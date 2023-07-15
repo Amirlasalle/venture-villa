@@ -4,9 +4,13 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "watch": "nodemon",
     "seed": "node seeders/seed.js"
+  },
+  "engines": {
+    "node": "0.10.41",
+    "npm": "1.4.29"
   },
   "keywords": [],
   "author": "",

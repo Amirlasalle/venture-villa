@@ -33,12 +33,12 @@ const Header = () => {
                 </Link></Nav.Link>
                 <NavDropdown title="Profile and more" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">    <Link to="/me">
-                    {Auth.getProfile().data.username}'s Ventures
+                    {Auth.getProfile().data.username}'s Bookings
                   </Link></NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.2">
-                    Venture History
-                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.1">    <Link to="/me">
+                    {Auth.getProfile().data.username}'s Ventures
+                  </Link></NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#action/3.3">Account settings</NavDropdown.Item>
                   <NavDropdown.Divider />

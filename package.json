@@ -18,5 +18,9 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "@apollo/utils.keyvadapter": "^3.0.0",
+    "keyv": "^4.5.2"
   }
 }

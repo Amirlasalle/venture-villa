@@ -2,7 +2,8 @@
   "name": "venture-villa",
   "version": "1.0.0",
   "engines": {
-    "node": "16.20.0"
+    "node": "0.10.41",
+    "npm": "1.4.29"
   },
   "description": "",
   "main": "server/server.js",
@@ -13,10 +14,7 @@
     "seed": "cd server && npm run seed",
     "build": "cd client && npm run build"
   },
-  "engines": {
-    "node": "0.10.41",
-    "npm": "1.4.29"
-  },
+ 
   "keywords": [],
   "author": "",
   "license": "ISC",

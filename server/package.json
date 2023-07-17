@@ -32,6 +32,7 @@
     "braces": "^3.0.2",
     "bson": "^5.4.0",
     "buffer-equal-constant-time": "^1.0.1",
+    "build": "^0.1.4",
     "bytes": "^3.1.2",
     "call-bind": "^1.0.2",
     "chokidar": "^3.5.3",
@@ -198,11 +199,8 @@
     "yallist": "^4.0.0"
   },
   "scripts": {
-    "dev": "react-scripts start",
-    "start": "serve -s build",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
     "heroku-postbuild": "npm run build"
   },
   "repository": {

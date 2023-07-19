@@ -20,7 +20,7 @@ const Header = () => {
     <Navbar expand="md" className="bg-body-tertiary ">
       <Container fluid className='betterheader'>
         <Navbar.Brand>
-          <Image className='vv-logo' src={process.env.PUBLIC_URL + "/assets/venture-villa-logo.png"} fluid /></Navbar.Brand>
+          <Image className='vv-logo' src={process.env.PUBLIC_URL + "client/public/assets/vv-logo.png"} fluid /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav

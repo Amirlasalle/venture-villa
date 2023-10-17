@@ -1,17 +1,17 @@
-html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-}
-
-/* Sections
-   ========================================================================== */
-/**
- * Remove the margin in all browsers.
- */
+html,
 body {
+  height: 100%;
   margin: 0;
+  padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+.App {
+  text-align: center;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 .welcomeImg{
 max-width: 100%;
@@ -23,11 +23,91 @@ margin-left: 10%;
 margin-right: 10%;
 
 }
+.home{
+  left: 0 !important;
+  right: 0 !important;
+  padding: 0 !important;
+  margin-right: 0 !important;
+  overflow: hidden;
+  width: 100vw !important;
+}
+.welcome {
+  color: #000;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 2rem;
+  text-align: left !important;
+  background-color: #fff;
+}
+.slide-image {
+  width: 100vw !important;
+  height: 40vh !important;
+  object-fit: cover;
+  filter: brightness(50%);
+  
+}
 .image-container{
   height: 50vh;
   width:100vw;
   margin-left: 0;
   padding-left: 0;
+}
+.banner{
+  height: 20vh !important;
+  width: 100vw !important;
+  left: 0 !important;
+  right: 0 !important;
+  padding: 0 !important;
+  margin-right: 0 !important;
+  overflow: hidden;
+}
+.banner-text {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-style: italic;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: translateY(-100%);
+  text-align: center;
+  color: #fff;
+  font-size: 3.5rem !important;
+}
+.banner-image{
+  width: 100vw;
+  height: 20vh !important;
+  object-fit: cover;
+  filter: brightness(55%);
+}
+.section-divider-y {
+  font-size: 2.3rem;
+  letter-spacing: 3px;
+  background-color: #ffe100bf;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 8px;
+  text-align: start;
+  position: relative;
+}
+.section-divider-b {
+  font-size: 2.3rem;
+  letter-spacing: 3px;
+  background-color: #0033ccc5;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 8px;
+  text-align: start;
+  position: relative;
+}
+.section-divider-r {
+  font-size: 2.3rem;
+  letter-spacing: 3px;
+  background-color: #ff0000a5;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 8px;
+  text-align: start;
+  position: relative;
 }
 /**
  * Render the `main` element consistently in IE.
@@ -390,7 +470,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   margin: 0 0 0.5rem;
   line-height: 1.25;
 }
@@ -1728,10 +1808,23 @@ label form [type='radio'] {
   }
 
 }
-.vv-logo{
-  height: 50px;
-  width: 200px;
-}
+.vv-logo {
+  margin-left: 10px;
+  -webkit-transition: all 0.50s;
+  transition: all 0.50s;
+  width: 5rem;
+
+  &:hover {
+    border: none;
+    filter: brightness(130%);
+    -webkit-filter: brightness(130%);
+    -moz-filter: brightness(130%);
+    -o-filter: brightness(130%);
+    -ms-filter: brightness(130%);
+    -webkit-transition: all 0.50s;
+    transition: all 0.50s;
+  }
+ }
 .signup-login{
   margin: 10%;
   padding: 10%;

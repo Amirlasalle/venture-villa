@@ -1,0 +1,32 @@
+[
+    {
+        "productname":"Villa Cali",
+        "subtitle":"mountain veiw",
+        "brief":"something about location",
+        "screenshot":"",
+        "product":""
+       
+    },    
+    {
+        "productname":"Mansion Bogota",
+        "subtitle":"huge pool",
+        "brief":"something about location",
+        "screenshot":"",
+        "product":""
+    },
+    {
+        "productname":"Beach house Santa Marta",
+        "subtitle":"5 mins to beachr",
+        "brief":"something about location",
+        "screenshot":"",
+        "product":""
+    },
+    {
+        "productname":"Penthouse in medellin",
+        "subtitle":"city view",
+        "brief":"something about location",
+        "screenshot":"",
+        "product":""
+    }
+    
+]

@@ -11,6 +11,9 @@ import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
+// import { faStar } from '@fortawesome/free-solid-svg-icons';
 // import PlaceList from '../components/Places/Places';
 
 const client = new ApolloClient({
@@ -44,6 +47,11 @@ function Home() {
   const nextIconStyle = {
     fontSize: '10vw',
     fontWeight: 'bolder',
+  };
+  const chevIconStyle = {
+    fontSize: '3vw',
+    fontWeight: 'bolder',
+    color: '#fff',
   };
   const [placesinfo] = useState(placesinfoData)
   console.log(placesinfo)
@@ -180,44 +188,120 @@ function Home() {
 
             <h3 className="mt-3 pl-5 pr-5 justify-content-center about-asco-text about">Cultural Richness
             </h3>
+
             <p className="mt-1 mb-1 pl-5 pr-5 justify-content-center about-asco-text-smaller about">Colombia is a melting pot of diverse cultures and traditions. Its cities are vibrant hubs of art, music, and dance, while rural regions preserve indigenous customs that have endured for centuries. A visit to Colombia will immerse you in a rich tapestry of festivals, music, and folklore, providing an opportunity to witness the country's cultural resilience and passion.
             </p>
             <h2 className="text-center mt-2 section-divider-b w-100" >
             </h2>
+            <h2 className="text-center section-divider-r w-100" >
+            </h2>
+            <Image src={process.env.PUBLIC_URL + "/assets/short/calidefari.jpeg"} className=" w-100 img-fluid d-flex flex-wrap justify-content-around page-img" />
+
+
             <h3 className="mt-3 pl-5 pr-5 justify-content-center about-asco-text about">Breathtaking Landscapes
             </h3>
             <p className="mt-1 mb-1 pl-5 pr-5 justify-content-center about-asco-text-smaller about">From the lush Amazon rainforest to the towering Andes mountains and the pristine Caribbean coast, Colombia's landscapes are nothing short of spectacular. Whether you're exploring the lush coffee regions, embarking on a trek to the Lost City, or relaxing on the white-sand beaches, Colombia offers a wide array of natural wonders that will leave you in awe.
             </p>
-            <h2 className="text-center mt-2 section-divider-r w-100" >
+            <h2 className="text-center mt-2 pb-3 section-divider-y w-100" >
             </h2>
+            <h2 className="text-center section-divider-b w-100" >
+            </h2>
+            <h2 className="text-center section-divider-r w-100" >
+            </h2>
+            <Image src={process.env.PUBLIC_URL + "/assets/short/santamartashort.jpeg"} className=" w-100 img-fluid d-flex flex-wrap justify-content-around page-img" />
+            <h3 className="mt-3 pl-5 pr-5 justify-content-center about-asco-text about">
+              Best Stays of 2023
+            </h3>
+            <p className="mt-1 mb-1 pl-5 pr-5 justify-content-center about-asco-text-smaller about">If you're searching for accommodations in Colombia, don't miss out on these top four bed and breakfast homes, each offering remarkable features and a plethora of exciting activities to enjoy.
+            </p>
+
 
           </Row>
         </div>
 
-        <Row className='mt-4'>
-          <div id="homepageCards" className="d-flex flex-wrap justify-content-around ">
+        <Row className='mt-5'>
+          <div id="homepageCards" className="d-flex flex-wrap justify-content-center pt-3 pb-3 cards-bg">
             {placesinfo.map((placesinfo, key) =>
 
-              <Card key={key} className="m-2 p-2 shadow-lg product-cards" style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={process.env.PUBLIC_URL + placesinfo.screenshot} />
-                <Card.Body>
-                  <Card.Title className="card-titles">{placesinfo.productname}</Card.Title>
-                  <Card.Subtitle className="mb-2  card-subt">{placesinfo.subtitle}</Card.Subtitle>
-                  <Card.Subtitle className="mb-3 text-muted  card-subt2">{placesinfo.subtitle2}</Card.Subtitle>
-                  <Card.Text>{placesinfo.brief}
-                  </Card.Text>
+              <Card key={key} className="m-2 p-2  product-cards" style={{ width: '22rem' }}>
+                <a href={placesinfo.more} target="_blank" rel="noreferrer" className="btn1" >
+                <Carousel slide={false} nextIcon={<FontAwesomeIcon icon={faChevronCircleRight} />} style={chevIconStyle}
+                  prevIcon={<FontAwesomeIcon icon={faChevronCircleLeft} />} className='next-icon'>
+
+                  <Carousel.Item className="carousel">
+                    <Image src={process.env.PUBLIC_URL + placesinfo.screenshotone} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                  </Carousel.Item>
+                  <Carousel.Item className="carousel">
+                    <Image src={process.env.PUBLIC_URL + placesinfo.screenshottwo} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                  </Carousel.Item>
+                  <Carousel.Item className="carousel">
+                    <Image src={process.env.PUBLIC_URL + placesinfo.screenshotthree} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                  </Carousel.Item>
+                  <Carousel.Item className="carousel">
+                    <Image src={process.env.PUBLIC_URL + placesinfo.screenshotfour} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                  </Carousel.Item>
+                  <Carousel.Item className="carousel">
+                    <Image src={process.env.PUBLIC_URL + placesinfo.screenshotfive} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                  </Carousel.Item>
+                  <Carousel.Item className="carousel">
+                    <Image src={process.env.PUBLIC_URL + placesinfo.screenshotsix} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                  </Carousel.Item>
+                  <Carousel.Item className="carousel">
+                    <Image src={process.env.PUBLIC_URL + placesinfo.screenshotseven} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                  </Carousel.Item>
+                  <Carousel.Item className="carousel">
+                    <Image src={process.env.PUBLIC_URL + placesinfo.screenshoteight} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                  </Carousel.Item>
+                  <Carousel.Item className="carousel">
+                    <Image src={process.env.PUBLIC_URL + placesinfo.screenshotnine} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                  </Carousel.Item>
+                  <Carousel.Item className="carousel">
+                    <Image src={process.env.PUBLIC_URL + placesinfo.screenshotten} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                  </Carousel.Item>
+                </Carousel>
+                {/* <Card.Img variant="top" src={process.env.PUBLIC_URL + placesinfo.screenshot} /> */}
+                <Card.Body className='w-100 mt-2 ml-0 mr-0'>
+                  <Card.Subtitle className="mb-2 mr-1 card-titles">{placesinfo.placesname} <span className='rating'>{placesinfo.star}<span className='text-muted'>{placesinfo.ratings}</span></span></Card.Subtitle>
+                  <Card.Subtitle className="mb-2 card-subtitle text-muted">{placesinfo.subtitle}</Card.Subtitle>
+                  <Card.Subtitle className="mb-2 text-muted  card-subt2">{placesinfo.beds}</Card.Subtitle>
+                  <Card.Subtitle className="mb-3 text-muted  card-subt2">{placesinfo.dates}</Card.Subtitle>
+                  <Card.Subtitle className="mb-3 card-price">{placesinfo.price} <span className='text-muted night'>night</span></Card.Subtitle>
                   <style type="text/css">
                   </style>
-                  <Button variant="info" size="md" className="mb-1 mt-auto" ><a href={placesinfo.product} target="_blank" rel="noreferrer" className="btn1" >More information <span><i class="fa fa-external-link" aria-hidden="true"></i></span></a></Button>
-                  {/* &nbsp;&nbsp;&nbsp;
-        <Button variant="info"  ><a href={placesinfo.deployment} target="_blank" rel="noreferrer" className="btn1"  >Contact <br></br>sales</a></Button> */}
                 </Card.Body>
+                </a>
               </Card>
 
             )}
           </div>
         </Row>
+        <div>
+          <Row className='mt-4  about'>
+            <h3 className="mt-3 mb-2 pl-5 pr-5 justify-content-center about-asco-text about">Discover Colombia: A Gem of South America Worth Exploring
+            </h3>
+            <p className="mt-1 mb-3 pl-5 pr-5 justify-content-center about-asco-text-smaller about">Colombia, a country long associated with a turbulent past, has emerged as a top destination for travelers seeking unique experiences, rich cultural heritage, and stunning natural beauty. This diverse South American nation boasts a wealth of reasons why you should add it to your travel bucket list.
+            </p>
+            <h2 className="text-center p-3 mt-2 section-divider-y w-100" >
+            </h2>
 
+
+            <h3 className="mt-3 pl-5 pr-5 justify-content-center about-asco-text about">Cultural Richness
+            </h3>
+            <p className="mt-1 mb-5 pl-5 pr-5 justify-content-center about-asco-text-smaller about">Colombia is a melting pot of diverse cultures and traditions. Its cities are vibrant hubs of art, music, and dance, while rural regions preserve indigenous customs that have endured for centuries. A visit to Colombia will immerse you in a rich tapestry of festivals, music, and folklore, providing an opportunity to witness the country's cultural resilience and passion.
+            </p>
+            {/* <h2 className="text-center mt-2 section-divider-b w-100" >
+            </h2> 
+
+            <h2 className="text-center mt-2 section-divider-r w-100" >
+            </h2>
+            <h3 className="mt-3 pl-5 pr-5 justify-content-center about-asco-text about">Breathtaking Landscapes
+            </h3>
+            <p className="mt-1 mb-1 pl-5 pr-5 justify-content-center about-asco-text-smaller about">From the lush Amazon rainforest to the towering Andes mountains and the pristine Caribbean coast, Colombia's landscapes are nothing short of spectacular. Whether you're exploring the lush coffee regions, embarking on a trek to the Lost City, or relaxing on the white-sand beaches, Colombia offers a wide array of natural wonders that will leave you in awe.
+            </p> */}
+
+
+          </Row>
+        </div>
         <Container fluid secondary="true" className="d-flex flex-wrap justify-content-around banner">
 
 

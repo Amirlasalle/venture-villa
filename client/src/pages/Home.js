@@ -186,6 +186,7 @@ function Home() {
 
           </Row>
         </div>
+
         {/* <p className="mt-1 mb-1 pl-5 pr-5 justify-content-center about-asco-text-smaller about">Colombia is a melting pot of diverse cultures and traditions. Its cities are vibrant hubs of art, music, and dance, while rural regions preserve indigenous customs that have endured for centuries. A visit to Colombia will immerse you in a rich tapestry of festivals, music, and folklore, providing an opportunity to witness the country's cultural resilience and passion.
             </p>
       
@@ -218,7 +219,7 @@ function Home() {
           <div id="homepageCards" className="d-flex flex-wrap justify-content-center pt-3 pb-3 cards-bg">
             <Card className="atribute-cards">
               <div className="card-content">
-                <Image src={process.env.PUBLIC_URL + "/assets/short/andesmountainshort.png"} className="img-fluid atribute-img" />
+                <Image src={process.env.PUBLIC_URL + "/assets/short/soccerfansshort.jpeg"} className="img-fluid atribute-img" />
                 <div className="text-container">
                   <h3 className="atribute-text">Cultural Richness</h3>
                 </div>
@@ -226,7 +227,7 @@ function Home() {
             </Card>
             <Card className="atribute-cards">
               <div className="card-content">
-                <Image src={process.env.PUBLIC_URL + "/assets/short/andesmountainshort.png"} className="img-fluid atribute-img" />
+                <Image src={process.env.PUBLIC_URL + "/assets/short/colombiadessertshort.jpg"} className="img-fluid atribute-img" />
                 <div className="text-container">
                   <h3 className="atribute-text">Breathtaking Landscapes</h3>
                 </div>
@@ -234,7 +235,7 @@ function Home() {
             </Card>
             <Card className="atribute-cards">
               <div className="card-content">
-                <Image src={process.env.PUBLIC_URL + "/assets/short/andesmountainshort.png"} className="img-fluid atribute-img" />
+                <Image src={process.env.PUBLIC_URL + "/assets/short/colombianfoodshort.jpeg"} className="img-fluid atribute-img" />
                 <div className="text-container">
                   <h3 className="atribute-text">Culinary Delights</h3>
                 </div>
@@ -242,7 +243,7 @@ function Home() {
             </Card>
             <Card className="atribute-cards" >
               <div className="card-content">
-                <Image src={process.env.PUBLIC_URL + "/assets/short/andesmountainshort.png"} className="img-fluid atribute-img" />
+                <Image src={process.env.PUBLIC_URL + "/assets/short/colombiawomanfoodshort.jpg"} className="img-fluid atribute-img" />
                 <div className="text-container">
                   <h3 className="atribute-text">Colombian Love</h3>
                 </div>
@@ -277,7 +278,24 @@ function Home() {
             <h3 className="mt-3 pl-5 pr-5 justify-content-center about-asco-text about">Where Cultural Richness, Breathtaking Landscapes, Culinary Delights, and Colombian Love Converge to Create an Unforgettable Journey
             </h3> */}
 
+<div>
+          <Row className='mt-4  about'>
+          <h2 className="text-center mt-2 pb-3 section-divider-y w-100" >
+            </h2>
+            <h2 className="text-center section-divider-b w-100" >
+            </h2>
+            <h2 className="text-center section-divider-r w-100" >
+            </h2>
 
+
+
+            <h3 className="mt-3 pl-5 pr-5 justify-content-center about-asco-text about">
+              Best Stays of 2023
+            </h3>
+            <p className="mt-1 mb-1 pl-5 pr-5 justify-content-center about-asco-text-smaller about">If you're searching for accommodations in Colombia, don't miss out on these top four bed and breakfast homes, each offering remarkable features and a plethora of exciting activities to enjoy.
+            </p>
+          </Row>
+        </div>
 
         <Row className='mt-5'>
           <div id="homepageCards" className="d-flex flex-wrap justify-content-center pt-3 pb-3 cards-bg">

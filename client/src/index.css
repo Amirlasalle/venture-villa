@@ -243,7 +243,7 @@ body {
 
 .history-img::before {
   content: "";
-  background-image: url('/public/assets/short/andesmountainshort.png');
+  background-image: url('/public/assets/short/colombiahistoryshort.jpg');
   background-size: cover;
   width: 100%;
   height: 100%;

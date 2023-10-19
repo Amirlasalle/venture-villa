@@ -35,6 +35,8 @@ body {
   width: 100vw !important;
 }
 
+
+
 .welcome {
   color: #000;
   font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -125,10 +127,149 @@ body {
 }
 
 .page-img {
-
   height: 40vh !important;
-  filter: brightness(150%), grayscale(100%), blur(5px), contrast(150%), invert(100%);
+  object-fit: cover;
+  filter: brightness(50%);
 }
+
+.atribute-cards {
+  position: relative; /* Enable positioning for child elements */
+  background-color: #ffffff;
+  border: none !important;
+  border-radius: 0;
+  margin: 0 !important;
+  padding: 0;
+  overflow: hidden; /* Clip content that overflows */
+}
+
+.card-content {
+  position: relative; /* Enable positioning for child elements */
+}
+
+.atribute-img {
+  width: 100%;
+  height: auto;
+}
+
+.text-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: none; /* Background color with opacity for readability */
+  padding: 10px;
+}
+
+.atribute-text {
+  text-align: center;
+  color: #fff;
+}
+
+
+
+.atribute-img {
+  height: 50vh !important;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+.atribute-img:hover {
+  transform: scale(1.1); 
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 -20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+/* .atribute-img {
+  height: 50vh !important;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+.atribute-img:hover {
+  transform: scale(1.1); 
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 -20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.atribute-cards {
+  background-color: #ffffff;
+  background: none !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+  border-radius: 0%;
+}
+.atribute-text {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  transform: translateY(-100%);
+  text-align: center;
+  color: #ff0000;
+  transform: rotateX(-100%);
+} */
+
+/* .atribute-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  justify-content: center;
+  text-align: center;
+  color: #ff0000;
+  transform: translateY(-100%);
+} */
+
+.cards-bg {
+ 
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap; /* Prevent cards from wrapping */
+  justify-content: space-between; /* Distribute cards evenly */
+  margin: 0; /* Remove any margin to make the cards fill the available space */
+}
+
+.history-img {
+  position: relative;
+  width: 100vw !important;
+  height: 50vh !important;
+}
+
+.history-img::before {
+  content: "";
+  background-image: url('/public/assets/short/andesmountainshort.png');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(45%);
+}
+
+.history-text {
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  height: 50vh; 
+  overflow: auto;
+  margin: 0;
+}
+
+
+.history-para {
+  text-align: center;
+  color: #ffffff;
+  padding: 7px;
+}
+
 
 .image-container {
   height: 50vh;
@@ -148,7 +289,7 @@ body {
 }
 
 .banner-text {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Lora', serif;
   font-style: italic;
   justify-content: center;
   text-align: center;
@@ -190,7 +331,7 @@ body {
 .section-divider-y {
   font-size: 2.3rem;
   letter-spacing: 3px;
-  background-color: #ffe100bf;
+  background-color: #ffe10075;
   color: white;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   padding: 8px;
@@ -201,7 +342,7 @@ body {
 .section-divider-b {
   font-size: 2.3rem;
   letter-spacing: 3px;
-  background-color: #0033ccc5;
+  background-color: #0033cc8d;
   color: white;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   padding: 8px;
@@ -212,7 +353,7 @@ body {
 .section-divider-r {
   font-size: 2.3rem;
   letter-spacing: 3px;
-  background-color: #ff0000a5;
+  background-color: #ff000081;
   color: white;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   padding: 8px;
@@ -614,7 +755,7 @@ h6 {
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   margin: 0 0 1rem;
   line-height: 1.5;
 }
@@ -2059,4 +2200,24 @@ label form [type='radio'] {
     justify-content: flex-end;
   }
 
+}
+
+@media (max-width: 1200px) {
+  .atribute-cards {
+    width: 100vw;
+    height: 50vh;
+  }
+
+}
+
+
+@media (min-width: 1200px) {
+  .cards-bg {
+    flex-wrap: nowrap; 
+    justify-content: flex-start; /* Align cards to the left side */
+  }
+
+  .atribute-cards {
+    max-width: 25%;
+  }
 }

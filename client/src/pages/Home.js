@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
+import { Link, useNavigate } from 'react-router-dom';
 import placesinfoData from "../components/Places/placesinfo.json"
 import Container from "react-bootstrap/Container";
 import Image from 'react-bootstrap/Image';
@@ -10,10 +11,8 @@ import '../App.css'
 import '../index.css'
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
-import { faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faChevronCircleRight, faChevronCircleLeft, faChevronLeft, faChevronRight, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+
 // import Col from 'react-bootstrap/Col';
 // import { faStar } from '@fortawesome/free-solid-svg-icons';
 // import PlaceList from '../components/Places/Places';
@@ -51,35 +50,26 @@ function Home() {
     fontWeight: 'bolder',
   };
   const chevIconStyle = {
-    fontSize: '3vw',
-    fontWeight: 'bolder',
-    color: '#fff',
+    fontSize: '2.5rem',
   };
+  const navigate = useNavigate();
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'auto',
+    });
+  };
+
+
+  const handleNavLinkClick = (url) => {
+    scrollToTop();
+    navigate(url);
+  };
+
   const [placesinfo] = useState(placesinfoData)
   console.log(placesinfo)
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          'https://airbnb-listings.p.rapidapi.com/v2/getadmins?countrycode=IT&admin1=07&admin2=RM&admin3=058091&admin4=05809101',
-          {
-            headers: {
-              'X-RapidAPI-Key': 'b3569df6b3mshd27a28f0f1315a1p1376d5jsn45d184e33c7f',
-              'X-RapidAPI-Host': 'airbnb-listings.p.rapidapi.com',
-            },
-          }
-        );
-        const data = await response.json();
-        console.log(data);
-        // setListings(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchData();
-  }, []);
 
 
   return (
@@ -95,9 +85,9 @@ function Home() {
               <Carousel.Caption className='mt-0 mb-auto d-flex flex-column justify-content-center outlined-text text-center'>
                 <h3 className='outlined-text'>Colombia is a Venture Waiting to happen</h3>
                 <div className="button-container">
-                  <Button variant="info" size="sm" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '150px' }}>
-                    <a href='https://www.youtube.com/watch?v=3zNO-2RBqKY' target="_blank" rel="noreferrer" className="btn1">Learn More </a>
-                  </Button>
+                    <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '150px' }}>
+                      <a href='https://www.youtube.com/watch?v=7-DkkLTe2eA' target="_blank" rel="noreferrer" className="btn1">Learn More <FontAwesomeIcon icon={faExternalLinkAlt} /></a>
+                    </Button>
                 </div>
               </Carousel.Caption>
             </Carousel.Item>
@@ -109,9 +99,11 @@ function Home() {
               <Carousel.Caption className='mt-0 mb-auto d-flex flex-column justify-content-center outlined-text text-center'>
                 <h3 className='outlined-text'>In Cartagena Every Day Feels Like a Fiesta!</h3>
                 <div className="button-container">
-                  <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '200px' }}>
-                    <a href='https://www.youtube.com/playlist?list=PLOm6FLTQtSyJez1dBGsC9SoOuQas0pFk2' target="_blank" rel="noreferrer" className="btn1">Start Learning <span><i class="fa fa-external-link" aria-hidden="true"></i></span></a>
-                  </Button>
+                  <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/shorts/r25RXQVJH50')} className='btn1'>
+                    <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '140px' }}>
+                      <a href='#cartagena' target="_blank" rel="noreferrer" className="btn1">See Rentals <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                    </Button>
+                  </Link>
                 </div>
               </Carousel.Caption>
             </Carousel.Item>
@@ -123,9 +115,11 @@ function Home() {
               <Carousel.Caption className='mt-0 mb-auto d-flex flex-column justify-content-center outlined-text text-center'>
                 <h3 className='outlined-text'>Where Paradise Meets Passion!</h3>
                 <div className="button-container">
-                  <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '150px' }}>
-                    <a href='https://www.youtube.com/playlist?list=PLOm6FLTQtSyJd84_uDBxlwXH9_67b7o_Y' target="_blank" rel="noreferrer" className="btn1">Team ASCO <span><i class="fa fa-users" aria-hidden="true"></i></span></a>
-                  </Button>
+                  <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=1z2wa7nK8zs')} className='btn1'>
+                    <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '120px' }}>
+                      <a href='#home' target="_blank" rel="noreferrer" className="btn1">Beaches <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                    </Button>
+                  </Link>
                 </div>
               </Carousel.Caption>
             </Carousel.Item>
@@ -137,9 +131,11 @@ function Home() {
               <Carousel.Caption className='mt-0 mb-auto d-flex flex-column justify-content-center outlined-text text-center'>
                 <h3 className='outlined-text'>Bogota Is A City of Endless Horizons and Vibrant Realities!</h3>
                 <div className="button-container">
-                  <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '150px' }}>
-                    <a href='https://www.youtube.com/watch?v=lbs_BC8cQwo' target="_blank" rel="noreferrer" className="btn1">Learn More <span><i class="fa fa-external-link" aria-hidden="true"></i></span></a>
-                  </Button>
+                  <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=1z2wa7nK8zsr')} className='btn1'>
+                    <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '140px' }}>
+                      <a href='#bogota' target="_blank" rel="noreferrer" className="btn1">See Rentals <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                    </Button>
+                  </Link>
                 </div>
               </Carousel.Caption>
             </Carousel.Item>
@@ -151,9 +147,11 @@ function Home() {
               <Carousel.Caption className='mt-0 mb-auto d-flex flex-column justify-content-center outlined-text text-center'>
                 <h3 className='outlined-text'>Cali: Where Salsa, Sunshine, and Smiles Await!</h3>
                 <div className="button-container">
-                  <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '250px' }}>
-                    <a href='https://www.youtube.com/watch?v=3zNO-2RBqKY' target="_blank" rel="noreferrer" className="btn1">Customer Testimonials <span><i class="fa fa-external-link" aria-hidden="true"></i></span></a>
-                  </Button>
+                  <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=BamIljS3reIr')} className='btn1'>
+                    <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '120px' }}>
+                      <a href='#cali' target="_blank" rel="noreferrer" className="btn1">Explore <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                    </Button>
+                  </Link>
                 </div>
               </Carousel.Caption>
             </Carousel.Item>
@@ -258,13 +256,13 @@ function Home() {
         <div className='mt-5 history-img'>
           <Row className=''>
             <div className='history-text'>
-                  <h2 className='d-flex flex-column justify-content-center pl-1'>Colombia's Tourism Evolution</h2>
-                  <p className='d-flex flex-column justify-content-center history-para  '>Colombia's tourism history is a captivating tale of transformation and resilience. From the mysterious allure of its pre-Columbian civilizations to the tumultuous years marked by conflict, and ultimately, its remarkable resurgence as a sought-after destination, the story of Colombian tourism is a testament to the nation's enduring spirit. The country's journey from a turbulent history to a beacon of adventure and cultural diversity is an inspiring narrative that invites visitors to be part of its ongoing renaissance, making Colombia a destination brimming with captivating tales yet to be told.</p>
-                </div>
+              <h2 className='d-flex flex-column justify-content-center pl-1'>Colombia's Tourism Evolution</h2>
+              <p className='d-flex flex-column justify-content-center history-para  '>Colombia's tourism history is a captivating tale of transformation and resilience. From the mysterious allure of its pre-Columbian civilizations to the tumultuous years marked by conflict, and ultimately, its remarkable resurgence as a sought-after destination, the story of Colombian tourism is a testament to the nation's enduring spirit. The country's journey from a turbulent history to a beacon of adventure and cultural diversity is an inspiring narrative that invites visitors to be part of its ongoing renaissance, making Colombia a destination brimming with captivating tales yet to be told.</p>
+            </div>
           </Row>
         </div>
 
-            {/* <h2 className="mt-3 mb-2 pl-5 pr-5 justify-content-center about-asco-text about">Discover Colombia: A Gem of South America Worth Exploring
+        {/* <h2 className="mt-3 mb-2 pl-5 pr-5 justify-content-center about-asco-text about">Discover Colombia: A Gem of South America Worth Exploring
             </h2>
             <p className="mt-1 mb-3 pl-5 pr-5 justify-content-center about-asco-text-smaller about">Colombia, a country long associated with a turbulent past, has emerged as a top destination for travelers seeking unique experiences, rich cultural heritage, and stunning natural beauty. This diverse South American nation boasts a wealth of reasons why you should add it to your travel bucket list.
             </p>
@@ -278,9 +276,9 @@ function Home() {
             <h3 className="mt-3 pl-5 pr-5 justify-content-center about-asco-text about">Where Cultural Richness, Breathtaking Landscapes, Culinary Delights, and Colombian Love Converge to Create an Unforgettable Journey
             </h3> */}
 
-<div>
+        <div>
           <Row className='mt-4  about'>
-          <h2 className="text-center mt-2 pb-3 section-divider-y w-100" >
+            <h2 className="text-center mt-2 pb-3 section-divider-y w-100" >
             </h2>
             <h2 className="text-center section-divider-b w-100" >
             </h2>

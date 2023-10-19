@@ -15,6 +15,24 @@ body {
   min-height: 100vh;
 }
 
+.mar{
+  margin-bottom: 116px;
+}
+
+.custom-links {
+  color: #000 !important;
+} 
+.custom-links a {
+  text-decoration: none;
+  background-color: transparent !important;
+  font-size: 1rem;
+  color: #000 !important;
+}
+
+.custom-links a:hover {
+  text-decoration: underline;
+  color: #000;
+}
 .welcomeImg {
   max-width: 100%;
   height: 40vh;
@@ -35,7 +53,16 @@ body {
   width: 100vw !important;
 }
 
-
+.footer {
+  position: relative;
+  bottom: 0 !important;
+  width: 100%;
+  background-color: #3dcd58;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+  text-decoration: none;
+}
 
 .welcome {
   color: #000;
@@ -53,21 +80,52 @@ body {
 
 }
 
-.product-cards .svg-inline--fa-chevron-circle-right {
-  display: none !important;
+.product-cards {
+  background-color: #ffffff;
+  background: none !important;
+  border: none !important;
+  margin: 5px;
 }
 
-.product-cards:hover .svg-inline--fa-chevron-circle-right {
+.product-cards:hover {
+  transform: translateY(-10px) scale(1.009) translateZ(10px);
+}
+
+
+.product-cards .carousel-control-next,
+.product-cards .carousel-control-prev {
+  display: none !important;
+  color: #fff;
+  filter: brightness(150%) !important;
+  font-weight: bold !important;
+  opacity: 1;
+  top: 60%; 
+  transform: translateY(-50%); 
+}
+
+.product-cards:hover .carousel-control-next,
+.product-cards:hover .carousel-control-prev {
   display: inline !important;
+  filter: brightness(100%) !important;
+  font-weight: bold !important;
+}
+
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+  opacity: 0.5;
 }
 
 .carousel-indicators .active {
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+  filter: brightness(170%) !important;
 }
 
-.carousel-indicators [data-bs-target] {
+/* .carousel-indicators [data-bs-target] {
   display: none;
-}
+} */
+
 .carousel-indicators {
   display: flex;
   overflow-x: auto;
@@ -76,23 +134,28 @@ body {
   justify-content: center;
   padding: 0;
 }
-.card-titles{
+
+.card-titles {
   color: #000;
   font-weight: bold;
 }
-.card-price{
+
+.card-price {
   color: #000;
   font-weight: bold;
 }
-.night{
+
+.night {
   color: #000;
   font-weight: lighter !important;
 }
-.rating{
+
+.rating {
   float: right;
   color: #000;
   font-weight: lighter !important;
 }
+
 .carousel-indicators [data-bs-target] {
   display: flex !important;
   overflow-x: auto;
@@ -110,18 +173,22 @@ body {
 }
 
 .btn1 {
-  text-decoration: none;
+  text-decoration: none !important;
+  color: #fff;
 }
+
 .btn1:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
+
 .cards-image {
   width: 100vw !important;
   height: 42vh !important;
   object-fit: cover;
   border-radius: 10px;
 }
-.fa-star{
+
+.fa-star {
   color: #000 !important;
   display: inline !important;
 }
@@ -133,17 +200,20 @@ body {
 }
 
 .atribute-cards {
-  position: relative; /* Enable positioning for child elements */
+  position: relative;
+  /* Enable positioning for child elements */
   background-color: #ffffff;
   border: none !important;
   border-radius: 0;
   margin: 0 !important;
   padding: 0;
-  overflow: hidden; /* Clip content that overflows */
+  overflow: hidden;
+  /* Clip content that overflows */
 }
 
 .card-content {
-  position: relative; /* Enable positioning for child elements */
+  position: relative;
+  /* Enable positioning for child elements */
 }
 
 .atribute-img {
@@ -156,7 +226,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: none; /* Background color with opacity for readability */
+  background-color: none;
+  /* Background color with opacity for readability */
   padding: 10px;
 }
 
@@ -172,8 +243,9 @@ body {
   object-fit: cover;
   filter: brightness(50%);
 }
+
 .atribute-img:hover {
-  transform: scale(1.1); 
+  transform: scale(1.1);
   transition: transform 0.3s ease;
   box-shadow: 0 0 -20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -227,12 +299,15 @@ body {
 } */
 
 .cards-bg {
- 
+
   overflow: hidden;
   display: flex;
-  flex-wrap: nowrap; /* Prevent cards from wrapping */
-  justify-content: space-between; /* Distribute cards evenly */
-  margin: 0; /* Remove any margin to make the cards fill the available space */
+  flex-wrap: nowrap;
+  /* Prevent cards from wrapping */
+  justify-content: space-between;
+  /* Distribute cards evenly */
+  margin: 0;
+  /* Remove any margin to make the cards fill the available space */
 }
 
 .history-img {
@@ -258,7 +333,7 @@ body {
   color: #ffffff;
   position: relative;
   z-index: 1;
-  height: 50vh; 
+  height: 50vh;
   overflow: auto;
   margin: 0;
 }
@@ -309,19 +384,7 @@ body {
   filter: brightness(55%);
 }
 
-.product-cards {
-  /* box-shadow: 0 24px 30px rgba(255, 0, 0, 0.11),
-    0 -24px 40px rgba(255, 0, 0, 0.11) !important; */
-  background-color: #ffffff;
-  background: none !important;
-  border: none !important;
-}
 
-.product-cards:hover {
-  transform: translateY(-10px) scale(1.009) translateZ(10px);
-  /* box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
-    0 24px 46px rgba(0, 0, 0, 0.11); */
-}
 
 .cards-bg {
   background-color: #ffffff;
@@ -2213,8 +2276,9 @@ label form [type='radio'] {
 
 @media (min-width: 1200px) {
   .cards-bg {
-    flex-wrap: nowrap; 
-    justify-content: flex-start; /* Align cards to the left side */
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    /* Align cards to the left side */
   }
 
   .atribute-cards {

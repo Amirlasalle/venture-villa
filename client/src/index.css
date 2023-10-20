@@ -80,6 +80,33 @@ body {
 
 }
 
+/* .custom-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:0;
+  margin: 0;
+  background-color: #ffffff00 !important;
+} */
+
+.custom-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(5, 5, 5, 0) !important;
+  max-height: 100vh;
+  max-width: 100vw; 
+}
+.model-header{
+  opacity: 0;
+}
+.custom-youtube-video {
+  max-width: 560px; 
+  max-height: 315px; 
+}
+
 .product-cards {
   background-color: #ffffff;
   background: none !important;
@@ -306,7 +333,7 @@ body {
   /* Prevent cards from wrapping */
   justify-content: space-between;
   /* Distribute cards evenly */
-  margin: 0;
+  /* margin: 0; */
   /* Remove any margin to make the cards fill the available space */
 }
 

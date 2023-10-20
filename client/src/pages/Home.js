@@ -12,6 +12,7 @@ import '../index.css'
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleRight, faChevronCircleLeft, faChevronLeft, faChevronRight, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import Modal from 'react-bootstrap/Modal';
 
 // import Col from 'react-bootstrap/Col';
 // import { faStar } from '@fortawesome/free-solid-svg-icons';
@@ -70,6 +71,10 @@ function Home() {
   const [placesinfo] = useState(placesinfoData)
   console.log(placesinfo)
 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
 
   return (
@@ -85,14 +90,28 @@ function Home() {
               <Carousel.Caption className='mt-0 mb-auto d-flex flex-column justify-content-center outlined-text text-center'>
                 <h3 className='outlined-text'>Colombia is a Venture Waiting to happen</h3>
                 <div className="button-container">
-                    <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '150px' }}>
-                      <a href='https://www.youtube.com/watch?v=7-DkkLTe2eA' target="_blank" rel="noreferrer" className="btn1">Learn More <FontAwesomeIcon icon={faExternalLinkAlt} /></a>
-                    </Button>
+                  <Button variant="info" onClick={handleShow} size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '150px' }}> Learn More <FontAwesomeIcon icon={faExternalLinkAlt} />
+                  </Button>
+                  {/* <Modal show={show} onHide={handleClose} animation={false} size="sm" className='d-flex flex-wrap justify-content-around custom-modal'>
+                    <Modal.Body className='d-flex flex-wrap justify-content-around custom-modal'closeButton>
+                      <div className='custom-youtube-video'>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/RqFZ7Xeumuo?si=SlblQNZhfvUT9jiC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      </div>
+                    </Modal.Body>
+                  </Modal> */}
+                  <Modal show={show} onHide={handleClose} animation={false} size="lg" className='d-flex flex-wrap justify-content-around custom-modal'>
+                  {/* <Modal.Header className='model-header' closeButton  /> */}
+                    <Modal.Body className='d-flex flex-wrap justify-content-around custom-modal' closeButton>
+                      <div className='custom-youtube-video'>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/RqFZ7Xeumuo?si=SlblQNZhfvUT9jiC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className='custom-youtube-video'></iframe>
+                      </div>
+                    </Modal.Body>
+                  </Modal>
                 </div>
               </Carousel.Caption>
             </Carousel.Item>
 
-
+            {/* <a href='https://www.youtube.com/watch?v=7-DkkLTe2eA' target="_blank" rel="noreferrer" className="btn1">Learn More <FontAwesomeIcon icon={faExternalLinkAlt} /></a>  */}
 
             <Carousel.Item className="carousel">
               <Image src={process.env.PUBLIC_URL + "/assets/short/cartagenashort.jpeg"} className="img-fluid d-flex flex-wrap justify-content-around slide-image" />
@@ -299,7 +318,7 @@ function Home() {
           <div id="homepageCards" className="d-flex flex-wrap justify-content-center pt-3 pb-3 cards-bg">
             {placesinfo.map((placesinfo, key) =>
 
-              <Card key={key} className="m-2 p-2  product-cards" style={{ width: '22rem' }}>
+              <Card key={key} className="m-2 p-2  product-cards" style={{ maxWidth: '22rem' }}>
                 <a href={placesinfo.more} target="_blank" rel="noreferrer" className="btn1" >
                   <Carousel slide={false} nextIcon={<FontAwesomeIcon icon={faChevronCircleRight} />} style={chevIconStyle}
                     prevIcon={<FontAwesomeIcon icon={faChevronCircleLeft} />} className='next-icon'>

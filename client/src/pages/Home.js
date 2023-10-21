@@ -75,6 +75,7 @@ function Home() {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  
 
 
   return (
@@ -92,21 +93,18 @@ function Home() {
                 <div className="button-container">
                   <Button variant="info" onClick={handleShow} size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '150px' }}> Learn More <FontAwesomeIcon icon={faExternalLinkAlt} />
                   </Button>
-                  {/* <Modal show={show} onHide={handleClose} animation={false} size="sm" className='d-flex flex-wrap justify-content-around custom-modal'>
-                    <Modal.Body className='d-flex flex-wrap justify-content-around custom-modal'closeButton>
-                      <div className='custom-youtube-video'>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/RqFZ7Xeumuo?si=SlblQNZhfvUT9jiC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                      </div>
-                    </Modal.Body>
-                  </Modal> */}
-                  <Modal show={show} onHide={handleClose} animation={false} size="lg" className='d-flex flex-wrap justify-content-around custom-modal'>
-                  {/* <Modal.Header className='model-header' closeButton  /> */}
+             
+                  <div className='ml-5 modal-div'>
+                  <Modal show={show} onHide={handleClose} animation={false} size="lg" dialogClassName="my-modal custom-modal">
+                  <Modal.Header closeButton style={{ display: 'none' }}></Modal.Header>
                     <Modal.Body className='d-flex flex-wrap justify-content-around custom-modal' closeButton>
+                   
                       <div className='custom-youtube-video'>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/RqFZ7Xeumuo?si=SlblQNZhfvUT9jiC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className='custom-youtube-video'></iframe>
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/NjbRrRfyvW4?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreenclassName='my-modal custom-modal'></iframe>
                       </div>
                     </Modal.Body>
                   </Modal>
+                  </div>
                 </div>
               </Carousel.Caption>
             </Carousel.Item>
@@ -119,7 +117,7 @@ function Home() {
                 <h3 className='outlined-text'>In Cartagena Every Day Feels Like a Fiesta!</h3>
                 <div className="button-container">
                   <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/shorts/r25RXQVJH50')} className='btn1'>
-                    <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '140px' }}>
+                    <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '145px' }}>
                       <a href='#cartagena' target="_blank" rel="noreferrer" className="btn1">See Rentals <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
                     </Button>
                   </Link>
@@ -151,7 +149,7 @@ function Home() {
                 <h3 className='outlined-text'>Bogota Is A City of Endless Horizons and Vibrant Realities!</h3>
                 <div className="button-container">
                   <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=1z2wa7nK8zsr')} className='btn1'>
-                    <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '140px' }}>
+                    <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '145px' }}>
                       <a href='#bogota' target="_blank" rel="noreferrer" className="btn1">See Rentals <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
                     </Button>
                   </Link>

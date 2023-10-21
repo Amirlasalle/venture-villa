@@ -12,6 +12,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
+import Culture from './pages/Culture';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import SpecificPlace from './components/Places/SpecificPlace';
@@ -71,6 +72,11 @@ function App() {
               />
               <Route path="/thoughts/:thoughtId" 
                 element={<SingleThought />}
+              />
+                <Route path="/place/:id"element= {<SpecificPlace/>}/>
+              <Route 
+                path="/culture" 
+                element={<Culture />} 
               />
             </Routes>
 

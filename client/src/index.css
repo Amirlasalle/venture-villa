@@ -15,13 +15,14 @@ body {
   min-height: 100vh;
 }
 
-.mar{
+.mar {
   margin-bottom: 116px;
 }
 
 .custom-links {
   color: #000 !important;
-} 
+}
+
 .custom-links a {
   text-decoration: none;
   background-color: transparent !important;
@@ -33,6 +34,7 @@ body {
   text-decoration: underline;
   color: #000;
 }
+
 .welcomeImg {
   max-width: 100%;
   height: 40vh;
@@ -81,9 +83,10 @@ body {
 }
 
 
-.modal-div{
-margin-left: 10px !important;
+.modal-div {
+  margin-left: 10px !important;
 }
+
 .custom-modal {
   position: relative;
   display: flex;
@@ -92,16 +95,17 @@ margin-left: 10px !important;
   justify-content: center !important;
   background-color: rgba(5, 5, 5, 0) !important;
   max-height: 100vh;
-  padding:0;
+  padding: 0;
 }
-.my-modal {  
-width: 80vw;
-max-width: 90vw; 
-top: 20%;
-margin-left: auto;
-margin-right: auto;
-/* padding-right: -25px; */
-} 
+
+.my-modal {
+  width: 80vw;
+  max-width: 90vw;
+  top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  /* padding-right: -25px; */
+}
 
 .about .carousel-control-next,
 .about .carousel-control-prev {
@@ -110,16 +114,57 @@ margin-right: auto;
   float: left;
 }
 
-.custom-youtube-video {
- position: relative;
- width: 100%;
- padding-bottom: 56.25%;
- height: 0;
- justify-content: center;
+.article-slides {
+  height: auto;
+    opacity: 1;
+    overflow: auto;
 }
-.custom-youtube-video iframe{
+.article-slides-container{
+  align-items: flex-start;
+  background-color: var(--color-white);
+  display: flex;
+  padding: 0;
+}
+
+.content-container{
+  padding-left: 130px;
+  padding-right: 130px;
+}
+
+.info-block{
+  
+}
+
+.carousel-two {
+  left: 0;
+  color: #000;
+  margin-left: 0 !important;
+}
+
+.carousel-item-two {
+  padding-top: 120px;
+  padding-right: 60px;
+  padding-bottom: 40px;
+  padding-left: 0;
+  color: #000;
+  margin-left: 0 !important;
+}
+
+.carousel-item-two h3 {
+  color: #000;
+}
+
+.custom-youtube-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  justify-content: center;
+}
+
+.custom-youtube-video iframe {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   padding-right: -5px;
   width: 100%;
@@ -145,8 +190,8 @@ margin-right: auto;
   filter: brightness(150%) !important;
   font-weight: bold !important;
   opacity: .9;
-  top: 60%; 
-  transform: translateY(-50%); 
+  top: 60%;
+  transform: translateY(-50%);
 }
 
 .product-cards:hover .carousel-control-next,

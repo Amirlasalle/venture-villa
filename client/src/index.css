@@ -2483,7 +2483,7 @@ label form [type='radio'] {
 
 }
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .atribute-cards {
     width: 100vw;
     height: 50vh;
@@ -2492,7 +2492,7 @@ label form [type='radio'] {
 }
 
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .cards-bg {
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -2506,36 +2506,183 @@ label form [type='radio'] {
   .about{
     padding-left: 130px;
     padding-right: 130px;
+    height: 600px !important;
+  }
+
+  .about-carousel-item{
+    padding-left: 115px;
+    padding-right: 115px;
+    height: 600px !important;
+    margin-right: 0;
   }
 
   .about-img-div {
     margin-top: 25px;
-    width: 40vw !important; 
+    width: 35rem !important;
+    height: 30rem !important; 
     float: right; 
-    left: auto;
+    left: 0 !important;
   }
 
   .about-text {
-    padding-left: 50px;
     padding-top: 70px;
-    padding-right: 60px;
-    width: 40vw !important; 
+    padding-right: 10px;
+    max-width: 30vw !important; 
     float: left !important;
     white-space: wrap;
+    /* left: auto !important; */
+    /* right: 0 !important; */
+    margin-bottom: 40px;
   }
   .about-text-p {
-    padding-left: 50px;
-    padding-bottom: 5px;
-    padding-right: 60px;
-    width: 40vw !important; 
+
+    margin-bottom: 40px;
+    /* padding-right: 60px; */
+    max-width: 30vw !important; 
     float: left !important; 
     white-space: wrap;
   }
   .about-text-sd {
-    margin-left: 50px;
-    padding-right: 60px;
     width: 100vw !important; 
     float: left !important;
-    margin-bottom: 40px; /* Float the text div to the left */
+    margin-bottom: 100px; /* Float the text div to the left */
+  }
+}
+
+@media screen and (min-width: 1325px) {
+
+  .about{
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+
+  .about-carousel-item{
+    padding-left: 115px;
+    padding-right: 115px;
+    margin-right: 0;
+  }
+
+  .about-img-div {
+    margin-top: 25px;
+    width: 35rem !important;
+    max-width: 50rem;
+    height: 35rem; 
+    float: right; 
+    left: 0 !important;
+  }
+
+  .about-text {
+    padding-top: 70px;
+    padding-right: 10px;
+    max-width: 40vw !important; 
+    float: left !important;
+    white-space: wrap;
+    /* left: auto !important; */
+    /* right: 0 !important; */
+    margin-bottom: 40px;
+  }
+  .about-text-p {
+
+    margin-bottom: 40px;
+    /* padding-right: 60px; */
+    max-width: 40vw !important; 
+    float: left !important; 
+    white-space: wrap;
+  }
+  .about-text-sd {
+    width: 100vw !important; 
+    float: left !important;
+    margin-bottom: 100px; /* Float the text div to the left */
+  }
+}
+@media screen and (min-width: 1750px) {
+
+  .about{
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+
+  .about-carousel-item{
+    padding-left: 115px;
+    padding-right: 115px;
+    margin-right: 0;
+  }
+
+  .about-img-div {
+    margin-top: 25px;
+    width: 50rem !important;
+    max-width: 50rem;
+    height: 35rem; 
+    float: right; 
+    left: 0 !important;
+  }
+
+  .about-text {
+    padding-top: 70px;
+    padding-right: 10px;
+    max-width: 40vw !important; 
+    float: left !important;
+    white-space: wrap;
+    /* left: auto !important; */
+    /* right: 0 !important; */
+    margin-bottom: 40px;
+  }
+  .about-text-p {
+
+    margin-bottom: 40px;
+    /* padding-right: 60px; */
+    max-width: 40vw !important; 
+    float: left !important; 
+    white-space: wrap;
+  }
+  .about-text-sd {
+    width: 100vw !important; 
+    float: left !important;
+    margin-bottom: 100px; /* Float the text div to the left */
+  }
+}
+@media screen and (min-width: 2325px) {
+
+  .about{
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+
+  .about-carousel-item{
+    padding-left: 115px;
+    padding-right: 115px;
+    margin-right: 0;
+  }
+
+  .about-img-div {
+    margin-top: 25px;
+    max-width: 100%;
+    height: 70rem; 
+    float: right; 
+    left: 0 !important;
+  }
+
+  .about-text {
+    padding-top: 70px;
+    padding-right: 10px;
+    max-width: 40rem !important; 
+    float: left !important;
+    white-space: wrap;
+    /* left: auto !important; */
+    /* right: 0 !important; */
+    margin-bottom: 40px;
+  }
+  .about-text-p {
+
+    margin-bottom: 40px;
+    /* padding-right: 60px; */
+    max-width: 40vw !important; 
+    float: left !important; 
+    white-space: wrap;
+  }
+  .about-text-sd {
+    width: 100vw !important; 
+    float: left !important;
+    margin-bottom: 100px; /* Float the text div to the left */
   }
 }

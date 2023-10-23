@@ -21,7 +21,7 @@ const Culture = () => {
 
 
 
-        <Carousel slide={false} nextIcon={<FontAwesomeIcon icon={faChevronRight} />} style={nextIconStyle}
+        <Carousel slide={true} nextIcon={<FontAwesomeIcon icon={faChevronRight} />} style={nextIconStyle}
             prevIcon={<FontAwesomeIcon icon={faChevronLeft} />} className='about'>
 <Carousel.Item className="about-carousel-item">
                 <div>
@@ -30,7 +30,27 @@ const Culture = () => {
                         <Image src={process.env.PUBLIC_URL + "/assets/short/antioquiashort.jpeg"} className="img-fluid d-flex flex-wrap about-img" />
                     </div>
                     <div className='about-text'>
-                        <h2 className="mb-2 justify-content-center about-text">Colombia has emerged as a top destination.
+                        <h2 className="mb-2 justify-content-around about-text">Colombia has emerged as a top destination.
+                        </h2>
+                        <p className="mt-1 mb-3 justify-content-center about-text-p">Colombia, a country long associated with a turbulent past, has emerged as a top destination for travelers
+                        </p>
+                        <h2 className="text-center pl-5 pr-5 pb-3 mb-0 section-divider-y   about-text-sd" >
+                        </h2>
+                        <h2 className="text-center section-divider-b  mb-0 about-text-sd " >
+                        </h2>
+                        <h2 className="text-center section-divider-r about-text-sd" >
+                        </h2>
+                    </div>
+                </div>
+            </Carousel.Item>
+            <Carousel.Item className="about-carousel-item">
+                <div>
+
+                    <div className='about-img-div'>
+                        <Image src={process.env.PUBLIC_URL + "/assets/short/cartagenashort.jpeg"} className="img-fluid d-flex flex-wrap about-img" />
+                    </div>
+                    <div className='about-text'>
+                        <h2 className="mb-2 justify-content-around about-text">Colombia has emerged as a top destination.
                         </h2>
                         <p className="mt-1 mb-3 justify-content-center about-text-p">Colombia, a country long associated with a turbulent past, has emerged as a top destination for travelers
                         </p>

@@ -50,6 +50,11 @@ function Home() {
     fontSize: '10vw',
     fontWeight: 'bolder',
   };
+  const nextIconStyleTwo = {
+    fontSize: '2rem',
+    fontWeight: 'bolder',
+  };
+
   const chevIconStyle = {
     fontSize: '2.5rem',
   };
@@ -75,7 +80,7 @@ function Home() {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  
+
 
 
   return (
@@ -93,23 +98,21 @@ function Home() {
                 <div className="button-container">
                   <Button variant="info" onClick={handleShow} size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '150px' }}> Learn More <FontAwesomeIcon icon={faExternalLinkAlt} />
                   </Button>
-             
+
                   <div className='ml-5 modal-div'>
-                  <Modal show={show} onHide={handleClose} animation={false} size="lg" dialogClassName="my-modal custom-modal">
-                  <Modal.Header closeButton style={{ display: 'none' }}></Modal.Header>
-                    <Modal.Body className='d-flex flex-wrap justify-content-around custom-modal' closeButton>
-                   
-                      <div className='custom-youtube-video'>
-                      <iframe width="560" height="315" src="https://www.youtube.com/embed/NjbRrRfyvW4?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreenclassName='my-modal custom-modal'></iframe>
-                      </div>
-                    </Modal.Body>
-                  </Modal>
+                    <Modal show={show} onHide={handleClose} animation={false} size="lg" dialogClassName="my-modal custom-modal">
+                      <Modal.Header closeButton style={{ display: 'none' }}></Modal.Header>
+                      <Modal.Body className='d-flex flex-wrap justify-content-around custom-modal' closeButton>
+
+                        <div className='custom-youtube-video'>
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/NjbRrRfyvW4?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreenclassName='my-modal custom-modal'></iframe>
+                        </div>
+                      </Modal.Body>
+                    </Modal>
                   </div>
                 </div>
               </Carousel.Caption>
             </Carousel.Item>
-
-            {/* <a href='https://www.youtube.com/watch?v=7-DkkLTe2eA' target="_blank" rel="noreferrer" className="btn1">Learn More <FontAwesomeIcon icon={faExternalLinkAlt} /></a>  */}
 
             <Carousel.Item className="carousel">
               <Image src={process.env.PUBLIC_URL + "/assets/short/cartagenashort.jpeg"} className="img-fluid d-flex flex-wrap justify-content-around slide-image" />
@@ -182,11 +185,11 @@ function Home() {
 
 
         <div>
-          <Row className='mt-4  about'>
+          <Row className='mt-4   '>
             <Image src={process.env.PUBLIC_URL + "/assets/short/antioquiashort.jpeg"} className="img-fluid d-flex flex-wrap justify-content-around page-img" />
-            <h2 className="mt-3 mb-2 pl-5 pr-5 justify-content-center about-asco-text about">Discover Colombia: A Gem of South America Worth Exploring
+            <h2 className="mt-3 mb-2 pl-5 pr-5 justify-content-center    ">Discover Colombia: A Gem of South America Worth Exploring
             </h2>
-            <p className="mt-1 mb-3 pl-5 pr-5 justify-content-center about-asco-text-smaller about">Colombia, a country long associated with a turbulent past, has emerged as a top destination for travelers seeking unique experiences, rich cultural heritage, and stunning natural beauty. This diverse South American nation boasts a wealth of reasons why you should add it to your travel bucket list.
+            <p className="mt-1 mb-3 pl-5 pr-5 justify-content-center  -smaller  ">Colombia, a country long associated with a turbulent past, has emerged as a top destination for travelers seeking unique experiences, rich cultural heritage, and stunning natural beauty. This diverse South American nation boasts a wealth of reasons why you should add it to your travel bucket list.
             </p>
             <h2 className="text-center p-3 mt-2 section-divider-y w-100" >
             </h2>
@@ -195,40 +198,13 @@ function Home() {
             <h2 className="text-center section-divider-r w-100" >
             </h2>
 
-            <h3 className="mt-3 pl-5 pr-5 justify-content-center about-asco-text about">Where Cultural Richness, Breathtaking Landscapes, Culinary Delights, and Colombian Love Converge to Create an Unforgettable Journey
+            <h3 className="mt-3 pl-5 pr-5 justify-content-center    ">Where Cultural Richness, Breathtaking Landscapes, Culinary Delights, and Colombian Love Converge to Create an Unforgettable Journey
             </h3>
 
 
           </Row>
         </div>
 
-        {/* <p className="mt-1 mb-1 pl-5 pr-5 justify-content-center about-asco-text-smaller about">Colombia is a melting pot of diverse cultures and traditions. Its cities are vibrant hubs of art, music, and dance, while rural regions preserve indigenous customs that have endured for centuries. A visit to Colombia will immerse you in a rich tapestry of festivals, music, and folklore, providing an opportunity to witness the country's cultural resilience and passion.
-            </p>
-      
-
-
-
-            <Image src={process.env.PUBLIC_URL + "/assets/short/andesmountainshort.png"} className="img-fluid d-flex flex-wrap justify-content-around page-img" />
-            <h3 className="mt-3 pl-5 pr-5 justify-content-center about-asco-text about">Breathtaking Landscapes
-            </h3>
-            <p className="mt-1 mb-1 pl-5 pr-5 justify-content-center about-asco-text-smaller about">From the lush Amazon rainforest to the towering Andes mountains and the pristine Caribbean coast, Colombia's landscapes are nothing short of spectacular. Whether you're exploring the lush coffee regions, embarking on a trek to the Lost City, or relaxing on the white-sand beaches, Colombia offers a wide array of natural wonders that will leave you in awe.
-            </p>
-
-
-            <h2 className="text-center mt-2 pb-3 section-divider-y w-100" >
-            </h2>
-            <h2 className="text-center section-divider-b w-100" >
-            </h2>
-            <h2 className="text-center section-divider-r w-100" >
-            </h2>
-
-
-
-            <h3 className="mt-3 pl-5 pr-5 justify-content-center about-asco-text about">
-              Best Stays of 2023
-            </h3>
-            <p className="mt-1 mb-1 pl-5 pr-5 justify-content-center about-asco-text-smaller about">If you're searching for accommodations in Colombia, don't miss out on these top four bed and breakfast homes, each offering remarkable features and a plethora of exciting activities to enjoy.
-            </p> */}
 
         <Row>
           <div id="homepageCards" className="d-flex flex-wrap justify-content-center pt-3 pb-3 cards-bg">
@@ -279,22 +255,9 @@ function Home() {
           </Row>
         </div>
 
-        {/* <h2 className="mt-3 mb-2 pl-5 pr-5 justify-content-center about-asco-text about">Discover Colombia: A Gem of South America Worth Exploring
-            </h2>
-            <p className="mt-1 mb-3 pl-5 pr-5 justify-content-center about-asco-text-smaller about">Colombia, a country long associated with a turbulent past, has emerged as a top destination for travelers seeking unique experiences, rich cultural heritage, and stunning natural beauty. This diverse South American nation boasts a wealth of reasons why you should add it to your travel bucket list.
-            </p>
-            <h2 className="text-center p-3 mt-2 section-divider-y w-100" >
-            </h2>
-            <h2 className="text-center section-divider-b w-100" >
-            </h2>
-            <h2 className="text-center section-divider-r w-100" >
-            </h2>
-
-            <h3 className="mt-3 pl-5 pr-5 justify-content-center about-asco-text about">Where Cultural Richness, Breathtaking Landscapes, Culinary Delights, and Colombian Love Converge to Create an Unforgettable Journey
-            </h3> */}
 
         <div className='w-100'>
-          <Row className='mt-4  about'>
+          <Row className='mt-4   '>
             <h2 className="text-center mt-2 pb-3 section-divider-y w-100" >
             </h2>
             <h2 className="text-center section-divider-b w-100" >
@@ -304,10 +267,10 @@ function Home() {
 
 
 
-            <h3 className="mt-3 pl-5 pr-5 justify-content-center about-asco-text about">
+            <h3 className="mt-3 pl-5 pr-5 justify-content-center    ">
               Best Stays of 2023
             </h3>
-            <p className="mt-1 mb-1 pl-5 pr-5 justify-content-center about-asco-text-smaller about">If you're searching for accommodations in Colombia, don't miss out on these top four bed and breakfast homes, each offering remarkable features and a plethora of exciting activities to enjoy.
+            <p className="mt-1 mb-1 pl-5 pr-5 justify-content-center  -smaller  ">If you're searching for accommodations in Colombia, don't miss out on these top four bed and breakfast homes, each offering remarkable features and a plethora of exciting activities to enjoy.
             </p>
           </Row>
         </div>
@@ -368,47 +331,119 @@ function Home() {
             )}
           </div>
         </Row>
+        <Row className='mt-5'>
+          <Carousel slide={true} nextIcon={<FontAwesomeIcon icon={faChevronRight} />} style={nextIconStyleTwo}
+            prevIcon={<FontAwesomeIcon icon={faChevronLeft} />} className='about'>
+            <Carousel.Item className="about-carousel-item">
+              <div>
 
+                <div className='about-img-div'>
+                  <Image src={process.env.PUBLIC_URL + "/assets/short/bogotacity.jpg"} className="img-fluid d-flex flex-wrap about-img" />
+                </div>
+                <div className='about-text'>
+                  <h2 className="justify-content-around about-text">Colombia and Attractions in Bogotá
+                  </h2>
+                  <p className="mt-1 mb-3 justify-content-center about-text about-text-p">Bogotá is Colombia's capital city and is responsible for 56% of the country's tourism.
+                  </p>
+                  <div className="button-container mb-3">
+                    <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=1z2wa7nK8zs')} className='btn1'>
+                      <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '120px' }}>
+                        <a href='#home' target="_blank" rel="noreferrer" className="btn1">See Why <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                      </Button>
+                    </Link>
+                  </div>
+                  <h2 className="text-center pl-5 pr-5 pb-3 mb-0 section-divider-y about-text-sd" >
+                  </h2>
+                  <h2 className="text-center section-divider-b  mb-0 about-text-sd " >
+                  </h2>
+                  <h2 className="text-center section-divider-r about-text-sd" >
+                  </h2>
+
+                </div>
+              </div>
+            </Carousel.Item>
+            <Carousel.Item className="about-carousel-item">
+              <div>
+
+                <div className='about-img-div'>
+                  <Image src={process.env.PUBLIC_URL + "/assets/short/sanadresboat.jpg"} className="img-fluid d-flex flex-wrap about-img" />
+                </div>
+                <div className='about-text'>
+                  <h2 className="justify-content-around about-text">San Andres a paradise for beach and sun enthusiasts
+                  </h2>
+                  <p className="mb-3 justify-content-center about-text about-text-p">
+                  This island's clear waters, white sands, and coral reefs attract global visitors seeking relaxation and adventure.
+                  </p>
+                  <div className="button-container mt-3 mb-3">
+                    <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=1z2wa7nK8zs')} className='btn1'>
+                      <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '120px' }}>
+                        <a href='#home' target="_blank" rel="noreferrer" className="btn1">More <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                      </Button>
+                    </Link>
+                  </div>
+                  <h2 className="text-center pl-5 pr-5 pb-3 mb-0 section-divider-y about-text-sd" >
+                  </h2>
+                  <h2 className="text-center section-divider-b  mb-0 about-text-sd " >
+                  </h2>
+                  <h2 className="text-center section-divider-r about-text-sd" >
+                  </h2>
+
+                </div>
+              </div>
+            </Carousel.Item>
+
+
+          </Carousel>
+        </Row>
         <div className='mb-5'>
-          <Row className='mt-4  about'>
+          <Row className='mt-4   '>
             <h2 className="text-center mt-2 pb-3 section-divider-y w-100" >
             </h2>
             <h2 className="text-center section-divider-b w-100" >
             </h2>
             <h2 className="text-center section-divider-r w-100" >
             </h2>
-            <h3 className="mt-3 mb-2 pl-5 pr-5 justify-content-center about-asco-text about">Culinary Delights
+            <h3 className="mt-3 mb-2 pl-5 pr-5 justify-content-center    ">Culinary Delights
             </h3>
-            <p className="mt-1 mb-3 pl-5 pr-5 justify-content-center about-asco-text-smaller about">Colombian cuisine is a feast for the senses, blending indigenous ingredients you can savor traditional dishes like arepas, bandeja paisa, and empanadas, or indulge in fresh tropical fruits and some of the world's finest coffee.
+            <p className="mt-1 mb-3 pl-5 pr-5 justify-content-center  -smaller  ">Colombian cuisine is a feast for the senses, blending indigenous ingredients you can savor traditional dishes like arepas, bandeja paisa, and empanadas, or indulge in fresh tropical fruits and some of the world's finest coffee.
             </p>
 
 
 
-            <h3 className="mt-3 pl-5 pr-5 justify-content-center about-asco-text about">Colombian love
+            <h3 className="mt-3 pl-5 pr-5 justify-content-center    ">Colombian love
             </h3>
-            <p className="mt-1 mb-5 pl-5 pr-5 justify-content-center about-asco-text-smaller about">Colombians are renowned for their warmth and hospitality. You'll find that locals are eager to share their culture and traditions with visitors, making you feel at home and creating lasting memories of your journey.
+            <p className="mt-1 mb-5 pl-5 pr-5 justify-content-center  -smaller  ">Colombians are renowned for their warmth and hospitality. You'll find that locals are eager to share their culture and traditions with visitors, making you feel at home and creating lasting memories of your journey.
             </p>
-            {/* <h2 className="text-center mt-2 section-divider-b w-100" >
-            </h2> 
 
-            <h2 className="text-center mt-2 section-divider-r w-100" >
-            </h2>
-            <h3 className="mt-3 pl-5 pr-5 justify-content-center about-asco-text about">Breathtaking Landscapes
-            </h3>
-            <p className="mt-1 mb-1 pl-5 pr-5 justify-content-center about-asco-text-smaller about">From the lush Amazon rainforest to the towering Andes mountains and the pristine Caribbean coast, Colombia's landscapes are nothing short of spectacular. Whether you're exploring the lush coffee regions, embarking on a trek to the Lost City, or relaxing on the white-sand beaches, Colombia offers a wide array of natural wonders that will leave you in awe.
-            </p> */}
 
 
           </Row>
         </div>
 
-
-        {/* <Container fluid secondary="true" className="d-flex flex-wrap justify-content-around banner">
-          <div className="banner">
-            <Image src={process.env.PUBLIC_URL + "/assets/short/colombia_flag.jpeg"} className="img-fluid d-flex flex-wrap justify-content-around banner-image banner" />
-            <h1 className='mt-0 mb-auto d-flex flex-column justify-content-center banner-text banner text-center'>Venture Villa</h1>
+        <Row>
+          <div id="homepageCards" className="d-flex flex-wrap justify-content-center pt-3 pb-3 cards-bg">
+            <Card className="atribute-cards">
+              <div className="card-content">
+                <Image src={process.env.PUBLIC_URL + "/assets/short/soccerfansshort.jpeg"} className="img-fluid atribute-img" />
+                <div className="text-container">
+                  <h3 className="atribute-text">Cultural Richness</h3>
+                </div>
+              </div>
+            </Card>
+            <Card className="atribute-cards">
+              <div className="card-content">
+                <Image src={process.env.PUBLIC_URL + "/assets/short/colombiadessertshort.jpg"} className="img-fluid atribute-img" />
+                <div className="text-container">
+                  <h3 className="atribute-text">Breathtaking Landscapes</h3>
+                  <p className='atribute-text text-left'>
+                    hello
+                  </p>
+                </div>
+              </div>
+            </Card>
           </div>
-        </Container> */}
+        </Row>
+
 
 
 

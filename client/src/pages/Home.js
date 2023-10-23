@@ -293,7 +293,7 @@ function Home() {
             <h3 className="mt-3 pl-5 pr-5 justify-content-center about-asco-text about">Where Cultural Richness, Breathtaking Landscapes, Culinary Delights, and Colombian Love Converge to Create an Unforgettable Journey
             </h3> */}
 
-        <div>
+        <div className='w-100'>
           <Row className='mt-4  about'>
             <h2 className="text-center mt-2 pb-3 section-divider-y w-100" >
             </h2>

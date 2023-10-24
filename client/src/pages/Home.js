@@ -82,6 +82,8 @@ function Home() {
   const handleShow = () => setShow(true);
 
 
+  
+
 
   return (
     <div className="home">
@@ -372,7 +374,7 @@ function Home() {
                   <h2 className="justify-content-around about-text">San Andres a paradise for beach and sun enthusiasts
                   </h2>
                   <p className="mb-3 justify-content-center about-text about-text-p">
-                  This island's clear waters, white sands, and coral reefs attract global visitors seeking relaxation and adventure.
+                    This island's clear waters, white sands, and coral reefs attract global visitors seeking relaxation and adventure.
                   </p>
                   <div className="button-container mt-3 mb-3">
                     <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=1z2wa7nK8zs')} className='btn1'>
@@ -403,43 +405,61 @@ function Home() {
             </h2>
             <h2 className="text-center section-divider-r w-100" >
             </h2>
-            <h3 className="mt-3 mb-2 pl-5 pr-5 justify-content-center    ">Culinary Delights
+            <h3 className="mt-3 mb-2 pl-5 pr-5 justify-content-center    ">Travel News and Events
             </h3>
-            <p className="mt-1 mb-3 pl-5 pr-5 justify-content-center  -smaller  ">Colombian cuisine is a feast for the senses, blending indigenous ingredients you can savor traditional dishes like arepas, bandeja paisa, and empanadas, or indulge in fresh tropical fruits and some of the world's finest coffee.
+            <p className="mt-1 mb-3 pl-5 pr-5 justify-content-center  -smaller  ">Colombia offers a captivating blend of experiences for travelers. Enjoy classical music in the historic streets of Cartagena at the International Music Festival, explore the Amazon rainforest with eco-tours, and savor the rich flavors of Colombian coffee through farm tours and tastings. With its diverse attractions, Colombia continues to be a must-visit destination
             </p>
-
-
-
-            <h3 className="mt-3 pl-5 pr-5 justify-content-center    ">Colombian love
-            </h3>
-            <p className="mt-1 mb-5 pl-5 pr-5 justify-content-center  -smaller  ">Colombians are renowned for their warmth and hospitality. You'll find that locals are eager to share their culture and traditions with visitors, making you feel at home and creating lasting memories of your journey.
-            </p>
-
-
-
           </Row>
         </div>
 
         <Row>
-          <div id="homepageCards" className="d-flex flex-wrap justify-content-center pt-3 pb-3 cards-bg">
-            <Card className="atribute-cards">
-              <div className="card-content">
-                <Image src={process.env.PUBLIC_URL + "/assets/short/soccerfansshort.jpeg"} className="img-fluid atribute-img" />
-                <div className="text-container">
-                  <h3 className="atribute-text">Cultural Richness</h3>
-                </div>
-              </div>
+          <div id="homepageCards" className="d-flex flex-wrap justify-content-center pt-3 pb-3 cards-bg w-100">
+            <Card className="atribute-cardstwo w-100">
+              <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/shorts/r25RXQVJH50')} className='btn1'>
+                <a href={placesinfo.more} target="_blank" rel="noreferrer" className="btn1" >
+                  <div className="card-content">
+                    <Image src={process.env.PUBLIC_URL + "/assets/short/colombianews.jpeg"} className="img-fluid atribute-image" />
+                      <div className='text-link-container atributes-links'>
+                        <p className='atributes-links'>
+                          Browse News <FontAwesomeIcon icon={faChevronRight} size="xs" />
+                        </p>
+                      </div>
+                    <div className="text-container">
+                      <div className="overlay-container">
+                        <h3 className="text-left atribute-text shown-text">Travel News</h3>
+                        <p className='hidden-text atribute-text text-left'>
+                          Read about the latest travelling news in Colombia
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </Link>
             </Card>
-            <Card className="atribute-cards">
-              <div className="card-content">
-                <Image src={process.env.PUBLIC_URL + "/assets/short/colombiadessertshort.jpg"} className="img-fluid atribute-img" />
-                <div className="text-container">
-                  <h3 className="atribute-text">Breathtaking Landscapes</h3>
-                  <p className='atribute-text text-left'>
-                    hello
-                  </p>
-                </div>
-              </div>
+            <Card className="atribute-cardstwo">
+              <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/shorts/r25RXQVJH50')} className='btn1'>
+                <a href={placesinfo.more} target="_blank" rel="noreferrer" className="btn1" >
+                  <div className="card-content">
+                    <Image src={process.env.PUBLIC_URL + "/assets/short/calideferia.jpeg"} className="img-fluid atribute-image" />
+                    <div className="text-container">
+                      <div>
+                        <h3 className="atribute-text shown-text">Events</h3>
+                        <p className='hidden-text atribute-text text-left'>
+                          From events like La Feria De Cali, y Carnaval de Barranquilla and more
+                        </p>
+                      </div>
+                      <div className='text-link-container atributes-links'>
+                        <p className='atributes-links'>
+                          Events <FontAwesomeIcon icon={faChevronRight} size="xs" />
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+
+                    </div>
+                  </div>
+                </a>
+              </Link>
             </Card>
           </div>
         </Row>

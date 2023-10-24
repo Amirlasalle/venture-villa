@@ -106,7 +106,8 @@ body {
   margin-right: auto;
   /* padding-right: -25px; */
 }
-.about{
+
+.about {
   left: 0 !important;
   right: 0 !important;
   padding: 0 !important;
@@ -114,19 +115,22 @@ body {
   overflow: hidden;
   width: 100vw !important;
 }
-.about-img-div{
-  margin-top: 25px ;
+
+.about-img-div {
+  margin-top: 25px;
   text-align: center;
   overflow: hidden;
   width: 100vw !important;
 }
+
 .about-img {
   margin-top: 25px;
   height: 40vh !important;
   width: 100vw;
   object-fit: cover;
 }
-.about-text{
+
+.about-text {
   overflow: hidden;
   width: 100vw !important;
   padding-left: 10px;
@@ -165,27 +169,31 @@ body {
   text-align: center;
   position: relative;
 }
+
 .about .carousel-control-next,
 .about .carousel-control-prev {
   color: #000000 !important;
   opacity: 1;
-  align-items: flex-start; 
+  align-items: flex-start;
   margin-top: 7px;
-  top: 0; /* Adjust the position to the top */
+  top: 0;
+  /* Adjust the position to the top */
   z-index: 100;
 }
 
 .about .carousel-control-next {
-  right: 0; 
+  right: 0;
 }
 
 @keyframes indicatorAnimation {
   0% {
     transform: translateX(0);
   }
+
   50% {
     transform: translateX(10%);
   }
+
   100% {
     transform: translateX(0%);
   }
@@ -202,7 +210,7 @@ body {
   background-color: rgb(0, 0, 0);
   opacity: 1;
   border-radius: 50%;
-  animation: none; 
+  animation: none;
 }
 
 .about .carousel-indicators button:not(:first-child) {
@@ -214,7 +222,7 @@ body {
   width: 1.95rem !important;
   height: 0.3rem !important;
   border-radius: 0 !important;
-  animation: indicatorAnimation 2s; 
+  animation: indicatorAnimation 2s;
 }
 
 
@@ -357,42 +365,117 @@ body {
 
 .atribute-cards {
   position: relative;
-  /* Enable positioning for child elements */
   background-color: #ffffff;
   border: none !important;
   border-radius: 0;
   margin: 0 !important;
   padding: 0;
   overflow: hidden;
-  /* Clip content that overflows */
+}
+
+.atribute-cardstwo {
+  position: relative;
+  background-color: #ffffff;
+  border: none !important;
+  border-radius: 0;
+  margin: 0 !important;
+  padding: 0;
+  overflow: hidden;
 }
 
 .card-content {
   position: relative;
-  /* Enable positioning for child elements */
+}
+.atribute-img {
+  height: 50vh !important;
+  object-fit: cover;
+  filter: brightness(50%);
 }
 
-.atribute-img {
+.atribute-img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 -20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.atribute-image {
+  width: 100%;
+  height: auto;
+}
+.atribute-image {
+  height: 50vh !important;
+  object-fit: cover;
+  filter: brightness(55%);
+}
+
+.atribute-cardstwo .atribute-image:hover {
+  transform: scale(1.1);
+  box-shadow: -1200 -1200 1200px 1200px rgba(0, 0, 0, 0.777) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1 !important; 
+}
+
+.atribute-image {
   width: 100%;
   height: auto;
 }
 
+.text-link-container {
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  left: 0 !important;
+  bottom: 0 !important;
+  display: block;
+  display: -webkit-flex;
+  z-index: 2;
+  opacity: 1; 
+}
+
 .text-container {
+  padding-bottom: 55px;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 0 !important;
   right: 0;
-  background-color: none;
-  /* Background color with opacity for readability */
-  padding: 10px;
+  z-index: 2;
 }
-
+/* .text-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+} */
+.hidden-text {
+  visibility: visible;
+}
 .atribute-text {
-  text-align: center;
+  text-align: left !important;
   color: #fff;
+  filter: brightness(250%) !important;
+  display: -webkit-flex;
+  padding-left: 20px !important;
 }
 
+.atributes-links {
+  margin-top: 5px;
+  padding-top: 5px;
+  text-align: left !important;
+  color: #31a9e1;
+  filter: brightness(110%) !important;
+  font-size: larger;
+  z-index: 1;
+  padding-left: 10px !important;
+  position: absolute;
+}
 
+.card-content .atributes-links:hover {
+  text-decoration: underline;
+}
 
 .atribute-img {
   height: 50vh !important;
@@ -408,62 +491,12 @@ body {
 
 }
 
-/* .atribute-img {
-  height: 50vh !important;
-  object-fit: cover;
-  filter: brightness(50%);
-}
-.atribute-img:hover {
-  transform: scale(1.1); 
-  transition: transform 0.3s ease;
-  box-shadow: 0 0 -20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-}
-
-.atribute-cards {
-  background-color: #ffffff;
-  background: none !important;
-  border: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow: hidden;
-  border-radius: 0%;
-}
-.atribute-text {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: absolute;
-  transform: translateY(-100%);
-  text-align: center;
-  color: #ff0000;
-  transform: rotateX(-100%);
-} */
-
-/* .atribute-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  justify-content: center;
-  text-align: center;
-  color: #ff0000;
-  transform: translateY(-100%);
-} */
-
 .cards-bg {
 
   overflow: hidden;
   display: flex;
   flex-wrap: nowrap;
-  /* Prevent cards from wrapping */
   justify-content: space-between;
-  /* Distribute cards evenly */
-  /* margin: 0; */
-  /* Remove any margin to make the cards fill the available space */
 }
 
 .history-img {
@@ -2428,13 +2461,16 @@ label form [type='radio'] {
     width: 100vw;
     height: 50vh;
   }
+
   .atribute-cardstwo {
     width: 100vw;
     height: 50vh;
   }
+
   .about-text-sd {
     display: none;
   }
+
 }
 
 
@@ -2442,20 +2478,46 @@ label form [type='radio'] {
   .cards-bg {
     flex-wrap: nowrap;
     justify-content: flex-start;
-    /* Align cards to the left side */
   }
 
   .atribute-cards {
     max-width: 25%;
   }
 
-  .about{
+  .atribute-cardstwo {
+    max-width: 50%;
+  }
+
+  .hidden-text {
+   display: block;
+    position: relative;
+    transform: translateY(160%);
+    transition: transform 0.3s, opacity 0.5s;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .atribute-cardstwo:hover .hidden-text {
+    transform: translateY(0%);
+    visibility: visible;
+    opacity: 1;
+  }
+  .shown-text {
+    position: relative;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+  }
+
+  .atribute-cardstwo:hover .shown-text {
+    transform: translateY(0%);
+  }
+  .about {
     padding-left: 130px;
     padding-right: 130px;
     height: 600px !important;
   }
 
-  .about-carousel-item{
+  .about-carousel-item {
     padding-left: 115px;
     padding-right: 115px;
     height: 600px !important;
@@ -2465,44 +2527,56 @@ label form [type='radio'] {
   .about-img-div {
     margin-top: 25px;
     width: 35rem !important;
-    height: 30rem !important; 
-    float: right; 
+    height: 30rem !important;
+    float: right;
     left: 0 !important;
   }
 
   .about-text {
     padding-top: 70px;
     padding-right: 10px;
-    max-width: 30vw !important; 
+    max-width: 30vw !important;
     float: left !important;
     white-space: wrap;
     /* left: auto !important; */
     /* right: 0 !important; */
     margin-bottom: 0px !important;
   }
+
   .about-text-p {
 
     margin-bottom: 40px;
     /* padding-right: 60px; */
-    max-width: 30vw !important; 
-    float: left !important; 
+    max-width: 30vw !important;
+    float: left !important;
     white-space: wrap;
   }
+
   .about-text-sd {
-    width: 100vw !important; 
+    width: 100vw !important;
     float: left !important;
-    margin-bottom: 100px; /* Float the text div to the left */
+    margin-bottom: 100px;
+    /* Float the text div to the left */
+  }
+
+ .text-link-container {
+    width: 50vw;
+    height: 5rem;
+    left: 0 !important;
+    bottom: 0 !important;
+    z-index: 100 !important;
+    display: -webkit-flex;
   }
 }
 
 @media screen and (min-width: 1325px) {
 
-  .about{
+  .about {
     padding-left: 130px;
     padding-right: 130px;
   }
 
-  .about-carousel-item{
+  .about-carousel-item {
     padding-left: 115px;
     padding-right: 115px;
     margin-right: 0;
@@ -2512,43 +2586,71 @@ label form [type='radio'] {
     margin-top: 25px;
     width: 35rem !important;
     max-width: 50rem;
-    height: 35rem; 
-    float: right; 
+    height: 35rem;
+    float: right;
     left: 0 !important;
   }
 
   .about-text {
     padding-top: 70px;
     padding-right: 10px;
-    max-width: 40vw !important; 
+    max-width: 40vw !important;
     float: left !important;
     white-space: wrap;
     /* left: auto !important; */
     /* right: 0 !important; */
     margin-bottom: 40px;
   }
+
   .about-text-p {
 
     margin-bottom: 40px;
     /* padding-right: 60px; */
-    max-width: 40vw !important; 
-    float: left !important; 
+    max-width: 40vw !important;
+    float: left !important;
     white-space: wrap;
   }
+
   .about-text-sd {
-    width: 100vw !important; 
+    width: 100vw !important;
     float: left !important;
-    margin-bottom: 100px; /* Float the text div to the left */
+    margin-bottom: 100px;
+    /* Float the text div to the left */
   }
+
+  /* .hidden-text {
+    display: block;
+     position: relative;
+     transform: translateY(160%);
+     transition: transform 0.3s, opacity 0.5s;
+     visibility: hidden;
+     opacity: 0;
+   }
+ 
+   .atribute-cardstwo:hover .hidden-text {
+     transform: translateY(-250%);
+     visibility: visible;
+     opacity: 1;
+   }
+   .shown-text {
+     position: relative;
+     transform: translateY(-50%);
+     transition: transform 0.3s;
+   }
+ 
+   .atribute-cardstwo:hover .shown-text {
+     transform: translateY(-150%);
+   } */
 }
+
 @media screen and (min-width: 1750px) {
 
-  .about{
+  .about {
     padding-left: 130px;
     padding-right: 130px;
   }
 
-  .about-carousel-item{
+  .about-carousel-item {
     padding-left: 115px;
     padding-right: 115px;
     margin-right: 0;
@@ -2558,43 +2660,47 @@ label form [type='radio'] {
     margin-top: 25px;
     width: 50rem !important;
     max-width: 50rem;
-    height: 35rem; 
-    float: right; 
+    height: 35rem;
+    float: right;
     left: 0 !important;
   }
 
   .about-text {
     padding-top: 70px;
     padding-right: 10px;
-    max-width: 40vw !important; 
+    max-width: 40vw !important;
     float: left !important;
     white-space: wrap;
     /* left: auto !important; */
     /* right: 0 !important; */
     margin-bottom: 40px;
   }
+
   .about-text-p {
 
     margin-bottom: 40px;
     /* padding-right: 60px; */
-    max-width: 40vw !important; 
-    float: left !important; 
+    max-width: 40vw !important;
+    float: left !important;
     white-space: wrap;
   }
+
   .about-text-sd {
-    width: 100vw !important; 
+    width: 100vw !important;
     float: left !important;
-    margin-bottom: 100px; /* Float the text div to the left */
+    margin-bottom: 100px;
+    /* Float the text div to the left */
   }
 }
+
 @media screen and (min-width: 2325px) {
 
-  .about{
+  .about {
     padding-left: 130px;
     padding-right: 130px;
   }
 
-  .about-carousel-item{
+  .about-carousel-item {
     padding-left: 115px;
     padding-right: 115px;
     margin-right: 0;
@@ -2603,32 +2709,35 @@ label form [type='radio'] {
   .about-img-div {
     margin-top: 25px;
     max-width: 100%;
-    height: 70rem; 
-    float: right; 
+    height: 70rem;
+    float: right;
     left: 0 !important;
   }
 
   .about-text {
     padding-top: 70px;
     padding-right: 10px;
-    max-width: 40rem !important; 
+    max-width: 40rem !important;
     float: left !important;
     white-space: wrap;
     /* left: auto !important; */
     /* right: 0 !important; */
     margin-bottom: 40px;
   }
+
   .about-text-p {
 
     margin-bottom: 40px;
     /* padding-right: 60px; */
-    max-width: 40vw !important; 
-    float: left !important; 
+    max-width: 40vw !important;
+    float: left !important;
     white-space: wrap;
   }
+
   .about-text-sd {
-    width: 100vw !important; 
+    width: 100vw !important;
     float: left !important;
-    margin-bottom: 100px; /* Float the text div to the left */
+    margin-bottom: 100px;
+    /* Float the text div to the left */
   }
 }

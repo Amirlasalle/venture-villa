@@ -13,7 +13,7 @@ import '../App.css'
 import '../index.css'
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronCircleRight, faChevronCircleLeft, faChevronLeft, faChevronRight, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faChevronCircleRight, faChevronCircleLeft, faChevronLeft, faChevronRight, faExternalLinkAlt, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import Modal from 'react-bootstrap/Modal';
 
 // import Col from 'react-bootstrap/Col';
@@ -212,7 +212,7 @@ function Home() {
 
         <Row>
           <div id="homepageCards" className="d-flex flex-wrap justify-content-center pt-3 pb-3 cards-bg">
-            <Card className="atribute-cards">
+            <Card className="atribute-cards w-100">
               <div className="card-content">
                 <Image src={process.env.PUBLIC_URL + "/assets/short/soccerfansshort.jpeg"} className="img-fluid atribute-img" />
                 <div className="text-container">
@@ -481,13 +481,13 @@ function Home() {
         <div className="d-flex flex-wrap justify-content-center pt-3 w-100 sections">
           <Row className='w-100 sections'>
             <Tabs
-              defaultActiveKey="home"
+              defaultActiveKey="universities"
               transition={false}
               id="noanim-tab-example"
               variant='tabs'
               className="mb-3 tabs"
             >
-              <Tab eventKey="education" title="Education" className=" tab">
+              <Tab eventKey="universities" title="Universities" className=" tab">
                 <div></div>
                 <Carousel slide={true} nextIcon={<FontAwesomeIcon icon={faChevronRight} />} style={nextIconStyleTwo}
                   prevIcon={<FontAwesomeIcon icon={faChevronLeft} />} className='about'>
@@ -495,12 +495,12 @@ function Home() {
                     <div>
 
                       <div className='about-img-div'>
-                        <Image src={process.env.PUBLIC_URL + "/assets/short/bogotacity.jpg"} className="img-fluid d-flex flex-wrap about-img" />
+                        <Image src={process.env.PUBLIC_URL + "/assets/short/Universidad-de-los-Andes.jpeg"} className="img-fluid d-flex flex-wrap about-img" />
                       </div>
                       <div className='about-text'>
-                        <h2 className="justify-content-around about-text">Colombia and Attractions in Bogotá
+                        <h2 className="justify-content-around about-text">Universidad de los Andes
                         </h2>
-                        <p className="mt-1 mb-3 justify-content-center about-text about-text-p">Bogotá is Colombia's capital city and is responsible for 56% of the country's tourism.
+                        <p className="justify-content-center about-text about-text-p">Founded in 1948, Universidad de los Andes, Colombia's top-ranked university dedicated to academic excellence and truth-seeking.
                         </p>
                         <div className="button-container mb-3">
                           <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=1z2wa7nK8zs')} className='btn1'>
@@ -528,7 +528,7 @@ function Home() {
                       <div className='about-text'>
                         <h2 className="justify-content-around about-text">San Andres a paradise for beach and sun enthusiasts
                         </h2>
-                        <p className="mb-3 justify-content-center about-text about-text-p">
+                        <p className="justify-content-center about-text about-text-p">
                           This island's clear waters, white sands, and coral reefs attract global visitors seeking relaxation and adventure.
                         </p>
                         <div className="button-container mt-3 mb-3">
@@ -550,8 +550,58 @@ function Home() {
                   </Carousel.Item>
                 </Carousel>
               </Tab>
-              <Tab eventKey="profile" title="Profile" className="tab">
-                Tab content for Profile
+              <Tab eventKey="education" title="Education" className="tab">
+                <div className="d-grid gap-3 ml-5 mr-5 about-carousel-item">
+
+                  <div className='bot'>
+                    <Link to="/universities" onClick={() => handleNavLinkClick('/universities')} className='w-100'>
+                      <Button variant='outline-light' className='btn2 w-100' size="lg">
+                        Browse All Universities <FontAwesomeIcon icon={faChevronRight} size="md" />
+                      </Button>
+                    </Link>
+                  </div>
+
+                  <div className='bot'>
+                    <a href='https://www.youtube.com/watch?v=1z2wa7nK8zs' target="_blank" rel="noreferrer" className="w-100">
+                      <Button variant='outline-light' className='btn2 w-100' size="lg">
+                        Block level button<FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+                      </Button>
+                    </a>
+                  </div>
+
+                  <div className='bot'>
+                    <a href='https://www.youtube.com/watch?v=1z2wa7nK8zs' target="_blank" rel="noreferrer" className="w-100">
+                      <Button variant='outline-light' className='btn2 w-100' size="lg">
+                        Block level button<FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+                      </Button>
+                    </a>
+                  </div>
+
+                  <div className='bot'>
+                    <a href='https://www.youtube.com/watch?v=1z2wa7nK8zs' target="_blank" rel="noreferrer" className="w-100">
+                      <Button variant='outline-light' className='btn2 w-100' size="lg">
+                        Block level button<FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+                      </Button>
+                    </a>
+                  </div>
+
+                  <div className='bot'>
+                    <a href='https://www.youtube.com/watch?v=1z2wa7nK8zs' target="_blank" rel="noreferrer" className="w-100">
+                      <Button variant='outline-light' className='btn2 w-100' size="lg">
+                        Block level button<FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+                      </Button>
+                    </a>
+                  </div>
+
+                  <div className='bot'>
+                    <a href='https://www.youtube.com/watch?v=1z2wa7nK8zs' target="_blank" rel="noreferrer" className="w-100">
+                      <Button variant='outline-light' className='btn2 w-100' size="lg">
+                        Block level button<FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+                      </Button>
+                    </a>
+                  </div>
+
+                </div>
               </Tab>
               <Tab eventKey="companies" title="Companies" className="tab">
                 Tab content for Contact
@@ -563,7 +613,21 @@ function Home() {
           </Row>
         </div>
 
+        <div className='mt-5 mb-5 homepage-signup-img'>
+          <Row className='mb-5'>
+            <div className='history-text'>
+              <h1 className='mt-5 pt-5 d-flex flex-column justify-content-center pl-1'>Your Venture Awaits!</h1>
+              <p className='d-flex flex-column justify-content-center history-para hide-it pb-5 mb-5 '>Create a beautiful travel wishlist of all the enchanting destinations in Colombia you'd love to explore. Indulge in a journey of discovery as you reserve stays at the most exquisite Bed and Breakfasts, all while uncovering the rich tapestry of experiences Colombia has in store for you.</p>
+              <div className="button-container mt-5 mb-3">
+                <Link to="/signup" onClick={() => handleNavLinkClick('/signup')} className='btn1'>
+                  <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '170px' }}> Sign Up Now <FontAwesomeIcon icon={faChevronRight} size="md" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
 
+          </Row>
+        </div>
 
       </Container>
     </div>

@@ -15,6 +15,7 @@ import Profile from './pages/Profile';
 import Culture from './pages/Culture';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Universities from './pages/Universities';
 import SpecificPlace from './components/Places/SpecificPlace';
 
 // Construct our main GraphQL API endpoint
@@ -77,6 +78,10 @@ function App() {
               <Route 
                 path="/culture" 
                 element={<Culture />} 
+              />
+                <Route 
+                path="/universities" 
+                element={<Universities />} 
               />
             </Routes>
 

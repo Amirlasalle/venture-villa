@@ -81,6 +81,59 @@ body {
   filter: brightness(50%);
 
 }
+.carousel-one .carousel-control-next,
+.carousel-one .carousel-control-prev {
+  color: #ffffff !important;
+  opacity: 1;
+  align-items: flex-start;
+  margin-top: 7px;
+  top: 0;
+  z-index: 103;
+}
+
+.carousel-one .carousel-control-next {
+  right: 0;
+}
+
+@keyframes indicatorAnimation {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.carousel-one .carousel-indicators {
+  position: absolute;
+  top: 7px;
+}
+
+.carousel-one .carousel-indicators button {
+  width: 0.4rem !important;
+  height: 0.4rem !important;
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+  border-radius: 50%;
+  animation: none;
+}
+
+.carousel-one .carousel-indicators button:not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.carousel-one .carousel-indicators .active {
+  background-color: #ff3700;
+  width: 1.95rem !important;
+  height: 0.3rem !important;
+  border-radius: 0 !important;
+  animation: indicatorAnimation 2s;
+}
 
 
 .modal-div {
@@ -228,12 +281,16 @@ body {
 .section {
   width: 100vw !important;
 }
-
+.tab .tab-pane{
+  width: 100vw !important;
+  left: 0 !important;
+}
 .tab-content {
-  padding-left: 0 !important;
-  padding-top: 0 !important;
-  padding-right: 0 !important;
-  padding-bottom: auto !important;
+width: 100vw !important;
+left: 0 !important;
+height: auto !important;
+padding-left: 0 !important;
+padding-right: 0 !important;
 }
 
 .sections {

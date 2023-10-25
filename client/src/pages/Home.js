@@ -49,7 +49,7 @@ function Home() {
   // const [listings, setListings] = useState([]);
 
   const nextIconStyle = {
-    fontSize: '10vw',
+    fontSize: '4rem',
     fontWeight: 'bolder',
   };
   const nextIconStyleTwo = {
@@ -91,7 +91,7 @@ function Home() {
     <div className="home">
       <Container fluid secondary="true" className="d-flex flex-wrap justify-content-around home">
 
-        <div id="carousel" className="carousel">
+        <div id="carousel" className="carousel-one">
           <Carousel slide={false} nextIcon={<FontAwesomeIcon icon={faChevronRight} />} style={nextIconStyle}
             prevIcon={<FontAwesomeIcon icon={faChevronLeft} />}>
 
@@ -285,7 +285,7 @@ function Home() {
 
               <Card key={key} className="m-2 p-2  product-cards" style={{ maxWidth: '22rem' }}>
                 <a href={placesinfo.more} target="_blank" rel="noreferrer" className="btn1" >
-                  <Carousel slide={false} nextIcon={<FontAwesomeIcon icon={faChevronCircleRight} />} style={chevIconStyle}
+                  <Carousel slide={false} interval={null} nextIcon={<FontAwesomeIcon icon={faChevronCircleRight} />} style={chevIconStyle}
                     prevIcon={<FontAwesomeIcon icon={faChevronCircleLeft} />} className='next-icon'>
 
                     <Carousel.Item className="carousel">
@@ -336,7 +336,7 @@ function Home() {
           </div>
         </Row>
         <Row className='mt-5'>
-          <Carousel slide={true} nextIcon={<FontAwesomeIcon icon={faChevronRight} />} style={nextIconStyleTwo}
+          <Carousel slide={true} interval={null} nextIcon={<FontAwesomeIcon icon={faChevronRight} />} style={nextIconStyleTwo}
             prevIcon={<FontAwesomeIcon icon={faChevronLeft} />} className='about'>
             <Carousel.Item className="about-carousel-item">
               <div>
@@ -489,7 +489,7 @@ function Home() {
             >
               <Tab eventKey="universities" title="Universities" className=" tab">
                 <div></div>
-                <Carousel slide={true} nextIcon={<FontAwesomeIcon icon={faChevronRight} />} style={nextIconStyleTwo}
+                <Carousel slide={true} interval={null} nextIcon={<FontAwesomeIcon icon={faChevronRight} />} style={nextIconStyleTwo}
                   prevIcon={<FontAwesomeIcon icon={faChevronLeft} />} className='about'>
                   <Carousel.Item className="about-carousel-item">
                     <div>
@@ -504,8 +504,8 @@ function Home() {
                         </p>
                         <div className="button-container mb-3">
                           <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=1z2wa7nK8zs')} className='btn1'>
-                            <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '120px' }}>
-                              <a href='#home' target="_blank" rel="noreferrer" className="btn1">See Why <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                            <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '145px' }}>
+                              <a href='#home' target="_blank" rel="noreferrer" className="btn1">View More <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
                             </Button>
                           </Link>
                         </div>
@@ -523,13 +523,13 @@ function Home() {
                     <div>
 
                       <div className='about-img-div'>
-                        <Image src={process.env.PUBLIC_URL + "/assets/short/sanadresboat.jpg"} className="img-fluid d-flex flex-wrap about-img" />
+                        <Image src={process.env.PUBLIC_URL + "/assets/short/javerianabogota.jpg"} className="img-fluid d-flex flex-wrap about-img" />
                       </div>
                       <div className='about-text'>
-                        <h2 className="justify-content-around about-text">San Andres a paradise for beach and sun enthusiasts
+                        <h2 className="justify-content-around about-text">Pontificia Universidad Javeriana
                         </h2>
                         <p className="justify-content-center about-text about-text-p">
-                          This island's clear waters, white sands, and coral reefs attract global visitors seeking relaxation and adventure.
+                        Pontificia Universidad Javeriana is a private higher education institution, founded in 1623. It is one of the oldest and most prestigious universities in Colombia, with its main campus in Bogota and a branch campus in Cali.
                         </p>
                         <div className="button-container mt-3 mb-3">
                           <Link to="/" onClick={() => handleNavLinkClick('/')} className='btn1'>

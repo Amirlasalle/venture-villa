@@ -7,14 +7,15 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
+import Culture from './pages/Culture';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Universities from './pages/Universities';
 import SpecificPlace from './components/Places/SpecificPlace';
 
 // Construct our main GraphQL API endpoint
@@ -45,7 +46,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
+        <div id='root' className="flex-column justify-flex-start min-100-vh">
           <Header />
         
             <Routes>
@@ -73,8 +74,17 @@ function App() {
               <Route path="/thoughts/:thoughtId" 
                 element={<SingleThought />}
               />
+                <Route path="/place/:id"element= {<SpecificPlace/>}/>
+              <Route 
+                path="/culture" 
+                element={<Culture />} 
+              />
+                <Route 
+                path="/universities" 
+                element={<Universities />} 
+              />
             </Routes>
-        
+
           <Footer />
         </div>
       </Router>

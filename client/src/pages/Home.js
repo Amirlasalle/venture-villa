@@ -7,6 +7,8 @@ import Image from 'react-bootstrap/Image';
 import Row from "react-bootstrap/Row";
 import Carousel from 'react-bootstrap/Carousel';
 import Card from 'react-bootstrap/Card';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 import '../App.css'
 import '../index.css'
 import Button from 'react-bootstrap/Button';
@@ -82,7 +84,7 @@ function Home() {
   const handleShow = () => setShow(true);
 
 
-  
+
 
 
   return (
@@ -377,9 +379,9 @@ function Home() {
                     This island's clear waters, white sands, and coral reefs attract global visitors seeking relaxation and adventure.
                   </p>
                   <div className="button-container mt-3 mb-3">
-                    <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=1z2wa7nK8zs')} className='btn1'>
+                    <Link to="/" onClick={() => handleNavLinkClick('/')} className='btn1'>
                       <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '120px' }}>
-                        <a href='#home' target="_blank" rel="noreferrer" className="btn1">More <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                        More <FontAwesomeIcon icon={faChevronRight} size="md" />
                       </Button>
                     </Link>
                   </div>
@@ -393,10 +395,10 @@ function Home() {
                 </div>
               </div>
             </Carousel.Item>
-
-
           </Carousel>
         </Row>
+
+
         <div className='mb-5'>
           <Row className='mt-4   '>
             <h2 className="text-center mt-2 pb-3 section-divider-y w-100" >
@@ -413,17 +415,17 @@ function Home() {
         </div>
 
         <Row>
-          <div id="homepageCards" className="d-flex flex-wrap justify-content-center pt-3 pb-3 cards-bg w-100">
+          <div id="homepageCards" className="d-flex flex-wrap justify-content-center pt-3 cards-bg w-100">
             <Card className="atribute-cardstwo w-100">
               <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/shorts/r25RXQVJH50')} className='btn1'>
                 <a href={placesinfo.more} target="_blank" rel="noreferrer" className="btn1" >
                   <div className="card-content">
                     <Image src={process.env.PUBLIC_URL + "/assets/short/colombianews.jpeg"} className="img-fluid atribute-image" />
-                      <div className='text-link-container atributes-links'>
-                        <p className='atributes-links'>
-                          Browse News <FontAwesomeIcon icon={faChevronRight} size="xs" />
-                        </p>
-                      </div>
+                    <div className='text-link-container atributes-links'>
+                      <p className='atributes-links'>
+                        Browse All News <FontAwesomeIcon icon={faChevronRight} size="xs" />
+                      </p>
+                    </div>
                     <div className="text-container">
                       <div className="overlay-container">
                         <h3 className="text-left atribute-text shown-text">Travel News</h3>
@@ -455,7 +457,6 @@ function Home() {
                       </div>
                     </div>
                     <div>
-
                     </div>
                   </div>
                 </a>
@@ -464,6 +465,103 @@ function Home() {
           </div>
         </Row>
 
+        <div className='mb-5'>
+          <Row className='w-100 section'>
+            <h2 className="text-center pb-3 section-divider-y w-100" >
+            </h2>
+            <h2 className="text-center section-divider-b w-100" >
+            </h2>
+            <h2 className="text-center section-divider-r w-100" >
+            </h2>
+            <h3 className="mt-3 mb-2 pl-5 pr-5 justify-content-center">Resources to help you navigate the opportunities in Colombia as a foreigner
+            </h3>
+          </Row>
+        </div>
+
+        <div className="d-flex flex-wrap justify-content-center pt-3 w-100 sections">
+          <Row className='w-100 sections'>
+            <Tabs
+              defaultActiveKey="home"
+              transition={false}
+              id="noanim-tab-example"
+              variant='tabs'
+              className="mb-3 tabs"
+            >
+              <Tab eventKey="education" title="Education" className=" tab">
+                <div></div>
+                <Carousel slide={true} nextIcon={<FontAwesomeIcon icon={faChevronRight} />} style={nextIconStyleTwo}
+                  prevIcon={<FontAwesomeIcon icon={faChevronLeft} />} className='about'>
+                  <Carousel.Item className="about-carousel-item">
+                    <div>
+
+                      <div className='about-img-div'>
+                        <Image src={process.env.PUBLIC_URL + "/assets/short/bogotacity.jpg"} className="img-fluid d-flex flex-wrap about-img" />
+                      </div>
+                      <div className='about-text'>
+                        <h2 className="justify-content-around about-text">Colombia and Attractions in Bogotá
+                        </h2>
+                        <p className="mt-1 mb-3 justify-content-center about-text about-text-p">Bogotá is Colombia's capital city and is responsible for 56% of the country's tourism.
+                        </p>
+                        <div className="button-container mb-3">
+                          <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=1z2wa7nK8zs')} className='btn1'>
+                            <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '120px' }}>
+                              <a href='#home' target="_blank" rel="noreferrer" className="btn1">See Why <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                            </Button>
+                          </Link>
+                        </div>
+                        <h2 className="text-center pl-5 pr-5 pb-3 mb-0 section-divider-y about-text-sd" >
+                        </h2>
+                        <h2 className="text-center section-divider-b  mb-0 about-text-sd " >
+                        </h2>
+                        <h2 className="text-center section-divider-r about-text-sd" >
+                        </h2>
+
+                      </div>
+                    </div>
+                  </Carousel.Item>
+                  <Carousel.Item className="about-carousel-item">
+                    <div>
+
+                      <div className='about-img-div'>
+                        <Image src={process.env.PUBLIC_URL + "/assets/short/sanadresboat.jpg"} className="img-fluid d-flex flex-wrap about-img" />
+                      </div>
+                      <div className='about-text'>
+                        <h2 className="justify-content-around about-text">San Andres a paradise for beach and sun enthusiasts
+                        </h2>
+                        <p className="mb-3 justify-content-center about-text about-text-p">
+                          This island's clear waters, white sands, and coral reefs attract global visitors seeking relaxation and adventure.
+                        </p>
+                        <div className="button-container mt-3 mb-3">
+                          <Link to="/" onClick={() => handleNavLinkClick('/')} className='btn1'>
+                            <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '120px' }}>
+                              More <FontAwesomeIcon icon={faChevronRight} size="md" />
+                            </Button>
+                          </Link>
+                        </div>
+                        <h2 className="text-center pl-5 pr-5 pb-3 mb-0 section-divider-y about-text-sd" >
+                        </h2>
+                        <h2 className="text-center section-divider-b  mb-0 about-text-sd " >
+                        </h2>
+                        <h2 className="text-center section-divider-r about-text-sd" >
+                        </h2>
+
+                      </div>
+                    </div>
+                  </Carousel.Item>
+                </Carousel>
+              </Tab>
+              <Tab eventKey="profile" title="Profile" className="tab">
+                Tab content for Profile
+              </Tab>
+              <Tab eventKey="companies" title="Companies" className="tab">
+                Tab content for Contact
+              </Tab>
+              <Tab eventKey="airlines" title="Airlines" className="tab">
+                Tab content for Contact
+              </Tab>
+            </Tabs>
+          </Row>
+        </div>
 
 
 

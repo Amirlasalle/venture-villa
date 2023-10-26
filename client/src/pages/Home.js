@@ -97,7 +97,7 @@ function Home() {
 
             <Carousel.Item className="carousel">
               <Image src={process.env.PUBLIC_URL + "/assets/short/colombiaflagshort.jpeg"} className="img-fluid d-flex flex-wrap justify-content-center slide-image" />
-              <Carousel.Caption className='mt-0 mb-auto d-flex flex-column justify-content-center outlined-text text-center'>
+              <Carousel.Caption className='mt-0 pl-0 mb-auto d-flex flex-column justify-content-center outlined-text text-center'>
                 <h2 className='outlined-text'>Colombia is a Venture Waiting to happen</h2>
                 <div className="button-container btn1">
                   <Button variant="info" onClick={handleShow} size="md" className="carousel-btn btn-block mx-auto btn1" style={{ maxWidth: '150px' }}> Learn More <FontAwesomeIcon icon={faExternalLinkAlt} />
@@ -265,8 +265,8 @@ function Home() {
         <div className='mt-5 history-img'>
           <Row className=''>
             <div className='history-text'>
-              <h2 className='d-flex flex-column justify-content-center pl-1 mt-5'>Colombia's Tourism Evolution</h2>
-              <p className='d-flex flex-column justify-content-center history-para  '>Colombia's tourism history is a captivating tale of transformation and resilience. From the mysterious allure of its pre-Columbian civilizations to the tumultuous years marked by conflict, and ultimately, its remarkable resurgence as a sought-after destination, the story of Colombian tourism is a testament to the nation's enduring spirit. The country's journey from a turbulent history to a beacon of adventure and cultural diversity is an inspiring narrative that invites visitors to be part of its ongoing renaissance, making Colombia a destination brimming with captivating tales yet to be told.</p>
+              <h2 className='d-flex flex-column justify-content-center  mt-5'>Colombia's Tourism Evolution</h2>
+              <p className='d-flex flex-column justify-content-center history-para'>Colombia's tourism history is a captivating tale of transformation and resilience. From the mysterious allure of its pre-Columbian civilizations to the tumultuous years marked by conflict, and ultimately, its remarkable resurgence as a sought-after destination, the story of Colombian tourism is a testament to the nation's enduring spirit. The country's journey from a turbulent history to a beacon of adventure and cultural diversity is an inspiring narrative that invites visitors to be part of its ongoing renaissance, making Colombia a destination brimming with captivating tales yet to be told.</p>
             </div>
           </Row>
         </div>
@@ -753,8 +753,8 @@ function Home() {
         <div className='mt-5 mb-5 homepage-signup-img'>
           <Row className='mb-5'>
             <div className='history-text'>
-              <h1 className='mt-2 pt-5 d-flex flex-column justify-content-center pl-1'>Your Venture Awaits!</h1>
-              <p className='d-flex flex-column justify-content-center history-para hide-it pb-5 mb-5 '>Create a beautiful travel wishlist of all the enchanting destinations in Colombia you'd love to explore. Indulge in a journey of discovery as you reserve stays at the most exquisite Bed and Breakfasts, all while uncovering the rich tapestry of experiences Colombia has in store for you.</p>
+              <h1 className='mt-2 d-flex flex-column justify-content-center pl-1'>Your Venture Awaits!</h1>
+              <p className='d-flex flex-column justify-content-center history-para'>Create a Colombian travel bucket list, book charming B&Bs, and embark on a journey to uncover Colombia's diverse experiences.</p>
               <div className="button-container mt-5 mb-3">
                 <Link to="/signup" onClick={() => handleNavLinkClick('/signup')} className='btn1'>
                   <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '170px' }}> Sign Up Now <FontAwesomeIcon icon={faChevronRight} size="md" />

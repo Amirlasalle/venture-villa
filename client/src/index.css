@@ -751,7 +751,7 @@ body {
 .homepage-signup-img {
   position: relative;
   width: 100vw !important;
-  height: 50vh !important;
+  height: 60vh !important;
 }
 
 .homepage-signup-img::before {
@@ -767,21 +767,29 @@ body {
 }
 
 .history-text {
-  text-align: center;
+  text-align: center !important;
+  
   color: #ffffff;
   position: relative;
   z-index: 1;
-  height: 50vh;
+  height: 60vh;
   overflow: auto;
   margin: 0;
+  padding: 10px !important;
 }
 
-
+.outlined-text {
+  padding-left: 0 !important;
+  text-align: center;
+  color: white;
+  font-size: 2rem !important;
+  font-weight: bolder !important;
+}
 
 .history-para {
-  text-align: center;
+  text-align: center !important;
   color: #ffffff;
-  padding: 7px;
+  padding: 15px !important;
 }
 
 

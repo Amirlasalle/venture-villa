@@ -98,7 +98,7 @@ function Home() {
             <Carousel.Item className="carousel">
               <Image src={process.env.PUBLIC_URL + "/assets/short/colombiaflagshort.jpeg"} className="img-fluid d-flex flex-wrap justify-content-center slide-image" />
               <Carousel.Caption className='mt-0 mb-auto d-flex flex-column justify-content-center outlined-text text-center'>
-                <h3 className='outlined-text'>Colombia is a Venture Waiting to happen</h3>
+                <h2 className='outlined-text'>Colombia is a Venture Waiting to happen</h2>
                 <div className="button-container btn1">
                   <Button variant="info" onClick={handleShow} size="md" className="carousel-btn btn-block mx-auto btn1" style={{ maxWidth: '150px' }}> Learn More <FontAwesomeIcon icon={faExternalLinkAlt} />
                   </Button>
@@ -121,7 +121,7 @@ function Home() {
             <Carousel.Item className="carousel">
               <Image src={process.env.PUBLIC_URL + "/assets/short/cartagenashort.jpeg"} className="img-fluid d-flex flex-wrap justify-content-around slide-image" />
               <Carousel.Caption className='mt-0 mb-auto d-flex flex-column justify-content-center outlined-text text-center'>
-                <h3 className='outlined-text'>In Cartagena Every Day Feels Like a Fiesta!</h3>
+                <h2 className='outlined-text'>In Cartagena Every Day Feels Like a Fiesta!</h2>
                 <div className="button-container">
                   <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/shorts/r25RXQVJH50')} className='btn1'>
                     <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '145px' }}>
@@ -137,7 +137,7 @@ function Home() {
             <Carousel.Item className="carousel">
               <Image src={process.env.PUBLIC_URL + "/assets/short/sanandresshort.jpeg"} className="img-fluid d-flex flex-wrap justify-content-around slide-image" />
               <Carousel.Caption className='mt-0 mb-auto d-flex flex-column justify-content-center outlined-text text-center'>
-                <h3 className='outlined-text'>Where Paradise Meets Passion!</h3>
+                <h2 className='outlined-text'>Where Paradise Meets Passion!</h2>
                 <div className="button-container">
                   <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=1z2wa7nK8zs')} className='btn1'>
                     <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '120px' }}>
@@ -153,7 +153,7 @@ function Home() {
             <Carousel.Item className="carousel">
               <Image src={process.env.PUBLIC_URL + "/assets/short/Bogotashort.jpeg"} className="img-fluid d-flex flex-wrap justify-content-around slide-image" />
               <Carousel.Caption className='mt-0 mb-auto d-flex flex-column justify-content-center outlined-text text-center'>
-                <h3 className='outlined-text'>Bogota Is A City of Endless Horizons and Vibrant Realities!</h3>
+                <h2 className='outlined-text'>Bogota Is A City of Endless Horizons and Vibrant Realities!</h2>
                 <div className="button-container">
                   <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=1z2wa7nK8zsr')} className='btn1'>
                     <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '145px' }}>
@@ -169,7 +169,7 @@ function Home() {
             <Carousel.Item className="carousel">
               <Image src={process.env.PUBLIC_URL + "/assets/short/colombiacali.jpeg"} className="img-fluid d-flex flex-wrap justify-content-around slide-image" />
               <Carousel.Caption className='mt-0 mb-auto d-flex flex-column justify-content-center outlined-text text-center'>
-                <h3 className='outlined-text'>Cali: Where Salsa, Sunshine, and Smiles Await!</h3>
+                <h2 className='outlined-text'>Cali: Where Salsa, Sunshine, and Smiles Await!</h2>
                 <div className="button-container">
                   <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=BamIljS3reIr')} className='btn1'>
                     <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '120px' }}>
@@ -184,17 +184,29 @@ function Home() {
           </Carousel>
         </div>
 
+        <Row className=''>
+          <div className='about'>
+             <div className="about-div-item">
+             
+
+                <div className='about-img-div-one'>
+                  <Image src={process.env.PUBLIC_URL + "/assets/short/colombiaforest.jpeg"} className="img-fluid d-flex flex-wrap about-img-one" />
+                </div>
+                <div className='about-text-one'>
+                  <h1 className="pl-3">Discover Colombia: A Gem of South America Worth Exploring
+                  </h1>
+                  <p className="pl-3 mb-3 justify-content-center about-text-p">Colombia, a country long associated with a turbulent past, has emerged as a top destination for travelers seeking unique experiences, rich cultural heritage, and stunning natural beauty. This diverse South American nation boasts a wealth of reasons why you should add it to your travel bucket list.
+                  </p>
+                </div>
+              </div>
+          </div>
+        </Row>
 
 
 
 
         <div>
-          <Row className='mt-4   '>
-            <Image src={process.env.PUBLIC_URL + "/assets/short/antioquiashort.jpeg"} className="img-fluid d-flex flex-wrap justify-content-around page-img" />
-            <h2 className="mt-3 mb-2 pl-5 pr-5 justify-content-center    ">Discover Colombia: A Gem of South America Worth Exploring
-            </h2>
-            <p className="mt-1 mb-3 pl-5 pr-5 justify-content-center  -smaller  ">Colombia, a country long associated with a turbulent past, has emerged as a top destination for travelers seeking unique experiences, rich cultural heritage, and stunning natural beauty. This diverse South American nation boasts a wealth of reasons why you should add it to your travel bucket list.
-            </p>
+          <Row className='mt-4'>
             <h2 className="text-center p-3 mt-2 section-divider-y w-100" >
             </h2>
             <h2 className="text-center section-divider-b w-100" >
@@ -202,8 +214,8 @@ function Home() {
             <h2 className="text-center section-divider-r w-100" >
             </h2>
 
-            <h3 className="mt-3 pl-5 pr-5 justify-content-center    ">Where Cultural Richness, Breathtaking Landscapes, Culinary Delights, and Colombian Love Converge to Create an Unforgettable Journey
-            </h3>
+            <h2 className="mt-3 pr-5 justify-content-center">Where Cultural Richness, Breathtaking Landscapes, Culinary Delights, and Colombian Love Converge to Create an Unforgettable Journey
+            </h2>
 
 
           </Row>
@@ -216,7 +228,7 @@ function Home() {
               <div className="card-content">
                 <Image src={process.env.PUBLIC_URL + "/assets/short/soccerfansshort.jpeg"} className="img-fluid atribute-img" />
                 <div className="text-container">
-                  <h3 className="atribute-text">Cultural Richness</h3>
+                  <h3 className="atribute-text">Cultural<br></br>Richness</h3>
                 </div>
               </div>
             </Card>
@@ -224,7 +236,7 @@ function Home() {
               <div className="card-content">
                 <Image src={process.env.PUBLIC_URL + "/assets/short/colombiadessertshort.jpg"} className="img-fluid atribute-img" />
                 <div className="text-container">
-                  <h3 className="atribute-text">Breathtaking Landscapes</h3>
+                  <h3 className="atribute-text">Breathtaking<br></br>Landscapes</h3>
                 </div>
               </div>
             </Card>
@@ -232,7 +244,7 @@ function Home() {
               <div className="card-content">
                 <Image src={process.env.PUBLIC_URL + "/assets/short/colombianfoodshort.jpeg"} className="img-fluid atribute-img" />
                 <div className="text-container">
-                  <h3 className="atribute-text">Culinary Delights</h3>
+                  <h3 className="atribute-text">Culinary<br></br>Delights</h3>
                 </div>
               </div>
             </Card>
@@ -240,7 +252,7 @@ function Home() {
               <div className="card-content">
                 <Image src={process.env.PUBLIC_URL + "/assets/short/colombiawomanfoodshort.jpg"} className="img-fluid atribute-img" />
                 <div className="text-container">
-                  <h3 className="atribute-text">Colombian Love</h3>
+                  <h3 className="atribute-text">Colombian<br></br>Love</h3>
                 </div>
               </div>
             </Card>
@@ -253,7 +265,7 @@ function Home() {
         <div className='mt-5 history-img'>
           <Row className=''>
             <div className='history-text'>
-              <h2 className='d-flex flex-column justify-content-center pl-1'>Colombia's Tourism Evolution</h2>
+              <h2 className='d-flex flex-column justify-content-center pl-1 mt-5'>Colombia's Tourism Evolution</h2>
               <p className='d-flex flex-column justify-content-center history-para  '>Colombia's tourism history is a captivating tale of transformation and resilience. From the mysterious allure of its pre-Columbian civilizations to the tumultuous years marked by conflict, and ultimately, its remarkable resurgence as a sought-after destination, the story of Colombian tourism is a testament to the nation's enduring spirit. The country's journey from a turbulent history to a beacon of adventure and cultural diversity is an inspiring narrative that invites visitors to be part of its ongoing renaissance, making Colombia a destination brimming with captivating tales yet to be told.</p>
             </div>
           </Row>
@@ -261,8 +273,8 @@ function Home() {
 
 
         <div className='w-100'>
-          <Row className='mt-4   '>
-            <h2 className="text-center mt-2 pb-3 section-divider-y w-100" >
+          <Row className=''>
+            <h2 className="text-center pb-4 section-divider-y w-100" >
             </h2>
             <h2 className="text-center section-divider-b w-100" >
             </h2>
@@ -271,10 +283,10 @@ function Home() {
 
 
 
-            <h3 className="mt-3 pl-5 pr-5 justify-content-center    ">
+            <h2 className="mt-3 pr-5 justify-content-center    ">
               Best Stays of 2023
-            </h3>
-            <p className="mt-1 mb-1 pl-5 pr-5 justify-content-center  -smaller  ">If you're searching for accommodations in Colombia, don't miss out on these top four bed and breakfast homes, each offering remarkable features and a plethora of exciting activities to enjoy.
+            </h2>
+            <p className="mt-1 mb-1 pr-5 justify-content-center  -smaller  ">If you're searching for accommodations in Colombia, don't miss out on these top four bed and breakfast homes, each offering remarkable features and a plethora of exciting activities to enjoy.
             </p>
           </Row>
         </div>
@@ -345,9 +357,9 @@ function Home() {
                   <Image src={process.env.PUBLIC_URL + "/assets/short/bogotacity.jpg"} className="img-fluid d-flex flex-wrap about-img" />
                 </div>
                 <div className='about-text'>
-                  <h2 className="justify-content-around about-text">Colombia and Attractions in Bogotá
+                  <h2 className="justify-content-around pl-0 about-text">Colombia and Attractions in Bogotá
                   </h2>
-                  <p className="mt-1 mb-3 justify-content-center about-text about-text-p">Bogotá is Colombia's capital city and is responsible for 56% of the country's tourism.
+                  <p className="pl-0 mb-3 justify-content-center about-text about-text-p">Bogotá is Colombia's capital city and is responsible for 56% of the country's tourism.
                   </p>
                   <div className="button-container mb-3">
                     <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=1z2wa7nK8zs')} className='btn1'>
@@ -373,9 +385,9 @@ function Home() {
                   <Image src={process.env.PUBLIC_URL + "/assets/short/sanadresboat.jpg"} className="img-fluid d-flex flex-wrap about-img" />
                 </div>
                 <div className='about-text'>
-                  <h2 className="justify-content-around about-text">San Andres a paradise for beach and sun enthusiasts
+                  <h2 className="justify-content-around pl-0 about-text">San Andres a paradise for beach and sun enthusiasts
                   </h2>
-                  <p className="mb-3 justify-content-center about-text about-text-p">
+                  <p className="mb-3 pl-0 justify-content-center about-text about-text-p">
                     This island's clear waters, white sands, and coral reefs attract global visitors seeking relaxation and adventure.
                   </p>
                   <div className="button-container mt-3 mb-3">
@@ -407,9 +419,9 @@ function Home() {
             </h2>
             <h2 className="text-center section-divider-r w-100" >
             </h2>
-            <h3 className="mt-3 mb-2 pl-5 pr-5 justify-content-center    ">Travel News and Events
-            </h3>
-            <p className="mt-1 mb-3 pl-5 pr-5 justify-content-center  -smaller  ">Colombia offers a captivating blend of experiences for travelers. Enjoy classical music in the historic streets of Cartagena at the International Music Festival, explore the Amazon rainforest with eco-tours, and savor the rich flavors of Colombian coffee through farm tours and tastings. With its diverse attractions, Colombia continues to be a must-visit destination
+            <h2 className="mt-3 mb-2 pr-5 justify-content-center    ">Travel News and Events
+            </h2>
+            <p className="mt-1 mb-3 pr-5 justify-content-center  -smaller  ">Colombia offers a captivating blend of experiences for travelers. Enjoy classical music in the historic streets of Cartagena at the International Music Festival, explore the Amazon rainforest with eco-tours, and savor the rich flavors of Colombian coffee through farm tours and tastings. With its diverse attractions, Colombia continues to be a must-visit destination
             </p>
           </Row>
         </div>
@@ -473,8 +485,8 @@ function Home() {
             </h2>
             <h2 className="text-center section-divider-r w-100" >
             </h2>
-            <h3 className="mt-3 mb-2 pl-5 pr-5 justify-content-center">Resources to help you navigate the opportunities in Colombia as a foreigner
-            </h3>
+            <h2 className="mt-3 mb-2 pr-5 justify-content-center">Resources to help you navigate the opportunities in Colombia as a foreigner
+            </h2>
           </Row>
         </div>
 
@@ -498,9 +510,9 @@ function Home() {
                         <Image src={process.env.PUBLIC_URL + "/assets/short/Universidad-de-los-Andes.jpeg"} className="img-fluid d-flex flex-wrap about-img" />
                       </div>
                       <div className='about-text'>
-                        <h2 className="justify-content-around about-text">Universidad de los Andes
+                        <h2 className="justify-content-around pl-0 about-text">Universidad de los Andes
                         </h2>
-                        <p className="justify-content-center about-text about-text-p">Founded in 1948, Universidad de los Andes, Colombia's top-ranked university dedicated to academic excellence and truth-seeking.
+                        <p className="justify-content-center pl-0 about-text about-text-p">Founded in 1948, Universidad de los Andes, Colombia's top-ranked university dedicated to academic excellence and truth-seeking.
                         </p>
                         <div className="button-container mb-3">
                           <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=1z2wa7nK8zs')} className='btn1'>
@@ -526,9 +538,9 @@ function Home() {
                         <Image src={process.env.PUBLIC_URL + "/assets/short/javerianabogota.jpg"} className="img-fluid d-flex flex-wrap about-img" />
                       </div>
                       <div className='about-text'>
-                        <h2 className="justify-content-around about-text">Pontificia Universidad Javeriana
+                        <h2 className="justify-content-around pl-0 about-text">Pontificia Universidad Javeriana
                         </h2>
-                        <p className="justify-content-center about-text about-text-p">
+                        <p className="justify-content-center pl-0 about-text about-text-p">
                         Pontificia Universidad Javeriana is a private higher education institution, founded in 1623. It is one of the oldest and most prestigious universities in Colombia, with its main campus in Bogota and a branch campus in Cali.
                         </p>
                         <div className="button-container mt-3 mb-3">
@@ -624,9 +636,9 @@ function Home() {
                         <Image src={process.env.PUBLIC_URL + "/assets/short/avianca.jpg"} className="img-fluid d-flex flex-wrap about-img" />
                       </div>
                       <div className='about-text'>
-                        <h2 className="justify-content-around about-text">Avianca Airlines
+                        <h2 className="justify-content-around pl-0 about-text">Avianca Airlines
                         </h2>
-                        <p className="justify-content-center about-text about-text-p">Discover great flight deals with Avianca, serving 75 destinations. Find year-round travel offers and book your next trip, and Venture away!
+                        <p className="justify-content-center pl-0 about-text about-text-p">Discover great flight deals with Avianca, serving 75 destinations. Find year-round travel offers and book your next trip, and Venture away!
                         </p>
                         <div className="button-container mb-3">
                             <a href='https://www.avianca.com/en/' target="_blank" rel="noreferrer" className="btn1">
@@ -652,9 +664,9 @@ function Home() {
                         <Image src={process.env.PUBLIC_URL + "/assets/short/latamair.jpeg"} className="img-fluid d-flex flex-wrap about-img" />
                       </div>
                       <div className='about-text'>
-                        <h2 className="justify-content-around about-text">LATAM Airlines Colombia
+                        <h2 className="justify-content-around pl-0 about-text">LATAM Airlines Colombia
                         </h2>
-                        <p className="justify-content-center about-text about-text-p">
+                        <p className="justify-content-center pl-0 about-text about-text-p">
                         LATAM Airlines Colombia, Colombia's second-largest carrier, connects you with regional domestic flights and cargo services. Your gateway to Colombia, based at Bogotá's El Dorado International Airport.
                         </p>
                         <div className="button-container mb-3">
@@ -681,9 +693,9 @@ function Home() {
                         <Image src={process.env.PUBLIC_URL + "/assets/short/copa-airlines.jpeg"} className="img-fluid d-flex flex-wrap about-img" />
                       </div>
                       <div className='about-text'>
-                        <h2 className="justify-content-around about-text">Copa Airlines
+                        <h2 className="justify-content-around pl-0 about-text">Copa Airlines
                         </h2>
-                        <p className="justify-content-center about-text about-text-p">
+                        <p className="justify-content-center pl-0 about-text about-text-p">
                         Copa Airlines: Panama's Flag Carrier, part of Star Alliance, based in Panama City, with Tocumen International Airport as its main hub.
                         </p>
                         <div className="button-container mb-3">
@@ -710,9 +722,9 @@ function Home() {
                         <Image src={process.env.PUBLIC_URL + "/assets/short/satenaair.jpeg"} className="img-fluid d-flex flex-wrap about-img" />
                       </div>
                       <div className='about-text'>
-                        <h2 className="justify-content-around about-text">Satena Airlines
+                        <h2 className="justify-content-around pl-0 about-text">Satena Airlines
                         </h2>
-                        <p className="justify-content-center about-text about-text-p">
+                        <p className="justify-content-center pl-0 about-text about-text-p">
                         SATENA: Bogotá-based airline, government-majority owned, focused on improving connectivity in remote areas, hub at El Dorado International Airport.
                         </p>
                         <div className="button-container mb-3">

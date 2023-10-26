@@ -477,16 +477,19 @@ padding-right: 0 !important;
   border-radius: 50% !important;
   margin: 0 5px;
 }
-
+.carousel-indicators{
+  z-index: 1 !important;
+}
 .btn1 {
+  position: relative;
   text-decoration: none !important;
   color: #fff;
-  z-index: 999 !important;
+  z-index: 2 !important;
 }
 
 .btn1:hover {
   text-decoration: none !important;
-  z-index: 999 !important;
+  z-index: 2 !important;
 }
 
 /* .gpu {
@@ -1846,6 +1849,7 @@ a:hover {
   width: 100%;
   display: block;
   text-align: center;
+  z-index: 999 !important;
 }
 
 .btn.btn-primary {

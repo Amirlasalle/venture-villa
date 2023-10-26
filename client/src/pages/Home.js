@@ -99,8 +99,8 @@ function Home() {
               <Image src={process.env.PUBLIC_URL + "/assets/short/colombiaflagshort.jpeg"} className="img-fluid d-flex flex-wrap justify-content-center slide-image" />
               <Carousel.Caption className='mt-0 mb-auto d-flex flex-column justify-content-center outlined-text text-center'>
                 <h3 className='outlined-text'>Colombia is a Venture Waiting to happen</h3>
-                <div className="button-container">
-                  <Button variant="info" onClick={handleShow} size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '150px' }}> Learn More <FontAwesomeIcon icon={faExternalLinkAlt} />
+                <div className="button-container btn1">
+                  <Button variant="info" onClick={handleShow} size="md" className="carousel-btn btn-block mx-auto btn1" style={{ maxWidth: '150px' }}> Learn More <FontAwesomeIcon icon={faExternalLinkAlt} />
                   </Button>
 
                   <div className='ml-5 modal-div'>
@@ -488,7 +488,7 @@ function Home() {
               className="mb-3 tabs"
             >
               <Tab eventKey="universities" title="Universities" className=" tab">
-                <div></div>
+               
                 <Carousel slide={true} interval={null} nextIcon={<FontAwesomeIcon icon={faChevronRight} />} style={nextIconStyleTwo}
                   prevIcon={<FontAwesomeIcon icon={faChevronLeft} />} className='about'>
                   <Carousel.Item className="about-carousel-item">
@@ -562,41 +562,49 @@ function Home() {
                   </div>
 
                   <div className='bot'>
-                    <a href='https://www.youtube.com/watch?v=1z2wa7nK8zs' target="_blank" rel="noreferrer" className="w-100">
+                    <a href='https://www.gooverseas.com/study-abroad/colombia' target="_blank" rel="noreferrer" className="w-100">
                       <Button variant='outline-light' className='btn2 w-100' size="lg">
-                        Block level button<FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+                        Study abroad programs in Colombia <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
                       </Button>
                     </a>
                   </div>
 
                   <div className='bot'>
-                    <a href='https://www.youtube.com/watch?v=1z2wa7nK8zs' target="_blank" rel="noreferrer" className="w-100">
+                    <a href='https://www.unisabana.edu.co/englishversion/academic-programs/undergraduate/gastronomy/' target="_blank" rel="noreferrer" className="w-100">
                       <Button variant='outline-light' className='btn2 w-100' size="lg">
-                        Block level button<FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+                        The number one culinary progam in Colombia <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
                       </Button>
                     </a>
                   </div>
 
                   <div className='bot'>
-                    <a href='https://www.youtube.com/watch?v=1z2wa7nK8zs' target="_blank" rel="noreferrer" className="w-100">
+                    <a href='https://ingenieria.bogota.unal.edu.co/en/programs/undergraduate/mechanical-engineering.html' target="_blank" rel="noreferrer" className="w-100">
                       <Button variant='outline-light' className='btn2 w-100' size="lg">
-                        Block level button<FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+                      The top-ranked Mechanical Engineering program in Colombia <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
                       </Button>
                     </a>
                   </div>
 
                   <div className='bot'>
-                    <a href='https://www.youtube.com/watch?v=1z2wa7nK8zs' target="_blank" rel="noreferrer" className="w-100">
+                    <a href='https://centrocatalina.com/' target="_blank" rel="noreferrer" className="w-100">
                       <Button variant='outline-light' className='btn2 w-100' size="lg">
-                        Block level button<FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+                       Learn Spanish in Medellin <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
                       </Button>
                     </a>
                   </div>
 
                   <div className='bot'>
-                    <a href='https://www.youtube.com/watch?v=1z2wa7nK8zs' target="_blank" rel="noreferrer" className="w-100">
+                    <a href='https://salsapura.com/en/salsa-school-in-cali-colombia-salsa-academy-in-cali-colombia/' target="_blank" rel="noreferrer" className="w-100">
                       <Button variant='outline-light' className='btn2 w-100' size="lg">
-                        Block level button<FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+                        Elevate your dance skills in Cali, the salsa capital of the world <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+                      </Button>
+                    </a>
+                  </div>
+
+                  <div className='bot'>
+                    <a href='https://www.alliance-training.com/our-facilities/medellin-colombia/#:~:text=MEDELLIN%20TRAINING%20CENTER,UAEAC%2Dapproved%20pilot%20training%20programs' target="_blank" rel="noreferrer" className="w-100">
+                      <Button variant='outline-light' className='btn2 w-100' size="lg">
+                        Flight training in Medellin with Alliance Aviation <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
                       </Button>
                     </a>
                   </div>
@@ -607,7 +615,124 @@ function Home() {
                 Tab content for Contact
               </Tab>
               <Tab eventKey="airlines" title="Airlines" className="tab">
-                Tab content for Contact
+              <Carousel slide={true} interval={null} nextIcon={<FontAwesomeIcon icon={faChevronRight} />} style={nextIconStyleTwo}
+                  prevIcon={<FontAwesomeIcon icon={faChevronLeft} />} className='about'>
+                  <Carousel.Item className="about-carousel-item">
+                    <div>
+
+                      <div className='about-img-div'>
+                        <Image src={process.env.PUBLIC_URL + "/assets/short/avianca.jpg"} className="img-fluid d-flex flex-wrap about-img" />
+                      </div>
+                      <div className='about-text'>
+                        <h2 className="justify-content-around about-text">Avianca Airlines
+                        </h2>
+                        <p className="justify-content-center about-text about-text-p">Discover great flight deals with Avianca, serving 75 destinations. Find year-round travel offers and book your next trip, and Venture away!
+                        </p>
+                        <div className="button-container mb-3">
+                            <a href='https://www.avianca.com/en/' target="_blank" rel="noreferrer" className="btn1">
+                              <Button variant="info" size="md" className="carousel-btn btn-block mx-auto btn1" style={{ maxWidth: '155px' }}>
+                              Book Flights <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" />
+                            </Button>
+                            </a>
+                        </div>
+                        <h2 className="text-center pl-5 pr-5 pb-3 mb-0 section-divider-y about-text-sd" >
+                        </h2>
+                        <h2 className="text-center section-divider-b  mb-0 about-text-sd " >
+                        </h2>
+                        <h2 className="text-center section-divider-r about-text-sd" >
+                        </h2>
+
+                      </div>
+                    </div>
+                  </Carousel.Item>
+                  <Carousel.Item className="about-carousel-item">
+                    <div>
+
+                      <div className='about-img-div'>
+                        <Image src={process.env.PUBLIC_URL + "/assets/short/latamair.jpeg"} className="img-fluid d-flex flex-wrap about-img" />
+                      </div>
+                      <div className='about-text'>
+                        <h2 className="justify-content-around about-text">LATAM Airlines Colombia
+                        </h2>
+                        <p className="justify-content-center about-text about-text-p">
+                        LATAM Airlines Colombia, Colombia's second-largest carrier, connects you with regional domestic flights and cargo services. Your gateway to Colombia, based at Bogotá's El Dorado International Airport.
+                        </p>
+                        <div className="button-container mb-3">
+                            <a href='https://www.latamairlines.com/us/en' target="_blank" rel="noreferrer" className="btn1">
+                              <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '155px' }}>
+                              Book Flights <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" />
+                            </Button>
+                            </a>
+                        </div>
+                        <h2 className="text-center pl-5 pr-5 pb-3 mb-0 section-divider-y about-text-sd" >
+                        </h2>
+                        <h2 className="text-center section-divider-b  mb-0 about-text-sd " >
+                        </h2>
+                        <h2 className="text-center section-divider-r about-text-sd" >
+                        </h2>
+
+                      </div>
+                    </div>
+                  </Carousel.Item>
+                  <Carousel.Item className="about-carousel-item">
+                    <div>
+
+                      <div className='about-img-div'>
+                        <Image src={process.env.PUBLIC_URL + "/assets/short/copa-airlines.jpeg"} className="img-fluid d-flex flex-wrap about-img" />
+                      </div>
+                      <div className='about-text'>
+                        <h2 className="justify-content-around about-text">Copa Airlines
+                        </h2>
+                        <p className="justify-content-center about-text about-text-p">
+                        Copa Airlines: Panama's Flag Carrier, part of Star Alliance, based in Panama City, with Tocumen International Airport as its main hub.
+                        </p>
+                        <div className="button-container mb-3">
+                            <a href='https://www.copaair.com/en-us/' target="_blank" rel="noreferrer" className="btn1">
+                              <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '155px' }}>
+                              Book Flights <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" />
+                            </Button>
+                            </a>
+                        </div>
+                        <h2 className="text-center pl-5 pr-5 pb-3 mb-0 section-divider-y about-text-sd" >
+                        </h2>
+                        <h2 className="text-center section-divider-b  mb-0 about-text-sd " >
+                        </h2>
+                        <h2 className="text-center section-divider-r about-text-sd" >
+                        </h2>
+
+                      </div>
+                    </div>
+                  </Carousel.Item>
+                  <Carousel.Item className="about-carousel-item">
+                    <div>
+
+                      <div className='about-img-div'>
+                        <Image src={process.env.PUBLIC_URL + "/assets/short/satenaair.jpeg"} className="img-fluid d-flex flex-wrap about-img" />
+                      </div>
+                      <div className='about-text'>
+                        <h2 className="justify-content-around about-text">Satena Airlines
+                        </h2>
+                        <p className="justify-content-center about-text about-text-p">
+                        SATENA: Bogotá-based airline, government-majority owned, focused on improving connectivity in remote areas, hub at El Dorado International Airport.
+                        </p>
+                        <div className="button-container mb-3">
+                            <a href='https://www.satena.com/' target="_blank" rel="noreferrer" className="btn1">
+                              <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '155px' }}>
+                              Book Flights <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" />
+                            </Button>
+                            </a>
+                        </div>
+                        <h2 className="text-center pl-5 pr-5 pb-3 mb-0 section-divider-y about-text-sd" >
+                        </h2>
+                        <h2 className="text-center section-divider-b  mb-0 about-text-sd " >
+                        </h2>
+                        <h2 className="text-center section-divider-r about-text-sd" >
+                        </h2>
+
+                      </div>
+                    </div>
+                  </Carousel.Item>
+                </Carousel>
               </Tab>
             </Tabs>
           </Row>

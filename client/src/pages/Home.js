@@ -580,7 +580,7 @@ function Home() {
                   <div className='bot'>
                     <a href='https://ingenieria.bogota.unal.edu.co/en/programs/undergraduate/mechanical-engineering.html' target="_blank" rel="noreferrer" className="w-100">
                       <Button variant='outline-light' className='btn2 w-100' size="lg">
-                      The top-ranked Mechanical Engineering program in Colombia <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+                      Colombia's premier Mechanical Engineering program <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
                       </Button>
                     </a>
                   </div>
@@ -596,7 +596,7 @@ function Home() {
                   <div className='bot'>
                     <a href='https://salsapura.com/en/salsa-school-in-cali-colombia-salsa-academy-in-cali-colombia/' target="_blank" rel="noreferrer" className="w-100">
                       <Button variant='outline-light' className='btn2 w-100' size="lg">
-                        Elevate your dance skills in Cali, the salsa capital of the world <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+                        Elevate your dance skills in Cali <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
                       </Button>
                     </a>
                   </div>
@@ -604,7 +604,7 @@ function Home() {
                   <div className='bot'>
                     <a href='https://www.alliance-training.com/our-facilities/medellin-colombia/#:~:text=MEDELLIN%20TRAINING%20CENTER,UAEAC%2Dapproved%20pilot%20training%20programs' target="_blank" rel="noreferrer" className="w-100">
                       <Button variant='outline-light' className='btn2 w-100' size="lg">
-                        Flight training in Medellin with Alliance Aviation <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+                        Flight training with Alliance Aviation <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
                       </Button>
                     </a>
                   </div>
@@ -741,7 +741,7 @@ function Home() {
         <div className='mt-5 mb-5 homepage-signup-img'>
           <Row className='mb-5'>
             <div className='history-text'>
-              <h1 className='mt-5 pt-5 d-flex flex-column justify-content-center pl-1'>Your Venture Awaits!</h1>
+              <h1 className='mt-2 pt-5 d-flex flex-column justify-content-center pl-1'>Your Venture Awaits!</h1>
               <p className='d-flex flex-column justify-content-center history-para hide-it pb-5 mb-5 '>Create a beautiful travel wishlist of all the enchanting destinations in Colombia you'd love to explore. Indulge in a journey of discovery as you reserve stays at the most exquisite Bed and Breakfasts, all while uncovering the rich tapestry of experiences Colombia has in store for you.</p>
               <div className="button-container mt-5 mb-3">
                 <Link to="/signup" onClick={() => handleNavLinkClick('/signup')} className='btn1'>

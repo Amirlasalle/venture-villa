@@ -758,6 +758,7 @@ padding-right: 0 !important;
 }
 
 
+
 .history-para {
   text-align: center;
   color: #ffffff;
@@ -2291,9 +2292,12 @@ label form [type='radio'] {
     align-content: center;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 675px) {
 .hide-it{
 display: none !important;
+  }
+  .btn2 {
+    font-size: small !important;
   }
 
 }

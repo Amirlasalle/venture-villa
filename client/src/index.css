@@ -505,13 +505,83 @@ body {
   z-index: 2 !important;
 }
 
-/* .gpu {
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
-} */
+
+.university-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  border-radius: 0; 
+  overflow: hidden;
+  transition: transform 0.3s;
+  border-color: #a0a0a058 !important;
+}
+
+.university-card:hover {
+  transform: scale(1.15);
+  border-left: 5px solid transparent;
+  box-shadow: 10px 10px 10px 0 rgba(51, 51, 51, .14), 0 1px 7px 0 rgba(51, 51, 51, .2);
+  border-image: repeating-linear-gradient(to bottom,
+      rgb(255, 242, 0) 0, rgb(255, 242, 0) 50%,
+      rgb(0, 9, 138) 50%, rgb(0, 9, 138) 75%,
+      red 75%, red 100%) 1;
+  border-image-slice: 1;
+}
+.university-card .card-body{
+width: 100% !important;
+}
+.uni-btn {
+  text-decoration: none !important;
+  color: #000;
+  z-index: 7 !important;
+}
+
+.uni-img {
+  text-align: left !important;
+  float: left !important;
+  margin-left: -25px; 
+  border: none;
+}
+.fcr{
+  text-align: right !important;
+  float: right !important;
+  margin-right: -55px;
+}
+
+.uni-name {
+  text-align: left;
+}
+
+.uni-brief {
+  text-align: left;
+  padding-left: 0;
+  transition: opacity 0.5s;
+  display: none;
+  opacity: 0;
+  font-size: small;
+  font-weight: lighter;
+  color: #3d3d3d;
+}
+
+.university-card:hover .uni-brief {
+  display: -webkit-inline-flex;
+  opacity: 1;
+}
+.university-card:hover .uni-img {
+  margin-right: 0; 
+  margin-left: 0; 
+}
+.university-card:hover .fcr {
+  margin-right: 0; 
+  margin-left: 0; 
+}
+.uni-btn:hover {
+  text-decoration: none !important;
+  color: #000;
+  z-index: 2 !important;
+}
+
 
 .btn {
   display: inline-block;
@@ -666,15 +736,7 @@ body {
   z-index: 2;
 }
 
-/* .text-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; 
-} */
+
 .hidden-text {
   visibility: visible;
 }
@@ -764,7 +826,7 @@ body {
 
 .history-text {
   text-align: center !important;
-  
+
   color: #ffffff;
   position: relative;
   z-index: 1;
@@ -868,6 +930,9 @@ body {
   text-align: start;
   position: relative;
 }
+
+
+.university-cards {}
 
 /**
  * Render the `main` element consistently in IE.
@@ -2854,12 +2919,14 @@ label form [type='radio'] {
     float: right;
     left: 0 !important;
   }
+
   .about-img-one {
     margin-top: 25px;
     height: 70vh !important;
     width: 100vw;
     object-fit: cover;
   }
+
   .about-img-div-one {
     width: 50vw !important;
     height: 50vh !important;
@@ -2876,6 +2943,7 @@ label form [type='radio'] {
     white-space: wrap;
     margin-bottom: auto !important;
   }
+
   .about-text-one {
     padding-top: 70px;
     padding-bottom: 40px;
@@ -2984,7 +3052,7 @@ label form [type='radio'] {
 
   .about-text-p {
     font-weight: 100 !important;
-   padding-bottom: 40px !important;
+    padding-bottom: 40px !important;
     max-width: 40vw !important;
     float: left !important;
     white-space: wrap;

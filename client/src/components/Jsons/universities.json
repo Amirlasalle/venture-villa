@@ -3,36 +3,36 @@
         "name": "Universidad de los Andes",
         "brief": "Founded in 1948, one of Colombia's top-ranked universities.",
         "uniUrl": "https://venture-villa-app-f0af34deb85d.herokuapp.com/",
-        "logo": "./assets/thumbnails/losandesTN.png"
+        "logo": "./assets/thumbnails/University_of_Los_Andes.png"
     },
     {
         "name": "Universidad Javeriana",
-        "brief": "Founded in 1623. It is one of the oldest, most traditional, and prestigious Colombian universities",
-
+        "brief": "Founded in 1623. One of the oldest, most traditional, and prestigious Colombian universities",
+        "uniUrl": "",
         "logo": "./assets/thumbnails/javerianalogo.png"
     },
     {
+        "name": "National University of Colombia",
+        "brief": "Founded in 1948, one of Colombia's top-ranked universities.",
+        "uniUrl": "",
+        "logo": "./assets/thumbnails/NationalUniversityofColombia.png"
+    },
+    {
         "name": "Universidad de los Andes",
         "brief": "Founded in 1948, one of Colombia's top-ranked universities.",
-
+        "uniUrl": "",
         "logo": "./assets/thumbnails/losandesTN.png"
     },
     {
         "name": "Universidad de los Andes",
         "brief": "Founded in 1948, one of Colombia's top-ranked universities.",
-
+        "uniUrl": "",
         "logo": "./assets/thumbnails/losandesTN.png"
     },
     {
         "name": "Universidad de los Andes",
         "brief": "Founded in 1948, one of Colombia's top-ranked universities.",
-
-        "logo": "./assets/thumbnails/losandesTN.png"
-    },
-    {
-        "name": "Universidad de los Andes",
-        "brief": "Founded in 1948, one of Colombia's top-ranked universities.",
-
+        "uniUrl": "",
         "logo": "./assets/thumbnails/losandesTN.png"
     }
 ]

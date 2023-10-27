@@ -30,14 +30,14 @@ const Universities = () => {
                 key={key}
                 className="m-5 university-card" style={{ width: '30rem', height: '10rem' }}>
                   <Card.Body className="d-flex justify-content-center align-items-center">
-                    <Col xs={3} md={3} className=''>
+                    <Col xs={2} md={2} className='uni-img'>
                       <Image src={process.env.PUBLIC_URL + university.logo} className="img-fluid uni-img" thumbnail />
                     </Col>
                     <div className="text-center">
                       <Card.Title>
-                        <h5 className='pl-0 uni-name'>
+                        <h6 className='pl-0 uni-name'>
                           {university.name}
-                        </h5>
+                        </h6>
                       </Card.Title>
                       <Card.Text className="pl-0 uni-brief">
                         <p className='pl-0 uni-brief'>{university.brief}</p>

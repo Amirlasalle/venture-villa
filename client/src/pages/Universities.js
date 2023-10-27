@@ -23,14 +23,14 @@ const Universities = () => {
     <div className="home">
       <Container fluid secondary="true" className="d-flex flex-wrap justify-content-around home">
         <Row className='mt-5'>
-          <div id="homepageCards" className="d-flex flex-wrap justify-content-center">
+          <div id="homepageCards" className="d-flex flex-wrap justify-content-center uni-btn align-items-center">
             {universities.map((university, key) => (
+                <a href={university.uniUrl} target="_blank" rel="noreferrer" className="uni-btn">
               <Card
                 key={key}
                 className="m-5 university-card" style={{ width: '30rem', height: '10rem' }}>
-                <a href={university.uniUrl} target="_blank" rel="noreferrer" className="uni-btn">
                   <Card.Body className="d-flex justify-content-center align-items-center">
-                    <Col xs={3} md={3} className='uni-img'>
+                    <Col xs={3} md={3} className=''>
                       <Image src={process.env.PUBLIC_URL + university.logo} className="img-fluid uni-img" thumbnail />
                     </Col>
                     <div className="text-center">
@@ -45,8 +45,8 @@ const Universities = () => {
                     </div>
                     <Card.Subtitle className="mb-2 mr-1 uni-fcr"><span className='text-muted fcr'><FontAwesomeIcon icon={faChevronRight} size="lg" /></span></Card.Subtitle>
                   </Card.Body>
-                </a>
               </Card>
+                </a>
             ))}
           </div>
         </Row>

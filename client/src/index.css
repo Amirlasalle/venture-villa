@@ -505,124 +505,135 @@ body {
   z-index: 2 !important;
 }
 
+.no-decoration:hover {
+  text-decoration: none;
+}
 
-/* .university-card {
+.uni-main {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin: 20px;
-  border-radius: 0; 
-  overflow: hidden;
-  transition: transform 0.3s;
-  border-color: #a0a0a058 !important;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 20px;
 }
-
-.university-card:hover {
-  transform: scale(1.15);
-  border-left: 5px solid transparent;
-  box-shadow: 10px 10px 10px 0 rgba(51, 51, 51, .14), 0 1px 7px 0 rgba(51, 51, 51, .2);
-  border-image: repeating-linear-gradient(to bottom,
-      rgb(255, 242, 0) 0, rgb(255, 242, 0) 50%,
-      rgb(0, 9, 138) 50%, rgb(0, 9, 138) 75%,
-      red 75%, red 100%) 1;
-  border-image-slice: 1;
-} */
-/* .university-card .card-body{
-width: 100% !important;
-} */
-.university-card {
+.document-category:hover .document-category-container, .document-category:focus .document-category-container {
+  transform: scale(1, 0.7);
+}
+.document-category-container:hover, .document-category-container:focus {
+  transform: scale(1, 0.7);
+}
+.document-category-container, .document-category-container-with-toggle {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  color: #333333;
+  font-weight: bold;
+  height: 100px;
+  width: 100%;
+  transition: 0s ease-in-out;
+  background: #ffffff;
+  font-size: 16px;
+}
+/* html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+} */
+.document-category:hover, .document-category:focus {
+  transform: scale(1, 1.5);
+  cursor: pointer;
+  border-inline-start: 5px solid rgb(4, 14, 158);
+  box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.297443);
+  outline: none;
+}
+.document-category, .document-category-with-toggle {
+  flex: 30%;
+  background: #ffffff;
+  border: 1px solid #e7e6e6;
   margin: 20px;
-  border-radius: 0;
-  overflow: hidden;
-  /* transition: transform 0.3s; */
 }
-
-.university-card:hover {
-  transform: scaleY(1.15); /* Scale vertically when hovered */
-  border-left: 5px solid transparent;
-  box-shadow: 10px 10px 10px 0 rgba(51, 51, 51, 0.14), 0 1px 7px 0 rgba(51, 51, 51, 0.2);
-  border-image: repeating-linear-gradient(
-      to bottom,
-      rgb(255, 242, 0) 0,
-      rgb(255, 242, 0) 50%,
-      rgb(0, 9, 138) 50%,
-      rgb(0, 9, 138) 75%,
-      red 75%,
-      red 100%
-    ) 1;
-  border-image-slice: 1;
+button {
+  appearance: auto;
+  text-rendering: auto;
+  color: buttontext;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  box-sizing: border-box;
+  background-color: buttonface;
+  writing-mode: horizontal-tb !important;
+  margin: 0em;
+  padding-block: 1px;
+  padding-inline: 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonborder;
+  border-image: initial;
 }
-
-/* Styles for other elements */
-
-
-.uni-btn {
-  text-decoration: none !important;
-  color: #000;
-  z-index: 7 !important;
+.document-icon-title {
+  display: flex;
+  align-items: center;
 }
-
-.uni-img {
-  text-align: left !important;
-  float: left !important;
-  margin-left: -60px; 
+.icon {
+  padding: 15px;
   border: none;
-  margin-right: 0;
 }
-.fcr{
-  text-align: right !important;
-  float: right !important;
-  margin-right: -65px;
-  align-items: center !important;
+.icon-medium {
+  font-size:  50px !important;
+  line-height: 50px !important;
+  fill: currentcolor;
+  display: inline-flex;
+  user-select: none;
+  border: none;
 }
-
-.uni-name {
-  text-align: left;
-  margin-left: -45px;
+.document-count {
+  padding-inline-end: 15px;
 }
-
-.uni-brief {
-  text-align: left;
-  padding-left: 0;
-  transition: opacity 0.5s;
+.document-title {
+  text-align: start;
+}
+.document-title .document-category-desc {
   display: none;
-  opacity: 0;
-  font-size: small;
+  text-align: initial;
+  color: #9fa0a4;
   font-weight: lighter;
-  color: #3d3d3d;
+  font-size: 15px;
 }
-
-.university-card:hover .uni-brief {
-  display: -webkit-inline-flex;
-  opacity: 1;
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
-.university-card:hover .uni-img {
-  margin-right: 0; 
-  margin-left: 0; 
-  transform: scaleY(.9);
-  
+.document-category-desc {
+  padding-inline-end: 10px;
+  margin-top: 10px;
 }
-.university-card:hover .uni-name {
-  text-align: left;
-  margin-left: 0;
-  transform: scaleY(.9);
+.document-category:hover .document-category-desc, .document-category:focus .document-category-desc {
+  display: block;
 }
-.university-card:hover .fcr {
-  margin-right: 0; 
-  transform: scaleY(.9);
-  float: right;
+.document-category-container, .document-category-container-with-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #333333;
+  font-weight: bold;
+  height: 100px;
+  width: 100%;
+  transition: 0s ease-in-out;
+  background: #ffffff;
+  font-size: 16px;
 }
-.uni-btn:hover {
-  text-decoration: none !important;
-  color: #000;
-  z-index: 2 !important;
-}
-
 
 .btn {
   display: inline-block;
@@ -715,7 +726,7 @@ width: 100% !important;
   border-radius: 0;
   margin: 0 !important;
   padding: 0;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .card-content {
@@ -973,7 +984,6 @@ width: 100% !important;
 }
 
 
-.university-cards {}
 
 /**
  * Render the `main` element consistently in IE.
@@ -2907,12 +2917,12 @@ label form [type='radio'] {
   }
 
   .atributes-links {
-    margin-top: 5px;
+    margin-top: 15px;
     padding-top: 5px;
     text-align: left !important;
     color: #31a9e1;
     filter: brightness(110%) !important;
-    font-size: larger;
+    font-size: large;
     z-index: 200;
     padding-left: 10px !important;
     position: absolute;
@@ -3204,4 +3214,10 @@ label form [type='radio'] {
     margin-bottom: 100px;
     /* Float the text div to the left */
   }
+}
+
+@media screen and (max-width: 800px){
+.uni-main {
+    flex-direction: column !important;
+}
 }

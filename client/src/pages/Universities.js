@@ -49,52 +49,13 @@ const Universities = () => {
     const nextIconStyleTwo = {
         fontSize: '2rem',
         fontWeight: 'bolder',
-    };
-
-
-    const cardsPerSlide = 3; // Number of cards per slide
-
-    const numberOfSlides = Math.ceil(tradeschool.length / cardsPerSlide);
-  
-    const slides = [];
-  
-    for (let i = 0; i < numberOfSlides; i++) {
-      const start = i * cardsPerSlide;
-      const end = start + cardsPerSlide;
-  
-      const slideCards = tradeschool.slice(start, end);
-  
-      slides.push(
-        <Carousel.Item key={i}>
-          <div className="card-slider d-flex">
-            {slideCards.map((trade, index) => (
-              <Card key={index} className="trade-items" style={{ width: "18rem", margin: "0 1rem" }}>
-                <a href={trade.uniUrl} className="item">
-                  <Card.Body className="trade-body d-flex flex-column">
-                    <div>
-                      <Card.Img
-                        variant="top"
-                        className="img-fluid trade-image"
-                        src={process.env.PUBLIC_URL + trade.logo}
-                      />
-                    </div>
-                    <div>
-                      <Card.Title>{trade.name}</Card.Title>
-                    </div>
-                  </Card.Body>
-                </a>
-              </Card>
-            ))}
-          </div>
-        </Carousel.Item>
-      );
-    }
+      };
 
     return (
         <div className="uni-container">
             <div className="uni-title-container">
-                <h1 className="title pl-0">Colombia &amp; Top Ten Universities</h1>
-                <h2 className="title-subcontent pl-0">Browse these amazing top ten universities in Colombia</h2>
+                <h1 className="title ">Colombia &amp; Top Ten Universities</h1>
+                <h2 className="title-subcontent">Browse these amazing top ten universities in Colombia</h2>
             </div>
 
             <div className="uni-main mt-5 mb-5">
@@ -127,35 +88,7 @@ const Universities = () => {
                     ))}
                 </Container>
             </div>
-
             <div className="offer-container mb-5">
-                <div className="offerCategory">
-                    <Accordion>
-                        <Card className="trades">
-                            <Card.Header className="trade-header">
-                                <ContextAwareToggle eventKey="0" className="icon-small">
-                                    {/* Add your toggle icon */}
-                                </ContextAwareToggle>
-                                <span id="category-title" className="category-title pl-5">
-                                    Top 10 Majors in Colombia
-                                </span>
-                            </Card.Header>
-                            <Accordion.Collapse eventKey="0">
-                                <Card.Body className="content" style={{ width: "100%" }}>
-                                    <div className="offer-container mb-5">
-                                        <div className="offerCategory">
-                                            <Carousel interval={null} nextIcon={<FontAwesomeIcon icon={faChevronRight} />} style={nextIconStyleTwo}
-                                                prevIcon={<FontAwesomeIcon icon={faChevronLeft} />} className='trade'>{slides}</Carousel>
-                                        </div>
-                                    </div>
-                                </Card.Body>
-                            </Accordion.Collapse>
-                        </Card>
-                    </Accordion>
-                </div>
-            </div>
-
-            {/* <div className="offer-container mb-5">
 
 
 
@@ -173,17 +106,17 @@ const Universities = () => {
                             </Card.Header>
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body className='content' style={{ width: '100%' }}>
-                                    <div className="w-100">
+                                    <div className="">
                                         <Carousel slide={false} interval={null} nextIcon={<FontAwesomeIcon icon={faChevronRight} />} style={nextIconStyleTwo}
                                             prevIcon={<FontAwesomeIcon icon={faChevronLeft} />}
-                                            className=' trade-carousel trade'
+                                            className='w-100 trade-carousel about'
                                         >
                                             {tradeschool.map((trade, index) => (
                                                 <Carousel.Item key={index} >
                                                     <Card className="trade-items" style={{ width: '18rem' }}>
                                                         <a href={trade.uniUrl} className="item">
                                                             <Card.Body className='trade-body'>
-                                                                <Card.Img variant="top" className="img-fluid trade-image" no-hover="true" src={process.env.PUBLIC_URL + trade.logo}  />
+                                                                <Card.Img variant="top" className="img-fluid  hydrated" no-hover="true" src={process.env.PUBLIC_URL + trade.logo} style={{ height: '150px', width: '150px' }} thumbnail />
                                                                 <Card.Title>{trade.name}</Card.Title>
                                                             </Card.Body>
                                                         </a>
@@ -199,7 +132,7 @@ const Universities = () => {
 
 
                 </div>
-            </div> */}
+            </div>
         </div>
 
     );

@@ -509,6 +509,261 @@ body {
   text-decoration: none;
 }
 
+#slider-container {
+  width: 90%;
+  height: 200px;
+  background: gray;
+  margin-top: 320px;
+  margin-bottom: 520px;
+}
+
+.slider-container-page {
+  justify-content: center;
+  display: flex;
+
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+
+}
+
+.uni-container {
+  padding: 0px 56px;
+  /* margin-left: 13px; */
+}
+
+.uni-title-container {
+  overflow-x: visible;
+  left: 0;
+}
+
+.title {
+  color: #333333;
+  margin-top: 50px;
+  margin-bottom: 12px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 42px !important;
+  line-height: 50px;
+  left: 0 !important;
+}
+
+.title-subcontent {
+  text-align: start;
+  font-size: 18px !important;
+  font-weight: 400;
+  line-height: 30px;
+  margin: 0px;
+  margin-bottom: -24px;
+}
+
+.content {
+
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto hidden;
+  align-items: stretch;
+  position: relative;
+  scroll-snap-type: x mandatory;
+}
+
+
+.arrows-overlay.start-overlay ::before {
+  content: "";
+  width: 56px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  pointer-events: none;
+  z-index: 1;
+  left: 0px;
+  background: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0));
+}
+
+
+.trade-carousel {
+  margin-top: 20px;
+  background-color: #f8f8f8;
+  width: 100% !important;
+}
+
+.trade .carousel-control-next,
+.trade .carousel-control-prev {
+  color: #000000 !important;
+  opacity: 1;
+  align-items: flex-start;
+  margin-top: 7px;
+  top: 0;
+  z-index: 103;
+}
+
+.trade .carousel-control-next {
+  right: 0;
+}
+
+@keyframes indicatorAnimation {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.trade .carousel-indicators {
+  position: absolute;
+  top: 7px;
+}
+
+.trade .carousel-indicators button {
+  width: 0.4rem !important;
+  height: 0.4rem !important;
+  background-color: rgb(0, 0, 0);
+  opacity: 1;
+  border-radius: 50%;
+  animation: none;
+}
+
+.trade .carousel-indicators button:not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.trade .carousel-indicators .active {
+  background-color: #ff3700;
+  width: 1.95rem !important;
+  height: 0.3rem !important;
+  border-radius: 0 !important;
+  animation: indicatorAnimation 2s;
+}
+
+.trade-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.trade-item:hover {
+  background-color: #f0f0f0;
+  /* Card background color on hover */
+}
+
+.trade-body {
+  padding: 0;
+}
+
+.trade-items {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto hidden;
+  align-items: stretch;
+  position: relative;
+  scroll-snap-type: x mandatory;
+}
+
+.trade-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  /* Card background color */
+  border: 1px solid #ddd;
+  /* Card border */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Card box shadow */
+  min-height: 250px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.arrow {
+  position: absolute;
+  z-index: 2;
+  top: calc(50% - 14px);
+  color: var(--se-alternative-contrast, rgba(51, 51, 51, 0.5));
+  padding: 2px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 0px;
+}
+
+.category-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.offer-categories {
+  margin: 20px 0;
+  padding: 2em;
+  background-color: #fff;
+  display: flex;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.card .trade-header {
+  background-color: transparent !important;
+  border: none;
+}
+
+.trades {
+  border: none !important;
+}
+
+.trade-item {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.icon-small {
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.offer-icon {
+  border-radius: 10px;
+  min-width: 50px;
+  height: 50px;
+  border: none;
+  box-shadow: 5px 5px 5px 0 rgba(51, 51, 51, .14), 0 1px 7px 0 rgba(51, 51, 51, .2);
+}
+
+
+.up-to-down {
+  color: rgb(4, 14, 158);
+}
+
+.down-to-up {
+  color: #ffffff;
+}
+
+
+.title-main {
+  color: #333333;
+  margin-top: 50px;
+  margin-bottom: 12px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 42px !important;
+  line-height: 50px;
+}
+
+
 .uni-main {
   display: flex;
   flex-direction: row;
@@ -516,13 +771,19 @@ body {
   width: 100%;
   margin-top: 20px;
 }
-.document-category:hover .document-category-container, .document-category:focus .document-category-container {
+
+.document-category:hover .document-category-container,
+.document-category:focus .document-category-container {
   transform: scale(1, 0.7);
 }
-.document-category-container:hover, .document-category-container:focus {
+
+.document-category-container:hover,
+.document-category-container:focus {
   transform: scale(1, 0.7);
 }
-.document-category-container, .document-category-container-with-toggle {
+
+.document-category-container,
+.document-category-container-with-toggle {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -534,6 +795,7 @@ body {
   background: #ffffff;
   font-size: 16px;
 }
+
 /* html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -541,19 +803,23 @@ body {
   font-size: 100%;
   vertical-align: baseline;
 } */
-.document-category:hover, .document-category:focus {
+.document-category:hover,
+.document-category:focus {
   transform: scale(1, 1.5);
   cursor: pointer;
   border-inline-start: 5px solid rgb(4, 14, 158);
   box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.297443);
   outline: none;
 }
-.document-category, .document-category-with-toggle {
+
+.document-category,
+.document-category-with-toggle {
   flex: 30%;
   background: #ffffff;
   border: 1px solid #e7e6e6;
   margin: 20px;
 }
+
 button {
   appearance: auto;
   text-rendering: auto;
@@ -579,28 +845,34 @@ button {
   border-color: buttonborder;
   border-image: initial;
 }
+
 .document-icon-title {
   display: flex;
   align-items: center;
 }
+
 .icon {
   padding: 15px;
   border: none;
 }
+
 .icon-medium {
-  font-size:  50px !important;
+  font-size: 50px !important;
   line-height: 50px !important;
   fill: currentcolor;
   display: inline-flex;
   user-select: none;
   border: none;
 }
+
 .document-count {
   padding-inline-end: 15px;
 }
+
 .document-title {
   text-align: start;
 }
+
 .document-title .document-category-desc {
   display: none;
   text-align: initial;
@@ -608,6 +880,7 @@ button {
   font-weight: lighter;
   font-size: 15px;
 }
+
 p {
   display: block;
   margin-block-start: 1em;
@@ -615,14 +888,19 @@ p {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
+
 .document-category-desc {
   padding-inline-end: 10px;
   margin-top: 10px;
 }
-.document-category:hover .document-category-desc, .document-category:focus .document-category-desc {
+
+.document-category:hover .document-category-desc,
+.document-category:focus .document-category-desc {
   display: block;
 }
-.document-category-container, .document-category-container-with-toggle {
+
+.document-category-container,
+.document-category-container-with-toggle {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -634,6 +912,7 @@ p {
   background: #ffffff;
   font-size: 16px;
 }
+
 
 .btn {
   display: inline-block;
@@ -2434,6 +2713,13 @@ label form [type='radio'] {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .trade-carousel {
+    display: block;
+    margin: 0px 25px;
+  }
+}
+
 @media screen and (max-width: 675px) {
   .hide-it {
     display: none !important;
@@ -3216,8 +3502,8 @@ label form [type='radio'] {
   }
 }
 
-@media screen and (max-width: 800px){
-.uni-main {
+@media screen and (max-width: 800px) {
+  .uni-main {
     flex-direction: column !important;
-}
+  }
 }

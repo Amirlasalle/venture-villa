@@ -1,10 +1,11 @@
 import { useState, useContext } from 'react';
 import universitiesData from "../components/Jsons/universities.json";
 import tradeschoolData from "../components/Jsons/tradeschool.json";
-import { Image, Container, Col, Carousel, Card, Accordion, useAccordionButton, AccordionContext } from 'react-bootstrap';
+import { Image, Container, Col, Card, Accordion, useAccordionButton, AccordionContext } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight, faChevronLeft, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import Slider from "react-slick";
+import { faChevronRight, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+// import Slider from "react-slick";
+import "../index.css"
 
 const Universities = () => {
     const [universities] = useState(universitiesData);
@@ -35,46 +36,46 @@ const Universities = () => {
             </button>
         );
     }
-    const nextIconStyleTwo = {
-        fontSize: '2rem',
-        fontWeight: 'bolder',
-    };
+    // const nextIconStyleTwo = {
+    //     fontSize: '2rem',
+    //     fontWeight: 'bolder',
+    // };
 
 
-    var settings = {
-        dots: true,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        initialSlide: 0,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
+    // var settings = {
+    //     dots: true,
+    //     infinite: false,
+    //     speed: 500,
+    //     slidesToShow: 4,
+    //     slidesToScroll: 4,
+    //     initialSlide: 0,
+    //     responsive: [
+    //         {
+    //             breakpoint: 1024,
+    //             settings: {
+    //                 slidesToShow: 3,
+    //                 slidesToScroll: 3,
+    //                 infinite: true,
+    //                 dots: true
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 600,
+    //             settings: {
+    //                 slidesToShow: 2,
+    //                 slidesToScroll: 2,
+    //                 initialSlide: 2
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 480,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1
+    //             }
+    //         }
+    //     ]
+    // };
 
     return (
         <div className="uni-container">
@@ -131,8 +132,8 @@ const Universities = () => {
                                         <div className='mt-5'>
                                             {tradeschool.map((trade, index) => (
                                                 <div className='tw-bg-white tw-h-[450px] tw-text-purple tw-rounded-xl' key={index}>
-                                                    <div className='tw-h-56 tw-bg-indigo flex justify-center items-center' roundedCircle  >
-                                                    <Image src={process.env.PUBLIC_URL + trade.logo} alt='' className="h-44 w-44" roundedCircle    />
+                                                    <div className='tw-h-56 tw-bg-indigo tw-flex tw-justify-centertw-items-center   tw-rounded-full'  >
+                                                    <Image src={process.env.PUBLIC_URL + trade.logo} alt='' className="h-44 w-44"     />
                                                     </div>
                                                     <div className='flex flex-col justify-center items-center gap-4 pt-4 pb-4'>
                                                         <p className='pl-0'>

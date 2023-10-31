@@ -7,11 +7,8 @@ const Footer = () => {
   const location = useLocation();
   const navigate = useNavigate();
   return (
-    <footer className="w-100 mt-auto bg-secondary ">
-      <div className=" w-100 mt-0 mb-0 banner ">
-        <Image src={process.env.PUBLIC_URL + "/assets/short/colombia_flag.jpeg"} className="img-fluid d-flex flex-wrap justify-content-around banner-image banner" />
-        <h1 className='mt-0 mb-auto d-flex flex-column justify-content-center banner-text banner text-center'>Venture Villa</h1>
-      </div>
+    <footer className="mt-auto bg-secondary ">
+
       <div className="w-100 mt-5 p-2 text-center mb-5">
         {location.pathname !== '/' && (
           <button
@@ -33,6 +30,10 @@ const Footer = () => {
           </span>{' '} */}
           Venture Awaits!
         </h4>
+      </div>
+      <div className="mt-0 mb-0 banner ">
+        <Image src={process.env.PUBLIC_URL + "/assets/short/colombia_flag.jpeg"} className="img-fluid d-flex flex-wrap justify-content-around banner-image banner" />
+        <h1 className='mt-0 mb-auto d-flex flex-column justify-content-center banner-text banner text-center'>Venture Villa</h1>
       </div>
     </footer>
   );

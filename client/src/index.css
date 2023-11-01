@@ -3437,6 +3437,7 @@ label form [type='radio'] {
 @media screen and (max-width: 800px) {
   .uni-main {
     flex-direction: column !important;
+    justify-content: center !important;
   }
 }
 

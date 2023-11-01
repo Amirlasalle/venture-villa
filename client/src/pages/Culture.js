@@ -40,9 +40,9 @@ const Universities = () => {
     }
         const settings = {
         dots: true,
-        infinite: true,
+        infinite: false,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 5,
         slidesToScroll: 1,
         nextArrow: <CustomNextArrow />,
         prevArrow: <CustomPrevArrow />,
@@ -50,17 +50,26 @@ const Universities = () => {
             {
               breakpoint: 1024,
               settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
+                slidesToShow: 4,
+                slidesToScroll: 1,
                 infinite: true,
                 dots: true
               }
-            },
+            },   
+            {
+                breakpoint: 800,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                  infinite: true,
+                  dots: true
+                }
+              },
             {
               breakpoint: 600,
               settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2,
+                slidesToScroll: 1,
                 initialSlide: 2
               }
             },
@@ -84,7 +93,7 @@ const Universities = () => {
             <div className="uni-main mt-5 mb-5">
                 <Container fluid secondary="true" className="justify-content-around d-flex flex-wrap  uni-main">
                     {universities.map((university, key) => (
-                        <button key={key} className="document-category" style={{ width: '25rem', height: '7rem' }}>
+                        <button key={key} className="document-category" style={{ maxWidth: '100%', height: '7rem' }}>
                             <a href={university.uniUrl} target="_blank" rel="noreferrer" className="no-decoration">
                                 <div className="document-category-container">
                                     <div className="document-category-item document-icon-title">
@@ -107,7 +116,7 @@ const Universities = () => {
             </div>
 
             <Container fluid secondary="true" className="mb-5 justify-content-around d-flex flex-wrap  about">
-                <Accordion style={{ width: '75%' }}>
+                <Accordion style={{ width: '80%' }}>
                     <Card className='trades'>
                         <Card.Header className='trade-header'>
                             <ContextAwareToggle eventKey="0" className='icon-small' />

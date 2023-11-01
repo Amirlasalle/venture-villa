@@ -524,21 +524,11 @@ body {
   background-color: #ffffff;
   background: none !important;
   border-color: lightblue !important;
-  height: 15rem !important;
+  height: 13rem !important;
+  justify-content: space-between;
 }
 
-/* .nextArrow ,
-.prevArrow {
-  color: #000000 !important;
-  opacity: 1;
-  margin-top: 7px;
-  top: 0 !important;
-  z-index: 103;
-}
 
-.nextArrow {
-  right: 0 !important;
-} */
 .slick-slide > div {
   margin: 0 10px;
 }

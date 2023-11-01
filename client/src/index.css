@@ -8,7 +8,6 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
 
-
 .App {
   text-align: center;
   bottom: 0;
@@ -519,68 +518,99 @@ body {
   margin-right: 20px;
   max-width: 55rem;
   margin-top: 20px;
-  justify-content: flex-start !important;
-  overflow-x: hidden;
-  background: transparent;
-  overflow-x: auto;
-  white-space: nowrap;
-
 }
 
-#slider-container {
-  background: gray;
-  overflow-x: auto;
-  white-space: nowrap;
+.trade-cards {
+  background-color: #ffffff;
+  background: none !important;
+  border-color: lightblue !important;
+  height: 15rem !important;
 }
 
-.slider-card {
-  width: 18rem;
-  height: 18rem;
-  background: #fff;
-  border-radius: 10px;
-  display: inline-block;
-  box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.297443);
-  margin-right: 1rem;
-  margin-left: 1rem;
-}
-
-.card-body.scrollable {
-  max-height: 320px;
-  overflow: auto;
-}
-
-.offer-container {
-  max-width: 100%; /* Ensure it doesn't exceed the available width */
-  overflow-x: hidden; /* Hide content that exceeds the width */
-}
-
-.slider-icon.left,
-.slider-icon.right {
-  color: black !important;
+/* .nextArrow ,
+.prevArrow {
+  color: #000000 !important;
   opacity: 1;
-  background-color: #001ccfa2;
-  height: 3rem;
-  width: 3rem;
-  border-radius: 50%;
-  margin-top: 150px;
-  margin-left: 25px;
-  margin-right: 25px;
-  top: 0;
+  margin-top: 7px;
+  top: 0 !important;
   z-index: 103;
-  padding: 10px;
-  font-size: 2rem !important;
-  position: absolute;
-  opacity: 1;
-  align-items: center !important;
 }
 
-.slider-icon.left {
-  left: 0 !important;
-}
-
-.slider-icon.right {
+.nextArrow {
   right: 0 !important;
+} */
+.slick-slide > div {
+  margin: 0 10px;
 }
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+  opacity: 1;
+  margin-top: 7px;
+  top: 0 !important;
+  z-index: 103;
+}
+.slick-dots {
+  position: absolute;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  top: -5%;
+}
+@keyframes indicatorAnimation {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+
+
+.about .carousel-indicators button {
+  width: 0.4rem !important;
+  height: 0.4rem !important;
+  background-color: rgb(0, 0, 0);
+  opacity: 1;
+  border-radius: 50%;
+  animation: none;
+}
+
+.about .carousel-indicators button:not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+
+
+.trade-image {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+}
+
+.trade-title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.trade-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+
 
 
 .uni-title-container {
@@ -607,119 +637,6 @@ body {
   margin: 0px;
   margin-bottom: -24px;
 }
-
-.content {
-  flex: 1 1 auto;
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: auto hidden;
-  align-items: stretch;
-  position: relative;
-  scroll-snap-type: x mandatory;
-}
-
-.trade {
-  left: 0 !important;
-  right: 0 !important;
-  padding: 0 !important;
-  margin-right: 0 !important;
-  overflow: hidden;
-  width: 100vw !important;
-}
-
-.trade .carousel-control-next,
-.trade .carousel-control-prev {
-  color: #000000 !important;
-  opacity: 1;
-  align-items: flex-start;
-  margin-top: 7px;
-  top: 0;
-  z-index: 103;
-}
-
-.trade .carousel-control-next {
-  right: 0;
-}
-
-@keyframes indicatorAnimation {
-  0% {
-    transform: translateX(0);
-  }
-
-  50% {
-    transform: translateX(10%);
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
-}
-
-.trade .carousel-indicators {
-  position: absolute;
-  top: 7px;
-}
-
-.trade .carousel-indicators button {
-  width: 0.4rem !important;
-  height: 0.4rem !important;
-  background-color: rgb(0, 0, 0);
-  opacity: 1;
-  border-radius: 50%;
-  animation: none;
-}
-
-.trade .carousel-indicators button:not(:first-child) {
-  margin-left: 0.5rem;
-}
-
-.trade .carousel-indicators .active {
-  background-color: #ff3700;
-  width: 1.95rem !important;
-  height: 0.3rem !important;
-  border-radius: 0 !important;
-  animation: indicatorAnimation 2s;
-}
-
-.trade-image {
-  max-width: 100%;
-  height: auto;
-}
-
-.trade-item:hover {
-  background-color: #f0f0f0;
-  /* Card background color on hover */
-}
-
-.trade-body {
-  padding: 0;
-}
-
-.trade-items {
-  flex: 1 1 auto;
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: auto hidden;
-  align-items: stretch;
-  position: relative;
-  scroll-snap-type: x mandatory;
-}
-
-.trade-items {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  min-height: 250px;
-  text-align: center;
-  cursor: pointer;
-}
-
 
 
 

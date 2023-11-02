@@ -38,9 +38,9 @@ const Universities = () => {
             </button>
         );
     }
-        const settings = {
+    const settings = {
         dots: true,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 5,
         slidesToScroll: 1,
@@ -48,39 +48,39 @@ const Universities = () => {
         prevArrow: <CustomPrevArrow />,
         responsive: [
             {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true
-              }
-            },   
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
             {
                 breakpoint: 800,
                 settings: {
-                  slidesToShow: 3,
-                  slidesToScroll: 1,
-                  infinite: true,
-                  dots: true
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
                 }
-              },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                initialSlide: 2
-              }
             },
             {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 380,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-          ]
+        ]
     };
 
     return (
@@ -116,7 +116,7 @@ const Universities = () => {
             </div>
 
             <Container fluid secondary="true" className="mb-5 justify-content-around d-flex flex-wrap  about">
-                <Accordion style={{ width: '75%' }}>
+                <Accordion style={{ width: '80%' }}>
                     <Card className='trades'>
                         <Card.Header className='trade-header'>
                             <ContextAwareToggle eventKey="0" className='icon-small' />
@@ -130,9 +130,16 @@ const Universities = () => {
                                     <Slider {...settings} >
                                         {tradeschool.map((trade, key) => (
                                             <Card key={key} className="m-5 p-2 trade-cards" style={{ maxWidth: '18rem' }}>
-                                                <Card.Body className='w-100 mt-2 ml-0 mr-0'>
-                                                <Card.Img src={process.env.PUBLIC_URL + trade.logo} className="img-fluid d-flex flex-wrap justify-content-around trade-image" />
-                                                <Card.Subtitle className="mt-2 mb-2 card-subtitle text-muted">{trade.name}</Card.Subtitle>
+                                                <Card.Body className='w-100 mt-2 ml-0 mr-0 '>
+                                                    <Card.Img src={process.env.PUBLIC_URL + trade.logo} className="img-fluid d-flex flex-wrap justify-content-around trade-image" />
+                                                    <Card.Subtitle className="mt-2 mb-2 card-subtitle text-muted">{trade.name}</Card.Subtitle>
+                                                    <Card.Subtitle> 
+                                                        <p className=" mb-0 trade-section-divider-y " >
+                                                    </p>
+                                                        <p className="trade-section-divider-b  mb-0 " >
+                                                        </p>
+                                                        <p className="mb-0 trade-section-divider-r " ></p>
+                                                    </Card.Subtitle>
                                                 </Card.Body>
                                             </Card>
                                         ))}
@@ -150,9 +157,9 @@ const Universities = () => {
 function CustomNextArrow(props) {
     const { className, style, onClick } = props;
     return (
-     <FontAwesomeIcon icon={faChevronCircleRight} size="lg" 
-            className={ className}
-            style={{ ...style, display: "block",color: "black" }}
+        <FontAwesomeIcon icon={faChevronCircleRight} size="lg"
+            className={`arrow ${className}`}
+            style={{ ...style, display: "block", color: "rgb(4, 14, 158)", fontSize: "5rem" }}
             onClick={onClick}
         />
     );
@@ -161,11 +168,11 @@ function CustomNextArrow(props) {
 function CustomPrevArrow(props) {
     const { className, style, onClick } = props;
     return (
-        <FontAwesomeIcon icon={faChevronCircleLeft} size="lg" 
-        className={className}
-        style={{ ...style, display: "block",color: "black" }}
-        onClick={onClick}
-    />
+        <FontAwesomeIcon icon={faChevronCircleLeft} size="lg"
+            className={`arrow ${className}`}
+            style={{ ...style, display: "block", color: "rgb(4, 14, 158)" }}
+            onClick={onClick}
+        />
     );
 }
 

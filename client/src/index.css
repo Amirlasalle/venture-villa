@@ -521,25 +521,67 @@ body {
 }
 
 .trade-cards {
-  background-color: #ffffff;
-  background: none !important;
+  /* background-color: #eade2f !important; */
   border-color: lightblue !important;
   height: 13rem !important;
   justify-content: space-between;
+  box-shadow: 5px 5px 5px 0 rgba(255, 1, 1, 0.14), 0 1px 7px 0 rgba(255, 0, 0, 0.2);
 }
 
-
-.slick-slide > div {
-  margin: 0 10px;
+.trade-section-divider-y {
+  letter-spacing: 0;
+  background-color: #ffe100;
+  padding-bottom: 12px;
+  text-align: left;
+  position: relative;
+  margin-right: 75%;
 }
-svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+
+.trade-section-divider-b {
+  letter-spacing: 0;
+  background-color: #0033cc;
+  padding-bottom: 7px;
+  text-align: left;
+  position: relative;
+  margin-right: 75%;
+}
+
+.trade-section-divider-r {
+  letter-spacing: 0;
+  background-color: #ff0000;
+  color: #ff000081;
+  padding-bottom: 7px;
+  text-align: left;
+  position: relative;
+  margin-right: 75%;
+}
+
+.slick-slide>div {
+  margin: 10px 10px;
+}
+
+.slick-arrow.slick-next,
+.slick-arrow.slick-prev {
   overflow: visible;
   box-sizing: content-box;
   opacity: 1;
-  margin-top: 7px;
+  margin-top: 0;
+  border-radius: 50%;
   top: 0 !important;
   z-index: 103;
+  height: 35px;
+  width: 35px;
+  font-size: 3rem !important;
+  box-shadow: 5px 5px 5px 0 rgba(51, 51, 51, .14), 0 1px 7px 0 rgba(51, 51, 51, .2);
 }
+
+.slick-arrow.slick-next:hover,
+.slick-arrow.slick-prev:hover {
+  color: #ffffff !important;
+  background-color: #0033cc;
+  opacity: 0.8;
+}
+
 .slick-dots {
   position: absolute;
   width: 100%;
@@ -549,6 +591,7 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
   text-align: center;
   top: -5%;
 }
+
 @keyframes indicatorAnimation {
   0% {
     transform: translateX(0);
@@ -3430,4 +3473,3 @@ label form [type='radio'] {
     justify-content: center !important;
   }
 }
-

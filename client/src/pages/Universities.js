@@ -119,10 +119,13 @@ const Universities = () => {
                 <Accordion style={{ width: '80%' }}>
                     <Card className='trades'>
                         <Card.Header className='trade-header'>
+                        <div className='header-content'>
                             <ContextAwareToggle eventKey="0" className='icon-small' />
-                            <span id="category-title" className="category-title pl-5">
+                         
+                            <h2 id="category-title" className="category-title pl-5">
                                 Top 10 Majors in Colombia
-                            </span>
+                            </h2>
+                            </div>
                         </Card.Header>
                         <Accordion.Collapse eventKey="0" className="m-auto" style={{ width: '100%' }}>
                             <Card.Body className="trade-card-body m-auto" style={{ width: '100%' }}>
@@ -133,13 +136,6 @@ const Universities = () => {
                                                 <Card.Body className='w-100 mt-2 ml-0 mr-0 '>
                                                     <Card.Img src={process.env.PUBLIC_URL + trade.logo} className="img-fluid d-flex flex-wrap justify-content-around trade-image" />
                                                     <Card.Subtitle className="mt-2 mb-2 card-subtitle text-muted">{trade.name}</Card.Subtitle>
-                                                    <Card.Subtitle> 
-                                                        <p className=" mb-0 trade-section-divider-y " >
-                                                    </p>
-                                                        <p className="trade-section-divider-b  mb-0 " >
-                                                        </p>
-                                                        <p className="mb-0 trade-section-divider-r " ></p>
-                                                    </Card.Subtitle>
                                                 </Card.Body>
                                             </Card>
                                         ))}

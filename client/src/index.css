@@ -521,11 +521,11 @@ body {
 }
 
 .trade-cards {
-  /* background-color: #eade2f !important; */
-  border-color: lightblue !important;
+  background-color:  #FCD116 !important;
+  border: 3px solid #003893 !important;
   height: 13rem !important;
   justify-content: space-between;
-  box-shadow: 5px 5px 5px 0 rgba(255, 1, 1, 0.14), 0 1px 7px 0 rgba(255, 0, 0, 0.2);
+  box-shadow: 5px 5px 5px 0 #ce1127aa, 0 1px 7px 0 #ce1127aa;
 }
 
 .trade-section-divider-y {
@@ -674,7 +674,7 @@ body {
 
 
 .category-title {
-  font-size: 24px;
+  font-size: 24px !important;
   font-weight: bold;
   color: #333;
 }
@@ -698,6 +698,10 @@ body {
   border: none !important;
 }
 
+.trade-header .header-content {
+  display: flex;
+  align-items: center; 
+}
 
 .icon-small {
   width: 32px;
@@ -846,13 +850,13 @@ button {
   font-size: 15px;
 }
 
-p {
+/* p {
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-}
+} */
 
 .document-category-desc {
   padding-inline-end: 10px;
@@ -3471,5 +3475,50 @@ label form [type='radio'] {
   .uni-main {
     flex-direction: column !important;
     justify-content: center !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+
+  .icon-medium {
+    font-size: 50px !important;
+    line-height: 50px !important;
+    fill: currentcolor;
+    display: inline-flex;
+    user-select: none;
+    border: none;
+  }
+  .icon {
+    padding: 2px;
+    border: none;
+  }
+  .document-title .document-category-desc {
+    display: none;
+    text-align: initial;
+    color: #9fa0a4;
+    font-weight: lighter;
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 350px) {
+
+  .icon-medium {
+    font-size: 70px !important;
+    line-height: 50px !important;
+    fill: currentcolor;
+    display: inline-flex;
+    user-select: none;
+    border: none;
+  }
+  .icon {
+    padding: 2px;
+    border: none;
+  }
+  .document-title .document-category-desc {
+    display: none;
+    text-align: initial;
+    color: #9fa0a4;
+    font-weight: lighter;
+    font-size: 10px;
   }
 }

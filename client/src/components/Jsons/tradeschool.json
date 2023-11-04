@@ -1,17 +1,17 @@
 [
     {
-        "name": "Universidad de Antioquia",
-        "uniUrl": "https://www.eafit.edu.co/",
+        "name": "Master in Mechanical Engineering",
+        "uniUrl": "https://ingenieria.bogota.unal.edu.co/en/programs/master/master-s-degree-in-mechanical-engineering.html",
         "logo": "./assets/thumbnails/udvlogo.jpeg"
     },
     {
-        "name": "Universidad de what?",
-        "uniUrl": "https://www.eafit.edu.co/",
+        "name": "Master in Data Analytics Intelligence MIAD",
+        "uniUrl": "https://industrial.uniandes.edu.co/es/master-in-data-analytics-intelligence",
         "logo": "./assets/thumbnails/udvlogo.jpeg"
     },
     {
-        "name": "Universidad de hello",
-        "uniUrl": "https://www.eafit.edu.co/",
+        "name": "Business Administration",
+        "uniUrl": "https://www.unisabana.edu.co/englishversion/academic-programs/undergraduate/business-administration/",
         "logo": "./assets/thumbnails/udvlogo.jpeg"
     },
     {

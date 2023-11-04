@@ -1,47 +1,75 @@
 [
     {
-        "name": "Master in Mechanical Engineering",
+        "name": "Masters in Mechanical Engineering",
         "uniUrl": "https://ingenieria.bogota.unal.edu.co/en/programs/master/master-s-degree-in-mechanical-engineering.html",
-        "logo": "./assets/thumbnails/udvlogo.jpeg"
+        "logo": "./assets/thumbnails/NationalUniversityofColombia.png",
+        "campusLocation": "Bogotá, Colombia",
+        "credits": "52",
+        "semesters": ""
     },
     {
-        "name": "Master in Data Analytics Intelligence MIAD",
+        "name": "Masters in Data Analytics Intelligence MIAD",
         "uniUrl": "https://industrial.uniandes.edu.co/es/master-in-data-analytics-intelligence",
-        "logo": "./assets/thumbnails/udvlogo.jpeg"
+        "logo": "./assets/thumbnails/University_of_Los_Andes_logo.svg.png",
+        "campusLocation": "Bogotá, Colombia",
+        "credits": "36",
+        "semesters": ""
     },
     {
-        "name": "Business Administration",
+        "name": "Bachelors in Business Administration",
         "uniUrl": "https://www.unisabana.edu.co/englishversion/academic-programs/undergraduate/business-administration/",
-        "logo": "./assets/thumbnails/udvlogo.jpeg"
+        "logo": "./assets/thumbnails/Unisabana.png",
+        "campusLocation": "Bogotá, Colombia",
+        "credits": "180",
+        "semesters": ""
     },
     {
-        "name": "Universidad de Antioquia",
-        "uniUrl": "https://www.eafit.edu.co/",
-        "logo": "./assets/thumbnails/udvlogo.jpeg"
+        "name": "Specialization in Oncological Surgery",
+        "uniUrl": "https://www.javeriana.edu.co/especializacion-cirugia-oncologica?elqTrackId=364dc4f655e14e5bb478508d33a4e472&elqaid=282&elqat=2",
+        "logo": "./assets/thumbnails/440px-Javeriana.svg.png",
+        "campusLocation": "Bogotá, Colombia",
+        "credits": "114",
+        "semesters": ""
     },
     {
-        "name": "Universidad de what?",
-        "uniUrl": "https://www.eafit.edu.co/",
-        "logo": "./assets/thumbnails/udvlogo.jpeg"
+        "name": "Masters in Chemistry",
+        "uniUrl": "https://uniandes.smartcatalogiq.com/en/2017/catalogo/school-of-sciences/chemistry-department/graduate/chemistry-master-s-degree/",
+        "logo": "./assets/thumbnails/University_of_Los_Andes_logo.svg.png",
+        "campusLocation": "Bogotá, Colombia",
+        "credits": "40",
+        "semesters": ""
     },
     {
-        "name": "Universidad de hello",
-        "uniUrl": "https://www.eafit.edu.co/",
-        "logo": "./assets/thumbnails/udvlogo.jpeg"
+        "name": "Specialization in Neurology",
+        "uniUrl": "https://medicina.bogota.unal.edu.co/formacion/especialidades-medicas/neurologia-clinica",
+        "logo": "./assets/thumbnails/NationalUniversityofColombia.png",
+        "campusLocation": "Bogotá, Colombia",
+        "credits": "120",
+        "semesters": ""
     },
     {
-        "name": "Universidad de Antioquia",
-        "uniUrl": "https://www.eafit.edu.co/",
-        "logo": "./assets/thumbnails/udvlogo.jpeg"
+        "name": "Bachelors in Gastronomy",
+        "uniUrl": "https://www.unisabana.edu.co/englishversion/academic-programs/undergraduate/gastronomy/",
+        "logo": "./assets/thumbnails/Unisabana.png",
+        "campusLocation": "Bogotá, Colombia",
+        "credits": "162",
+        "semesters": ""
     },
     {
-        "name": "Universidad de what?",
-        "uniUrl": "https://www.eafit.edu.co/",
-        "logo": "./assets/thumbnails/udvlogo.jpeg"
+        "name": "Masters in Materials Engineering",
+        "uniUrl": "https://www.udea.edu.co/wps/portal/udea/web/inicio/unidades-academicas/ingenieria/estudiar-facultad/posgrados/maestria-ingenieria-materiales",
+        "logo": "./assets/thumbnails/324px-Escudo-UdeA.svg.png",
+        "campusLocation": "Bogotá, Colombia",
+        "credits": "62",
+        "semesters": ""
     },
     {
-        "name": "Universidad de hello",
-        "uniUrl": "https://www.eafit.edu.co/",
-        "logo": "./assets/thumbnails/udvlogo.jpeg"
+        "name": "Doctors in Economics",
+        "uniUrl": "https://economia.uniandes.edu.co/programas/escuela-de-posgrados/doctorado-en-economia",
+        "logo": "./assets/thumbnails/University_of_Los_Andes_logo.svg.png",
+        "subjectScore": "35.3",
+        "campusLocation": "Bogotá, Colombia",
+        "credits": "88",
+        "semesters": ""
     }
 ]

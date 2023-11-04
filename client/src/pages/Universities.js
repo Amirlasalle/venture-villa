@@ -3,11 +3,12 @@ import universitiesData from "../components/Jsons/universities.json";
 import tradeschoolData from "../components/Jsons/tradeschool.json";
 import { Image, Container, Col, Card, Accordion, useAccordionButton, AccordionContext } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight, faChevronDown, faChevronUp, faChevronCircleRight, faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight, faChevronDown, faChevronUp, faChevronCircleRight, faChevronCircleLeft, faLocationDot, faSuitcase, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import Slider from "react-slick";
 import "../index.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 
 const Universities = () => {
     const [universities] = useState(universitiesData);
@@ -42,22 +43,14 @@ const Universities = () => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 1,
+        dotsClass: "button__bar",
         nextArrow: <CustomNextArrow />,
         prevArrow: <CustomPrevArrow />,
         responsive: [
             {
                 breakpoint: 1024,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 800,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
@@ -66,9 +59,18 @@ const Universities = () => {
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 800,
                 settings: {
                     slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     initialSlide: 2
                 }
@@ -117,26 +119,31 @@ const Universities = () => {
 
             <Container fluid secondary="true" className="mb-5 justify-content-around d-flex flex-wrap  about">
                 <Accordion style={{ width: '80%' }}>
-                    <Card className='trades'>
-                        <Card.Header className='trade-header'>
-                        <div className='header-content'>
-                            <ContextAwareToggle eventKey="0" className='icon-small' />
-                         
-                            <h2 id="category-title" className="category-title pl-5">
-                                Top 10 Majors in Colombia
-                            </h2>
+                    <Card className='majors'>
+                        <Card.Header className='majors-header'>
+                            <div className='header-content'>
+                                <ContextAwareToggle eventKey="0" className='icon-small' />
+
+                                <h2 id="category-title" className="category-title pl-5">
+                                    Top 10 Majors in Colombia
+                                </h2>
                             </div>
                         </Card.Header>
                         <Accordion.Collapse eventKey="0" className="m-auto" style={{ width: '100%' }}>
-                            <Card.Body className="trade-card-body m-auto" style={{ width: '100%' }}>
+                            <Card.Body className="majors-card-body m-auto" style={{ width: '100%' }}>
                                 <div className='slider-body mt-5'>
                                     <Slider {...settings} >
                                         {tradeschool.map((trade, key) => (
-                                            <Card key={key} className="m-5 p-2 trade-cards" style={{ maxWidth: '18rem' }}>
-                                                <Card.Body className='w-100 mt-2 ml-0 mr-0 '>
-                                                    <Card.Img src={process.env.PUBLIC_URL + trade.logo} className="img-fluid d-flex flex-wrap justify-content-around trade-image" />
-                                                    <Card.Subtitle className="mt-2 mb-2 card-subtitle text-muted">{trade.name}</Card.Subtitle>
-                                                </Card.Body>
+                                            <Card key={key} className="m-5 p-2 major-cards" style={{ maxWidth: '18rem' }}>
+                                                <a href={trade.uniUrl} target="_blank" rel="noreferrer" className="no-decoration">
+                                                    <Card.Body className='w-100 mt-2 ml-0 mr-0 '>
+                                                        <Card.Img src={process.env.PUBLIC_URL + trade.logo} className="img-fluid d-flex flex-wrap justify-content-around trade-image" />
+                                                        <Card.Subtitle className="mt-2 mb-2 card-subtitle text-muted">{trade.name}</Card.Subtitle>
+                                                        <Card.Subtitle className="mt-2 mb-2 card-subtitle text-muted"><FontAwesomeIcon icon={faLocationDot} size="sm" /> {trade.campusLocation}</Card.Subtitle>
+                                                        <Card.Subtitle className="mt-2 mb-2 card-subtitle text-muted"><FontAwesomeIcon icon={faSuitcase} size="sm" /> :  {trade.credits} credits</Card.Subtitle>
+                                                        <Card.Subtitle className="mt-2 mb-2 card-subtitle text-muted"><FontAwesomeIcon icon={faCalendarDays} size="sm" /> :  {trade.semesters} semesters</Card.Subtitle>
+                                                    </Card.Body>
+                                                </a>
                                             </Card>
                                         ))}
                                     </Slider>
@@ -149,6 +156,8 @@ const Universities = () => {
         </div>
     );
 };
+
+
 
 function CustomNextArrow(props) {
     const { className, style, onClick } = props;

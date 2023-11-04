@@ -520,44 +520,30 @@ body {
   margin-top: 20px;
 }
 
-.trade-cards {
-  background-color:  #FCD116 !important;
+.major-cards {
   border: 3px solid #003893 !important;
-  height: 13rem !important;
+  background-color: #fff;
+  height: 15rem !important;
   justify-content: space-between;
+  z-index: 999 !important;
+  filter: brightness(120%);
+  box-shadow: 5px 5px 5px 0 #0000005f, 0 1px 7px 0 #00000047; 
+}
+
+.major-cards a {
+  z-index: 1000 !important;
+}
+
+
+.major-cards:hover {
+  background-color: #FCD116 !important;
   box-shadow: 5px 5px 5px 0 #ce1127aa, 0 1px 7px 0 #ce1127aa;
-}
-
-.trade-section-divider-y {
-  letter-spacing: 0;
-  background-color: #ffe100;
-  padding-bottom: 12px;
-  text-align: left;
-  position: relative;
-  margin-right: 75%;
-}
-
-.trade-section-divider-b {
-  letter-spacing: 0;
-  background-color: #0033cc;
-  padding-bottom: 7px;
-  text-align: left;
-  position: relative;
-  margin-right: 75%;
-}
-
-.trade-section-divider-r {
-  letter-spacing: 0;
-  background-color: #ff0000;
-  color: #ff000081;
-  padding-bottom: 7px;
-  text-align: left;
-  position: relative;
-  margin-right: 75%;
+  filter: brightness(120%);
 }
 
 .slick-slide>div {
   margin: 10px 10px;
+  z-index: 2 !important;
 }
 
 .slick-arrow.slick-next,
@@ -582,15 +568,63 @@ body {
   opacity: 0.8;
 }
 
-.slick-dots {
+.button__bar {
   position: absolute;
-  width: 100%;
+  vertical-align: middle;
+  margin: auto;
   padding: 0;
-  margin: 0;
-  list-style: none;
+  background: none;
   text-align: center;
-  top: -5%;
+  width: 100%;
+  top: -5% !important;
+  overflow: hidden;
+  /* display: inline-block; */
+  /* align-items: center; */
+  /* display: flex; */
+  /* justify-content: center; */
 }
+
+.button__bar li {
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0;
+
+}
+
+.button__bar li button {
+  background-color: rgba(255, 255, 255, 0.88);
+  border: 1px solid #0033cc;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0;
+  height: 8px;
+  transition: width .3s;
+  width: 8px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.button__bar li.slick-active button {
+  background-color: #ce1127aa;
+  width: 2.5rem !important;
+  align-items: center;
+  animation: indicatorAnimation 3s;
+}
+
+.button__bar li button:hover,
+.button__bar li button:focus {
+  background: #FCD116;
+  outline: 0;
+}
+
+/* .slick-slide img {
+  border: 5px solid #fff;
+  display: block;
+  margin: auto;
+} */
+
 
 @keyframes indicatorAnimation {
   0% {
@@ -604,11 +638,30 @@ body {
   100% {
     transform: translateX(0%);
   }
+
+  /* 0% {
+    transform: translateY(5px);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+  
+  100% {
+    transform: translateY(5px);
+  } */
 }
 
+/* 
 
 
-.about .carousel-indicators button {
+
+.about .slick-dots {
+  position: absolute;
+  top: 7px;
+}
+
+.about .slick-dots button {
   width: 0.4rem !important;
   height: 0.4rem !important;
   background-color: rgb(0, 0, 0);
@@ -617,13 +670,21 @@ body {
   animation: none;
 }
 
-.about .carousel-indicators button:not(:first-child) {
+.about .slick-dots button:not(:first-child) {
   margin-left: 0.5rem;
 }
 
+.about .slick-active {
+  background-color: #ff3700 !important;
+  width: 1.95rem !important;
+  height: 0.3rem !important;
+  border-radius: 0 !important;
+  animation: indicatorAnimation 2s;
+} */
 
 
 .trade-image {
+  margin-top: 0;
   height: 44px;
   width: 44px;
   border-radius: 50%;
@@ -689,18 +750,18 @@ body {
   align-items: center;
 }
 
-.card .trade-header {
+.card .majors-header {
   background-color: transparent !important;
   border: none;
 }
 
-.trades {
+.majors {
   border: none !important;
 }
 
-.trade-header .header-content {
+.majors-header .header-content {
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
 .icon-small {
@@ -3488,10 +3549,12 @@ label form [type='radio'] {
     user-select: none;
     border: none;
   }
+
   .icon {
     padding: 2px;
     border: none;
   }
+
   .document-title .document-category-desc {
     display: none;
     text-align: initial;
@@ -3500,6 +3563,7 @@ label form [type='radio'] {
     font-size: 10px;
   }
 }
+
 @media screen and (max-width: 350px) {
 
   .icon-medium {
@@ -3510,10 +3574,12 @@ label form [type='radio'] {
     user-select: none;
     border: none;
   }
+
   .icon {
     padding: 2px;
     border: none;
   }
+
   .document-title .document-category-desc {
     display: none;
     text-align: initial;

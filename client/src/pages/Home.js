@@ -2,20 +2,12 @@ import React, { useState } from 'react';
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 import { Link, useNavigate } from 'react-router-dom';
 import placesinfoData from "../components/Places/placesinfo.json"
-import Container from "react-bootstrap/Container";
-import Image from 'react-bootstrap/Image';
-import Row from "react-bootstrap/Row";
-import Carousel from 'react-bootstrap/Carousel';
-import Card from 'react-bootstrap/Card';
-import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
+import { Image, Container, Col, Card, Row, Carousel, Tab, Tabs, Button, Modal } from 'react-bootstrap';
 import '../App.css'
 import '../index.css'
-import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleRight, faChevronCircleLeft, faChevronLeft, faChevronRight, faExternalLinkAlt, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import Modal from 'react-bootstrap/Modal';
-
+import companiesData from "../components/Jsons/companies.json";
 // import Col from 'react-bootstrap/Col';
 // import { faStar } from '@fortawesome/free-solid-svg-icons';
 // import PlaceList from '../components/Places/Places';
@@ -77,6 +69,7 @@ function Home() {
 
   const [placesinfo] = useState(placesinfoData)
   console.log(placesinfo)
+  const [companies] = useState(companiesData);
 
   const [show, setShow] = useState(false);
 
@@ -631,7 +624,82 @@ function Home() {
                 </div>
               </Tab>
               <Tab eventKey="companies" title="Companies" className="tab">
-                Tab content for Contact
+              <Carousel slide={true} interval={null} nextIcon={<FontAwesomeIcon icon={faChevronRight} />} style={nextIconStyleTwo}
+                  prevIcon={<FontAwesomeIcon icon={faChevronLeft} />} className='about-company'>
+
+                  <Carousel.Item className="about-carousel-item-company">
+                    <div className='about-company-img-div'>
+                      <Image src={process.env.PUBLIC_URL + "/assets/short/Rappi_logo.svg.png"} className="img-fluid d-flex mt-5 flex-wrap about-company-image" />
+                    </div>
+                    <div>
+                      <div className='about-company-text'>
+                        <h1 className="pl-3">Colombia's Super App
+                        </h1>
+                        <p className="pl-3 mb-3 justify-content-center about-text-p">RAPPI was created in August 2015 by Simón Borrero, Felipe Villamarín and Sebastian Mejía in Bogotá, Colombia.  The concept of Rappi emerged as a pioneering solution designed to bridge the gap between small businesses, often referred to as "neighborhood stores," and local users residing within just a few city blocks.
+                        </p>
+
+                        <div className="button-container mb-2">
+                          <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=BamIljS3reIr')} className='btn1'>
+                            <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '120px' }}>
+                              <a href='#cali' target="_blank" rel="noreferrer" className="btn1">Explore <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                            </Button>
+                          </Link>
+                        </div>
+                        <h2 className="text-center pl-5 pr-5 pb-3 mb-0 about-section-divider-y about-text-sd" >
+                        </h2>
+                        <h2 className="text-center about-section-divider-b  mb-0 about-text-sd " >
+                        </h2>
+                        <h2 className="text-center about-section-divider-r about-text-sd" >
+                        </h2>
+                      </div>
+                    </div>
+                  </Carousel.Item>
+
+                  <Carousel.Item className="about-carousel-item-company">
+                  <div className="uni-container mt-2">
+            <div className="uni-title-container">
+                <h1 className="title">Colombia's Impactful Companies</h1>
+                <h2 className="title-subcontent">Explore these remarkable companies that started in Colombia</h2>
+            </div>
+
+            <div className="uni-main mt-5 mb-5">
+                <Container fluid secondary="true" className="justify-content-around d-flex flex-wrap  uni-main">
+                    {companies.map((company, key) => (
+                        <button key={key} className="document-category" style={{ maxWidth: '100%', height: '7rem' }}>
+                            <a href={company.companyUrl} target="_blank" rel="noreferrer" className="no-decoration">
+                                <div className="document-category-container">
+                                    <div className="document-category-item document-icon-title">
+                                        <Col xs={3} md={3} className='justify-content-start ml-1 icon'>
+                                            <Image className="img-fluid icon-medium-company hydrated" no-hover="true" src={process.env.PUBLIC_URL + company.logo} style={{ width: '70px', border: 'none' }} />
+                                        </Col>
+                                        <div className="document-title ">
+                                            <span className="document-company-name">{company.name}</span>
+                                            <p className="pl-0 document-company-desc">
+                                              <span className='text-black'>Founded: </span> {company.founded}
+                                              <br></br>
+                                              <span className='text-black'>Headquarters: </span> {company.headquarters}  
+                                            <br></br>
+                                            <span className='text-black'>Industry: </span> {company.industry}  
+                                            <br></br>
+                                            <span className='text-black'>Products: </span> {company.products}
+                                            </p>
+                                          
+                                        </div>
+                                    </div>
+                                    <span className="document-category-item document-count">
+                                        <FontAwesomeIcon icon={faChevronRight} size="lg" />
+                                    </span>
+                                </div>
+                            </a>
+                        </button>
+                    ))}
+                </Container>
+            </div>
+
+          
+        </div>
+                  </Carousel.Item>
+                </Carousel>
               </Tab>
               <Tab eventKey="airlines" title="Airlines" className="tab">
                 <Carousel slide={true} interval={null} nextIcon={<FontAwesomeIcon icon={faChevronRight} />} style={nextIconStyleTwo}

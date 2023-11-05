@@ -111,6 +111,10 @@ body {
   }
 }
 
+.carousel-indicators {
+  z-index: 0 !important;
+}
+
 .carousel-one .carousel-indicators {
   position: absolute;
   top: 7px;
@@ -162,6 +166,30 @@ body {
   /* padding-right: -25px; */
 }
 
+.about-company-image {
+  margin-top: 25px;
+  object-fit: cover;
+
+  &:hover {
+    border: none;
+    filter: brightness(130%);
+    -webkit-filter: brightness(130%);
+    -moz-filter: brightness(130%);
+    -o-filter: brightness(130%);
+    -ms-filter: brightness(130%);
+    -webkit-transition: all 0.50s;
+    transition: all 0.50s;
+  }
+}
+
+.about-company-img-div {
+  margin-top: 25px;
+  text-align: center;
+  overflow: hidden;
+  width: 100vw !important;
+  z-index: 104 !important;
+}
+
 .about {
   left: 0 !important;
   right: 0 !important;
@@ -169,6 +197,10 @@ body {
   margin-right: 0 !important;
   overflow: hidden;
   width: 100vw !important;
+}
+
+.about-carousel-item {
+  z-index: 102 !important;
 }
 
 .about-img-div {
@@ -280,6 +312,63 @@ body {
 }
 
 .about .carousel-indicators .active {
+  background-color: #ff3700;
+  width: 1.95rem !important;
+  height: 0.3rem !important;
+  border-radius: 0 !important;
+  animation: indicatorAnimation 2s;
+}
+
+/* .about-company below */
+
+.about-company .carousel-control-next,
+.about-company .carousel-control-prev {
+  color: #000000 !important;
+  opacity: 1;
+  align-items: flex-start;
+  margin-top: 7px;
+  top: 0;
+  z-index: 103;
+}
+
+.about-company .carousel-control-next {
+  right: 0;
+}
+
+@keyframes indicatorAnimation {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.about-company .carousel-indicators {
+  position: absolute;
+  top: 7px;
+  z-index: 0 !important;
+}
+
+.about-company .carousel-indicators button {
+  width: 0.4rem !important;
+  height: 0.4rem !important;
+  background-color: rgb(0, 0, 0);
+  opacity: 1;
+  border-radius: 50%;
+  animation: none;
+}
+
+.about-company .carousel-indicators button:not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.about-company .carousel-indicators .active {
   background-color: #ff3700;
   width: 1.95rem !important;
   height: 0.3rem !important;
@@ -523,11 +612,11 @@ body {
 .major-cards {
   border: 3px solid #003893 !important;
   background-color: #fff;
-  height: 15rem !important;
+  height: 17rem !important;
   justify-content: space-between;
   z-index: 999 !important;
   filter: brightness(120%);
-  box-shadow: 5px 5px 5px 0 #0000005f, 0 1px 7px 0 #00000047; 
+  box-shadow: 5px 5px 5px 0 #0000005f, 0 1px 7px 0 #00000047;
 }
 
 .major-cards a {
@@ -683,7 +772,7 @@ body {
 } */
 
 
-.trade-image {
+.uni-image {
   margin-top: 0;
   height: 44px;
   width: 44px;
@@ -895,6 +984,15 @@ button {
   border: none;
 }
 
+.icon-medium-company {
+  font-size: 50px !important;
+  line-height: 50px !important;
+  fill: currentcolor;
+  display: inline-flex;
+  user-select: none;
+  border: none;
+}
+
 .document-count {
   padding-inline-end: 15px;
 }
@@ -911,14 +1009,6 @@ button {
   font-size: 15px;
 }
 
-/* p {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-} */
-
 .document-category-desc {
   padding-inline-end: 10px;
   margin-top: 10px;
@@ -928,6 +1018,30 @@ button {
 .document-category:focus .document-category-desc {
   display: block;
 }
+
+/* company-desc */
+.document-title .document-company-desc {
+  display: none;
+  text-align: initial;
+  color: #9fa0a4;
+  font-weight: lighter;
+  font-size: 13px;
+}
+
+.document-company-desc {
+  padding-inline-end: 10px;
+  margin-top: 10px;
+}
+
+.document-category:hover .document-company-desc,
+.document-category:focus .document-company-desc {
+  display: block;
+}
+
+.document-company-name{
+  font-size: 15px;
+}
+/* done */
 
 .document-category-container,
 .document-category-container-with-toggle {
@@ -3261,12 +3375,27 @@ label form [type='radio'] {
     height: 600px !important;
   }
 
+  .about-company {
+    padding-left: 130px;
+    padding-right: 130px;
+    height: 700px !important;
+  }
+
   .about-carousel-item {
     padding-left: 115px;
     padding-right: 115px;
     height: 600px !important;
     margin-right: 0;
     z-index: 102 !important;
+    padding-bottom: auto;
+  }
+
+  .about-carousel-item-company {
+    padding-left: 80px;
+    padding-right: 80px;
+    height: 650px !important;
+    margin-right: 0;
+    z-index: 103 !important;
     padding-bottom: auto;
   }
 
@@ -3285,6 +3414,15 @@ label form [type='radio'] {
     height: 30rem !important;
     float: right;
     left: 0 !important;
+    z-index: 102 !important;
+  }
+
+  .about-company-img-div {
+    margin-top: 25px;
+    width: 25rem !important;
+    float: left;
+    left: 0 !important;
+    z-index: 102 !important;
   }
 
   .about-img-one {
@@ -3307,6 +3445,15 @@ label form [type='radio'] {
     padding-right: 10px;
     max-width: 30vw !important;
     float: left !important;
+    white-space: wrap;
+    margin-bottom: auto !important;
+  }
+
+  .about-company-text {
+    padding-top: 70px;
+    padding-right: 10px;
+    max-width: 30vw !important;
+    float: right !important;
     white-space: wrap;
     margin-bottom: auto !important;
   }
@@ -3479,7 +3626,6 @@ label form [type='radio'] {
     width: 100vw !important;
     float: left !important;
     margin-bottom: 100px;
-    /* Float the text div to the left */
   }
 }
 
@@ -3528,7 +3674,6 @@ label form [type='radio'] {
     width: 100vw !important;
     float: left !important;
     margin-bottom: 100px;
-    /* Float the text div to the left */
   }
 }
 
@@ -3560,7 +3705,7 @@ label form [type='radio'] {
     text-align: initial;
     color: #9fa0a4;
     font-weight: lighter;
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
@@ -3586,5 +3731,9 @@ label form [type='radio'] {
     color: #9fa0a4;
     font-weight: lighter;
     font-size: 10px;
+  }
+
+  .document-cat-name {
+    font-size: 11px;
   }
 }

@@ -5,7 +5,7 @@
         "logo": "./assets/thumbnails/NationalUniversityofColombia.png",
         "campusLocation": "Bogotá, Colombia",
         "credits": "52",
-        "semesters": ""
+        "semesters": "4"
     },
     {
         "name": "Masters in Data Analytics Intelligence MIAD",
@@ -13,7 +13,7 @@
         "logo": "./assets/thumbnails/University_of_Los_Andes_logo.svg.png",
         "campusLocation": "Bogotá, Colombia",
         "credits": "36",
-        "semesters": ""
+        "semesters": "4"
     },
     {
         "name": "Bachelors in Business Administration",
@@ -21,7 +21,7 @@
         "logo": "./assets/thumbnails/Unisabana.png",
         "campusLocation": "Bogotá, Colombia",
         "credits": "180",
-        "semesters": ""
+        "semesters": "9"
     },
     {
         "name": "Specialization in Oncological Surgery",
@@ -29,7 +29,7 @@
         "logo": "./assets/thumbnails/440px-Javeriana.svg.png",
         "campusLocation": "Bogotá, Colombia",
         "credits": "114",
-        "semesters": ""
+        "semesters": "4"
     },
     {
         "name": "Masters in Chemistry",
@@ -37,7 +37,7 @@
         "logo": "./assets/thumbnails/University_of_Los_Andes_logo.svg.png",
         "campusLocation": "Bogotá, Colombia",
         "credits": "40",
-        "semesters": ""
+        "semesters": "4"
     },
     {
         "name": "Specialization in Neurology",
@@ -45,7 +45,7 @@
         "logo": "./assets/thumbnails/NationalUniversityofColombia.png",
         "campusLocation": "Bogotá, Colombia",
         "credits": "120",
-        "semesters": ""
+        "semesters": "4"
     },
     {
         "name": "Bachelors in Gastronomy",
@@ -53,7 +53,7 @@
         "logo": "./assets/thumbnails/Unisabana.png",
         "campusLocation": "Bogotá, Colombia",
         "credits": "162",
-        "semesters": ""
+        "semesters": "8"
     },
     {
         "name": "Masters in Materials Engineering",
@@ -61,7 +61,7 @@
         "logo": "./assets/thumbnails/324px-Escudo-UdeA.svg.png",
         "campusLocation": "Bogotá, Colombia",
         "credits": "62",
-        "semesters": ""
+        "semesters": "4"
     },
     {
         "name": "Doctors in Economics",
@@ -70,6 +70,6 @@
         "subjectScore": "35.3",
         "campusLocation": "Bogotá, Colombia",
         "credits": "88",
-        "semesters": ""
+        "semesters": "8"
     }
 ]

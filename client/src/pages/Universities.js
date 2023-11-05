@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import universitiesData from "../components/Jsons/universities.json";
-import tradeschoolData from "../components/Jsons/tradeschool.json";
+import majorsData from "../components/Jsons/majors.json";
 import { Image, Container, Col, Card, Accordion, useAccordionButton, AccordionContext } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronDown, faChevronUp, faChevronCircleRight, faChevronCircleLeft, faLocationDot, faSuitcase, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Universities = () => {
     const [universities] = useState(universitiesData);
-    const [tradeschool] = useState(tradeschoolData);
+    const [majors] = useState(majorsData);
 
     const UP = <FontAwesomeIcon icon={faChevronUp} size="lg" className='up-to-down' />;
     const DOWN = <FontAwesomeIcon icon={faChevronDown} size="lg" className='down-to-up' />;
@@ -125,7 +125,7 @@ const Universities = () => {
                                 <ContextAwareToggle eventKey="0" className='icon-small' />
 
                                 <h2 id="category-title" className="category-title pl-5">
-                                    Top 10 Majors in Colombia
+                                Top 10 Advanced Education Programs in Colombia
                                 </h2>
                             </div>
                         </Card.Header>
@@ -133,15 +133,15 @@ const Universities = () => {
                             <Card.Body className="majors-card-body m-auto" style={{ width: '100%' }}>
                                 <div className='slider-body mt-5'>
                                     <Slider {...settings} >
-                                        {tradeschool.map((trade, key) => (
+                                        {majors.map((major, key) => (
                                             <Card key={key} className="m-5 p-2 major-cards" style={{ maxWidth: '18rem' }}>
-                                                <a href={trade.uniUrl} target="_blank" rel="noreferrer" className="no-decoration">
+                                                <a href={major.uniUrl} target="_blank" rel="noreferrer" className="no-decoration">
                                                     <Card.Body className='w-100 mt-2 ml-0 mr-0 '>
-                                                        <Card.Img src={process.env.PUBLIC_URL + trade.logo} className="img-fluid d-flex flex-wrap justify-content-around trade-image" />
-                                                        <Card.Subtitle className="mt-2 mb-2 card-subtitle text-muted">{trade.name}</Card.Subtitle>
-                                                        <Card.Subtitle className="mt-2 mb-2 card-subtitle text-muted"><FontAwesomeIcon icon={faLocationDot} size="sm" /> {trade.campusLocation}</Card.Subtitle>
-                                                        <Card.Subtitle className="mt-2 mb-2 card-subtitle text-muted"><FontAwesomeIcon icon={faSuitcase} size="sm" /> :  {trade.credits} credits</Card.Subtitle>
-                                                        <Card.Subtitle className="mt-2 mb-2 card-subtitle text-muted"><FontAwesomeIcon icon={faCalendarDays} size="sm" /> :  {trade.semesters} semesters</Card.Subtitle>
+                                                        <Card.Img src={process.env.PUBLIC_URL + major.logo} className="img-fluid d-flex flex-wrap justify-content-around uni-image" />
+                                                        <Card.Subtitle className="mt-2 mb-2 card-subtitle text-muted">{major.name}</Card.Subtitle>
+                                                        <Card.Subtitle className="mt-2 mb-2 card-subtitle text-muted"><FontAwesomeIcon icon={faLocationDot} size="sm" /> {major.campusLocation}</Card.Subtitle>
+                                                        <Card.Subtitle className="mt-2 mb-2 card-subtitle text-muted"><FontAwesomeIcon icon={faSuitcase} size="sm" /> :  {major.credits} credits</Card.Subtitle>
+                                                        <Card.Subtitle className="mt-2 mb-2 card-subtitle text-muted"><FontAwesomeIcon icon={faCalendarDays} size="sm" /> :  {major.semesters} semesters</Card.Subtitle>
                                                     </Card.Body>
                                                 </a>
                                             </Card>

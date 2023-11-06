@@ -118,13 +118,6 @@ const Header = ({ handlePageChange }) => {
                 </>
               )}
 
-
-
-
-
-
-
-
               <Stack direction="horizontal" gap={3}>
                 <Form.Control className="me-auto" placeholder=" Venture Search..." />
                 <Button variant="secondary">Search</Button>

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
-
+import { Button } from 'react-bootstrap';
 
 const Signup = () => {
   const [formState, setFormState] = useState({
@@ -81,6 +81,20 @@ const Signup = () => {
     }
   };
 
+  const navigate = useNavigate();
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'auto',
+    });
+  };
+
+  const handleNavLinkClick = (url) => {
+    scrollToTop();
+    navigate(url);
+  };
+
   return (
     <main className="flex-row justify-center mb-4">
       <div className='w-100'>
@@ -93,9 +107,9 @@ const Signup = () => {
           </h2>
   
       </div>
-      <div className='mb-5 w-100 contact-img'>
-          <div className='contact-img-text'>
-            <h2 className='justify-content-center text-center contact-img-text'>Become A Venturer</h2>
+      <div className='mb-5 w-100 signup-img'>
+          <div className='signup-img-text'>
+            <h2 className='justify-content-center text-center signup-img-text'>Become A Venturer</h2>
           </div>
         
       </div>
@@ -114,7 +128,7 @@ const Signup = () => {
               <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
-                  placeholder="Username"
+                  placeholder="Create a username &#xf007;"
                   name="username"
                   type="text"
                   value={formState.username}
@@ -122,7 +136,7 @@ const Signup = () => {
                 />
                 <input
                   className="form-input"
-                  placeholder="Your email"
+                  placeholder="Enter your email &#xf0e0;"
                   name="email"
                   type="email"
                   value={formState.email}
@@ -130,7 +144,7 @@ const Signup = () => {
                 />
                 <input
                   className="form-input"
-                  placeholder="Choose a Password"
+                  placeholder="Create a password &#xf023;"
                   name="password"
                   type="password"
                   value={formState.password}
@@ -141,10 +155,10 @@ const Signup = () => {
 
                 {formState.password.length > 0 && (
                   <div className=" pl-1 password-requirements">
-                    <p className="pl-0">
+                    <p className="pl-0 password-requirements-parent">
                       Password Requirements:
                     </p>
-                    <p className="pl-3 password-requirements">
+                    <p className="pl-3 pt-0 password-requirements">
                       {passwordRequirementsMet.length ? (
                         <FontAwesomeIcon icon={faCheckCircle} className="text-success" />
                       ) : (
@@ -194,6 +208,13 @@ const Signup = () => {
                 >
                   Signup
                 </button>
+
+                <Link to="/login" onClick={() => handleNavLinkClick('/login')} className='mt-3 carousel-btn btn-block mx-auto btn1 custom-links'>
+                  <Button className='mt-3 carousel-btn btn-block mx-auto btn1 custom-link' style={{ maxWidth: '345px' }}>
+                    Already have an account? Login here!
+                  </Button>
+                </Link>
+
               </form>
             )}
 

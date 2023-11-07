@@ -3,8 +3,8 @@ import { useLocation, useNavigate, Link } from 'react-router-dom';
 import '../../index.css'
 import { Image, Accordion } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faLinkedin, faSkype, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import {  faLinkedin, faGithub, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
 
@@ -67,7 +67,7 @@ const Footer = () => {
             <span
               className="social-media-icons p-1">
               <a href='https://github.com/Amirlasalle' target="_blank" rel="noreferrer" className="social-media-icons">
-                <FontAwesomeIcon icon={faSkype} size='xl' />
+                <FontAwesomeIcon icon={faFacebook} size='xl' />
               </a>
             </span>
           </h4>
@@ -104,13 +104,11 @@ const Footer = () => {
               </h6>
             </Accordion.Header>
             <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+            <Link to="/contact" onClick={() => handleNavLinkClick('/contact')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Contact Support</p></Link>
+            <Link to="/" onClick={() => handleNavLinkClick('/')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Find a Bed & Breakfast</p>
+            </Link>
+            <Link to="/" onClick={() => handleNavLinkClick('/')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Find a Restaurant </p>
+            </Link>
             </Accordion.Body>
           </Accordion.Item>
           <div className='section-divide'>
@@ -125,11 +123,16 @@ const Footer = () => {
             </Accordion.Header>
             <Accordion.Body>
             <Link to="/contact" onClick={() => handleNavLinkClick('/contact')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Contact Support</p></Link>
-            <Link to="/" onClick={() => handleNavLinkClick('/')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Bed & Breakfasts</p></Link>
+            <a href="tel:+1(631)925-8216" >
+                  <p className='pl-0 mb-0 pb-1 footer-text'>Reach Us By Email <FontAwesomeIcon icon={faEnvelope}  />
+                  </p>
+              </a>
             <a href="tel:+1(631)925-8216" >
                   <p className='pl-0 mb-0 pb-1 footer-text'>Call Us <FontAwesomeIcon icon={faPhone}  />
                   </p>
               </a>
+              <Link to="/signup" onClick={() => handleNavLinkClick('/signup')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Signup</p>
+            </Link>
             </Accordion.Body>
           </Accordion.Item>
           <div className='section-divide'>
@@ -157,60 +160,7 @@ const Footer = () => {
           </div>
         </Accordion>
       </div>
-      {/* <Container className='footer-nav '>
 
-          <div className='footer-nav'>
-
-
-            <Nav.Link>
-              <Link to="/">
-                <h4 className='pl-0'>
-                  Home
-                </h4>
-              </Link>
-            </Nav.Link>
-            <NavDropdown title="Profile and more" id="">
-              <h4>
-                home
-              </h4>
-              <NavDropdown.Item href="#action/3.1">
-                <Link to="/">
-                  Bookings
-                </Link></NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.1">
-                <Link to="/">
-                  Ventures
-                </Link>
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.3">Account settings</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Get help
-              </NavDropdown.Item>
-            </NavDropdown>
-
-            <Nav.Link >  <Link>
-              Logout
-            </Link></Nav.Link>
-
-            <Nav.Link><Link to="/">
-              Home
-            </Link></Nav.Link>
-
-            <Nav.Link >  <Link to="/login" onClick={() => handleNavLinkClick('/login')} >
-              Login
-            </Link></Nav.Link>
-
-            <Nav.Link ><Link to="/signup" onClick={() => handleNavLinkClick('/signup')} >
-              Signup
-            </Link></Nav.Link>
-
-          </div>
-
-        </Container>
-      </Navbar> */}
       <div className="w-100 text-center text-white">
 
         <h4 className='pl-0'>

@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Email Us",
+        "subtitle": "Our dedicated email support team is available around the clock, ensuring that we're ready to assist you at any given moment.",
+        "beds": " ",
+        "dates": " ",
+        "price": " ",
+        "screenshotone": "/assets/social/email-card.jpg",
+        "more": "mailto:mirolasalle@gmail.com"
+    },
+    {
+        "name": "Give Us A Call",
+        "subtitle": "We are available to assist you with any inquiries during our normal business hours from 8 am - 5 pm EST.",
+        "beds": " ",
+        "dates": " ",
+        "price": " ",
+        "screenshotone": "/assets/social/phone-card.jpg",
+        "more": "tel:+1(631)925-8216"
+    },
+    {
+        "name": "Send Us A Text",
+        "subtitle": "Prefer texting? Feel free to send us a text anytime, and we'll be delighted to assist you promptly.",
+        "beds": " ",
+        "dates": " ",
+        "price": " ",
+        "screenshotone": "/assets/social/sms-card.jpg",
+        "more": "sms:+1(631)925-8216"
+    },
+    {
+        "name": "LinkedIn",
+        "subtitle": "Network with on through LinkedIn and unlock opportunities, connect with industry leaders, and supercharge your career!",
+        "beds": " ",
+        "dates": " ",
+        "price": " ",
+        "screenshotone": "/assets/social/linkedin-card.jpg",
+        "more": "https://www.linkedin.com/in/amirlasalle/"
+    },
+    {
+        "name": "GitHub",
+        "subtitle": "Join us on GitHub and be part of our innovative community today!",
+        "beds": " ",
+        "dates": " ",
+        "price": " ",
+        "screenshotone": "/assets/social/github-card.jpg",
+        "more": "https://github.com/Amirlasalle"
+    },
+    {
+        "name": "Facebook",
+        "subtitle": "Follow our Facebook page to stay updated and be part of our vibrant community!",
+        "beds": " ",
+        "dates": " ",
+        "price": " ",
+        "screenshotone": "/assets/social/facebook-card.jpg",
+        "more": "https://www.facebook.com/profile.php?id=61553046641168"
+    },
+    {
+        "name": "Instagram",
+        "subtitle": "Follow us Instagram for daily inspiration and exclusive updates – follow us now and be part of the excitement!",
+        "beds": " ",
+        "dates": " ",
+        "price": " ",
+        "screenshotone": "/assets/social/instagram-card.jpg",
+        "more": "https://www.instagram.com/ichigo23__/"
+    }
+]

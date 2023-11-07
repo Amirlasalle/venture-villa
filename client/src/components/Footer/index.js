@@ -1,11 +1,12 @@
 import React from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import '../../index.css'
-import { Image,  Accordion } from 'react-bootstrap';
-
+import { Image, Accordion } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faLinkedin, faSkype, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
-
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -24,21 +25,63 @@ const Footer = () => {
     <footer className="mt-auto bg-secondary">
 
       <div className='w-100 custom-links-footer'>
-        <div className='p-3'>
+        <div className="w-100 mt-2 text-center text-white">
+          {location.pathname !== '/' && (
+            <button
+              className="btn btn-dark mb-3"
+              onClick={() => navigate(-1)}
+            >
+              &larr; Go Back
+            </button>
+          )}
+        </div>
+        <div className='p-0 pb-5'>
           <Link to="/" onClick={() => handleNavLinkClick('/')} className='custom-link'> <Image className='vv-white-logo' src={process.env.PUBLIC_URL + "/assets/venture-villa-white-logo.png"} fluid />
           </Link>
         </div>
+        <div className="w-100 text-center text-white">
 
-        <Accordion flush defaultActiveKey="0" className='mt-5 mb-5 ml-0 accordion-footer'>
+          <h4 className='pl-0'>
+            {' '}
+            <span
+              className="social-media-icons p-1">
+              <a href='https://www.instagram.com/ichigo23__/' target="_blank" rel="noreferrer" className="social-media-icons">
+                <FontAwesomeIcon icon={faInstagram} size='xl' />
+              </a>
+            </span>
+            {' '}
+            <span
+              className="social-media-icons p-1">
+              <a href='https://www.linkedin.com/in/amirlasalle/' target="_blank" rel="noreferrer" className="social-media-icons">
+                <FontAwesomeIcon icon={faLinkedin} size='xl' />
+              </a>
+            </span>
+            {' '}
+            <span
+              className="social-media-icons p-1">
+              <a href='https://github.com/Amirlasalle' target="_blank" rel="noreferrer" className="social-media-icons">
+                <FontAwesomeIcon icon={faGithub} size='xl' />
+              </a>
+            </span>
+            {' '}
+            <span
+              className="social-media-icons p-1">
+              <a href='https://github.com/Amirlasalle' target="_blank" rel="noreferrer" className="social-media-icons">
+                <FontAwesomeIcon icon={faSkype} size='xl' />
+              </a>
+            </span>
+          </h4>
+        </div>
+        <Accordion flush className='mt-5 mb-5 ml-0 accordion-footer'>
           <div className='section-divide'>
             <h2 className="mt-2 mb-2 section-divider-accordion " >
             </h2>
           </div>
           <Accordion.Item eventKey="0" className='bg-secondary accordion-footer'>
             <Accordion.Header className='pl-0 accordion-footer'>
-              <h5 className='pl-0 bg-secondary accordion-footer'>
+              <h6 className='pl-0 pt-2 bg-secondary accordion-footer text-bold'>
                 ABOUT US
-              </h5>
+              </h6>
             </Accordion.Header>
             <Accordion.Body>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -56,9 +99,9 @@ const Footer = () => {
           </div>
           <Accordion.Item eventKey="1" className='bg-secondary accordion-footer'>
             <Accordion.Header className='pl-0 accordion-footer'>
-              <h5 className='pl-0 bg-secondary accordion-footer'>
+              <h6 className='pl-0 pt-2 bg-secondary accordion-footer text-bold'>
                 SUPPORT
-              </h5>
+              </h6>
             </Accordion.Header>
             <Accordion.Body>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -76,18 +119,17 @@ const Footer = () => {
           </div>
           <Accordion.Item eventKey="2" className='bg-secondary accordion-footer'>
             <Accordion.Header className='pl-0 accordion-footer'>
-              <h5 className='pl-0 bg-secondary accordion-footer'>
-                Home
-              </h5>
+              <h6 className='pl-0 pt-2 bg-secondary accordion-footer text-bold'>
+                CONTACT US
+              </h6>
             </Accordion.Header>
             <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+            <Link to="/contact" onClick={() => handleNavLinkClick('/contact')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Contact Support</p></Link>
+            <Link to="/" onClick={() => handleNavLinkClick('/')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Bed & Breakfasts</p></Link>
+            <a href="tel:+1(631)925-8216" >
+                  <p className='pl-0 mb-0 pb-1 footer-text'>Call Us <FontAwesomeIcon icon={faPhone}  />
+                  </p>
+              </a>
             </Accordion.Body>
           </Accordion.Item>
           <div className='section-divide'>
@@ -96,18 +138,17 @@ const Footer = () => {
           </div>
           <Accordion.Item eventKey="3" className='bg-secondary accordion-footer'>
             <Accordion.Header className='pl-0 accordion-footer'>
-              <h5 className='pl-0 bg-secondary accordion-footer'>
+              <h6 className='pl-0 pt-2 bg-secondary accordion-footer text-bold'>
                 QUICK LINKS
-              </h5>
+              </h6>
             </Accordion.Header>
             <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+            <Link to="/" onClick={() => handleNavLinkClick('/')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Discover Colombia</p></Link>
+            <Link to="/universities" onClick={() => handleNavLinkClick('/')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Universities</p></Link>
+            <Link to="/culture" onClick={() => handleNavLinkClick('/culture')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Columbian Culture</p></Link>
+            <Link to="/" onClick={() => handleNavLinkClick('/')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Delicious Cuisine</p></Link>
+            <Link to="/" onClick={() => handleNavLinkClick('/')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Wondrous Landscapes</p></Link>   
+            <Link to="/" onClick={() => handleNavLinkClick('/')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Bed & Breakfasts</p></Link>
             </Accordion.Body>
           </Accordion.Item>
           <div className='section-divide'>
@@ -170,17 +211,10 @@ const Footer = () => {
 
         </Container>
       </Navbar> */}
-      <div className="w-100">
-        {location.pathname !== '/' && (
-          <button
-            className="btn btn-dark mb-3"
-            onClick={() => navigate(-1)}
-          >
-            &larr; Go Back
-          </button>
-        )}
-        <h4>
-          Your Next{' '}
+      <div className="w-100 text-center text-white">
+
+        <h4 className='pl-0'>
+          Your Next Venture Awaits!{' '}
           <span
             className="emoji"
             role="img"
@@ -188,8 +222,16 @@ const Footer = () => {
             aria-hidden="false"
           >
             ❤️
-          </span>{' '}
-          Venture Awaits!
+          </span>
+          {' '}
+          <span
+            className="emoji"
+            role="img"
+            aria-label="plane"
+            aria-hidden="false"
+          >
+            ✈️
+          </span>
         </h4>
       </div>
       <div className="mt-0 mb-0 banner ">

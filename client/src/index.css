@@ -693,6 +693,84 @@ body {
   z-index: 1 !important;
 }
 
+.venture-search-container {
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center !important;
+}
+
+.venture-search {
+  max-width: 80%;
+  position: relative;
+  color: #000 !important;
+  text-decoration: none !important;
+  border: .5px solid #a1a1a1b3 !important;
+  border-radius: 50px !important;
+  background-color: #fff !important;
+  box-shadow: 5px 5px 5px 0 #0000005f, 0 1px 7px 0 #00000047;
+  z-index: 2 !important;
+  display: inline-flex;
+
+}
+
+
+.venture-search:hover {
+  text-decoration: none !important;
+  z-index: 2 !important;
+}
+
+.venture-mag {
+  margin-right: -10px;
+  float: right;
+  align-items: center;
+  padding: 10px;
+  color: #fff;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 255, 0.692);
+
+}
+
+.venture-text {
+  align-items: center !important;
+  text-align: center;
+  padding-top: 5px;
+  float: left;
+}
+
+.venture-divider-1 {
+  padding: 5px;
+  float: left;
+  color: #b9b9b9;
+}
+
+._vb0de6j {
+  -webkit-box-align: center !important;
+  cursor: pointer !important;
+  position: relative !important;
+  touch-action: manipulation !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  font-weight: inherit !important;
+  border-radius: 0px !important;
+  outline: none !important;
+  transition: none 0s ease 0s !important;
+  -webkit-tap-highlight-color: transparent !important;
+  background: transparent !important;
+  border: none !important;
+  color: inherit !important;
+  display: flex !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  text-align: inherit !important;
+  text-decoration: none !important;
+  height: 100% !important;
+  width: 100% !important;
+  align-items: center !important;
+  min-width: 0px !important;
+  user-select: none !important;
+}
+
 .btn1 {
   position: relative;
   text-decoration: none !important;
@@ -2688,6 +2766,7 @@ a:hover {
 .password-requirements-parent {
   font-size: medium !important;
 }
+
 .password-requirements {
   font-size: small !important;
 }
@@ -2757,9 +2836,11 @@ form .form-input {
   border-radius: 0.3rem;
   font-family: FontAwesome;
 }
-form .form-input::placeholder  {
-color: #8e8e8ea1;
+
+form .form-input::placeholder {
+  color: #8e8e8ea1;
 }
+
 form .form-input.form-input-squared {
   border-radius: 0;
 }
@@ -2839,7 +2920,7 @@ label form [type='radio'] {
 }
 
 .align-center {
-  align-items: center;
+  align-items: center !important;
 }
 
 .align-content-start {

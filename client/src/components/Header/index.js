@@ -1,14 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Auth from '../../utils/auth';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Image from 'react-bootstrap/Image';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 import Stack from 'react-bootstrap/Stack';
+import { Image, Container,  Nav, Navbar, NavDropdown, Form, Button, Modal } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faMagnifyingGlass, faCircle } from '@fortawesome/free-solid-svg-icons';
+// faChevronCircleRight, faChevronCircleLeft, faChevronLeft, faChevronRight, faPipe,  faExternalLinkAlt, faArrowUpRightFromSquare,Col, Card,
 
 
 const Header = ({ handlePageChange }) => {
@@ -55,6 +52,11 @@ const Header = ({ handlePageChange }) => {
     navigate(url);
   };
 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
 
 
 
@@ -69,8 +71,39 @@ const Header = ({ handlePageChange }) => {
 
             </Nav.Link>
           </Navbar.Brand>
-          {/* <Navbar.Brand>
-          <Image className='vv-logo' src={process.env.PUBLIC_URL + "/assets/venture-villa-logo.png"} fluid /></Navbar.Brand> */}
+          {/* <Stack direction="horizontal" gap={3} style={{ maxWidth: '450px' }}> */}
+          {/* <Form.Control className="me-auto" placeholder=" Venture Search..." />
+                <Button variant="flat" className='carousel-btn btn-block mx-auto venture-search' style={{ maxWidth: '450px' }}>Venture Search</Button> */}
+          <div className="m-1 w-50 flex-row justify-center venture-search-container align-center ">
+            <Button onClick={handleShow} size="md" className="btn btn-block venture-search align-center" style={{ maxWidth: '100%', height: '100%' }}>
+              <span className='pr-2 venture-text'> Venture Search </span>
+              <span className='pr-2 venture-divider-1'>
+                <FontAwesomeIcon icon={faCircle} size="2xs" />
+              </span>
+              <span className='pr-2 venture-text'> Anywhere </span>
+              <span className='pr-2 venture-divider-1'>
+                <FontAwesomeIcon icon={faCircle} size="2xs" />
+              </span>
+              <span className='venture-text'> Any week </span>
+              <span>
+                <FontAwesomeIcon icon={faMagnifyingGlass} className='venture-mag' />
+              </span>
+            </Button>
+
+            <div className='ml-5 modal-div'>
+              <Modal show={show} onHide={handleClose} animation={false} size="lg" dialogClassName="my-modal custom-modal">
+                <Modal.Header closeButton style={{ display: 'none' }}></Modal.Header>
+                <Modal.Body className='d-flex flex-wrap justify-content-around custom-modal' closeButton>
+
+                  <div className='custom-youtube-video'>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/NjbRrRfyvW4?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreenclassName='my-modal custom-modal'></iframe>
+                  </div>
+                </Modal.Body>
+              </Modal>
+            </div>
+          </div>
+          {/* </Stack> */}
+
           <Navbar.Toggle aria-controls="navbarScroll" className='toggle' onClick={toggleNavbar} />
           <Navbar.Collapse id="navbarScroll" className={`navbar-scroll ${isNavbarOpen ? 'show' : ''}`}>
             <Nav

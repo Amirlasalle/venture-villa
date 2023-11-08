@@ -80,11 +80,11 @@ const Header = ({ handlePageChange }) => {
               <span className='pr-2 venture-divider-1'>
                 <FontAwesomeIcon icon={faCircle} size="2xs" />
               </span>
-              <span className='pr-2 venture-text'> Anywhere </span>
-              <span className='pr-2 venture-divider-1'>
+              <span className='pr-2 venture-text-1'> Anywhere </span>
+              <span className='pr-2 venture-divider-2'>
                 <FontAwesomeIcon icon={faCircle} size="2xs" />
               </span>
-              <span className='venture-text'> Any week </span>
+              <span className='venture-text-2'> Any week </span>
               <span>
                 <FontAwesomeIcon icon={faMagnifyingGlass} className='venture-mag' />
               </span>

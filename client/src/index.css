@@ -743,6 +743,27 @@ body {
   color: #b9b9b9;
 }
 
+.venture-text-1 {
+  align-items: center !important;
+  text-align: center;
+  padding-top: 5px;
+  float: left;
+}
+
+.venture-divider-2 {
+  padding: 5px;
+  float: left;
+  color: #b9b9b9;
+}
+
+.venture-text-2 {
+  align-items: center !important;
+  text-align: center;
+  padding-top: 5px;
+  float: left;
+}
+
+
 ._vb0de6j {
   -webkit-box-align: center !important;
   cursor: pointer !important;
@@ -4005,13 +4026,37 @@ label form [type='radio'] {
   }
 }
 
+@media screen and (max-width: 830px) {
+
+
+  .venture-divider-2 {
+    display: none;
+  }
+
+  .venture-text-2 {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .uni-main {
     flex-direction: column !important;
     justify-content: center !important;
   }
+
 }
 
+@media screen and (max-width: 625px) {
+
+
+  .venture-divider-1 {
+    display: none;
+  }
+
+  .venture-text-1 {
+    display: none;
+  }
+}
 @media screen and (max-width: 450px) {
 
   .icon-medium {

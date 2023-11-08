@@ -258,7 +258,7 @@ function Home() {
         <div className='mt-5 history-img'>
           <Row className=''>
             <div className='history-text'>
-              <h2 className='d-flex flex-column justify-content-center  mt-5'>Colombia's Tourism Evolution</h2>
+              <h2 className='d-flex flex-column justify-content-center pl-0 mt-5'>Colombia's Tourism Evolution</h2>
               <p className='d-flex flex-column justify-content-center history-para'>Colombia's tourism history is a captivating tale of transformation and resilience. From the mysterious allure of its pre-Columbian civilizations to the tumultuous years marked by conflict, and ultimately, its remarkable resurgence as a sought-after destination, the story of Colombian tourism is a testament to the nation's enduring spirit. The country's journey from a turbulent history to a beacon of adventure and cultural diversity is an inspiring narrative that invites visitors to be part of its ongoing renaissance, making Colombia a destination brimming with captivating tales yet to be told.</p>
             </div>
           </Row>

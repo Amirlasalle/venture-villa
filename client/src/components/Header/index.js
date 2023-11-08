@@ -2,9 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Auth from '../../utils/auth';
 import Stack from 'react-bootstrap/Stack';
-import { Image, Container,  Nav, Navbar, NavDropdown, Form, Button, Modal } from 'react-bootstrap';
+import { Image, Container, Nav, Navbar, NavDropdown, Form, Button, Modal } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faMagnifyingGlass, faCircle } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 // faChevronCircleRight, faChevronCircleLeft, faChevronLeft, faChevronRight, faPipe,  faExternalLinkAlt, faArrowUpRightFromSquare,Col, Card,
 
 
@@ -71,24 +71,23 @@ const Header = ({ handlePageChange }) => {
 
             </Nav.Link>
           </Navbar.Brand>
-          {/* <Stack direction="horizontal" gap={3} style={{ maxWidth: '450px' }}> */}
-          {/* <Form.Control className="me-auto" placeholder=" Venture Search..." />
-                <Button variant="flat" className='carousel-btn btn-block mx-auto venture-search' style={{ maxWidth: '450px' }}>Venture Search</Button> */}
-          <div className="m-1 w-50 flex-row justify-center venture-search-container align-center ">
-            <Button onClick={handleShow} size="md" className="btn btn-block venture-search align-center" style={{ maxWidth: '100%', height: '100%' }}>
-              <span className='pr-2 venture-text'> Venture Search </span>
-              <span className='pr-2 venture-divider-1'>
-                <FontAwesomeIcon icon={faCircle} size="2xs" />
-              </span>
-              <span className='pr-2 venture-text-1'> Anywhere </span>
-              <span className='pr-2 venture-divider-2'>
-                <FontAwesomeIcon icon={faCircle} size="2xs" />
-              </span>
-              <span className='venture-text-2'> Any week </span>
-              <span>
-                <FontAwesomeIcon icon={faMagnifyingGlass} className='venture-mag' />
-              </span>
+
+          <div className="venture-search-container">
+            <Button onClick={handleShow} size="md" className="venture-search ">
+              <div className=' venture-text'> Venture Search </div>
             </Button>
+            <span className='venture-btn-divider'></span>
+            <Button onClick={handleShow} size="md" className="venture-search-2 " >
+              <div className=' venture-text'>Anywhere</div>
+            </Button>
+            <span className='venture-btn-divider'></span>
+            <Button onClick={handleShow} size="md" className="venture-search-3 " >
+              <div className=' venture-text'>Any week</div>
+            </Button>
+            <div className='venture-mag-div'>
+              <FontAwesomeIcon icon={faMagnifyingGlass} className='venture-mag venture-mag-bold' size='md' style={{ fontWeight: 'bolder' }} />
+            </div>
+
 
             <div className='ml-5 modal-div'>
               <Modal show={show} onHide={handleClose} animation={false} size="lg" dialogClassName="my-modal custom-modal">
@@ -155,6 +154,22 @@ const Header = ({ handlePageChange }) => {
                 <Form.Control className="me-auto" placeholder=" Venture Search..." />
                 <Button variant="secondary">Search</Button>
               </Stack>
+                 {/* <div className="venture-search-container">
+            <Button onClick={handleShow} size="md" className="venture-search ">
+              <div className=' venture-text'> Venture Search </div>
+            </Button>
+            <span className='venture-btn-divider'></span>
+            <Button onClick={handleShow} size="md" className="venture-search-2 " >
+              <div className=' venture-text'>Anywhere</div>
+            </Button>
+            <span className='venture-btn-divider'></span>
+            <Button onClick={handleShow} size="md" className="venture-search-3 " >
+              <div className=' venture-text'>Any week</div>
+            </Button>
+            <div className='venture-mag-div'>
+              <FontAwesomeIcon icon={faMagnifyingGlass} className='venture-mag venture-mag-bold' size='md' style={{ fontWeight: 'bolder' }} />
+            </div>
+            </div> */}
 
             </Nav>
           </Navbar.Collapse>

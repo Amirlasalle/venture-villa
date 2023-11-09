@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Auth from '../../utils/auth';
 import Stack from 'react-bootstrap/Stack';
 import { Image, Container, Nav, Navbar, NavDropdown, Form, Button, Modal } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faCircleUser, faBars, faGem } from '@fortawesome/free-solid-svg-icons';
 // faChevronCircleRight, faChevronCircleLeft, faChevronLeft, faChevronRight, faPipe,  faExternalLinkAlt, faArrowUpRightFromSquare,Col, Card,
 
 
@@ -37,6 +37,8 @@ const Header = ({ handlePageChange }) => {
       document.removeEventListener('mousedown', handleOutsideClick);
     };
   }, []);
+
+  const location = useLocation();
   const navigate = useNavigate();
 
   const scrollToTop = () => {
@@ -62,7 +64,7 @@ const Header = ({ handlePageChange }) => {
 
   return (
     <div role='navigation' className='bg-body-tertiary mar'>
-      <Navbar className="fixed-top custom-links bg-body-tertiary" bg="white" expand="lg" ref={navbarRef} expanded={isNavbarOpen}>
+      <Navbar className="fixed-top custom-link bg-body-tertiary" bg="white" expand="lg" ref={navbarRef} expanded={isNavbarOpen}>
         <Container fluid className='betterheader'>
           <Navbar.Brand className='navbarBrand'>
             <Nav.Link>
@@ -103,39 +105,37 @@ const Header = ({ handlePageChange }) => {
           </div>
           {/* </Stack> */}
 
-          <Navbar.Toggle aria-controls="navbarScroll" className='toggle' onClick={toggleNavbar} />
-          <Navbar.Collapse id="navbarScroll" className={`navbar-scroll ${isNavbarOpen ? 'show' : ''}`}>
-            <Nav
-              className=" my-2 my-lg-0 navNav">
 
-              {Auth.loggedIn() ? (
-                <>
-                  <Nav.Link><Link to="/">
-                    Home
-                  </Link></Nav.Link>
-                  <NavDropdown title="Profile and more" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">    <Link to="/me">
-                      {Auth.getProfile().data.username}'s Bookings
-                    </Link></NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.1">    <Link to="/me">
-                      {Auth.getProfile().data.username}'s Ventures
-                    </Link></NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.3">Account settings</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">
-                      Get help
-                    </NavDropdown.Item>
-                  </NavDropdown>
+          <div className="basic-nav-dropdown-div">
 
-                  <Nav.Link >  <Link onClick={logout}>
-                    Logout
-                  </Link></Nav.Link>
-                </>
-              ) : (
-                <>
-                  <Nav.Link><Link to="/">
+            {Auth.loggedIn() ? (
+              <>
+                <Nav.Link><Link to="/">
+                  Home
+                </Link></Nav.Link>
+                <NavDropdown title="Profile and more" id="basic-nav-dropdown">
+                  <NavDropdown.Item href="#action/3.1">    <Link to="/me">
+                    {Auth.getProfile().data.username}'s Bookings
+                  </Link></NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#action/3.1">    <Link to="/me">
+                    {Auth.getProfile().data.username}'s Ventures
+                  </Link></NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#action/3.3">Account settings</NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#action/3.4">
+                    Get help
+                  </NavDropdown.Item>
+                </NavDropdown>
+
+                <Nav.Link >  <Link onClick={logout}>
+                  Logout
+                </Link></Nav.Link>
+              </>
+            ) : (
+              <>
+                {/* <Nav.Link><Link to="/">
                     Home
                   </Link></Nav.Link>
 
@@ -145,16 +145,67 @@ const Header = ({ handlePageChange }) => {
 
                   <Nav.Link ><Link to="/signup">
                     Signup
-                  </Link></Nav.Link>
+                  </Link></Nav.Link> */}
+                <NavDropdown eventKey={3} title={<div style={{ display: "inline-block" }}>    <FontAwesomeIcon icon={faBars} className='' size='xl' style={{ fontWeight: 'bolder' }} /><FontAwesomeIcon icon={faCircleUser} className='ml-2 ' size='2xl' style={{ fontWeight: 'bolder' }} /> </div>} className='navbar-static basic-nav-dropdown '>
 
-                </>
-              )}
+                  <Nav.Link>
+                    <Link to="/" onClick={() => handleNavLinkClick('/')}>
+                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>
+                      Explore Colombia's gem
+                      {/* <span className='colombian-flag-emoji-lg'>
+                        <FontAwesomeIcon icon={faGem} size="xl" />
+                      </span> */}
+                      <span>
+                      <Image className='emerald-icon' src={process.env.PUBLIC_URL + "/assets/thumbnails/pngwing.com.png"} fluid />
+                        </span>
+                      </p>
+                    </Link>
+                  </Nav.Link>
 
-              <Stack direction="horizontal" gap={3}>
+                  <NavDropdown.Divider />
+
+                  <Nav.Link>
+                    <Link to="/signup" onClick={() => handleNavLinkClick('/signup')}>
+                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Sign up</p>
+                    </Link>
+                  </Nav.Link>
+
+                  <Nav.Link>
+                    <Link to="/login" onClick={() => handleNavLinkClick('/login')}>
+                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Login</p>
+                    </Link>
+                  </Nav.Link>
+
+                  <NavDropdown.Divider />
+
+                  <Nav.Link>
+                    <Link to="/" onClick={() => handleNavLinkClick('/')}>
+                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Restaurants</p>
+                    </Link>
+                  </Nav.Link>
+
+                  <Nav.Link>
+                    <Link to="/" onClick={() => handleNavLinkClick('/')}>
+                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Find a Bed & Breakfast</p>
+                    </Link>
+                  </Nav.Link>
+
+                  <Nav.Link>
+                    <Link to="/contact" onClick={() => handleNavLinkClick('/contact')}>
+                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Help Center</p>
+                    </Link>
+                  </Nav.Link>
+
+
+                </NavDropdown>
+              </>
+            )}
+
+            {/* <Stack direction="horizontal" gap={3}>
                 <Form.Control className="me-auto" placeholder=" Venture Search..." />
                 <Button variant="secondary">Search</Button>
-              </Stack>
-                 {/* <div className="venture-search-container">
+              </Stack> */}
+            {/* <div className="venture-search-container">
             <Button onClick={handleShow} size="md" className="venture-search ">
               <div className=' venture-text'> Venture Search </div>
             </Button>
@@ -171,8 +222,8 @@ const Header = ({ handlePageChange }) => {
             </div>
             </div> */}
 
-            </Nav>
-          </Navbar.Collapse>
+          </div>
+
         </Container>
       </Navbar>
     </div>

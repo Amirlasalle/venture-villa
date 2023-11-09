@@ -74,7 +74,7 @@ const Login = (props) => {
       </div>
       <div className="col-12 col-lg-10">
         <div className="card">
-          <h4 className="card-header text-dark p-2" style={{ background: '#f7e70c' }}>Login and start your Venture 😋 😎</h4>
+          <h4 className="card-header text-dark p-2" style={{ background: '#ffe100' }}>Login and start your Venture 😋 😎</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -100,17 +100,17 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
 
-                <button
-                  className="btn btn-block btn-light "
+                <Button
+                  className="btn btn-block btn-light sign-log-btn "
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
                   Login
-                </button>
+                </ Button>
 
 
-                <Link to="/signup" onClick={() => handleNavLinkClick('/signup')} className='mt-3 carousel-btn btn-block mx-auto btn1 custom-links'>
-                  <Button className='mt-3 carousel-btn btn-block mx-auto btn1 custom-link' style={{ maxWidth: '345px' }}>
+                <Link to="/signup" onClick={() => handleNavLinkClick('/signup')} className='mt-3 btn-block mx-auto sign-log-red btn1 custom-links'>
+                  <Button className='mt-3 btn-block mx-auto btn1 sign-log-red custom-link' style={{ width: '375px', background: '#ff0000'  }}>
 
                     Don't have an account yet? Signup here!
 

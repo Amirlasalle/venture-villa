@@ -98,24 +98,24 @@ const Signup = () => {
   return (
     <main className="flex-row justify-center mb-4">
       <div className='w-100'>
- 
-          <h2 className="text-center pb-4 section-divider-y w-100" >
-          </h2>
-          <h2 className="text-center section-divider-b w-100" >
-          </h2>
-          <h2 className="mb-0 text-center section-divider-r w-100" >
-          </h2>
-  
+
+        <h2 className="text-center pb-4 section-divider-y w-100" >
+        </h2>
+        <h2 className="text-center section-divider-b w-100" >
+        </h2>
+        <h2 className="mb-0 text-center section-divider-r w-100" >
+        </h2>
+
       </div>
       <div className='mb-5 w-100 signup-img'>
-          <div className='signup-img-text'>
-            <h2 className='justify-content-center text-center signup-img-text'>Become A Venturer</h2>
-          </div>
-        
+        <div className='signup-img-text'>
+          <h2 className='justify-content-center text-center signup-img-text'>Become A Venturer</h2>
+        </div>
+
       </div>
       <div className="col-12 col-lg-10">
         <div className="card">
-          <h4 className="card-header text-dark p-2" style={{ background: '#f7e70c' }}>
+          <h4 className="card-header text-dark p-2" style={{ background: '#ffe100' }}>
             Unleash your Venture and discover the lands unseen!
           </h4>
           <div className="card-body">
@@ -200,20 +200,22 @@ const Signup = () => {
                     </p>
                   </div>
                 )}
-                <button
-                  className={`btn btn-block ${isPasswordValid() ? "btn-info" : "btn-light"}`}
-                  style={{ cursor: 'pointer' }}
+                <Button
+                  className={`btn btn-block sign-log-btn ${isPasswordValid() ? "btn-flat" : "btn-light"}`}
+                  style={{ cursor: 'pointer', background: '#0033cc' }}
                   type="submit"
                   disabled={!isPasswordValid()}
                 >
                   Signup
-                </button>
+                </Button>
 
-                <Link to="/login" onClick={() => handleNavLinkClick('/login')} className='mt-3 carousel-btn btn-block mx-auto btn1 custom-links'>
-                  <Button className='mt-3 carousel-btn btn-block mx-auto btn1 custom-link' style={{ maxWidth: '345px' }}>
-                    Already have an account? Login here!
-                  </Button>
-                </Link>
+                <div className="mt-3 button-container">
+                  <Link to="/login" onClick={() => handleNavLinkClick('/login')} className='mt-3 btn-block mx-auto sign-log-red btn1 custom-links'>
+                    <Button className='mt-3 btn-block mx-auto btn1 sign-log-red custom-link' style={{ maxWidth: '345px', background: '#ff0000' }}>
+                      Already have an account? Login here!
+                    </Button>
+                  </Link>
+                </div>
 
               </form>
             )}

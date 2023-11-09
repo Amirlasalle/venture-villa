@@ -23,6 +23,58 @@ body {
   margin-bottom: 116px;
 }
 
+
+
+.sign-log-red {
+  font-family: 'Poppins', sans-serif !important;
+  text-decoration: none !important;
+  font-size: 1rem;
+  color: #ffffff !important;
+}
+
+.sign-log-red :hover {
+  filter: brightness(90%) !important;
+  text-decoration: none !important;
+  color: #ffffff;
+}
+
+
+.sign-log-btn {
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif !important;
+  color: rgb(255, 255, 255) !important;
+  background-color: #0033cc !important;
+}
+
+.sign-log-btn:hover {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #ffffff !important;
+  background-color: #0033cc !important;
+  filter: brightness(150%)
+}
+
+
+
+.custom-link {
+  color: #000 !important;
+}
+
+
+.custom-link a {
+  text-decoration: none;
+  background-color: transparent !important;
+  font-size: 1rem;
+  color: #000 !important;
+}
+
+.custom-link a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+
+
 .custom-links {
   color: #000 !important;
 }
@@ -693,8 +745,104 @@ body {
   z-index: 1 !important;
 }
 
+.basic-nav-dropdown-div {
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center !important;
+  background-color: #fff;
+  border: 1px solid #afafaf;
+  border-radius: 40px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
+  color: #fff;
+  vertical-align: middle;
+  position: relative;
+}
 
+.basic-nav-dropdown {
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center !important;
+  background-color: #fff;
+  border: 1px solid #afafaf;
+  border-radius: 40px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
+  position: relative;
+  color: #fff;
+  vertical-align: middle;
+  padding: 8px 8px 8px 14px;
+}
 
+.basic-nav-dropdown .dropdown-toggle::after {
+  display: none !important;
+}
+
+.basic-nav-dropdown .dropdown-menu {
+  width: 15rem !important;
+  margin-top: 10px !important;
+  justify-content: flex-start !important;
+  transform: translateX(-75%);
+  border-radius: 10px;
+  border: 0;
+  box-shadow: 5px 5px 5px 0 rgba(51, 51, 51, 0.307), 0 1px 7px 0 rgba(51, 51, 51, 0.365) !important;
+}
+
+.basic-nav-dropdown-text {
+  max-width: 100%;
+  text-decoration: none !important;
+  font-size: 0.85rem !important;
+  padding: 10px;
+
+}
+
+.basic-nav-dropdown-text:hover {
+  background-color: #a5a5a5;
+  text-decoration: none !important;
+  filter: brightness(150%);
+}
+
+.colombian-flag-emoji-lg {
+  color: #50C878;
+  margin-left: 7px;
+  /* padding: 0 25px 0 20px; */
+  /* background-color: #50C878; */
+  border: 0 !important;
+  /* border-bottom-left-radius: 17px;
+border-bottom-right-radius: 17px; */
+  /* background:
+    linear-gradient(145deg, transparent 7px, #50C878 0) top left,
+    linear-gradient(-145deg, transparent 7px, #50C878 0) top right,
+    linear-gradient(22.5deg, transparent 9px, #50C878 0) bottom left,
+    linear-gradient(-22.5deg, transparent 9px, #50C878 0) bottom right;
+  background-size: 50% 50%;
+  background-repeat: no-repeat; */
+  /* background: linear-gradient(to bottom, #ffe100 50%, #0033cc 50%, #0033cc 75%, #ff0000 75%); */
+}
+
+.emerald-icon {
+  margin-left: 10px;
+  -webkit-transition: all 0.50s;
+  transition: all 0.50s;
+  width: 2.35rem;
+
+  &:hover {
+    border: none;
+    filter: brightness(130%);
+    -webkit-filter: brightness(130%);
+    -moz-filter: brightness(130%);
+    -o-filter: brightness(130%);
+    -ms-filter: brightness(130%);
+    -webkit-transition: all 0.50s;
+    transition: all 0.50s;
+  }
+}
+
+.colombian-flag-emoji-lg:hover {}
+
+.nav-toggler {
+  padding: 8px 8px 8px 14px;
+}
 
 .venture-search-container {
   max-width: 70%;
@@ -821,12 +969,14 @@ body {
 .venture-mag {
   padding: 10px;
   color: #ffffff !important;
-  /* font-weight: 900; */ /* #ffe100 #0033cc #ff0000 */
+  /* font-weight: 900; */
+  /* #ffe100 #0033cc #ff0000 */
   border-radius: 50%;
   background: linear-gradient(to bottom, #ffe100 50%, #0033cc 50%, #0033cc 75%, #ff0000 75%);
 }
+
 .venture-mag-bold {
- filter: brightness(100%);
+  filter: brightness(100%);
 }
 
 
@@ -861,7 +1011,7 @@ body {
 .btn1 {
   position: relative;
   text-decoration: none !important;
-  color: #fff;
+  color: #fff !important;
   z-index: 2 !important;
 }
 

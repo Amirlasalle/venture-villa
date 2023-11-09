@@ -746,13 +746,13 @@ body {
 }
 
 .basic-nav-dropdown-div {
-  max-width: 100%;
+  max-width: 70%;
   display: inline-flex;
   align-items: center !important;
   background-color: #fff;
-  border: 1px solid #afafaf;
+  border: 1px solid #afafaf00;
   border-radius: 40px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05); */
   transition: box-shadow 0.2s;
   color: #fff;
   vertical-align: middle;
@@ -766,12 +766,15 @@ body {
   background-color: #fff;
   border: 1px solid #afafaf;
   border-radius: 40px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.3s;
   position: relative;
   color: #fff;
   vertical-align: middle;
   padding: 8px 8px 8px 14px;
+}
+
+.basic-nav-dropdown:hover {
+  box-shadow: 5px 5px 5px 0 rgba(51, 51, 51, 0.307), 0 1px 7px 0 rgba(51, 51, 51, 0.365) !important;
 }
 
 .basic-nav-dropdown .dropdown-toggle::after {
@@ -802,23 +805,7 @@ body {
   filter: brightness(150%);
 }
 
-.colombian-flag-emoji-lg {
-  color: #50C878;
-  margin-left: 7px;
-  /* padding: 0 25px 0 20px; */
-  /* background-color: #50C878; */
-  border: 0 !important;
-  /* border-bottom-left-radius: 17px;
-border-bottom-right-radius: 17px; */
-  /* background:
-    linear-gradient(145deg, transparent 7px, #50C878 0) top left,
-    linear-gradient(-145deg, transparent 7px, #50C878 0) top right,
-    linear-gradient(22.5deg, transparent 9px, #50C878 0) bottom left,
-    linear-gradient(-22.5deg, transparent 9px, #50C878 0) bottom right;
-  background-size: 50% 50%;
-  background-repeat: no-repeat; */
-  /* background: linear-gradient(to bottom, #ffe100 50%, #0033cc 50%, #0033cc 75%, #ff0000 75%); */
-}
+
 
 .emerald-icon {
   margin-left: 10px;
@@ -840,12 +827,41 @@ border-bottom-right-radius: 17px; */
 
 .colombian-flag-emoji-lg:hover {}
 
+.parcero-text {
+  max-width: 100%;
+  text-decoration: none !important;
+  font-size: 0.85rem !important;
+  padding: 10px;
+
+}
+
+.parcero-text:hover {
+  background-color: #a5a5a500;
+  text-decoration: none !important;
+  filter: brightness(150%);
+}
+
 .nav-toggler {
   padding: 8px 8px 8px 14px;
 }
 
+.venture-search-container-btn {
+  max-width: 50%;
+  display: inline-flex;
+  align-items: center !important;
+  background-color: #ffffff00 !important;
+  border: 1px solid #afafaf00 !important;
+  border-radius: 40px !important;
+  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s; */
+  position: relative;
+  color: #fff;
+  vertical-align: middle;
+  padding: 0 !important;
+}
+
 .venture-search-container {
-  max-width: 70%;
+  max-width: 100%;
   display: inline-flex;
   align-items: center !important;
   background-color: #fff;
@@ -957,18 +973,41 @@ border-bottom-right-radius: 17px; */
 
 .venture-mag-div {
   color: #fff;
-  margin: 10px 0 7px 0 !important;
+  /* margin: 0px 0 0px 0 !important; */
   overflow: visible;
   text-decoration: none;
+  align-items: center;
   float: right;
   align-items: center !important;
   z-index: 1;
-  transform: translateX(10px);
+  /* transform: translateX(15px); */
+  appearance: none;
+  border: 0;
+  color: inherit;
+  /* display: inline-block; */
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin-right: 5px;
+  outline: 0;
+  overflow: visible;
+  text-decoration: none;
+  user-select: auto;
+  outline: none;
+  align-items: center;
+  display: flex;
+  /* flex: 0 1 auto; */
+  height: 48px;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .venture-mag {
   padding: 10px;
   color: #ffffff !important;
+  margin-bottom: 2px;
   /* font-weight: 900; */
   /* #ffe100 #0033cc #ff0000 */
   border-radius: 50%;
@@ -4264,16 +4303,16 @@ label form [type='radio'] {
 @media screen and (max-width: 605px) {
 
 
-  .venture-search-container {
+  /* .venture-search-container {
     display: none;
-  }
+  } */
 
 }
 
 @media screen and (max-width: 405px) {
-  .venture-search-container {
+  /* .venture-search-container {
     display: none !important;
-  }
+  } */
 }
 
 @media screen and (max-width: 450px) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation, useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import '../../index.css'
 import { Image, Accordion } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,7 +8,7 @@ import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
 
-  const location = useLocation();
+  // const location = useLocation();
   const navigate = useNavigate();
   const scrollToTop = () => {
     window.scrollTo({
@@ -25,16 +25,7 @@ const Footer = () => {
     <footer className="mt-auto bg-secondary">
 
       <div className='w-100 custom-links-footer'>
-        <div className="w-100 mt-2 text-center text-white">
-          {location.pathname !== '/' && (
-            <button
-              className="btn btn-dark mb-3"
-              onClick={() => navigate(-1)}
-            >
-              &larr; Go Back
-            </button>
-          )}
-        </div>
+
         <div className='p-0 pb-5'>
           <Link to="/" onClick={() => handleNavLinkClick('/')} className='custom-link'> <Image className='vv-white-logo' src={process.env.PUBLIC_URL + "/assets/venture-villa-white-logo.png"} fluid />
           </Link>
@@ -84,13 +75,11 @@ const Footer = () => {
               </h6>
             </Accordion.Header>
             <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+              <p className='pl-0'>
+            At Venture Villa, we are passionate about providing an immersive experience for foreigners exploring the vibrant and diverse landscape of Colombia. Our platform is more than just a guide; it's a personalized journey through the rich tapestry of Colombian culture, offering insights into the best bed and breakfasts, restaurants, universities, companies, and the unparalleled world of Colombian futball.
+            </p>
+            <Link to="/" onClick={() => handleNavLinkClick('/')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Learn More</p>
+            </Link>
             </Accordion.Body>
           </Accordion.Item>
           <div className='section-divide'>

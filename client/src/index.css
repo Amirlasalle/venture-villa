@@ -387,6 +387,12 @@ body {
   object-fit: cover;
 }
 
+.about-us-img-one {
+  height: 40vh !important;
+  width: 100vw;
+  object-fit: cover;
+}
+
 .about-text {
   overflow: hidden;
   width: 100vw !important;
@@ -1806,6 +1812,42 @@ button {
   padding: 10px !important;
 }
 
+.about-signup-img {
+  position: relative;
+  width: 100vw !important;
+  height: 60vh !important;
+}
+
+.about-signup-img::before {
+  content: "";
+  background-image: url('/public/assets/short/colombia-day-one.jpeg');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(45%);
+}
+
+.about-img-us {
+  position: relative;
+  width: 100vw !important;
+  height: 50vh !important;
+}
+
+.about-img-us::before {
+  content: "";
+  background-image: url('/public/assets/short/Bogota-Street-Art-6.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(45%);
+}
+
 .contact-img {
   position: relative;
   width: 100vw !important;
@@ -2920,6 +2962,10 @@ a:hover {
   background-color: #1b89bc !important;
 }
 
+.bg-colombia{
+  background: linear-gradient(to bottom, #ffe100 50%, #0033cc 50%, #0033cc 75%, #ff0000 75%);
+}
+
 /* DISPLAY */
 .display-none {
   display: none !important;
@@ -2962,6 +3008,12 @@ a:hover {
 
 .btn.btn-squared {
   border-radius: 0;
+}
+
+.btn-xsm {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.5rem;
 }
 
 .btn.btn-sm {
@@ -3029,10 +3081,12 @@ a:hover {
 .btn.btn-white {
   background-color: #ffffff;
   color: #1a1a1a;
+  border: 0;
 }
 
 .btn.btn-white:hover {
   background-color: #cccccc;
+  border: 0;
 }
 
 .btn.btn-black {
@@ -3574,6 +3628,7 @@ label form [type='radio'] {
 
 /* col-lg */
 @media screen and (min-width: 992px) {
+
   .col-md-auto {
     flex-grow: 1;
     flex-basis: 0;
@@ -3806,6 +3861,8 @@ label form [type='radio'] {
     align-content: center;
   }
 
+
+
 }
 
 .vv-logo {
@@ -3894,6 +3951,10 @@ label form [type='radio'] {
 }
 
 @media screen and (max-width: 1200px) {
+  .move-it{
+    display: none;
+  }
+
   .atribute-cards {
     width: 100vw !important;
     height: 50vh !important;
@@ -3935,6 +3996,13 @@ label form [type='radio'] {
     padding-left: 100px !important;
   }
 
+  .move-it{
+    display: block;
+  }
+
+  .take-out{
+    display: none;
+  }
 
   .cards-bg {
     flex-wrap: nowrap;
@@ -4049,6 +4117,13 @@ label form [type='radio'] {
   }
 
   .about-img-one {
+    margin-top: 25px;
+    height: 70vh !important;
+    width: 100vw;
+    object-fit: cover;
+  }
+
+  .about-us-img-one {
     margin-top: 25px;
     height: 70vh !important;
     width: 100vw;

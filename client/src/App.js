@@ -15,8 +15,10 @@ import Profile from './pages/Profile';
 import Culture from './pages/Culture';
 import Contact from './pages/Contact';
 import Header from './components/Header';
+import GoBackNav from './components/GoBackNav';
 import Footer from './components/Footer';
 import Universities from './pages/Universities';
+import AboutUs from './pages/AboutUs';
 import SpecificPlace from './components/Places/SpecificPlace';
 
 // Construct our main GraphQL API endpoint
@@ -49,6 +51,7 @@ function App() {
       <Router>
         <div id='root' className="flex-column justify-flex-start min-100-vh">
           <Header />
+          <GoBackNav />
         
             <Routes>
              <Route path="/place/:id"element= {<SpecificPlace/>}/>
@@ -87,6 +90,10 @@ function App() {
                 <Route 
                 path="/contact" 
                 element={<Contact />} 
+              />
+                 <Route 
+                path="/aboutus" 
+                element={<AboutUs />} 
               />
             </Routes>
 

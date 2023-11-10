@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Auth from '../../utils/auth';
-import Stack from 'react-bootstrap/Stack';
-import { Image, Container, Nav, Navbar, NavDropdown, Form, Button, Modal } from 'react-bootstrap';
+import { Image, Container, Nav, Navbar, NavDropdown, Button, Modal } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faCircleUser, faBars, faLanguage, faGlobe } from '@fortawesome/free-solid-svg-icons';
-// faChevronCircleRight, faChevronCircleLeft, faChevronLeft, faChevronRight, faPipe,  faExternalLinkAlt, faArrowUpRightFromSquare,Col, Card,
+import { faMagnifyingGlass, faCircleUser, faBars, faLanguage, faGlobe, faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
+// faChevronCircleRight, faChevronLeft, faChevronRight, faPipe,  faExternalLinkAlt, faArrowUpRightFromSquare,Col, Card,
 
 
 const Header = ({ handlePageChange }) => {
@@ -20,9 +19,10 @@ const Header = ({ handlePageChange }) => {
     setIsNavbarOpen(false);
   };
 
-  const toggleNavbar = () => {
-    setIsNavbarOpen(!isNavbarOpen);
-  };
+  const location = useLocation();
+  // const toggleNavbar = () => {
+  //   setIsNavbarOpen(!isNavbarOpen);
+  // };
 
   useEffect(() => {
     const handleOutsideClick = (e) => {
@@ -38,7 +38,7 @@ const Header = ({ handlePageChange }) => {
     };
   }, []);
 
-  const location = useLocation();
+  // const location = useLocation();
   const navigate = useNavigate();
 
   const scrollToTop = () => {
@@ -108,6 +108,8 @@ const Header = ({ handlePageChange }) => {
             </Modal>
           </div>
 
+
+
           <div className="basic-nav-dropdown-div">
 
             {Auth.loggedIn() ? (
@@ -127,9 +129,9 @@ const Header = ({ handlePageChange }) => {
 
                 <Nav.Link>
                   <div className=' mr-3 language-translate emerald-icon'>
-                  
-                      <FontAwesomeIcon icon={faGlobe} className='language-translate-g emerald-icon' /> <FontAwesomeIcon icon={faLanguage} size='md' className=' language-translate-a emerald-icon' />
-                     
+
+                    <FontAwesomeIcon icon={faGlobe} className='language-translate-g emerald-icon' /> <FontAwesomeIcon icon={faLanguage} size='md' className=' language-translate-a emerald-icon' />
+
                   </div>
                 </Nav.Link>
 
@@ -165,9 +167,9 @@ const Header = ({ handlePageChange }) => {
 
                   <NavDropdown.Divider />
 
-                  
-                    <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text-signedin'>Signed in as: {Auth.getProfile().data.username}</p>
-               
+
+                  <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text-signedin'>Signed in as: {Auth.getProfile().data.username}</p>
+
 
                   <Nav.Link>
                     <Link to="/me" onClick={() => handleNavLinkClick('/me')}>
@@ -206,7 +208,7 @@ const Header = ({ handlePageChange }) => {
 
                   <Nav.Link>
                     <Link to="/" onClick={() => handleNavLinkClick('/')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Language  <FontAwesomeIcon icon={faGlobe} /> <FontAwesomeIcon icon={faLanguage} size='md'/></p>
+                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Language  <FontAwesomeIcon icon={faGlobe} /> <FontAwesomeIcon icon={faLanguage} size='md' /></p>
                     </Link>
                   </Nav.Link>
 
@@ -227,6 +229,25 @@ const Header = ({ handlePageChange }) => {
               </>
             ) : (
               <>
+
+                {/* <Nav.Link>
+
+                  <p className='pl-2 mb-0 mt-0 d-flex parcero-text parcero'>
+                    <span>
+                      <Image className='emerald-icon parcero' src={process.env.PUBLIC_URL + "/assets/thumbnails/hola-parcero.png"} fluid />
+                    </span>
+                    Hola parce<br></br>Que mas?
+                  </p>
+
+                </Nav.Link> */}
+
+                <Nav.Link>
+                  <div className=' mr-3 language-translate emerald-icon'>
+
+                    <FontAwesomeIcon icon={faGlobe} className='language-translate-g emerald-icon' /> <FontAwesomeIcon icon={faLanguage} size='md' className=' language-translate-a emerald-icon' />
+
+                  </div>
+                </Nav.Link>
 
                 <NavDropdown eventKey={3} title={<div style={{ display: "inline-block" }}>    <FontAwesomeIcon icon={faBars} className='' size='xl' style={{ fontWeight: 'bolder' }} /><FontAwesomeIcon icon={faCircleUser} className='ml-2 ' size='2xl' style={{ fontWeight: 'bolder' }} /> </div>} className='navbar-static basic-nav-dropdown '>
 
@@ -279,11 +300,29 @@ const Header = ({ handlePageChange }) => {
                 </NavDropdown>
               </>
             )}
+            <br></br>
+
+
+          
+
+
+
 
 
           </div>
 
-        </Container>
+        </Container> 
+
+              {location.pathname !== '/' && (
+        <div className="w-100 fixed-bottom mt-0 mb-0 text-left bg-colombia text-white">
+                <Button
+                  className="btn-xsm  btn-white mt-1 mb-1 ml-1"
+                  onClick={() => navigate(-1)}
+                >
+                  <FontAwesomeIcon icon={faChevronCircleLeft} /> Go Back
+                </Button>
+            </div>
+              )}
       </Navbar>
     </div>
   );

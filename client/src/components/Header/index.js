@@ -4,7 +4,7 @@ import Auth from '../../utils/auth';
 import Stack from 'react-bootstrap/Stack';
 import { Image, Container, Nav, Navbar, NavDropdown, Form, Button, Modal } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faCircleUser, faBars, faGem } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faCircleUser, faBars, faLanguage, faGlobe } from '@fortawesome/free-solid-svg-icons';
 // faChevronCircleRight, faChevronCircleLeft, faChevronLeft, faChevronRight, faPipe,  faExternalLinkAlt, faArrowUpRightFromSquare,Col, Card,
 
 
@@ -80,11 +80,11 @@ const Header = ({ handlePageChange }) => {
                 <div className=' venture-text'> Venture Search </div>
               </Button>
               <span className='venture-btn-divider'></span>
-              <Button size="md" className="venture-search-2 " >
+              <Button size="md" className="venture-search-2 dis-none" >
                 <div className=' venture-text'>Anywhere</div>
               </Button>
               <span className='venture-btn-divider'></span>
-              <Button size="md" className="venture-search-3 " >
+              <Button size="md" className="venture-search-3 dis-none" >
                 <div className=' venture-text'>Any week</div>
               </Button>
               <Button size="md" className="venture-search-3 pr-0" >
@@ -96,7 +96,7 @@ const Header = ({ handlePageChange }) => {
 
             </div>
           </Button>
-          <div className='ml-5 modal-div'>
+          <div className='ml-0 modal-div'>
             <Modal show={show} onHide={handleClose} animation={false} size="lg" dialogClassName="my-modal custom-modal">
               <Modal.Header closeButton ></Modal.Header>
               <Modal.Body className='d-flex flex-wrap justify-content-around custom-modal' closeButton>
@@ -116,21 +116,21 @@ const Header = ({ handlePageChange }) => {
 
                 <Nav.Link>
 
-                  <p className='pl-2 mb-0 mt-0 d-flex parcero-text'>
-                    {/* <Nav.Link><Link to="/">
-                  Home
-                </Link></Nav.Link>
-            
-
-                <Nav.Link >  <Link onClick={logout}>
-                  Logout
-                </Link></Nav.Link> */}
+                  <p className='pl-2 mb-0 mt-0 d-flex parcero-text parcero'>
                     <span>
-                      <Image className='emerald-icon' src={process.env.PUBLIC_URL + "/assets/thumbnails/hola-parcero.png"} fluid />
+                      <Image className='emerald-icon parcero' src={process.env.PUBLIC_URL + "/assets/thumbnails/hola-parcero.png"} fluid />
                     </span>
-                    Hola parcero
+                    Hola parce<br></br>Que mas?
                   </p>
 
+                </Nav.Link>
+
+                <Nav.Link>
+                  <div className=' mr-3 language-translate emerald-icon'>
+                  
+                      <FontAwesomeIcon icon={faGlobe} className='language-translate-g emerald-icon' /> <FontAwesomeIcon icon={faLanguage} size='md' className=' language-translate-a emerald-icon' />
+                     
+                  </div>
                 </Nav.Link>
 
                 {/* <NavDropdown title="Profile and more" id="basic-nav-dropdown">
@@ -150,11 +150,11 @@ const Header = ({ handlePageChange }) => {
                 </NavDropdown> */}
 
 
-                <NavDropdown eventKey={3} title={<div style={{ display: "inline-block" }}>    <FontAwesomeIcon icon={faBars} className='' size='xl' style={{ fontWeight: 'bolder' }} /><FontAwesomeIcon icon={faCircleUser} className='ml-2 ' size='2xl' style={{ fontWeight: 'bolder' }} /> </div>} className='navbar-static basic-nav-dropdown '>
+                <NavDropdown eventKey={3} title={<div style={{ display: "inline-block" }}>    <FontAwesomeIcon icon={faBars} className='' size='md' style={{ fontWeight: 'bolder' }} /><FontAwesomeIcon icon={faCircleUser} className='ml-2 ' size='2xl' style={{ fontWeight: 'bolder' }} /> </div>} className='navbar-static basic-nav-dropdown '>
 
                   <Nav.Link>
                     <Link to="/" onClick={() => handleNavLinkClick('/')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>
+                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-bold'>
                         Explore Colombia's gem
                         <span>
                           <Image className='emerald-icon' src={process.env.PUBLIC_URL + "/assets/thumbnails/pngwing.com.png"} fluid />
@@ -165,25 +165,25 @@ const Header = ({ handlePageChange }) => {
 
                   <NavDropdown.Divider />
 
-                  <Nav.Link>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Signed in as {Auth.getProfile().data.username}</p>
-                  </Nav.Link>
+                  
+                    <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text-signedin'>Signed in as: {Auth.getProfile().data.username}</p>
+               
 
                   <Nav.Link>
                     <Link to="/me" onClick={() => handleNavLinkClick('/me')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Venture trips bucklist</p>
+                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-bold'>Venture trips bucklist</p>
                     </Link>
                   </Nav.Link>
 
                   <Nav.Link>
                     <Link to="/login" onClick={() => handleNavLinkClick('/login')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Login</p>
+                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-bold'>Wishlists</p>
                     </Link>
                   </Nav.Link>
 
-                  <NavDropdown.Divider />   
-                  
-                   <Nav.Link>
+                  <NavDropdown.Divider />
+
+                  <Nav.Link>
                     <Link to="/" onClick={() => handleNavLinkClick('/')}>
                       <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Find a Bed & Breakfast</p>
                     </Link>
@@ -195,7 +195,7 @@ const Header = ({ handlePageChange }) => {
                     </Link>
                   </Nav.Link>
 
-              
+
 
                   <Nav.Link>
                     <Link to="/" onClick={() => handleNavLinkClick('/')}>
@@ -206,7 +206,7 @@ const Header = ({ handlePageChange }) => {
 
                   <Nav.Link>
                     <Link to="/" onClick={() => handleNavLinkClick('/')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Restaurants</p>
+                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Language  <FontAwesomeIcon icon={faGlobe} /> <FontAwesomeIcon icon={faLanguage} size='md'/></p>
                     </Link>
                   </Nav.Link>
 
@@ -218,7 +218,7 @@ const Header = ({ handlePageChange }) => {
                   </Nav.Link>
 
                   <Nav.Link>
-                  <Link onClick={logout}>
+                    <Link onClick={logout}>
                       <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Logout</p>
                     </Link>
                   </Nav.Link>

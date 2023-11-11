@@ -23,7 +23,9 @@ body {
   margin-bottom: 116px;
 }
 
-
+.go-back{
+margin-top: 108px;
+}
 
 .sign-log-red {
   font-family: 'Poppins', sans-serif !important;
@@ -3012,7 +3014,7 @@ a:hover {
 
 .btn-xsm {
   font-family: 'Poppins', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.65rem;
   padding: 0.2rem 0.5rem;
 }
 

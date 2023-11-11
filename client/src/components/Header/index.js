@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Auth from '../../utils/auth';
 import { Image, Container, Nav, Navbar, NavDropdown, Button, Modal } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faCircleUser, faBars, faLanguage, faGlobe, faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faCircleUser, faBars, faLanguage, faGlobe } from '@fortawesome/free-solid-svg-icons';
 // faChevronCircleRight, faChevronLeft, faChevronRight, faPipe,  faExternalLinkAlt, faArrowUpRightFromSquare,Col, Card,
 
 
@@ -19,7 +19,7 @@ const Header = ({ handlePageChange }) => {
     setIsNavbarOpen(false);
   };
 
-  const location = useLocation();
+  
   // const toggleNavbar = () => {
   //   setIsNavbarOpen(!isNavbarOpen);
   // };
@@ -64,7 +64,7 @@ const Header = ({ handlePageChange }) => {
 
   return (
     <div role='navigation' className='bg-body-tertiary mar'>
-      <Navbar className="fixed-top custom-link bg-body-tertiary" bg="white" expand="lg" ref={navbarRef} expanded={isNavbarOpen}>
+      <Navbar className="pb-0 fixed-top custom-link bg-body-tertiary" bg="white" expand="lg" ref={navbarRef} expanded={isNavbarOpen}>
         <Container fluid className='betterheader'>
           <Navbar.Brand className='navbarBrand'>
             <Nav.Link>
@@ -312,9 +312,8 @@ const Header = ({ handlePageChange }) => {
           </div>
 
         </Container> 
-
-              {location.pathname !== '/' && (
-        <div className="w-100 fixed-bottom mt-0 mb-0 text-left bg-colombia text-white">
+ {/* {location.pathname !== '/' && (
+        <div className="w-100 text-left go-back text-white">
                 <Button
                   className="btn-xsm  btn-white mt-1 mb-1 ml-1"
                   onClick={() => navigate(-1)}
@@ -322,8 +321,11 @@ const Header = ({ handlePageChange }) => {
                   <FontAwesomeIcon icon={faChevronCircleLeft} /> Go Back
                 </Button>
             </div>
-              )}
+              )} */}
       </Navbar>
+     
+             
+          
     </div>
   );
 };

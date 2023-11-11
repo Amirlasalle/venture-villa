@@ -13,10 +13,10 @@ const GoBackNav = ({ handlePageChange }) => {
 
   return (
     <div role='navigation' className='bg-body-tertiary'>
-      <Navbar className="custom-link bg-body-tertiary" bg="" expand="lg">
+      <Navbar className="fixed-top go-back custom-link bg-body-" bg="" expand="sm">
         <Container fluid className='betterheader'>
 
-        <div className="w-100 mt-0 mb-0 text-left text-white">
+        <div className="w-100  text-left text-white">
           {location.pathname !== '/' && (
             <Button
               className="btn-xsm  btn-white"
@@ -26,11 +26,8 @@ const GoBackNav = ({ handlePageChange }) => {
             </Button>
           )}
         </div>
+</Container>
 
-
-
-
-        </Container>
       </Navbar>
     </div>
   );

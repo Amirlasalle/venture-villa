@@ -40,7 +40,7 @@ const Signup = () => {
     const uppercaseRegex = /[A-Z]/;
     const lowercaseRegex = /[a-z]/;
     const numericRegex = /\d/;
-    const specialCharacterRegex = /[!@#$%^&*()_\-+=]/;
+    const specialCharacterRegex = /[!@#$%^&*()_\-+=.]/;
 
     setPasswordRequirementsMet({
       length: lengthRegex.test(password),

@@ -19,6 +19,10 @@ import GoBackNav from './components/GoBackNav';
 import Footer from './components/Footer';
 import Universities from './pages/Universities';
 import AboutUs from './pages/AboutUs';
+import Wishlists from './pages/Wishlists';
+import Futbol from './pages/Futbol';
+import Restaurants from './pages/Restaurants';
+import BnB from './pages/BnB';
 import SpecificPlace from './components/Places/SpecificPlace';
 
 // Construct our main GraphQL API endpoint
@@ -52,50 +56,66 @@ function App() {
         <div id='root' className="flex-column justify-flex-start min-100-vh">
           <Header />
           <GoBackNav />
-        
-            <Routes>
-             <Route path="/place/:id"element= {<SpecificPlace/>}/>
-              <Route 
-                path="/" 
-                element={<Home />} 
-              />
-              <Route 
-                path="/login" 
-                element={<Login />} 
-              />
-              <Route 
-                path="/signup" 
-                element={<Signup />} 
-              />
-              <Route 
-                path="/me"
-                element={<Profile />}
-              />
-              <Route 
-                path="/profiles/:username" 
-                element={<Profile />}
-              />
-              <Route path="/thoughts/:thoughtId" 
-                element={<SingleThought />}
-              />
-                <Route path="/place/:id"element= {<SpecificPlace/>}/>
-              <Route 
-                path="/culture" 
-                element={<Culture />} 
-              />
-                <Route 
-                path="/universities" 
-                element={<Universities />} 
-              />
-                <Route 
-                path="/contact" 
-                element={<Contact />} 
-              />
-                 <Route 
-                path="/aboutus" 
-                element={<AboutUs />} 
-              />
-            </Routes>
+
+          <Routes>
+            <Route path="/place/:id" element={<SpecificPlace />} />
+            <Route
+              path="/"
+              element={<Home />}
+            />
+            <Route
+              path="/login"
+              element={<Login />}
+            />
+            <Route
+              path="/signup"
+              element={<Signup />}
+            />
+            <Route
+              path="/me"
+              element={<Profile />}
+            />
+            <Route
+              path="/profiles/:username"
+              element={<Profile />}
+            />
+            <Route path="/thoughts/:thoughtId"
+              element={<SingleThought />}
+            />
+            <Route path="/place/:id" element={<SpecificPlace />} />
+            <Route
+              path="/culture"
+              element={<Culture />}
+            />
+            <Route
+              path="/universities"
+              element={<Universities />}
+            />
+            <Route
+              path="/contact"
+              element={<Contact />}
+            />
+            <Route
+              path="/aboutus"
+              element={<AboutUs />}
+            />
+            <Route
+              path="/wishlists"
+              element={<Wishlists />}
+            />
+                <Route
+              path="/futbol"
+              element={<Futbol />}
+            />
+               <Route
+              path="/restaurants"
+              element={<Restaurants />}
+            />
+                <Route
+              path="/bnb"
+              element={<BnB />}
+            />
+          </Routes>
 
           <Footer />
         </div>

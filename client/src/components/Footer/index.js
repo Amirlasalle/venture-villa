@@ -99,9 +99,9 @@ const Footer = () => {
             </Accordion.Header>
             <Accordion.Body>
             <Link to="/contact" onClick={() => handleNavLinkClick('/contact')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Contact Support</p></Link>
-            <Link to="/" onClick={() => handleNavLinkClick('/')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Find a Bed & Breakfast</p>
+            <Link to="/bnb" onClick={() => handleNavLinkClick('/bnb')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Find a Bed & Breakfast</p>
             </Link>
-            <Link to="/" onClick={() => handleNavLinkClick('/')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Find a Restaurant </p>
+            <Link to="/restaurants" onClick={() => handleNavLinkClick('/restaurants')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Find a Restaurant </p>
             </Link>
             </Accordion.Body>
           </Accordion.Item>
@@ -143,9 +143,9 @@ const Footer = () => {
             <Link to="/" onClick={() => handleNavLinkClick('/')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Discover Colombia</p></Link>
             <Link to="/universities" onClick={() => handleNavLinkClick('/')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Universities</p></Link>
             <Link to="/culture" onClick={() => handleNavLinkClick('/culture')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Columbian Culture</p></Link>
-            <Link to="/" onClick={() => handleNavLinkClick('/')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Delicious Cuisine</p></Link>
+            <Link to="/restaurants" onClick={() => handleNavLinkClick('/restaurants')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Delicious Cuisine</p></Link>
             <Link to="/" onClick={() => handleNavLinkClick('/')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Wondrous Landscapes</p></Link>   
-            <Link to="/" onClick={() => handleNavLinkClick('/')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Bed & Breakfasts</p></Link>
+            <Link to="/bnb" onClick={() => handleNavLinkClick('/bnb')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Bed & Breakfasts</p></Link>
             </Accordion.Body>
           </Accordion.Item>
           <div className='section-divide'>

@@ -117,7 +117,7 @@ function Home() {
                 <h2 className='outlined-text'>In Cartagena Every Day Feels Like a Fiesta!</h2>
                 <div className="button-container">
                   <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/shorts/r25RXQVJH50')} className='btn1'>
-                    <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '145px' }}>
+                    <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '155px' }}>
                       <a href='#cartagena' target="_blank" rel="noreferrer" className="btn1">See Rentals <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
                     </Button>
                   </Link>
@@ -133,7 +133,7 @@ function Home() {
                 <h2 className='outlined-text'>Where Paradise Meets Passion!</h2>
                 <div className="button-container">
                   <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=1z2wa7nK8zs')} className='btn1'>
-                    <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '120px' }}>
+                    <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '125px' }}>
                       <a href='#home' target="_blank" rel="noreferrer" className="btn1">Beaches <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
                     </Button>
                   </Link>
@@ -149,7 +149,7 @@ function Home() {
                 <h2 className='outlined-text'>Bogota Is A City of Endless Horizons and Vibrant Realities!</h2>
                 <div className="button-container">
                   <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=1z2wa7nK8zsr')} className='btn1'>
-                    <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '145px' }}>
+                    <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '155px' }}>
                       <a href='#bogota' target="_blank" rel="noreferrer" className="btn1">See Rentals <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
                     </Button>
                   </Link>
@@ -363,7 +363,7 @@ function Home() {
 
                   <div className="button-container mb-2">
                     <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=BamIljS3reIr')} className='btn1'>
-                      <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '120px' }}>
+                      <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '125px' }}>
                         <a href='#cali' target="_blank" rel="noreferrer" className="btn1">See Why <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
                       </Button>
                     </Link>

@@ -63,8 +63,8 @@ const ThoughtForm = () => {
   };
 
   return (
-    <div>
-      <h3>What's the next destination on your bucklist?</h3>
+    <div className='font-poppins'> 
+      <h3>What destination in Colombia would you like to add to your bucket list?</h3>
 
       {Auth.loggedIn() ? (
         <>
@@ -80,7 +80,7 @@ const ThoughtForm = () => {
             onSubmit={handleFormSubmit}
           >
             <div className="col-12 col-lg-9">
-              <textarea                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+              <textarea                   
                 name="thoughtText"
                 placeholder="This year I really want to go to..."
                 value={thoughtText}

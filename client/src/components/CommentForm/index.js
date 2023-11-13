@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
-
+import '../../index.css'
 import { ADD_COMMENT } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
@@ -41,8 +41,8 @@ const CommentForm = ({ thoughtId }) => {
   };
 
   return (
-    <div>
-      <h4>What are your travel recommendations for this venture location?</h4>
+    <div className='font-poppins'>
+      <h4>What travel plans do you have for this venture location? </h4>
 
       {Auth.loggedIn() ? (
         <>
@@ -57,12 +57,12 @@ const CommentForm = ({ thoughtId }) => {
             className="flex-row justify-center justify-space-between-md align-center"
             onSubmit={handleFormSubmit}
           >
-            <div className="col-12 col-lg-9">
+            <div className="col-12 col-lg-9 font-poppins">
               <textarea
                 name="commentText"
-                placeholder="Add your comment..."
+                placeholder="Add your plan for this location..."
                 value={commentText}
-                className="form-input w-100"
+                className="form-input w-100 font-poppins"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
               ></textarea>
@@ -70,14 +70,14 @@ const CommentForm = ({ thoughtId }) => {
 
             <div className="col-12 col-lg-3">
               <button className="btn btn-light btn-block py-3" type="submit">
-                Add Travel Recommendation.
+              Submit Plan
               </button>
             </div>
           </form>
         </>
       ) : (
         <p>
-          You need to be logged in to share your travel recommendations. Please{' '}
+          You need to be logged in to add to your bucket list. Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}

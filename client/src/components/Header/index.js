@@ -20,9 +20,7 @@ const Header = ({ handlePageChange }) => {
   };
 
 
-  // const toggleNavbar = () => {
-  //   setIsNavbarOpen(!isNavbarOpen);
-  // };
+
 
   useEffect(() => {
     const handleOutsideClick = (e) => {
@@ -38,7 +36,7 @@ const Header = ({ handlePageChange }) => {
     };
   }, []);
 
-  // const location = useLocation();
+
   const navigate = useNavigate();
 
   const scrollToTop = () => {
@@ -135,21 +133,6 @@ const Header = ({ handlePageChange }) => {
                   </div>
                 </Nav.Link>
 
-                {/* <NavDropdown title="Profile and more" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">    <Link to="/me">
-                    {Auth.getProfile().data.username}'s Bookings
-                  </Link></NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.1">    <Link to="/me">
-                    {Auth.getProfile().data.username}'s Ventures
-                  </Link></NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.3">Account settings</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
-                    Get help
-                  </NavDropdown.Item>
-                </NavDropdown> */}
 
 
                 <NavDropdown eventKey={3} title={<div style={{ display: "inline-block" }}>
@@ -185,7 +168,7 @@ const Header = ({ handlePageChange }) => {
 
                   <NavDropdown.Item className='p-0'>
                   <Nav.Link>
-                    <Link to="/login" onClick={() => handleNavLinkClick('/login')}>
+                    <Link to="/wishlists" onClick={() => handleNavLinkClick('/wishlists')}>
                       <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-bold'>Wishlists</p>
                     </Link>
                   </Nav.Link>
@@ -195,7 +178,7 @@ const Header = ({ handlePageChange }) => {
 
                   <NavDropdown.Item className='p-0'>
                   <Nav.Link>
-                    <Link to="/" onClick={() => handleNavLinkClick('/')}>
+                    <Link to="/bnb" onClick={() => handleNavLinkClick('/bnb')}>
                       <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Find a Bed & Breakfast</p>
                     </Link>
                   </Nav.Link>
@@ -203,7 +186,7 @@ const Header = ({ handlePageChange }) => {
 
                   <NavDropdown.Item className='p-0'>
                   <Nav.Link>
-                    <Link to="/" onClick={() => handleNavLinkClick('/')}>
+                    <Link to="/restaurants" onClick={() => handleNavLinkClick('/restaurants')}>
                       <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Restaurants</p>
                     </Link>
                   </Nav.Link>
@@ -211,8 +194,8 @@ const Header = ({ handlePageChange }) => {
 
                   <NavDropdown.Item className='p-0'>
                   <Nav.Link>
-                    <Link to="/" onClick={() => handleNavLinkClick('/')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Watch a Soccer Game</p>
+                    <Link to="/futbol" onClick={() => handleNavLinkClick('/futbol')}>
+                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Watch a Fútbol Game</p>
                     </Link>
                   </Nav.Link>
                   </NavDropdown.Item>
@@ -308,7 +291,7 @@ const Header = ({ handlePageChange }) => {
 
                   <NavDropdown.Item className='p-0'>
                     <Nav.Link>
-                      <Link to="/" onClick={() => handleNavLinkClick('/')}>
+                      <Link to="/restaurants" onClick={() => handleNavLinkClick('/restaurants')}>
                         <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Restaurants</p>
                       </Link>
                     </Nav.Link>
@@ -316,7 +299,7 @@ const Header = ({ handlePageChange }) => {
 
                   <NavDropdown.Item className='p-0'>
                     <Nav.Link>
-                      <Link to="/" onClick={() => handleNavLinkClick('/')}>
+                      <Link to="/bnb" onClick={() => handleNavLinkClick('/bnb')}>
                         <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Find a Bed & Breakfast</p>
                       </Link>
                     </Nav.Link>
@@ -345,16 +328,6 @@ const Header = ({ handlePageChange }) => {
           </div>
 
         </Container>
-        {/* {location.pathname !== '/' && (
-        <div className="w-100 text-left go-back text-white">
-                <Button
-                  className="btn-xsm  btn-white mt-1 mb-1 ml-1"
-                  onClick={() => navigate(-1)}
-                >
-                  <FontAwesomeIcon icon={faChevronCircleLeft} /> Go Back
-                </Button>
-            </div>
-              )} */}
       </Navbar>
 
 

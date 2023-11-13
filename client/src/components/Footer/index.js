@@ -63,7 +63,9 @@ const Footer = () => {
             </span>
           </h4>
         </div>
-        <Accordion flush className='mt-5 mb-5 ml-0 accordion-footer'>
+
+
+        <Accordion  flush className='mt-5 mb-5 ml-0 accordion-footer'>
           <div className='section-divide'>
             <h2 className="mt-2 mb-2 section-divider-accordion " >
             </h2>
@@ -74,11 +76,14 @@ const Footer = () => {
                 ABOUT US
               </h6>
             </Accordion.Header>
-            <Accordion.Body>
+            <Accordion.Body class="accordion-body">
               <p className='pl-0'>
             At Venture Villa, we are passionate about providing an immersive experience for foreigners exploring the vibrant and diverse landscape of Colombia. Our platform is more than just a guide; it's a personalized journey through the rich tapestry of Colombian culture, offering insights into the best bed and breakfasts, restaurants, universities, companies, and the unparalleled world of Colombian futball.
             </p>
-            <Link to="/" onClick={() => handleNavLinkClick('/')} className='footer-text'><p className='pl-0 mb-0 pb-1 footer-text'>Learn More</p>
+            <Link to="/aboutus" onClick={() => handleNavLinkClick('/aboutus')} className='footer-text'>
+              <p className='pl-0 mb-0 pb-1 footer-text'>
+                Learn More
+                </p>
             </Link>
             </Accordion.Body>
           </Accordion.Item>

@@ -19,7 +19,7 @@ const Header = ({ handlePageChange }) => {
     setIsNavbarOpen(false);
   };
 
-  
+
   // const toggleNavbar = () => {
   //   setIsNavbarOpen(!isNavbarOpen);
   // };
@@ -152,8 +152,12 @@ const Header = ({ handlePageChange }) => {
                 </NavDropdown> */}
 
 
-                <NavDropdown eventKey={3} title={<div style={{ display: "inline-block" }}>    <FontAwesomeIcon icon={faBars} className='' size='md' style={{ fontWeight: 'bolder' }} /><FontAwesomeIcon icon={faCircleUser} className='ml-2 ' size='2xl' style={{ fontWeight: 'bolder' }} /> </div>} className='navbar-static basic-nav-dropdown '>
+                <NavDropdown eventKey={3} title={<div style={{ display: "inline-block" }}>
 
+                  <FontAwesomeIcon icon={faBars} className='' size='md' style={{ fontWeight: 'bolder' }} /><FontAwesomeIcon icon={faCircleUser} className='ml-2 ' size='2xl' style={{ fontWeight: 'bolder' }} />
+                </div>} className='navbar-static basic-nav-dropdown' autoClose="true">
+
+                <NavDropdown.Item className='p-0'>
                   <Nav.Link>
                     <Link to="/" onClick={() => handleNavLinkClick('/')}>
                       <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-bold'>
@@ -164,66 +168,81 @@ const Header = ({ handlePageChange }) => {
                       </p>
                     </Link>
                   </Nav.Link>
+                  </NavDropdown.Item>
 
                   <NavDropdown.Divider />
 
 
                   <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text-signedin'>Signed in as: {Auth.getProfile().data.username}</p>
 
-
+                  <NavDropdown.Item className='p-0'>
                   <Nav.Link>
                     <Link to="/me" onClick={() => handleNavLinkClick('/me')}>
                       <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-bold'>Venture trips bucklist</p>
                     </Link>
                   </Nav.Link>
+                  </NavDropdown.Item>
 
+                  <NavDropdown.Item className='p-0'>
                   <Nav.Link>
                     <Link to="/login" onClick={() => handleNavLinkClick('/login')}>
                       <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-bold'>Wishlists</p>
                     </Link>
                   </Nav.Link>
+                  </NavDropdown.Item>
 
                   <NavDropdown.Divider />
 
+                  <NavDropdown.Item className='p-0'>
                   <Nav.Link>
                     <Link to="/" onClick={() => handleNavLinkClick('/')}>
                       <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Find a Bed & Breakfast</p>
                     </Link>
                   </Nav.Link>
+                  </NavDropdown.Item>
 
+                  <NavDropdown.Item className='p-0'>
                   <Nav.Link>
                     <Link to="/" onClick={() => handleNavLinkClick('/')}>
                       <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Restaurants</p>
                     </Link>
                   </Nav.Link>
+                  </NavDropdown.Item>
 
-
-
+                  <NavDropdown.Item className='p-0'>
                   <Nav.Link>
                     <Link to="/" onClick={() => handleNavLinkClick('/')}>
                       <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Watch a Soccer Game</p>
                     </Link>
                   </Nav.Link>
+                  </NavDropdown.Item>
+
                   <NavDropdown.Divider />
 
+                  <NavDropdown.Item className='p-0'>
                   <Nav.Link>
                     <Link to="/" onClick={() => handleNavLinkClick('/')}>
                       <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Language  <FontAwesomeIcon icon={faGlobe} /> <FontAwesomeIcon icon={faLanguage} size='md' /></p>
                     </Link>
                   </Nav.Link>
+                  </NavDropdown.Item>
 
 
+                  <NavDropdown.Item className='p-0'>
                   <Nav.Link>
                     <Link to="/contact" onClick={() => handleNavLinkClick('/contact')}>
                       <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Help Center</p>
                     </Link>
                   </Nav.Link>
+                  </NavDropdown.Item>
 
+                  <NavDropdown.Item className='p-0'>
                   <Nav.Link>
                     <Link onClick={logout}>
                       <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Logout</p>
                     </Link>
                   </Nav.Link>
+                  </NavDropdown.Item>
 
                 </NavDropdown>
               </>
@@ -249,53 +268,67 @@ const Header = ({ handlePageChange }) => {
                   </div>
                 </Nav.Link>
 
-                <NavDropdown eventKey={3} title={<div style={{ display: "inline-block" }}>    <FontAwesomeIcon icon={faBars} className='' size='xl' style={{ fontWeight: 'bolder' }} /><FontAwesomeIcon icon={faCircleUser} className='ml-2 ' size='2xl' style={{ fontWeight: 'bolder' }} /> </div>} className='navbar-static basic-nav-dropdown '>
+                <NavDropdown title={<div style={{ display: "inline-block" }}>
+                  <FontAwesomeIcon icon={faBars} className='' size='xl' style={{ fontWeight: 'bolder' }} />
+                  <FontAwesomeIcon icon={faCircleUser} className='ml-2 ' size='2xl' style={{ fontWeight: 'bolder' }} />
+                </div>} className='navbar-static basic-nav-dropdown' autoClose="true">
 
-                  <Nav.Link>
-                    <Link to="/" onClick={() => handleNavLinkClick('/')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>
-                        Explore Colombia's gem
-                        <span>
-                          <Image className='emerald-icon' src={process.env.PUBLIC_URL + "/assets/thumbnails/pngwing.com.png"} fluid />
-                        </span>
-                      </p>
-                    </Link>
-                  </Nav.Link>
-
-                  <NavDropdown.Divider />
-
-                  <Nav.Link>
-                    <Link to="/signup" onClick={() => handleNavLinkClick('/signup')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Sign up</p>
-                    </Link>
-                  </Nav.Link>
-
-                  <Nav.Link>
-                    <Link to="/login" onClick={() => handleNavLinkClick('/login')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Login</p>
-                    </Link>
-                  </Nav.Link>
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link to="/" onClick={() => handleNavLinkClick('/')}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>
+                          Explore Colombia's gem
+                          <span>
+                            <Image className='emerald-icon' src={process.env.PUBLIC_URL + "/assets/thumbnails/pngwing.com.png"} fluid />
+                          </span>
+                        </p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
 
                   <NavDropdown.Divider />
 
-                  <Nav.Link>
-                    <Link to="/" onClick={() => handleNavLinkClick('/')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Restaurants</p>
-                    </Link>
-                  </Nav.Link>
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link to="/signup" onClick={() => handleNavLinkClick('/signup')}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Sign up</p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
 
-                  <Nav.Link>
-                    <Link to="/" onClick={() => handleNavLinkClick('/')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Find a Bed & Breakfast</p>
-                    </Link>
-                  </Nav.Link>
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link to="/login" onClick={() => handleNavLinkClick('/login')}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Login</p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
 
-                  <Nav.Link>
-                    <Link to="/contact" onClick={() => handleNavLinkClick('/contact')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Help Center</p>
-                    </Link>
-                  </Nav.Link>
+                  <NavDropdown.Divider />
 
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link to="/" onClick={() => handleNavLinkClick('/')}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Restaurants</p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
+
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link to="/" onClick={() => handleNavLinkClick('/')}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Find a Bed & Breakfast</p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
+
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link to="/contact" onClick={() => handleNavLinkClick('/contact')}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Help Center</p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
 
                 </NavDropdown>
               </>
@@ -303,7 +336,7 @@ const Header = ({ handlePageChange }) => {
             <br></br>
 
 
-          
+
 
 
 
@@ -311,8 +344,8 @@ const Header = ({ handlePageChange }) => {
 
           </div>
 
-        </Container> 
- {/* {location.pathname !== '/' && (
+        </Container>
+        {/* {location.pathname !== '/' && (
         <div className="w-100 text-left go-back text-white">
                 <Button
                   className="btn-xsm  btn-white mt-1 mb-1 ml-1"
@@ -323,9 +356,9 @@ const Header = ({ handlePageChange }) => {
             </div>
               )} */}
       </Navbar>
-     
-             
-          
+
+
+
     </div>
   );
 };

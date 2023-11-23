@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // import { Link, useNavigate } from 'react-router-dom';, useContext, Accordion, useAccordionButton, AccordionContext faChevronDown, faChevronUp, 
 import socialmediaData from "../components/Jsons/socialmedia.json";
-import { Image, Container, Card, Row} from 'react-bootstrap';
+import { Image, Container, Card, Row } from 'react-bootstrap';
 import '../App.css'
 import '../index.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -141,29 +141,29 @@ function Contact() {
                         </Card.Header>
                         <Accordion.Collapse eventKey="0" className="m-auto" style={{ width: '100%' }}>
                             <Card.Body className="majors-card-body m-auto" style={{ width: '100%' }}> */}
-                                <div className='slider-body mt-5' style={{ width: '80%' }}>
-                                    <Slider {...settings} >
-                                        {socialmedia.map((socialmedia, key) =>
+                <div className='slider-body mt-5' style={{ width: '80%' }}>
+                    <Slider {...settings} >
+                        {socialmedia.map((socialmedia, key) =>
 
-                                            <Card key={key} className="m-2 p-2 mb-5 product-cards" style={{ maxWidth: '22rem' }}>
-                                                <a href={socialmedia.more} target="_blank" rel="noreferrer" className="btn1" >
+                            <Card key={key} className="m-2 p-2 mb-5 product-cards" style={{ maxWidth: '22rem' }}>
+                                <a href={socialmedia.more} target="_blank" rel="noreferrer" className="btn1" >
 
-                                                    <Image src={process.env.PUBLIC_URL + socialmedia.screenshotone} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                                    <Image src={process.env.PUBLIC_URL + socialmedia.screenshotone} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
 
-                                                    <Card.Body className='w-100 mt-2 ml-0 mr-0'>
-                                                        <Card.Subtitle className="mb-2 mr-1 card-titles">{socialmedia.name}</Card.Subtitle>
-                                                        <Card.Subtitle className="mb-2 card-subtitle text-muted">{socialmedia.subtitle}</Card.Subtitle>
-                                                        <Card.Subtitle className="mb-2 text-muted  card-subt2">{socialmedia.beds}</Card.Subtitle>
-                                                        <Card.Subtitle className="mb-3 text-muted  card-subt2">{socialmedia.dates}</Card.Subtitle>
-                                                        <style type="text/css">
-                                                        </style>
-                                                    </Card.Body>
-                                                </a>
-                                            </Card>
-                                        )}
-                                    </Slider>
-                                </div>
-                            {/* </Card.Body>
+                                    <Card.Body className='w-100 mt-2 ml-0 mr-0'>
+                                        <Card.Subtitle className="mb-2 mr-1 card-titles">{socialmedia.name}</Card.Subtitle>
+                                        <Card.Subtitle className="mb-2 card-subtitle text-muted">{socialmedia.subtitle}</Card.Subtitle>
+                                        <Card.Subtitle className="mb-2 text-muted  card-subt2">{socialmedia.beds}</Card.Subtitle>
+                                        <Card.Subtitle className="mb-3 text-muted  card-subt2">{socialmedia.dates}</Card.Subtitle>
+                                        <style type="text/css">
+                                        </style>
+                                    </Card.Body>
+                                </a>
+                            </Card>
+                        )}
+                    </Slider>
+                </div>
+                {/* </Card.Body>
                         </Accordion.Collapse>
                     </Card>
                 </Accordion> */}

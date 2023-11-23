@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Any City",
+        "screenshotone": "/assets/maps/colombia-map.svg",
+        "more": ""
+    },
+    {
+        "name": "Armenia Quindio",
+        "screenshotone": "/assets/maps/armenia-map.png",
+        "more": ""
+    },
+    {
+        "name": "Bogota",
+        "screenshotone": "/assets/maps/bogota-map.png",
+        "more": ""
+    },
+    {
+        "name": "Cuaca",
+        "screenshotone": "/assets/maps/cali-map.png",
+        "more": ""
+    },
+    {
+        "name": "Bolivar",
+        "screenshotone": "/assets/maps/bolivar-map.png",
+        "more": ""
+    },
+    {
+        "name": "Antioquia",
+        "screenshotone": "/assets/maps/medellin-map.png",
+        "more": ""
+    },
+    {
+        "name": "San Andrés",
+        "screenshotone": "/assets/maps/cali-map.png",
+        "more": ""
+    },
+    {
+        "name": "Atlantico",
+        "screenshotone": "/assets/maps/cali-map.png",
+        "more": ""
+    },
+    {
+        "name": "Cundinamarca",
+        "screenshotone": "/assets/maps/cundinamarca-map.png",
+        "more": ""
+    },
+    {
+        "name": "Magdalena",
+        "screenshotone": "/assets/maps/magdalena-map.png",
+        "more": ""
+    }
+]

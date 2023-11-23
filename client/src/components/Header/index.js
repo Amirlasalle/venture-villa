@@ -3,8 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import Auth from '../../utils/auth';
 import { Image, Container, Nav, Navbar, NavDropdown, Button, Modal, Tab, Tabs, Stack, Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faCircleUser, faBars, faLanguage, faGlobe, faChevronCircleRight, faChevronLeft, faChevronRight, faPipe, faExternalLinkAlt, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-// ,Col, , Form
+import { faMagnifyingGlass, faCircleUser, faBars, faLanguage, faGlobe} from '@fortawesome/free-solid-svg-icons';
+// ,Col, , Form   , faChevronCircleRight, faChevronLeft, faChevronRight, faPipe, faExternalLinkAlt, faArrowUpRightFromSquare 
 import wheretoData from "../Jsons/whereto.json";
 
 
@@ -21,10 +21,10 @@ const Header = ({ handlePageChange }) => {
   };
 
 
-  const nextIconStyleTwo = {
-    fontSize: '2rem',
-    fontWeight: 'bolder',
-  };
+  // const nextIconStyleTwo = {
+  //   fontSize: '2rem',
+  //   fontWeight: 'bolder',
+  // };
 
 
   useEffect(() => {
@@ -125,7 +125,7 @@ const Header = ({ handlePageChange }) => {
               >
                 <Tab eventKey="stays" title="Stays" className="modal-tab justify-center">
 
-                  <div className='modal-tab-content'>
+                  <div className='modal-tab-content mb-2'>
                     <div className='mt-4 justify-center'>
 
                       <h4 className='pl-3 mx-3 pb-2 text-left text-black'>
@@ -194,7 +194,7 @@ const Header = ({ handlePageChange }) => {
 
                           <Card key={key} className=" mx-1 where-to-cards" style={{ width: '10rem' }}>
                             <a href={butwhereto.more} target="_blank" rel="noreferrer" className="btn1" >
-                              <Image src={process.env.PUBLIC_URL + butwhereto.screenshotone} className="img-fluid d-flex flex-wrap justify-content-around where-to-image" />
+                              <Image src={process.env.PUBLIC_URL + butwhereto.screenshotone} className="img-fluid d-flex flex-wrap where-to-image" />
                             </a>
                             <Card.Body className='w-100 mt-1 ml-0 mr-0'>
                               <Card.Subtitle className="mb-2 mr-1 where-to-text">

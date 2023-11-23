@@ -2106,8 +2106,9 @@ button {
   right: 0 !important;
   padding: 0 !important;
   margin-right: 0 !important;
-  overflow: hidden;
   width: 100vw !important;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .modal-header {
@@ -2225,19 +2226,20 @@ button {
   cursor: text !important;
 }
 
-.btn10:hover{
-text-decoration: none; 
-border: 1px solid transparent; 
+.btn10:hover {
+  text-decoration: none;
+  border: 1px solid transparent;
 }
 
-.btn-block-text{
-color: #9797978b;
-font-weight: 200;
-font-size: 0.85rem;
-align-items: center;
-outline-color: transparent;
+.btn-block-text {
+  color: #9797978b;
+  font-weight: 200;
+  font-size: 0.85rem;
+  align-items: center;
+  outline-color: transparent;
 }
-.where-to-content{
+
+.where-to-content {
   width: 100%;
   justify-content: center !important;
   border: 1px solid transparent;
@@ -2248,15 +2250,16 @@ outline-color: transparent;
 }
 
 .where-to-cards-container {
- height: 15rem; 
- justify-content: center !important;
+  height: 15rem;
+  justify-content: center !important;
   border: 1px solid transparent;
   background: #ffffff;
   display: inline-flex;
   flex-direction: row;
 
 }
-.where-to-cards{
+
+.where-to-cards {
   width: 8rem !important;
   height: 10rem;
   border: 1px solid transparent !important;
@@ -2269,13 +2272,16 @@ outline-color: transparent;
   border-radius: 5px;
   aspect-ratio: 1/1;
 }
+
 .where-to-image:hover {
   border: 1px solid #1c1c1c9b;
 }
+
 .where-to-text {
-font-size: 0.85rem;
-font-weight: 300;
+  font-size: 0.85rem;
+  font-weight: 300;
 }
+
 /**
  * Render the `main` element consistently in IE.
  */

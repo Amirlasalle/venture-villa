@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faCircleUser, faBars, faLanguage, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import wheretoData from "../Jsons/whereto.json";
 import terrainsData from "../Jsons/terrains.json";
+import whattodoData from "../Jsons/whattodo.json";
+import foryourtastebudsData from "../Jsons/foryourtastebuds.json";
 // ,Col, , Form   , faChevronCircleRight, faChevronLeft, faChevronRight, faPipe, faExternalLinkAlt, faArrowUpRightFromSquare 
 
 const Header = ({ handlePageChange }) => {
@@ -75,6 +77,10 @@ const Header = ({ handlePageChange }) => {
   console.log(whereto)
   const [terrains] = useState(terrainsData)
   console.log(terrains)
+  const [whattodo] = useState(whattodoData)
+  console.log(whattodo)
+  const [foryourtastebuds] = useState(foryourtastebudsData)
+  console.log(foryourtastebuds)
 
   return (
     <div role='navigation' className='bg-body-tertiary mar'>
@@ -203,7 +209,7 @@ const Header = ({ handlePageChange }) => {
                     <div className='mt-4 justify-center'>
 
                       <h4 className='pl-3 mx-3 pb-2 text-left text-black'>
-                        Where to?
+                        What to do?
                       </h4>
                       <Stack direction="horizontal">
                         {/* <Form.Control className="mx-3 p-3" placeholder=" Venture Search..." /> */}
@@ -219,15 +225,43 @@ const Header = ({ handlePageChange }) => {
                     </div>
                     <div className='mt-4 where-to-content ml-2'>
                       <div className='where-to-cards-container'>
-                        {whereto.map((butwhereto, key) =>
+                        {whattodo.map((butwhattodo, key) =>
 
                           <Card key={key} className=" mx-1 where-to-cards" style={{ width: '10rem' }}>
-                            <a href={butwhereto.more} target="_blank" rel="noreferrer" className="btn1" >
-                              <Image src={process.env.PUBLIC_URL + butwhereto.screenshotone} className="img-fluid d-flex flex-wrap where-to-image" />
+                            <a href={butwhattodo.more} target="_blank" rel="noreferrer" className="btn1" >
+                              <Image src={process.env.PUBLIC_URL + butwhattodo.screenshotone} className="img-fluid d-flex flex-wrap where-to-image" />
                             </a>
                             <Card.Body className='w-100 mt-1 ml-0 mr-0'>
                               <Card.Subtitle className="mb-2 mr-1 where-to-text">
-                                {butwhereto.name}
+                                {butwhattodo.name}
+                              </Card.Subtitle>
+                              <style type="text/css">
+                              </style>
+                            </Card.Body>
+
+                          </Card>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                  <div className='modal-tab-content-3 mb-1'>
+                    <div className='mt-1 justify-center'>
+
+                      <h6 className='pl-3 mx-3 mb-0 text-left text-black'>
+                        For your taste buds
+                      </h6>
+                    </div>
+                    <div className=' where-to-content-3 ml-2'>
+                      <div className='where-to-cards-container-3'>
+                        {foryourtastebuds.map((food, key) =>
+
+                          <Card key={key} className=" mx-1 where-to-cards-3" style={{ width: '3.5rem' }}>
+                            <a href={food.more} target="_blank" rel="noreferrer" className="btn1 where-to-image-3" >
+                              <Image src={process.env.PUBLIC_URL + food.screenshotone} className="img-fluid d-flex flex-wrap justify-content-around where-to-image-3" />
+                            </a>
+                            <Card.Body className='w-100 mt-1 ml-0 mr-0'>
+                              <Card.Subtitle className="mb-2 where-to-text-3">
+                                {food.name}
                               </Card.Subtitle>
                               <style type="text/css">
                               </style>

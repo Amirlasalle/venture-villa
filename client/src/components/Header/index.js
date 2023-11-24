@@ -3,10 +3,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import Auth from '../../utils/auth';
 import { Image, Container, Nav, Navbar, NavDropdown, Button, Modal, Tab, Tabs, Stack, Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faCircleUser, faBars, faLanguage, faGlobe} from '@fortawesome/free-solid-svg-icons';
-// ,Col, , Form   , faChevronCircleRight, faChevronLeft, faChevronRight, faPipe, faExternalLinkAlt, faArrowUpRightFromSquare 
+import { faMagnifyingGlass, faCircleUser, faBars, faLanguage, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import wheretoData from "../Jsons/whereto.json";
-
+import terrainsData from "../Jsons/terrains.json";
+// ,Col, , Form   , faChevronCircleRight, faChevronLeft, faChevronRight, faPipe, faExternalLinkAlt, faArrowUpRightFromSquare 
 
 const Header = ({ handlePageChange }) => {
   const logout = (event) => {
@@ -73,6 +73,8 @@ const Header = ({ handlePageChange }) => {
 
   const [whereto] = useState(wheretoData)
   console.log(whereto)
+  const [terrains] = useState(terrainsData)
+  console.log(terrains)
 
   return (
     <div role='navigation' className='bg-body-tertiary mar'>
@@ -164,13 +166,40 @@ const Header = ({ handlePageChange }) => {
                       </div>
                     </div>
                   </div>
+                  <div className='modal-tab-content-two mb-2'>
+                    <div className='mt-1 justify-center'>
 
+                      <h6 className='pl-3 mx-3 text-left text-black'>
+                        What's your vibe?
+                      </h6>
+                    </div>
+                    <div className=' where-to-content-two ml-2'>
+                      <div className='where-to-cards-container-two'>
+                        {terrains.map((terrain, key) =>
+
+                          <Card key={key} className=" mx-1 where-to-cards-two" style={{ width: '10rem' }}>
+                            <a href={terrain.more} target="_blank" rel="noreferrer" className="btn1" >
+                              <Image src={process.env.PUBLIC_URL + terrain.screenshotone} className="img-fluid d-flex flex-wrap justify-content-around where-to-image-two" />
+                            </a>
+                            <Card.Body className='w-100 mt-1 ml-0 mr-0'>
+                              <Card.Subtitle className="mb-2 mr-1 where-to-text-two">
+                                {terrain.name}
+                              </Card.Subtitle>
+                              <style type="text/css">
+                              </style>
+                            </Card.Body>
+
+                          </Card>
+                        )}
+                      </div>
+                    </div>
+                  </div>
                 </Tab>
 
 
                 <Tab eventKey="explorations" title="explorations" className="modal-tab">
 
-                <div className='modal-tab-content'>
+                  <div className='modal-tab-content'>
                     <div className='mt-4 justify-center'>
 
                       <h4 className='pl-3 mx-3 pb-2 text-left text-black'>

@@ -1,0 +1,77 @@
+[
+    {
+        "name": "Urban Cities",
+        "screenshotone": "/assets/terrains/all-terrains.png",
+        "more": ""
+    },
+    {
+        "name": "Mountains",
+        "screenshotone": "/assets/terrains/armenia-map.png",
+        "more": ""
+    },
+    {
+        "name": "Amazon Rainforest",
+        "screenshotone": "/assets/terrains/bogota-map.png",
+        "more": ""
+    },
+    {
+        "name": "Caribbean Coast",
+        "screenshotone": "/assets/terrains/cali-map.png",
+        "more": ""
+    },
+    {
+        "name": "Pacific Coast",
+        "screenshotone": "/assets/terrains/bolivar-map.png",
+        "more": ""
+    },
+    {
+        "name": "Llanos",
+        "screenshotone": "/assets/terrains/medellin-map.png",
+        "more": ""
+    },
+    {
+        "name": "Tropical Lowlands",
+        "screenshotone": "/assets/terrains/cali-map.png",
+        "more": ""
+    },
+    {
+        "name": "Islands",
+        "screenshotone": "/assets/terrains/magdalena-map.png",
+        "more": ""
+    },
+    {
+        "name": "Country Side",
+        "screenshotone": "/assets/terrains/cali-map.png",
+        "more": ""
+    },
+    {
+        "name": "Coffee Region",
+        "screenshotone": "/assets/terrains/cundinamarca-map.png",
+        "more": ""
+    },
+    {
+        "name": "Desert",
+        "screenshotone": "/assets/terrains/magdalena-map.png",
+        "more": ""
+    },
+    {
+        "name": "Paramo",
+        "screenshotone": "/assets/terrains/magdalena-map.png",
+        "more": ""
+    },
+    {
+        "name": "Desert",
+        "screenshotone": "/assets/terrains/magdalena-map.png",
+        "more": ""
+    },
+    {
+        "name": "Mangroves",
+        "screenshotone": "/assets/terrains/magdalena-map.png",
+        "more": ""
+    },
+    {
+        "name": "Highland Lakes",
+        "screenshotone": "/assets/terrains/magdalena-map.png",
+        "more": ""
+    }
+]

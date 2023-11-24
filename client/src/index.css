@@ -2269,7 +2269,7 @@ button {
   width: 8rem;
   height: 8rem;
   border: 1px solid #a0a0a058;
-  border-radius: 5px;
+  border-radius: 1rem;
   aspect-ratio: 1/1;
 }
 
@@ -2279,6 +2279,63 @@ button {
 
 .where-to-text {
   font-size: 0.85rem;
+  font-weight: 300;
+}
+/* break */
+
+.modal-tab-content-two {
+  justify-content: center !important;
+  height: 7.25rem;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  border: 1px solid #bdbdbd8e;
+  background: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+
+.where-to-content-two {
+  width: 100%;
+  justify-content: center !important;
+  border: 1px solid transparent;
+  background: #ffffff;
+  overflow-x: scroll !important;
+  -moz-scroll-snap-type: x proximity;
+  scroll-snap-type: x proximity;
+}
+
+.where-to-cards-container-two {
+  height: 6rem;
+  justify-content: center !important;
+  border: 1px solid transparent;
+  background: #ffffff;
+  display: inline-flex;
+  flex-direction: row;
+
+}
+
+.where-to-cards-two {
+  width: 5rem !important;
+  height: 5rem;
+  border: 1px solid transparent !important;
+}
+
+.where-to-image-two {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #a0a0a058;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+.where-to-image-two:hover {
+  border: 1px solid #1c1c1c9b;
+}
+
+.where-to-text-two {
+  font-size: 0.65rem;
   font-weight: 300;
 }
 

@@ -2205,7 +2205,8 @@ button {
   border: 1px solid #bdbdbd8e;
   background: #ffffff;
   border-radius: 25px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+  /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05); */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   overflow: hidden;
 }
 
@@ -2286,12 +2287,15 @@ button {
 .modal-tab-content-two {
   justify-content: center !important;
   height: 7.25rem;
+  margin-top: 2rem;
   margin-left: 0.8rem;
   margin-right: 0.8rem;
   border: 1px solid #bdbdbd8e;
   background: #ffffff;
   border-radius: 25px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+  /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08), 
+  0 4px 12px rgba(0, 0, 0, 0.05); */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   overflow: hidden;
 }
 
@@ -2317,7 +2321,7 @@ button {
 }
 
 .where-to-cards-two {
-  width: 5rem !important;
+  width: 4.5rem !important;
   height: 5rem;
   border: 1px solid transparent !important;
 }

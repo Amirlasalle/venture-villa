@@ -166,10 +166,10 @@ const Header = ({ handlePageChange }) => {
                       </div>
                     </div>
                   </div>
-                  <div className='modal-tab-content-two mb-2'>
+                  <div className='modal-tab-content-two mb-1'>
                     <div className='mt-1 justify-center'>
 
-                      <h6 className='pl-3 mx-3 text-left text-black'>
+                      <h6 className='pl-3 mx-3 mb-0 text-left text-black'>
                         What's your vibe?
                       </h6>
                     </div>
@@ -177,12 +177,12 @@ const Header = ({ handlePageChange }) => {
                       <div className='where-to-cards-container-two'>
                         {terrains.map((terrain, key) =>
 
-                          <Card key={key} className=" mx-1 where-to-cards-two" style={{ width: '10rem' }}>
-                            <a href={terrain.more} target="_blank" rel="noreferrer" className="btn1" >
+                          <Card key={key} className=" mx-1 where-to-cards-two" style={{ width: '3.5rem' }}>
+                            <a href={terrain.more} target="_blank" rel="noreferrer" className="btn1 where-to-image-two" >
                               <Image src={process.env.PUBLIC_URL + terrain.screenshotone} className="img-fluid d-flex flex-wrap justify-content-around where-to-image-two" />
                             </a>
                             <Card.Body className='w-100 mt-1 ml-0 mr-0'>
-                              <Card.Subtitle className="mb-2 mr-1 where-to-text-two">
+                              <Card.Subtitle className="mb-2 where-to-text-two">
                                 {terrain.name}
                               </Card.Subtitle>
                               <style type="text/css">

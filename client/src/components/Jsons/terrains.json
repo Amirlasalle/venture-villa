@@ -1,77 +1,92 @@
 [
     {
         "name": "Urban Cities",
-        "screenshotone": "/assets/terrains/all-terrains.png",
+        "screenshotone": "/assets/terrains/city.png",
         "more": ""
     },
     {
         "name": "Mountains",
-        "screenshotone": "/assets/terrains/armenia-map.png",
+        "screenshotone": "/assets/terrains/mountain.png",
         "more": ""
     },
     {
         "name": "Amazon Rainforest",
-        "screenshotone": "/assets/terrains/bogota-map.png",
+        "screenshotone": "/assets/terrains/jungle.png",
+        "more": ""
+    },
+    {
+        "name": "Farm",
+        "screenshotone": "/assets/terrains/farmhouse.png",
         "more": ""
     },
     {
         "name": "Caribbean Coast",
-        "screenshotone": "/assets/terrains/cali-map.png",
+        "screenshotone": "/assets/terrains/caribbean.png",
         "more": ""
     },
     {
         "name": "Pacific Coast",
-        "screenshotone": "/assets/terrains/bolivar-map.png",
+        "screenshotone": "/assets/terrains/pacific-coast.png",
+        "more": ""
+    },
+    {
+        "name": "Village",
+        "screenshotone": "/assets/terrains/village.png",
+        "more": ""
+    },
+    {
+        "name": "Historic",
+        "screenshotone": "/assets/terrains/historic.png",
         "more": ""
     },
     {
         "name": "Llanos",
-        "screenshotone": "/assets/terrains/medellin-map.png",
+        "screenshotone": "/assets/terrains/plain.png",
         "more": ""
     },
     {
         "name": "Tropical Lowlands",
-        "screenshotone": "/assets/terrains/cali-map.png",
+        "screenshotone": "/assets/terrains/tropical-lowlands.png",
         "more": ""
     },
     {
         "name": "Islands",
-        "screenshotone": "/assets/terrains/magdalena-map.png",
+        "screenshotone": "/assets/terrains/island.png",
+        "more": ""
+    },
+    {
+        "name": "Coastal Village",
+        "screenshotone": "/assets/terrains/coastal-village.png",
         "more": ""
     },
     {
         "name": "Country Side",
-        "screenshotone": "/assets/terrains/cali-map.png",
+        "screenshotone": "/assets/terrains/power.png",
         "more": ""
     },
     {
         "name": "Coffee Region",
-        "screenshotone": "/assets/terrains/cundinamarca-map.png",
+        "screenshotone": "/assets/terrains/coffee-beans.png",
         "more": ""
     },
     {
         "name": "Desert",
-        "screenshotone": "/assets/terrains/magdalena-map.png",
+        "screenshotone": "/assets/terrains/desert.png",
         "more": ""
     },
     {
         "name": "Paramo",
-        "screenshotone": "/assets/terrains/magdalena-map.png",
-        "more": ""
-    },
-    {
-        "name": "Desert",
-        "screenshotone": "/assets/terrains/magdalena-map.png",
+        "screenshotone": "/assets/terrains/plateau.png",
         "more": ""
     },
     {
         "name": "Mangroves",
-        "screenshotone": "/assets/terrains/magdalena-map.png",
+        "screenshotone": "/assets/terrains/mangrove.png",
         "more": ""
     },
     {
         "name": "Highland Lakes",
-        "screenshotone": "/assets/terrains/magdalena-map.png",
+        "screenshotone": "/assets/terrains/lake.png",
         "more": ""
     }
 ]

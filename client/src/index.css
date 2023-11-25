@@ -2097,9 +2097,9 @@ button {
 /* ==========  SEARCH BAR MODAL  =========== */
 
 .modal-fullscreen .modal-body {
-  overflow-y: auto;
-  overflow-x: hidden;
-  background: #fafafa;
+  /* overflow-y: auto;
+  overflow-x: hidden; */
+  background-color: #f3f2f2;
   width: 100vw !important;
   left: 0 !important;
   left: 0 !important;
@@ -2127,37 +2127,39 @@ button {
   border-radius: 50%;
   border: 1px solid #afafafaa !important;
   opacity: 1;
-  background-color: #fff;
+  background-color: #fafafa;
   padding: calc(var(--bs-modal-header-padding-y) * .7) calc(var(--bs-modal-header-padding-x) * .7);
-  margin: calc(-1.5 * var(--bs-modal-header-padding-y)) calc(1 * var(--bs-modal-header-padding-x)) calc(-1.5 * var(--bs-modal-header-padding-y)) auto;
+  margin: calc(-2.7 * var(--bs-modal-header-padding-y)) calc(1 * var(--bs-modal-header-padding-x)) calc(-1.5 * var(--bs-modal-header-padding-y)) auto;
+  z-index: 500 !important;
 }
 
 .modal-header .btn-close:hover {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.2s;
   border: 1px solid transparent !important;
+  background-color: white;
 }
 
 .model-tabs {
-  background-color: #fafafa;
+  background-color: #f3f2f2;
   font-size: 1rem;
   font-weight: 200;
   left: 0 !important;
-  margin: .68rem;
-  padding-bottom: .5rem;
+  margin: 0;
+  padding: .5rem;
   border: none !important;
   display: flex;
   flex-direction: row;
+  z-index: 499;
 }
 
 .model-tabs .nav-link:hover {
-  background-color: #f3f2f2 !important;
+  background-color: #eaeaea;
 }
 
 .model-tabs .nav-link {
   height: 3rem;
   width: 8rem;
-  /* background-color: #ffffff; */
   font-size: 1rem;
   color: #4747479f;
   text-decoration: none;
@@ -2173,7 +2175,7 @@ button {
   height: 3rem;
   width: 8rem;
   color: #000000;
-  background-color: #fafafa;
+  background-color: #f3f2f2;
   font-size: 1rem;
   margin: 0 !important;
   padding: 0 !important;
@@ -2188,13 +2190,17 @@ button {
 
 .model-tabs .modal-tab {
   font-size: 1rem;
-  background-color: #ffffff;
+  background-color: #fafafa;
   align-items: center !important;
   justify-content: center !important;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.modal-tab {
+  margin-top: 4rem;
 }
 
 .modal-tab-content {
@@ -2206,7 +2212,7 @@ button {
   background: #ffffff;
   border-radius: 25px;
   /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05); */
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   overflow: hidden;
 }
 
@@ -2218,7 +2224,7 @@ button {
   font-size: large;
   font-weight: bold;
   text-align: start !important;
-  z-index: 999 !important;
+  z-index: 2 !important;
   outline: 1px solid #a0a0a058 !important;
   display: inline-block;
   transition: transform 50ms ease;
@@ -2287,7 +2293,7 @@ button {
 .modal-tab-content-two {
   justify-content: center !important;
   height: 7.25rem;
-  margin-top: 2rem;
+  margin-top: 1.25rem;
   margin-left: 0.8rem;
   margin-right: 0.8rem;
   border: 1px solid #bdbdbd8e;
@@ -2295,7 +2301,8 @@ button {
   border-radius: 25px;
   /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08), 
   0 4px 12px rgba(0, 0, 0, 0.05); */
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   overflow: hidden;
 }
 
@@ -2347,7 +2354,7 @@ button {
 .modal-tab-content-3 {
   justify-content: center !important;
   height: 7.25rem;
-  margin-top: 2rem;
+  margin-top: 1.25rem;
   margin-left: 0.8rem;
   margin-right: 0.8rem;
   border: 1px solid #bdbdbd8e;
@@ -3444,7 +3451,7 @@ a:hover {
   width: 100%;
   display: block;
   text-align: left;
-  z-index: 999 !important;
+  z-index: 200 !important;
 }
 
 .btn.btn-primary {

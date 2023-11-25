@@ -122,18 +122,18 @@ const Header = ({ handlePageChange }) => {
 
             <Modal.Body className='search-modal-body justify-center'>
               <Modal.Header closeButton
-                className='close-button'>
+                className='close-button fixed-top'>
               </Modal.Header>
               <Tabs
                 defaultActiveKey="stays"
                 transition={false}
                 id="model-tabs"
                 variant='tabs'
-                className="model-tabs justify-center"
+                className="model-tabs fixed-top justify-center"
               >
                 <Tab eventKey="stays" title="Stays" className="modal-tab justify-center">
 
-                  <div className='modal-tab-content mb-2'>
+                  <div className='modal-tab-content'>
                     <div className='mt-4 justify-center'>
 
                       <h4 className='pl-3 mx-3 pb-2 text-left text-black'>
@@ -203,7 +203,7 @@ const Header = ({ handlePageChange }) => {
                 </Tab>
 
 
-                <Tab eventKey="explorations" title="explorations" className="modal-tab">
+                <Tab eventKey="explorations" title="Explorations" className="modal-tab">
 
                   <div className='modal-tab-content'>
                     <div className='mt-4 justify-center'>
@@ -275,6 +275,10 @@ const Header = ({ handlePageChange }) => {
                 </Tab>
               </Tabs>
             </Modal.Body>
+            <Modal.Footer>
+          <Button variant="secondary">Close</Button>
+          <Button variant="primary">Save changes</Button>
+        </Modal.Footer>            
           </Modal>
 
 

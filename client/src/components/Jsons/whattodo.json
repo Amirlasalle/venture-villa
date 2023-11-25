@@ -1,51 +1,81 @@
 [
     {
-        "name": "Any City",
+        "name": "Any Activity",
         "screenshotone": "/assets/maps/colombia-map.svg",
         "more": ""
     },
     {
-        "name": "Armenia Quindio",
+        "name": "Salsa Dancing in Cali",
         "screenshotone": "/assets/maps/armenia-map.png",
         "more": ""
     },
     {
-        "name": "Bogota",
+        "name": "Hike in Cocora Valley",
         "screenshotone": "/assets/maps/bogota-map.png",
         "more": ""
     },
     {
-        "name": "Cuaca",
+        "name": "Take a Coffee Farm Tour",
         "screenshotone": "/assets/maps/cali-map.png",
         "more": ""
     },
     {
-        "name": "Bolivar",
+        "name": "Explore Cartagena's Old Town",
         "screenshotone": "/assets/maps/bolivar-map.png",
         "more": ""
     },
     {
-        "name": "Antioquia",
+        "name": "Trek to the Lost City (Ciudad Perdida)",
         "screenshotone": "/assets/maps/medellin-map.png",
         "more": ""
     },
     {
-        "name": "San Andrés",
+        "name": "Visit Tayrona National Natural Park",
         "screenshotone": "/assets/maps/cali-map.png",
         "more": ""
     },
     {
-        "name": "Atlantico",
+        "name": "Explore Medellín's Comuna 13",
         "screenshotone": "/assets/maps/cali-map.png",
         "more": ""
     },
     {
-        "name": "Cundinamarca",
+        "name": "Visit the Salt Cathedral of Zipaquirá",
         "screenshotone": "/assets/maps/cundinamarca-map.png",
         "more": ""
     },
     {
-        "name": "Magdalena",
+        "name": "Go Paragliding in San Gil",
+        "screenshotone": "/assets/maps/magdalena-map.png",
+        "more": ""
+    },
+    {
+        "name": "Discover the Amazon Rainforest",
+        "screenshotone": "/assets/maps/bolivar-map.png",
+        "more": ""
+    },
+    {
+        "name": "Attend the Barranquilla Carnival",
+        "screenshotone": "/assets/maps/medellin-map.png",
+        "more": ""
+    },
+    {
+        "name": "Take a Boat Trip in Guatapé",
+        "screenshotone": "/assets/maps/cali-map.png",
+        "more": ""
+    },
+    {
+        "name": "Bird Watching in Minca",
+        "screenshotone": "/assets/maps/cali-map.png",
+        "more": ""
+    },
+    {
+        "name": "Relax in San Andrés and Providencia",
+        "screenshotone": "/assets/maps/cundinamarca-map.png",
+        "more": ""
+    },
+    {
+        "name": "Experience Bogotá's Museums",
         "screenshotone": "/assets/maps/magdalena-map.png",
         "more": ""
     }

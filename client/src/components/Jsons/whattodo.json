@@ -1,82 +1,82 @@
 [
     {
         "name": "Any Activity",
-        "screenshotone": "/assets/maps/colombia-map.svg",
+        "screenshotone": "/assets/activities/extracurricular-activities.png",
         "more": ""
     },
     {
         "name": "Salsa Dancing in Cali",
-        "screenshotone": "/assets/maps/armenia-map.png",
+        "screenshotone": "/assets/activities/salsa.png",
         "more": ""
     },
     {
         "name": "Hike in Cocora Valley",
-        "screenshotone": "/assets/maps/bogota-map.png",
+        "screenshotone": "/assets/activities/hiker.png",
         "more": ""
     },
     {
         "name": "Take a Coffee Farm Tour",
-        "screenshotone": "/assets/maps/cali-map.png",
+        "screenshotone": "/assets/activities/tour-guide.png",
         "more": ""
     },
     {
         "name": "Explore Cartagena's Old Town",
-        "screenshotone": "/assets/maps/bolivar-map.png",
+        "screenshotone": "/assets/activities/cartagena.png",
         "more": ""
     },
     {
         "name": "Trek to the Lost City (Ciudad Perdida)",
-        "screenshotone": "/assets/maps/medellin-map.png",
+        "screenshotone": "/assets/activities/ciudad-perdida.png",
         "more": ""
     },
     {
         "name": "Visit Tayrona National Natural Park",
-        "screenshotone": "/assets/maps/cali-map.png",
+        "screenshotone": "/assets/activities/Tayrona-park.png",
         "more": ""
     },
     {
         "name": "Explore Medellín's Comuna 13",
-        "screenshotone": "/assets/maps/cali-map.png",
+        "screenshotone": "/assets/activities/medellin.png",
         "more": ""
     },
     {
         "name": "Visit the Salt Cathedral of Zipaquirá",
-        "screenshotone": "/assets/maps/cundinamarca-map.png",
+        "screenshotone": "/assets/activities/salt-cathedral.png",
         "more": ""
     },
     {
         "name": "Go Paragliding in San Gil",
-        "screenshotone": "/assets/maps/magdalena-map.png",
+        "screenshotone": "/assets/activities/paragliding.png",
         "more": ""
     },
     {
         "name": "Discover the Amazon Rainforest",
-        "screenshotone": "/assets/maps/bolivar-map.png",
+        "screenshotone": "/assets/activities/rainforestamazon.png",
         "more": ""
     },
     {
         "name": "Attend the Barranquilla Carnival",
-        "screenshotone": "/assets/maps/medellin-map.png",
+        "screenshotone": "/assets/activities/carnaval-de-barranquilla.png",
         "more": ""
     },
     {
         "name": "Take a Boat Trip in Guatapé",
-        "screenshotone": "/assets/maps/cali-map.png",
+        "screenshotone": "/assets/activities/bumper-boats.png",
         "more": ""
     },
     {
         "name": "Bird Watching in Minca",
-        "screenshotone": "/assets/maps/cali-map.png",
+        "screenshotone": "/assets/activities/toucan-clipart-md.png",
         "more": ""
     },
     {
         "name": "Relax in San Andrés and Providencia",
-        "screenshotone": "/assets/maps/cundinamarca-map.png",
+        "screenshotone": "/assets/activities/hammock.png",
         "more": ""
     },
     {
         "name": "Experience Bogotá's Museums",
-        "screenshotone": "/assets/maps/magdalena-map.png",
+        "screenshotone": "/assets/activities/art-museum.png",
         "more": ""
     }
 ]

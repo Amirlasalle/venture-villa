@@ -2139,6 +2139,20 @@ button {
   border: 1px solid transparent !important;
   background-color: white;
 }
+.venture-modal-footer{
+  background: linear-gradient(to bottom,
+  rgb(255, 242, 0) 0, rgb(255, 242, 0) 50%,
+  rgb(0, 9, 138) 50%, rgb(0, 9, 138) 75%,
+  red 75%, red 100%);
+  align-items: center;
+  justify-content: flex-start;
+  /* filter: brightness(90%); */
+}
+
+.modal-footer-text{
+  color: #fff;
+  text-shadow: 2px 2px #626262;
+}
 
 .model-tabs {
   background-color: #f3f2f2;
@@ -2181,9 +2195,9 @@ button {
   padding: 0 !important;
   border-bottom: 3px solid transparent;
   border-image: repeating-linear-gradient(to right,
-      rgb(255, 242, 0) 0, rgb(255, 242, 0) 50%,
-      rgb(0, 9, 138) 50%, rgb(0, 9, 138) 75%,
-      red 75%, red 100%) 1;
+  #ffe100 0, #ffe100 50%,
+  #0033cc  50%, #0033cc  75%,
+  #ff0000 75%, #ff0000 100%) 1;
   border-image-slice: 1;
 
 }

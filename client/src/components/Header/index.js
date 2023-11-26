@@ -156,9 +156,9 @@ const Header = ({ handlePageChange }) => {
                         {whereto.map((butwhereto, key) =>
 
                           <Card key={key} className=" mx-1 where-to-cards" style={{ width: '10rem' }}>
-                            <a href={butwhereto.more} target="_blank" rel="noreferrer" className="btn1" >
+                              <Link to={butwhereto.more} className="btn1" >
                               <Image src={process.env.PUBLIC_URL + butwhereto.screenshotone} className="img-fluid d-flex flex-wrap justify-content-around where-to-image" />
-                            </a>
+                            </Link>
                             <Card.Body className='w-100 mt-1 ml-0 mr-0'>
                               <Card.Subtitle className="mb-2 mr-1 where-to-text">
                                 {butwhereto.name}
@@ -184,9 +184,9 @@ const Header = ({ handlePageChange }) => {
                         {terrains.map((terrain, key) =>
 
                           <Card key={key} className=" mx-1 where-to-cards-two" style={{ width: '3.5rem' }}>
-                            <a href={terrain.more} target="_blank" rel="noreferrer" className="btn1 where-to-image-two" >
+                            <Link to={terrain.more} className="btn1 where-to-image-two" >
                               <Image src={process.env.PUBLIC_URL + terrain.screenshotone} className="img-fluid d-flex flex-wrap justify-content-around where-to-image-two" />
-                            </a>
+                            </Link>
                             <Card.Body className='w-100 mt-1 ml-0 mr-0'>
                               <Card.Subtitle className="mb-2 where-to-text-two">
                                 {terrain.name}
@@ -228,9 +228,9 @@ const Header = ({ handlePageChange }) => {
                         {whattodo.map((butwhattodo, key) =>
 
                           <Card key={key} className=" mx-1 where-to-cards" style={{ width: '10rem' }}>
-                            <a href={butwhattodo.more} target="_blank" rel="noreferrer" className="btn1" >
+                              <Link to={butwhattodo.more} target="_blank" rel="noreferrer" className="btn1" >
                               <Image src={process.env.PUBLIC_URL + butwhattodo.screenshotone} className="img-fluid d-flex flex-wrap where-to-image" />
-                            </a>
+                            </Link>
                             <Card.Body className='w-100 mt-1 ml-0 mr-0'>
                               <Card.Subtitle className="mb-2 mr-1 where-to-text">
                                 {butwhattodo.name}
@@ -256,9 +256,9 @@ const Header = ({ handlePageChange }) => {
                         {foryourtastebuds.map((food, key) =>
 
                           <Card key={key} className=" mx-1 where-to-cards-3" style={{ width: '3.5rem' }}>
-                            <a href={food.more} target="_blank" rel="noreferrer" className="btn1 where-to-image-3" >
+                            <Link to={food.more} className="btn1 where-to-image-3" >
                               <Image src={process.env.PUBLIC_URL + food.screenshotone} className="img-fluid d-flex flex-wrap justify-content-around where-to-image-3" />
-                            </a>
+                            </Link>
                             <Card.Body className='w-100 mt-1 ml-0 mr-0'>
                               <Card.Subtitle className="mb-2 where-to-text-3">
                                 {food.name}
@@ -275,10 +275,11 @@ const Header = ({ handlePageChange }) => {
                 </Tab>
               </Tabs>
             </Modal.Body>
-            <Modal.Footer>
-          <Button variant="secondary">Close</Button>
-          <Button variant="primary">Save changes</Button>
-        </Modal.Footer>            
+            <Modal.Footer className='bg-colombia p-5'>
+              {/* <h4 className='pl-2 mx-3 text-left modal-footer-text'>
+                Sign up for exclusive content
+              </h4> */}
+            </Modal.Footer>
           </Modal>
 
 

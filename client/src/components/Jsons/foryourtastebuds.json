@@ -1,142 +1,117 @@
 [
     {
         "name": "Bandeja Paisa",
-        "screenshotone": "/assets/maps/colombia-map.svg",
+        "screenshotone": "/assets/food/bandeja-paisa1.png",
         "more": ""
     },
     {
         "name": "Arepas",
-        "screenshotone": "/assets/maps/armenia-map.png",
+        "screenshotone": "/assets/food/arepas.png",
         "more": ""
     },
     {
         "name": "Sancocho",
-        "screenshotone": "/assets/maps/bogota-map.png",
+        "screenshotone": "/assets/food/sancocho.png",
         "more": ""
     },
     {
         "name": "Empanadas",
-        "screenshotone": "/assets/maps/cali-map.png",
+        "screenshotone": "/assets/food/cassava.png",
         "more": ""
     },
     {
         "name": "Bunuelos",
-        "screenshotone": "/assets/maps/bolivar-map.png",
+        "screenshotone": "/assets/food/bunuelo.png",
         "more": ""
     },
     {
         "name": "Pan de Bono",
-        "screenshotone": "/assets/maps/medellin-map.png",
+        "screenshotone": "/assets/food/pan-de-bono.png",
         "more": ""
     },
     {
         "name": "Ajiaco",
-        "screenshotone": "/assets/maps/cali-map.png",
+        "screenshotone": "/assets/food/ajiaco.png",
         "more": ""
     },
     {
         "name": "Lechona",
-        "screenshotone": "/assets/maps/cali-map.png",
+        "screenshotone": "/assets/food/lechona.png",
         "more": ""
     },
     {
         "name": "Tamales",
-        "screenshotone": "/assets/maps/cundinamarca-map.png",
-        "more": ""
-    },
-    {
-        "name": "Sobrebarriga",
-        "screenshotone": "/assets/maps/magdalena-map.png",
+        "screenshotone": "/assets/food/tamales.png",
         "more": ""
     },
     {
         "name": "Changua",
-        "screenshotone": "/assets/maps/bolivar-map.png",
+        "screenshotone": "/assets/food/changua.png",
         "more": ""
     },
     {
         "name": "Ceviche",
-        "screenshotone": "/assets/maps/medellin-map.png",
+        "screenshotone": "/assets/food/ceviche.png",
         "more": ""
     },
     {
         "name": "Fritanga",
-        "screenshotone": "/assets/maps/cali-map.png",
+        "screenshotone": "/assets/food/fritanga.png",
         "more": ""
     },
     {
-        "name": "Arroz con Pollp",
-        "screenshotone": "/assets/maps/cali-map.png",
+        "name": "Arroz con Pollo",
+        "screenshotone": "/assets/food/biryani.png",
         "more": ""
     },
     {
         "name": "Obleas",
-        "screenshotone": "/assets/maps/magdalena-map.png",
+        "screenshotone": "/assets/food/oblea.png",
         "more": ""
     },
     {
         "name": "Pargo Rojo Frito",
-        "screenshotone": "/assets/maps/bogota-map.png",
+        "screenshotone": "/assets/food/red-snapper-fish.png",
         "more": ""
     },
     {
         "name": "Mote de Queso",
-        "screenshotone": "/assets/maps/cali-map.png",
+        "screenshotone": "/assets/food/mote-de-queso.png",
         "more": ""
     },
     {
         "name": "Choclo con Queso",
-        "screenshotone": "/assets/maps/bolivar-map.png",
+        "screenshotone": "/assets/food/arepas1.png",
         "more": ""
     },
     {
         "name": "Salpicón",
-        "screenshotone": "/assets/maps/medellin-map.png",
+        "screenshotone": "/assets/food/salpicon.png",
         "more": ""
     },
     {
         "name": "Pescado a la Plancha",
-        "screenshotone": "/assets/maps/cali-map.png",
+        "screenshotone": "/assets/food/rice.png",
         "more": ""
     },
     {
         "name": "Sudado de Pollo",
-        "screenshotone": "/assets/maps/cali-map.png",
-        "more": ""
-    },
-    {
-        "name": "Enyucado",
-        "screenshotone": "/assets/maps/cundinamarca-map.png",
+        "screenshotone": "/assets/food/stew.png",
         "more": ""
     },
     {
         "name": "Cholado",
-        "screenshotone": "/assets/maps/magdalena-map.png",
-        "more": ""
-    },
-    {
-        "name": "Almojábanas",
-        "screenshotone": "/assets/maps/medellin-map.png",
-        "more": ""
-    },
-    {
-        "name": "Fanesca",
-        "screenshotone": "/assets/maps/cali-map.png",
-        "more": ""
-    },
-    {
-        "name": "Cuchuco de Trigo",
-        "screenshotone": "/assets/maps/cali-map.png",
+        "screenshotone": "/assets/food/cholado.png",
         "more": ""
     },
     {
         "name": "Cabrito",
-        "screenshotone": "/assets/maps/cundinamarca-map.png",
+        "screenshotone": "/assets/food/roasted-lamb.png",
         "more": ""
     },
     {
         "name": "Aguardiente",
-        "screenshotone": "/assets/maps/magdalena-map.png",
+        "screenshotone": "/assets/food/aguardiente.png",
         "more": ""
     }
 ]

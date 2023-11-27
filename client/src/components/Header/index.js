@@ -72,7 +72,7 @@ const Header = ({ handlePageChange }) => {
     };
   }, []);
 
-  const [showA, setShowA] = useState(true);
+  const [showA, setShowA] = useState(false);
   const toggleShowA = () => setShowA(!showA);
 
   const values = [true];
@@ -151,7 +151,6 @@ const Header = ({ handlePageChange }) => {
                         Where to?
                       </h4>
                       <Stack direction="horizontal">
-                        {/* <Form.Control className="mx-3 p-3" placeholder=" Venture Search..." /> */}
                         <Button variant='light' className='btn10 btn-block10 mx-3 p-3 text-left' onClick={toggleShowA}>
                           <span className='mx-1'>
                             <FontAwesomeIcon icon={faMagnifyingGlass} size='md' style={{ fontWeight: 'bolder' }} />
@@ -160,8 +159,7 @@ const Header = ({ handlePageChange }) => {
                             Venture Search
                           </span>
                         </Button>
-
-                      </Stack>
+                        </Stack>
                     </div>
                     <div className='mt-4 where-to-content ml-2'>
                       <div className='where-to-cards-container'>
@@ -294,23 +292,19 @@ const Header = ({ handlePageChange }) => {
                 <Toast.Header className='mt-4'>
                 </Toast.Header>
                 <Toast.Body>
-                  <Stack direction="horizontal">
-                     
-                        <div ref={resetColor} variant='light' style={{ backgroundColor }} className='form-div p-3 text-left'  onClick={changeBgColor}>
-                          <span className='mx-1 '>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} size='lg' className='faMagGlass' />
-                          </span>
-                       
-                          <input className="form-input search-btn-form" placeholder=" Venture Search..." />
-                   
-                        </div>
-                      </Stack>
+                  <div ref={resetColor} variant='light' style={{ backgroundColor }} className='form-div p-3 text-left' onClick={changeBgColor}>
+                    <span className='mx-1 '>
+                      <FontAwesomeIcon icon={faMagnifyingGlass} size='lg' className='faMagGlass' />
+                    </span>
 
+                    <input className="form-input search-btn-form" placeholder=" Venture Search..." />
+
+                  </div>
                 </Toast.Body>
               </Toast>
-              <Modal.Footer className='p-5 modal-footers bg-colombia'>
+          
+            </div>    <Modal.Footer className='p-5 modal-footers bg-colombia'>
               </Modal.Footer>
-            </div>
           </Modal>
 
 

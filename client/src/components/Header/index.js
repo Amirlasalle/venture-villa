@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Auth from '../../utils/auth';
 import { Image, Container, Nav, Navbar, NavDropdown, Button, Modal, Tab, Tabs, Stack, Card, Toast } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faCircleUser, faBars, faLanguage, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faCircleUser, faBars, faLanguage, faGlobe, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import wheretoData from "../Jsons/whereto.json";
 import terrainsData from "../Jsons/terrains.json";
 import whattodoData from "../Jsons/whattodo.json";
@@ -84,7 +84,11 @@ const Header = ({ handlePageChange }) => {
     setShow(true);
   }
 
- 
+  const CustomCloseButton = ({ onClick }) => (
+    <div variant="link" className="close-btn" onClick={onClick}>
+      <FontAwesomeIcon icon={faArrowLeft} size='lg'/>
+    </div>
+  );
 
   const [whereto] = useState(wheretoData)
   console.log(whereto)
@@ -291,20 +295,21 @@ const Header = ({ handlePageChange }) => {
             <div className='w-100  bg-white'>
               <Toast show={showA} onClose={toggleShowA}
                 style={{ width: '100%' }} className='toast'>
-                 <Toast.Header closeVariant='primary' className='fixed-top' closeButton={true} />
+                <Toast.Header closeButton={false} closeVariant='primary' className='fixed-top'>
+                  <CustomCloseButton onClick={toggleShowA} className='btn-close' />
+                </Toast.Header>
+                {/* <Toast.Header closeVariant='primary' className='fixed-top' closeButton={true} /> */}
                 <Toast.Body>
                   <div ref={resetColor} variant='light' style={{ backgroundColor }} className='form-div p-3 text-left' onClick={changeBgColor}>
                     <span className='mx-1 '>
                       <FontAwesomeIcon icon={faMagnifyingGlass} size='lg' className='faMagGlass' />
                     </span>
-
                     <input className="form-input search-btn-form" placeholder=" Venture Search..." />
-
                   </div>
                 </Toast.Body>
               </Toast>
-
             </div>
+
             <Modal.Footer className='p-5 modal-footers bg-colombia'>
             </Modal.Footer>
           </Modal>

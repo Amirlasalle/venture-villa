@@ -2143,7 +2143,7 @@ button {
   padding: 0;
 }
 
-.toast .toast-header .btn-close {
+/* .toast .toast-header .btn-close {
   font-size: 0.6rem;
   font-weight: 900 !important;
   color: #000 !important;
@@ -2161,7 +2161,29 @@ button {
   transition: box-shadow 0.2s;
   border: 1px solid transparent !important;
   background-color: white;
+} */
+
+.close-btn {
+  font-size: 0.7rem;
+  font-weight: 900 !important;
+  color: #000000 !important;
+  border-radius: 50%;
+  background-color: #fafafa;
+  border: 1px solid #afafafaa !important;
+  opacity: 1;
+  padding: calc(var(--bs-modal-header-padding-y) * .5) calc(var(--bs-modal-header-padding-x) * .6);
+  margin: calc(-2.7 * var(--bs-modal-header-padding-y)) calc(1 * var(--bs-modal-header-padding-x)) calc(-1.5 * var(--bs-modal-header-padding-y)) auto;
+  z-index: 500 !important;
+  cursor: pointer !important;
 }
+
+.close-btn:hover {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
+  border: 1px solid transparent !important;
+  background-color: white;
+}
+
 
 
 

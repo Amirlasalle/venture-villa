@@ -84,6 +84,8 @@ const Header = ({ handlePageChange }) => {
     setShow(true);
   }
 
+ 
+
   const [whereto] = useState(wheretoData)
   console.log(whereto)
   const [terrains] = useState(terrainsData)
@@ -159,7 +161,7 @@ const Header = ({ handlePageChange }) => {
                             Venture Search
                           </span>
                         </Button>
-                        </Stack>
+                      </Stack>
                     </div>
                     <div className='mt-4 where-to-content ml-2'>
                       <div className='where-to-cards-container'>
@@ -288,9 +290,8 @@ const Header = ({ handlePageChange }) => {
 
             <div className='w-100  bg-white'>
               <Toast show={showA} onClose={toggleShowA}
-                style={{ height: '540px', width: '100%' }} className=''>
-                <Toast.Header className='mt-4'>
-                </Toast.Header>
+                style={{ width: '100%' }} className='toast'>
+                 <Toast.Header closeVariant='primary' className='fixed-top' closeButton={true} />
                 <Toast.Body>
                   <div ref={resetColor} variant='light' style={{ backgroundColor }} className='form-div p-3 text-left' onClick={changeBgColor}>
                     <span className='mx-1 '>
@@ -302,9 +303,10 @@ const Header = ({ handlePageChange }) => {
                   </div>
                 </Toast.Body>
               </Toast>
-          
-            </div>    <Modal.Footer className='p-5 modal-footers bg-colombia'>
-              </Modal.Footer>
+
+            </div>
+            <Modal.Footer className='p-5 modal-footers bg-colombia'>
+            </Modal.Footer>
           </Modal>
 
 

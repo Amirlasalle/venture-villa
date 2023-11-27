@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Auth from '../../utils/auth';
-import { Image, Container, Nav, Navbar, NavDropdown, Button, Modal, Tab, Tabs, Stack, Card } from 'react-bootstrap';
+import { Image, Container, Nav, Navbar, NavDropdown, Button, Modal, Tab, Tabs, Stack, Card, Toast } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faCircleUser, faBars, faLanguage, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import wheretoData from "../Jsons/whereto.json";
 import terrainsData from "../Jsons/terrains.json";
 import whattodoData from "../Jsons/whattodo.json";
 import foryourtastebudsData from "../Jsons/foryourtastebuds.json";
-// ,Col, , Form   , faChevronCircleRight, faChevronLeft, faChevronRight, faPipe, faExternalLinkAlt, faArrowUpRightFromSquare 
+// ,Col,   , faChevronCircleRight, faChevronLeft, faChevronRight, faPipe, faExternalLinkAlt, faArrowUpRightFromSquare 
 
 const Header = ({ handlePageChange }) => {
   const logout = (event) => {
@@ -21,13 +21,6 @@ const Header = ({ handlePageChange }) => {
   const closeNavbar = () => {
     setIsNavbarOpen(false);
   };
-
-
-  // const nextIconStyleTwo = {
-  //   fontSize: '2rem',
-  //   fontWeight: 'bolder',
-  // };
-
 
   useEffect(() => {
     const handleOutsideClick = (e) => {
@@ -59,10 +52,28 @@ const Header = ({ handlePageChange }) => {
     navigate(url);
   };
 
-  // const [show, setShow] = useState(false);
+  const [backgroundColor, setBackgroundColor] = useState('#f3f2f2');
+  const resetColor = useRef(null);
 
-  // const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
+  const changeBgColor = () => {
+    setBackgroundColor('#f3f2f2');
+  };
+
+  const outSideSearchBar = (event) => {
+    if (resetColor.current && !resetColor.current.contains(event.target)) {
+      setBackgroundColor('#fff');
+    }
+  };
+  useEffect(() => {
+    document.addEventListener('click', outSideSearchBar);
+
+    return () => {
+      document.removeEventListener('click', outSideSearchBar);
+    };
+  }, []);
+
+  const [showA, setShowA] = useState(true);
+  const toggleShowA = () => setShowA(!showA);
 
   const values = [true];
   const [fullscreen, setFullscreen] = useState(true);
@@ -141,7 +152,7 @@ const Header = ({ handlePageChange }) => {
                       </h4>
                       <Stack direction="horizontal">
                         {/* <Form.Control className="mx-3 p-3" placeholder=" Venture Search..." /> */}
-                        <Button variant='light' className='btn10 btn-block10 mx-3 p-3 text-left'>
+                        <Button variant='light' className='btn10 btn-block10 mx-3 p-3 text-left' onClick={toggleShowA}>
                           <span className='mx-1'>
                             <FontAwesomeIcon icon={faMagnifyingGlass} size='md' style={{ fontWeight: 'bolder' }} />
                           </span>
@@ -149,6 +160,7 @@ const Header = ({ handlePageChange }) => {
                             Venture Search
                           </span>
                         </Button>
+
                       </Stack>
                     </div>
                     <div className='mt-4 where-to-content ml-2'>
@@ -156,7 +168,7 @@ const Header = ({ handlePageChange }) => {
                         {whereto.map((butwhereto, key) =>
 
                           <Card key={key} className=" mx-1 where-to-cards" style={{ width: '10rem' }}>
-                              <Link to={butwhereto.more} className="btn1" >
+                            <Link to={butwhereto.more} className="btn1" >
                               <Image src={process.env.PUBLIC_URL + butwhereto.screenshotone} className="img-fluid d-flex flex-wrap justify-content-around where-to-image" />
                             </Link>
                             <Card.Body className='w-100 mt-1 ml-0 mr-0'>
@@ -213,7 +225,7 @@ const Header = ({ handlePageChange }) => {
                       </h4>
                       <Stack direction="horizontal">
                         {/* <Form.Control className="mx-3 p-3" placeholder=" Venture Search..." /> */}
-                        <Button variant='light' className='btn10 btn-block10 mx-3 p-3 text-left'>
+                        <Button variant='light' className='btn10 btn-block10 mx-3 p-3 text-left' onClick={toggleShowA}>
                           <span className='mx-1'>
                             <FontAwesomeIcon icon={faMagnifyingGlass} size='md' style={{ fontWeight: 'bolder' }} />
                           </span>
@@ -228,7 +240,7 @@ const Header = ({ handlePageChange }) => {
                         {whattodo.map((butwhattodo, key) =>
 
                           <Card key={key} className=" mx-1 where-to-cards" style={{ width: '10rem' }}>
-                              <Link to={butwhattodo.more} target="_blank" rel="noreferrer" className="btn1" >
+                            <Link to={butwhattodo.more} target="_blank" rel="noreferrer" className="btn1" >
                               <Image src={process.env.PUBLIC_URL + butwhattodo.screenshotone} className="img-fluid d-flex flex-wrap where-to-image" />
                             </Link>
                             <Card.Body className='w-100 mt-1 ml-0 mr-0'>
@@ -275,11 +287,30 @@ const Header = ({ handlePageChange }) => {
                 </Tab>
               </Tabs>
             </Modal.Body>
-            <Modal.Footer className='bg-colombia p-5'>
-              {/* <h4 className='pl-2 mx-3 text-left modal-footer-text'>
-                Sign up for exclusive content
-              </h4> */}
-            </Modal.Footer>
+
+            <div className='w-100  bg-white'>
+              <Toast show={showA} onClose={toggleShowA}
+                style={{ height: '540px', width: '100%' }} className=''>
+                <Toast.Header className='mt-4'>
+                </Toast.Header>
+                <Toast.Body>
+                  <Stack direction="horizontal">
+                     
+                        <div ref={resetColor} variant='light' style={{ backgroundColor }} className='form-div p-3 text-left'  onClick={changeBgColor}>
+                          <span className='mx-1 '>
+                            <FontAwesomeIcon icon={faMagnifyingGlass} size='lg' className='faMagGlass' />
+                          </span>
+                       
+                          <input className="form-input search-btn-form" placeholder=" Venture Search..." />
+                   
+                        </div>
+                      </Stack>
+
+                </Toast.Body>
+              </Toast>
+              <Modal.Footer className='p-5 modal-footers bg-colombia'>
+              </Modal.Footer>
+            </div>
           </Modal>
 
 

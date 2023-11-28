@@ -2097,8 +2097,6 @@ button {
 /* ==========  SEARCH BAR MODAL  =========== */
 
 .modal-fullscreen .modal-body {
-  /* overflow-y: auto;
-  overflow-x: hidden; */
   background-color: #f3f2f2;
   width: 100vw !important;
   left: 0 !important;
@@ -2132,6 +2130,17 @@ button {
   background: #fff;
   z-index: 9999;
   position: fixed;
+  border-top-left-radius: 1.5rem !important;
+  border-top-right-radius: 1.5rem !important;
+}
+
+.toast-body {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .toast-header {
@@ -2142,26 +2151,6 @@ button {
   margin: 0;
   padding: 0;
 }
-
-/* .toast .toast-header .btn-close {
-  font-size: 0.6rem;
-  font-weight: 900 !important;
-  color: #000 !important;
-  border-radius: 50%;
-  background-color: #fafafa;
-  border: 1px solid #afafafaa !important;
-  opacity: 1;
-  padding: calc(var(--bs-modal-header-padding-y) * .7) calc(var(--bs-modal-header-padding-x) * .7);
-  margin: calc(-2.7 * var(--bs-modal-header-padding-y)) calc(1 * var(--bs-modal-header-padding-x)) calc(-1.5 * var(--bs-modal-header-padding-y)) auto;
-  z-index: 500 !important;
-}
-
-.toast-header .btn-close:hover {
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.2s;
-  border: 1px solid transparent !important;
-  background-color: white;
-} */
 
 .close-btn {
   font-size: 0.7rem;
@@ -2185,16 +2174,67 @@ button {
 }
 
 
+.search-data-body {
+  width: 100%;
+  background: transparent;
+  overflow-y: scroll !important;
+  margin-top: 1rem;
+}
+
+.search-data-item {
+  cursor: pointer !important;
+  list-style-type: none !important;
+  width: 100% !important;
+  display: flex !important;
+}
+
+.search-data-item:hover {
+  background: #f4f4f4;
+}
+
+.search-data-icon-div{
+  background: #dcdcdc;
+  border-radius: 12px;
+  width: 2rem !important;
+  height: 2rem !important;
+  margin-right: 0.7rem !important;
+  padding: 1.35rem 1.35rem;
+  margin-left: 0.25rem;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.search-data-icon {
+  background: transparent;
+  border-radius: 2px;
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
 
 
+.search-data-text {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  letter-spacing: 1px !important;
+  font-size: 1rem;
+  font-weight: 300;
+}
 
 .form-div {
   display: inline-flex;
   flex-direction: row;
-  width: 100%;
+  justify-content: center !important;
+  width: 95%;
   outline: 1px solid #a0a0a058 !important;
   align-items: center;
   border-radius: .9rem !important;
+  margin-top: 3rem;
 }
 
 .search-btn-form {
@@ -2229,7 +2269,8 @@ input:focus {
 }
 
 .modal-header .btn-close:hover {
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08), 
+  0 4px 12px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.2s;
   border: 1px solid transparent !important;
   background-color: white;
@@ -2295,7 +2336,7 @@ input:focus {
       #0033cc 50%, #0033cc 75%,
       #ff0000 75%, #ff0000 100%) 1;
   border-image-slice: 1;
-
+  cursor: default;
 }
 
 .model-tabs .modal-tab {
@@ -2321,7 +2362,6 @@ input:focus {
   border: 1px solid #bdbdbd8e;
   background: #ffffff;
   border-radius: 25px;
-  /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05); */
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   overflow: hidden;
 }
@@ -2373,7 +2413,6 @@ input:focus {
   background: #ffffff;
   display: inline-flex;
   flex-direction: row;
-
 }
 
 .where-to-cards {

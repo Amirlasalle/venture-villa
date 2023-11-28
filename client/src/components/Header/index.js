@@ -4,9 +4,12 @@ import Auth from '../../utils/auth';
 import { Image, Container, Nav, Navbar, NavDropdown, Button, Modal, Tab, Tabs, Stack, Card, Toast } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faCircleUser, faBars, faLanguage, faGlobe, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import wheretoData from "../Jsons/whereto.json";
-import terrainsData from "../Jsons/terrains.json";
-import whattodoData from "../Jsons/whattodo.json";
+import terrainsData from '../Jsons/terrains.json';
+import whattodoData from '../Jsons/whattodo.json';
+import wheretoData from '../Jsons/whereto.json';
+import citiesData from '../Jsons/cities.json';
+import foodData from '../Jsons/food.json';
+import activitiesData from '../Jsons/activities.json';
 import foryourtastebudsData from "../Jsons/foryourtastebuds.json";
 // ,Col,   , faChevronCircleRight, faChevronLeft, faChevronRight, faPipe, faExternalLinkAlt, faArrowUpRightFromSquare 
 
@@ -75,6 +78,9 @@ const Header = ({ handlePageChange }) => {
   const [showA, setShowA] = useState(false);
   const toggleShowA = () => setShowA(!showA);
 
+  const [showB, setShowB] = useState(false);
+  const toggleShowB = () => setShowB(!showB);
+
   const values = [true];
   const [fullscreen, setFullscreen] = useState(true);
   const [show, setShow] = useState(false);
@@ -84,9 +90,9 @@ const Header = ({ handlePageChange }) => {
     setShow(true);
   }
 
-  const CustomCloseButton = ({ onClick }) => (
+  const ToastCloseButton = ({ onClick }) => (
     <div variant="link" className="close-btn" onClick={onClick}>
-      <FontAwesomeIcon icon={faArrowLeft} size='lg'/>
+      <FontAwesomeIcon icon={faArrowLeft} size='lg' />
     </div>
   );
 
@@ -98,6 +104,48 @@ const Header = ({ handlePageChange }) => {
   console.log(whattodo)
   const [foryourtastebuds] = useState(foryourtastebudsData)
   console.log(foryourtastebuds)
+
+  const [data, setData] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  useEffect(() => {
+
+    const searchData = [
+      ...citiesData,
+    ];
+    setData(searchData);
+  }, []);
+
+
+  const searchedData = data.filter((item) => {
+    const filteredSearch = searchQuery.trim().toLowerCase();
+    const filteredName = item.name.toLowerCase().trim();
+    return filteredName.startsWith(filteredSearch) || filteredName === filteredSearch;
+  });
+
+  const [data2, setData2] = useState([]);
+  const [searchQuery2, setSearchQuery2] = useState('');
+
+  useEffect(() => {
+
+    const searchData2 = [
+      ...foodData,
+      ...activitiesData,
+    ];
+    setData2(searchData2);
+  }, []);
+
+
+  const searchedData2 = data2.filter((item) => {
+    const filteredSearch2 = searchQuery2.trim().toLowerCase();
+    const filteredName2 = item.name.toLowerCase().trim();
+    return filteredName2.startsWith(filteredSearch2) || filteredName2 === filteredSearch2;
+  });
+
+  const closeToast = () => {
+      setShowA(false);
+      setShowB(false);
+  };
 
   return (
     <div role='navigation' className='bg-body-tertiary mar'>
@@ -147,8 +195,9 @@ const Header = ({ handlePageChange }) => {
                 id="model-tabs"
                 variant='tabs'
                 className="model-tabs fixed-top justify-center"
+                onSelect={closeToast}
               >
-                <Tab eventKey="stays" title="Stays" className="modal-tab justify-center">
+                <Tab eventKey="stays" title="Stays" className="modal-tab justify-center" >
 
                   <div className='modal-tab-content'>
                     <div className='mt-4 justify-center'>
@@ -219,7 +268,7 @@ const Header = ({ handlePageChange }) => {
                 </Tab>
 
 
-                <Tab eventKey="explorations" title="Explorations" className="modal-tab">
+                <Tab eventKey="explorations" title="Explorations" className="modal-tab" >
 
                   <div className='modal-tab-content'>
                     <div className='mt-4 justify-center'>
@@ -229,7 +278,7 @@ const Header = ({ handlePageChange }) => {
                       </h4>
                       <Stack direction="horizontal">
                         {/* <Form.Control className="mx-3 p-3" placeholder=" Venture Search..." /> */}
-                        <Button variant='light' className='btn10 btn-block10 mx-3 p-3 text-left' onClick={toggleShowA}>
+                        <Button variant='light' className='btn10 btn-block10 mx-3 p-3 text-left' onClick={toggleShowB}>
                           <span className='mx-1'>
                             <FontAwesomeIcon icon={faMagnifyingGlass} size='md' style={{ fontWeight: 'bolder' }} />
                           </span>
@@ -296,19 +345,73 @@ const Header = ({ handlePageChange }) => {
               <Toast show={showA} onClose={toggleShowA}
                 style={{ width: '100%' }} className='toast'>
                 <Toast.Header closeButton={false} closeVariant='primary' className='fixed-top'>
-                  <CustomCloseButton onClick={toggleShowA} className='btn-close' />
+                  <ToastCloseButton onClick={toggleShowA} className='btn-close' />
                 </Toast.Header>
-                {/* <Toast.Header closeVariant='primary' className='fixed-top' closeButton={true} /> */}
-                <Toast.Body>
-                  <div ref={resetColor} variant='light' style={{ backgroundColor }} className='form-div p-3 text-left' onClick={changeBgColor}>
+                <Toast.Body className='w-100'>
+                  <div ref={resetColor} variant='light' style={{ backgroundColor }} className='form-div  mx-3 p-3 text-left' onClick={changeBgColor}>
                     <span className='mx-1 '>
                       <FontAwesomeIcon icon={faMagnifyingGlass} size='lg' className='faMagGlass' />
                     </span>
-                    <input className="form-input search-btn-form" placeholder=" Venture Search..." />
+                    <input
+                      className="form-input search-btn-form" placeholder=" Venture Search..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                    />
                   </div>
+                  {searchQuery && (
+                    <div className='search-data-body '>
+                      {searchedData.slice(0, 5).map((item) => (
+                        <div key={item.name} className='search-data-item p-2'>
+                             <div className='search-data-icon-div'>
+                             <Image src={item.screenShot} alt={item.name} className='search-data-icon'/>
+                          </div>
+                          <div className='search-data-text'>
+                          {item.name}
+                          </div>
+                          </div>
+                      ))}
+                    </div>
+                  )}
+
                 </Toast.Body>
               </Toast>
             </div>
+            <div className='w-100  bg-white'>
+              <Toast show={showB} onClose={toggleShowB}
+                style={{ width: '100%' }} className='toast'>
+                <Toast.Header closeButton={false} closeVariant='primary' className='fixed-top'>
+                  <ToastCloseButton onClick={toggleShowB} className='btn-close' />
+                </Toast.Header>
+                <Toast.Body className='w-100'>
+                  <div ref={resetColor} variant='light' style={{ backgroundColor }} className='form-div  mx-3 p-3 text-left' onClick={changeBgColor}>
+                    <span className='mx-1 '>
+                      <FontAwesomeIcon icon={faMagnifyingGlass} size='lg' className='faMagGlass' />
+                    </span>
+                    <input
+                      className="form-input search-btn-form" placeholder=" Venture Search..."
+                      value={searchQuery2}
+                      onChange={(e) => setSearchQuery2(e.target.value)}
+                    />
+                  </div>
+                  {searchQuery2 && (
+                    <div className='search-data-body '>
+                      {searchedData2.slice(0, 5).map((item) => (
+                        <div key={item.name} className='search-data-item p-2'>
+                             <div className='search-data-icon-div'>
+                             <Image src={item.screenShot} alt={item.name} className='search-data-icon'/>
+                          </div>
+                          <div className='search-data-text'>
+                          {item.name}
+                          </div>
+                          </div>
+                      ))}
+                    </div>
+                  )}
+
+                </Toast.Body>
+              </Toast>
+            </div>
+
 
             <Modal.Footer className='p-5 modal-footers bg-colombia'>
             </Modal.Footer>

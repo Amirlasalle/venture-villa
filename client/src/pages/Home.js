@@ -116,9 +116,9 @@ function Home() {
               <Carousel.Caption className='mt-0 mb-auto d-flex flex-column justify-content-center outlined-text text-center'>
                 <h2 className='outlined-text'>In Cartagena Every Day Feels Like a Fiesta!</h2>
                 <div className="button-container">
-                  <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/shorts/r25RXQVJH50')} className='btn1'>
+                  <Link to="/bnb" onClick={() => handleNavLinkClick('bnb')} className='btn1'>
                     <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '155px' }}>
-                      <a href='#cartagena' target="_blank" rel="noreferrer" className="btn1">See Rentals <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                      See Rentals <FontAwesomeIcon icon={faChevronRight} size="md" />
                     </Button>
                   </Link>
                 </div>
@@ -148,9 +148,9 @@ function Home() {
               <Carousel.Caption className='mt-0 mb-auto d-flex flex-column justify-content-center outlined-text text-center'>
                 <h2 className='outlined-text'>Bogota Is A City of Endless Horizons and Vibrant Realities!</h2>
                 <div className="button-container">
-                  <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=1z2wa7nK8zsr')} className='btn1'>
+                  <Link to="/bnb" onClick={() => handleNavLinkClick('bnb')} className='btn1'>
                     <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '155px' }}>
-                      <a href='#bogota' target="_blank" rel="noreferrer" className="btn1">See Rentals <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                      See Rentals <FontAwesomeIcon icon={faChevronRight} size="md" />
                     </Button>
                   </Link>
                 </div>
@@ -624,7 +624,7 @@ function Home() {
                 </div>
               </Tab>
               <Tab eventKey="companies" title="Companies" className="tab">
-              <Carousel slide={true} interval={null} nextIcon={<FontAwesomeIcon icon={faChevronRight} />} style={nextIconStyleTwo}
+                <Carousel slide={true} interval={null} nextIcon={<FontAwesomeIcon icon={faChevronRight} />} style={nextIconStyleTwo}
                   prevIcon={<FontAwesomeIcon icon={faChevronLeft} />} className='about-company'>
 
                   <Carousel.Item className="about-carousel-item-company">
@@ -656,48 +656,48 @@ function Home() {
                   </Carousel.Item>
 
                   <Carousel.Item className="about-carousel-item-company">
-                  <div className="uni-container mt-2">
-            <div className="uni-title-container">
-                <h1 className="title">Colombia's Impactful Companies</h1>
-                <h2 className="title-subcontent">Explore these remarkable companies that started in Colombia</h2>
-            </div>
+                    <div className="uni-container mt-2">
+                      <div className="uni-title-container">
+                        <h1 className="title">Colombia's Impactful Companies</h1>
+                        <h2 className="title-subcontent">Explore these remarkable companies that started in Colombia</h2>
+                      </div>
 
-            <div className="uni-main mt-5 mb-5">
-                <Container fluid secondary="true" className="justify-content-around d-flex flex-wrap  uni-main">
-                    {companies.map((company, key) => (
-                        <button key={key} className="document-category" style={{ maxWidth: '100%', height: '7rem' }}>
-                            <a href={company.companyUrl} target="_blank" rel="noreferrer" className="no-decoration">
+                      <div className="uni-main mt-5 mb-5">
+                        <Container fluid secondary="true" className="justify-content-around d-flex flex-wrap  uni-main">
+                          {companies.map((company, key) => (
+                            <button key={key} className="document-category" style={{ maxWidth: '100%', height: '7rem' }}>
+                              <a href={company.companyUrl} target="_blank" rel="noreferrer" className="no-decoration">
                                 <div className="document-category-container">
-                                    <div className="document-category-item document-icon-title">
-                                        <Col xs={3} md={3} className='justify-content-start ml-1 icon'>
-                                            <Image className="img-fluid icon-medium-company hydrated" no-hover="true" src={process.env.PUBLIC_URL + company.logo} style={{ width: '70px', border: 'none' }} />
-                                        </Col>
-                                        <div className="document-title ">
-                                            <span className="document-company-name">{company.name}</span>
-                                            <p className="pl-0 document-company-desc">
-                                              <span className='text-black'>Founded: </span> {company.founded}
-                                              <br></br>
-                                              <span className='text-black'>Headquarters: </span> {company.headquarters}  
-                                            <br></br>
-                                            <span className='text-black'>Industry: </span> {company.industry}  
-                                            <br></br>
-                                            <span className='text-black'>Products: </span> {company.products}
-                                            </p>
-                                          
-                                        </div>
-                                    </div>
-                                    <span className="document-category-item document-count">
-                                        <FontAwesomeIcon icon={faChevronRight} size="lg" />
-                                    </span>
-                                </div>
-                            </a>
-                        </button>
-                    ))}
-                </Container>
-            </div>
+                                  <div className="document-category-item document-icon-title">
+                                    <Col xs={3} md={3} className='justify-content-start ml-1 icon'>
+                                      <Image className="img-fluid icon-medium-company hydrated" no-hover="true" src={process.env.PUBLIC_URL + company.logo} style={{ width: '70px', border: 'none' }} />
+                                    </Col>
+                                    <div className="document-title ">
+                                      <span className="document-company-name">{company.name}</span>
+                                      <p className="pl-0 document-company-desc">
+                                        <span className='text-black'>Founded: </span> {company.founded}
+                                        <br></br>
+                                        <span className='text-black'>Headquarters: </span> {company.headquarters}
+                                        <br></br>
+                                        <span className='text-black'>Industry: </span> {company.industry}
+                                        <br></br>
+                                        <span className='text-black'>Products: </span> {company.products}
+                                      </p>
 
-          
-        </div>
+                                    </div>
+                                  </div>
+                                  <span className="document-category-item document-count">
+                                    <FontAwesomeIcon icon={faChevronRight} size="lg" />
+                                  </span>
+                                </div>
+                              </a>
+                            </button>
+                          ))}
+                        </Container>
+                      </div>
+
+
+                    </div>
                   </Carousel.Item>
                 </Carousel>
               </Tab>

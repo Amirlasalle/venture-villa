@@ -1,81 +1,56 @@
-import React, { useState } from 'react';
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
-// import { Link, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
 import placesinfoData from "../components/Places/placesinfo.json"
-import { Image, Container, Card, Row, Carousel,  } from 'react-bootstrap';
+import bnbsearchData from '../components/Jsons/bnbsearch.json'
+import { Image, Container, Card, Row, Carousel, } from 'react-bootstrap';
 import '../App.css'
 import '../index.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronCircleRight, faChevronCircleLeft,  } from '@fortawesome/free-solid-svg-icons';
+import { faChevronCircleRight, faChevronCircleLeft, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 // import Col from 'react-bootstrap/Col';
 // import { faStar } from '@fortawesome/free-solid-svg-icons';
 // import PlaceList from '../components/Places/Places'; 
 //Col,  Tab, Tabs, Button, Modal 
 //faChevronLeft, faChevronRight, faExternalLinkAlt, faArrowUpRightFromSquare
 //
-const client = new ApolloClient({
-  uri: 'https://api.insidebnb.com:8443/v2/markets',
-  cache: new InMemoryCache(),
-});
-const GET_MARKETS_QUERY = gql`
-  query {
-    markets {
-      name
-      country
-      city
-    }
-  }
-`;
-client
-  .query({
-    query: GET_MARKETS_QUERY,
-  })
-  .then((response) => {
-    const { data } = response;
-    console.log(data.markets);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
+
 
 function BnB() {
-  // const [listings, setListings] = useState([]);
 
-//   const nextIconStyle = {
-//     fontSize: '4rem',
-//     fontWeight: 'bolder',
-//   };
-//   const nextIconStyleTwo = {
-//     fontSize: '2rem',
-//     fontWeight: 'bolder',
-//   };
+  const [backgroundColor, setBackgroundColor] = useState('#f3f2f2');
+  const resetColor = useRef(null);
+
+  const changeBgColor = () => {
+    setBackgroundColor('#f3f2f2');
+  };
+
+  const [data2, setData2] = useState([]);
+  const [searchQuery2, setSearchQuery2] = useState('');
+
+  useEffect(() => {
+
+    const searchData2 = [
+      ...bnbsearchData
+    ];
+    setData2(searchData2);
+  }, []);
+
+  const searchedData2 = data2.filter((item) => {
+    const filteredSearch2 = searchQuery2.trim().toLowerCase();
+    const filteredName2 = item.name.toLowerCase().trim();
+    const searchWords = filteredSearch2.split(' ');
+
+    return searchWords.some((word) => filteredName2.includes(word));
+  });
+
+
 
   const chevIconStyle = {
     fontSize: '2.5rem',
   };
-  // const navigate = useNavigate();
 
-  // const scrollToTop = () => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     behavior: 'auto',
-  //   });
-  // };
-
-
-  // const handleNavLinkClick = (url) => {
-  //   scrollToTop();
-  //   navigate(url);
-  // };
 
   const [placesinfo] = useState(placesinfoData)
   console.log(placesinfo)
-
-
-  // const [show, setShow] = useState(false);
-
-  // const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
 
 
 
@@ -85,8 +60,6 @@ function BnB() {
     <div className="home">
       <Container fluid secondary="true" className="d-flex flex-wrap justify-content-around home">
 
-
-
         <div className='w-100'>
           <Row className=''>
             <h2 className="text-center pb-4 section-divider-y w-100" >
@@ -95,9 +68,87 @@ function BnB() {
             </h2>
             <h2 className="text-center section-divider-r w-100" >
             </h2>
+          </Row>
+        </div>
+
+        <div className='w-100 mb-5 toast-body'>
+          <div ref={resetColor} variant='light' style={{ backgroundColor }} className='form-div  mx-3 p-3 text-left' onClick={changeBgColor}>
+            <span className='mx-1 '>
+              <FontAwesomeIcon icon={faMagnifyingGlass} size='lg' className='faMagGlass' />
+            </span>
+            <input
+              className="form-input search-btn-form" placeholder=" Venture Search..."
+              value={searchQuery2}
+              onChange={(e) => setSearchQuery2(e.target.value)}
+            />
+          </div>
+          {searchQuery2 && (
+            <div className="d-flex flex-wrap justify-content-center pt-3 pb-3 cards-bg mt-3">
+              {searchedData2.length > 0 ? (
+                searchedData2.slice(0, 10).map((item) => (
+                    <Card key={item} className="m-2 p-2  product-cards" style={{ maxWidth: '22rem' }}>
+                      <a href={item.more} target="_blank" rel="noreferrer" className="btn1" >
+                        <Carousel slide={false} interval={null} nextIcon={<FontAwesomeIcon icon={faChevronCircleRight} />} style={chevIconStyle}
+                          prevIcon={<FontAwesomeIcon icon={faChevronCircleLeft} />} className='next-icon'>
+                          <Carousel.Item className="carousel">
+                            <Image src={process.env.PUBLIC_URL + item.screenshotone} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                          </Carousel.Item>
+                          <Carousel.Item className="carousel">
+                            <Image src={process.env.PUBLIC_URL + item.screenshottwo} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                          </Carousel.Item>
+                          <Carousel.Item className="carousel">
+                            <Image src={process.env.PUBLIC_URL + item.screenshotthree} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                          </Carousel.Item>
+                          <Carousel.Item className="carousel">
+                            <Image src={process.env.PUBLIC_URL + item.screenshotfour} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                          </Carousel.Item>
+                          <Carousel.Item className="carousel">
+                            <Image src={process.env.PUBLIC_URL + item.screenshotfive} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                          </Carousel.Item>
+                          <Carousel.Item className="carousel">
+                            <Image src={process.env.PUBLIC_URL + item.screenshotsix} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                          </Carousel.Item>
+                          <Carousel.Item className="carousel">
+                            <Image src={process.env.PUBLIC_URL + item.screenshotseven} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                          </Carousel.Item>
+                          <Carousel.Item className="carousel">
+                            <Image src={process.env.PUBLIC_URL + item.screenshoteight} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                          </Carousel.Item>
+                          <Carousel.Item className="carousel">
+                            <Image src={process.env.PUBLIC_URL + item.screenshotnine} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                          </Carousel.Item>
+                          <Carousel.Item className="carousel">
+                            <Image src={process.env.PUBLIC_URL + item.screenshotten} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+                          </Carousel.Item>
+                        </Carousel>
+                        <Card.Body className='w-100 mt-2 ml-0 mr-0'>
+                          <Card.Subtitle className="mb-2 mr-1 card-titles">{item.name} <span className='rating'>{item.star}<span className='text-muted'>{item.ratings}</span></span></Card.Subtitle>
+                          <Card.Subtitle className="mb-2 card-subtitle text-muted">{item.subtitle}</Card.Subtitle>
+                          <Card.Subtitle className="mb-2 text-muted  card-subt2">{item.beds}</Card.Subtitle>
+                          <Card.Subtitle className="mb-3 text-muted  card-subt2">{item.dates}</Card.Subtitle>
+                          <Card.Subtitle className="mb-3 card-price">{item.price} <span className='text-muted night'>night</span></Card.Subtitle>
+                          <style type="text/css">
+                          </style>
+                        </Card.Body>
+                      </a>
+                    </Card>
+                  ))
+                
+
+              ) : (
+                <div className="text-center mt-3">
+                  <p className='pl-0'>Sorry, there are no available stays at this location.</p>
+                </div>
+              )}
+            </div>
 
 
+          )}
+        </div>
 
+
+        <div className='w-100'>
+          <Row className=''>
             <h2 className="mt-3 pr-5 justify-content-center    ">
               Best Stays of 2023
             </h2>
@@ -161,7 +212,7 @@ function BnB() {
 
             )}
           </div>
-        
+
           <div id="homepageCards" className="d-flex flex-wrap justify-content-center pt-3 pb-3 cards-bg bnb-cards-570">
             <Card className="atribute-cards-bnb w-100">
               <div className="card-content">
@@ -196,15 +247,15 @@ function BnB() {
               </div>
             </Card>
           </div>
-        
-          <h2 className="text-center mt-2 pb-3 section-divider-y w-100" >
+
+          <h2 className="text-center pb-5 section-divider-y w-100" >
           </h2>
           <h2 className="text-center section-divider-b w-100" >
           </h2>
           <h2 className="text-center section-divider-r mb-0 w-100" >
           </h2>
         </Row>
-       
+
 
       </Container>
     </div>
@@ -214,20 +265,3 @@ function BnB() {
 
 
 export default BnB;
-
-
-// import { useQuery } from '@apollo/client';
-
-// import ThoughtList from '../components/ThoughtList';
-// import ThoughtForm from '../components/ThoughtForm';
-
-// import { QUERY_THOUGHTS } from '../utils/queries';
-
-// import Card from 'react-bootstrap/Card';
-// import Button from 'react-bootstrap/Button';
-// import Col from 'react-bootstrap/Col';
-// import Image from 'react-bootstrap/Image';
-// import Row from 'react-bootstrap/Row';
-// import Form from 'react-bootstrap/Form';
-// import InputGroup from 'react-bootstrap/InputGroup';
-// import Container from 'react-bootstrap/Container';

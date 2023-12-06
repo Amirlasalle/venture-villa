@@ -20,6 +20,7 @@ import Footer from './components/Footer';
 import Universities from './pages/Universities';
 import AboutUs from './pages/AboutUs';
 import Wishlists from './pages/Wishlists';
+import ApiTest from './pages/ApiTest';
 import Futbol from './pages/Futbol';
 import Restaurants from './pages/Restaurants';
 import BnB from './pages/BnB';
@@ -103,18 +104,23 @@ function App() {
               path="/wishlists"
               element={<Wishlists />}
             />
-                <Route
+            <Route
               path="/futbol"
               element={<Futbol />}
             />
-               <Route
+            <Route
               path="/restaurants"
               element={<Restaurants />}
             />
-                <Route
+            <Route
               path="/bnb"
               element={<BnB />}
             />
+            <Route
+              path="/api"
+              element={<ApiTest />}
+            />
+
           </Routes>
 
           <Footer />

@@ -2174,6 +2174,19 @@ button {
 }
 
 
+.pac-container {
+  box-shadow: none !important;
+  border: none !important;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start !important;
+  width: 100%;
+  outline: 1px solid #a0a0a058 !important;
+  align-items: center;
+  border-radius: .9rem !important;
+  margin-top: 3rem;
+}
+
 .search-data-body {
   width: 100%;
   background: transparent;
@@ -2242,11 +2255,13 @@ button {
   width: 100% !important;
   margin-left: 3px;
   margin-right: 3px;
-  height: 100%;
+  height: 100% !important;
   background: transparent;
   align-items: center;
 }
-
+.form-input{
+  height: 100% !important;
+}
 input:focus {
   outline: none !important;
 }
@@ -3004,7 +3019,9 @@ a:hover {
 .min-100-vw {
   min-width: 100vw;
 }
-
+.h-100 {
+  height: 100% !important;
+}
 /* MARGIN/PADDING UTILS */
 /* Margin - all sides */
 .m-0 {

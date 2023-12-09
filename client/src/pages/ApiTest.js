@@ -1,107 +1,107 @@
-import React, { useState, useRef, useEffect } from 'react';
-import PlacesAutocomplete, {
-  geocodeByAddress,
-  getLatLng,
-} from 'react-places-autocomplete';
+import React, { useState, useEffect } from 'react';
+import { getPlacesData } from '../components/api/index';
+import { Image, Card } from 'react-bootstrap';
+import '../App.css'
+import '../index.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { Image } from 'react-bootstrap';
+import { faStar, faGlobe, faPhone, faDirections } from '@fortawesome/free-solid-svg-icons';
 
 const GooglePlacesSearch = () => {
 
 
-  const [address, setAddress] = useState('');
-  const [coordinates, setCoordinates] = useState(null);
+  const [places, setPlaces] = useState([]);
 
-  const handleSelect = async (selectedAddress) => {
-    try {
-      const results = await geocodeByAddress(selectedAddress);
-      const latLng = await getLatLng(results[0]);
-      setCoordinates(latLng);
-    } catch (error) {
-      console.error('Error selecting place:', error);
-    }
-  };
+  const [coordinates, setCoordinates] = useState({});
+  const [bounds, setBounds] = useState({});
 
-  const [backgroundColor, setBackgroundColor] = useState('#f3f2f2');
-  const resetColor = useRef(null);
 
-  const changeBgColor = () => {
-    setBackgroundColor('#f3f2f2');
-  };
-  const outSideSearchBar = (event) => {
-    if (resetColor.current && !resetColor.current.contains(event.target)) {
-      setBackgroundColor('#fff');
-    }
-  };
   useEffect(() => {
-    document.addEventListener('click', outSideSearchBar);
+    navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
+      setCoordinates({ lat: latitude, lng: longitude });
+      setBounds({ sw: { lat: latitude - 0.1, lng: longitude - 0.1 }, ne: { lat: latitude + 0.1, lng: longitude + 0.1 } });
+    })
+  }, [])
 
-    return () => {
-      document.removeEventListener('click', outSideSearchBar);
-    };
-  }, []);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    setLoading(true);
+    getPlacesData(bounds.sw, bounds.ne)
+      .then((data) => {
+        setPlaces(data);
+      })
+      .catch((error) => {
+        setError(error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, [coordinates, bounds]);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error.message}</p>;
+  }
+
 
 
   return (
-    <div className="w-100 mb-5 mt-3 display-flex justify-center align-center">
-      <PlacesAutocomplete
-        value={address}
-        onChange={(value) => setAddress(value)}
-        onSelect={handleSelect}
-        searchOptions={{
-          key: 'AIzaSyDzy3wz5yxKZv9CaxbAHUstxBLvan78zsY',
-          types: ['geocode'],
-          componentRestrictions: { country: 'co' },
-        }}
-      >
-        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-          <div className="w-100 mb-5 mt-3 justify-center">
-            <div className="w-100 display-flex justify-center align-center">
-              <div ref={resetColor} variant='light' style={{ backgroundColor }} className='form-div  mx-3 p-3 text-left ' onClick={changeBgColor}>
-                <span className="mx-1 ">
-                  <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" className="faMagGlass text-left" />
+    <div className='home'>
+
+      <div id="restaurantCards" className="d-flex flex-wrap justify-content-center pt-3 pb-3 cards-bg">
+        {places && places.map((place, key) => (
+          <Card key={key} className="m-2 p-2  restaurant-cards" style={{ maxWidth: '22rem' }}>
+
+            <Image
+              src={place.photo ? place.photo.images.large.url : 'https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg'} alt={place.name} className="img-fluid d-flex flex-wrap justify-content-around cards-image" />
+            <Card.Body className='w-100 mt-2 ml-0 mr-0'>
+              <Card.Subtitle className="mb-2 mr-1 card-titles">{place.name}
+                <span className='rating'>
+                  <span className='text-muted'>
+                    <FontAwesomeIcon icon={faStar} /> {place.rating}
+                  </span>
                 </span>
-                <input
-                  {...getInputProps({
-                    placeholder: 'Venture Search...',
-                    className: 'w-100 form-input search-btn-form',
-                  })}
-                />
-              </div>
-            </div>
-            <div className="mt-3">
-              {loading && <div> <p className='pl-0 text-center'>Loading...</p></div>}
-              {suggestions.map(suggestion => (
-                <div
-                  key={suggestion.placeId}
-                  {...getSuggestionItemProps(suggestion, {})}
-                  className="w-100 search-data-item p-2"
-                >
-                  <div className="search-data-icon-div">
-                    <Image
-                      src={process.env.PUBLIC_URL + "/assets/cities/placeholder.png"}
-                      alt={suggestion.description}
-                      className="search-data-icon"
-                    />
-                  </div>
-                  <div className="search-data-text">{suggestion.description}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-      </PlacesAutocomplete>
+              </Card.Subtitle>
+              <Card.Subtitle className="mb-3 card-price">
+                {place.price_level}
+              </Card.Subtitle>
+              <a href={`tel:${place.phone}`} target="_blank" rel="noreferrer" className="hover-decoration">
+                <Card.Subtitle className="mb-3 text-default-2 restaurant-details">
+                  <FontAwesomeIcon icon={faPhone} />   {place.phone}
+                </Card.Subtitle>
+              </a>
+              <a href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(place.address)}`}
+                target="_blank"
+                rel="noreferrer"
+                className="hover-decoration">
+               <Card.Subtitle className="mb-3 text-default-2 restaurant-details">
+                <FontAwesomeIcon icon={faDirections} />   {place.address}
+              </Card.Subtitle>
+            </a>
+            <a href={place.website} target="_blank" rel="noreferrer" className="hover-decoration">
+              <Card.Subtitle className="mb-3 text-default-2 restaurant-details">
+                <FontAwesomeIcon icon={faGlobe} />   website
+              </Card.Subtitle>
+            </a>
 
+            <style type="text/css">
+            </style>
+          </Card.Body>
 
-      {coordinates && (
-        <div>
-          <p>
-            Selected Coordinates: {coordinates.lat}, {coordinates.lng}
-          </p>
-        </div>
-      )}
+          </Card>
+
+        ))}
     </div>
+
+
+
+
+
+    </div >
   );
 };
 

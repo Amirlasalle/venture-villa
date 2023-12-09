@@ -76,7 +76,7 @@ const Footer = () => {
                 ABOUT US
               </h6>
             </Accordion.Header>
-            <Accordion.Body class="accordion-body">
+            <Accordion.Body className="accordion-body">
               <p className='pl-0'>
             At Venture Villa, we are passionate about providing an immersive experience for foreigners exploring the vibrant and diverse landscape of Colombia. Our platform is more than just a guide; it's a personalized journey through the rich tapestry of Colombian culture, offering insights into the best bed and breakfasts, restaurants, universities, companies, and the unparalleled world of Colombian futball.
             </p>

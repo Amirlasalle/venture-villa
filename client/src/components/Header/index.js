@@ -100,13 +100,9 @@ const Header = ({ handlePageChange }) => {
   );
 
   const [whereto] = useState(wheretoData)
-  console.log(whereto)
   const [terrains] = useState(terrainsData)
-  console.log(terrains)
   const [whattodo] = useState(whattodoData)
-  console.log(whattodo)
   const [foryourtastebuds] = useState(foryourtastebudsData)
-  console.log(foryourtastebuds)
 
  
 
@@ -181,7 +177,7 @@ const Header = ({ handlePageChange }) => {
                 </Button>
                 <Button size="md" className="venture-search-3 pr-0" >
                   <div className='venture-mag-div'>
-                    <FontAwesomeIcon icon={faMagnifyingGlass} className='venture-mag venture-mag-bold' size='md' style={{ fontWeight: 'bolder' }} />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='venture-mag venture-mag-bold'  style={{ fontWeight: 'bolder' }} />
                   </div>
                 </Button>
               </div>
@@ -213,7 +209,7 @@ const Header = ({ handlePageChange }) => {
                       <Stack direction="horizontal">
                         <Button variant='light' className='btn10 btn-block10 mx-3 p-3 text-left' onClick={toggleShowA}>
                           <span className='mx-1'>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} size='md' style={{ fontWeight: 'bolder' }} />
+                            <FontAwesomeIcon icon={faMagnifyingGlass}  style={{ fontWeight: 'bolder' }} />
                           </span>
                           <span className='btn-block-text'>
                             Venture Search
@@ -285,7 +281,7 @@ const Header = ({ handlePageChange }) => {
                         {/* <Form.Control className="mx-3 p-3" placeholder=" Venture Search..." /> */}
                         <Button variant='light' className='btn10 btn-block10 mx-3 p-3 text-left' onClick={toggleShowB}>
                           <span className='mx-1'>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} size='md' style={{ fontWeight: 'bolder' }} />
+                            <FontAwesomeIcon icon={faMagnifyingGlass} style={{ fontWeight: 'bolder' }} />
                           </span>
                           <span className='btn-block-text'>
                             Venture Search
@@ -476,7 +472,7 @@ const Header = ({ handlePageChange }) => {
               <Nav.Link>
                 <div className=' mr-3 language-translate emerald-icon'>
 
-                  <FontAwesomeIcon icon={faGlobe} className='language-translate-g emerald-icon' /> <FontAwesomeIcon icon={faLanguage} size='md' className=' language-translate-a emerald-icon' />
+                  <FontAwesomeIcon icon={faGlobe} className='language-translate-g emerald-icon' /> <FontAwesomeIcon icon={faLanguage}  className=' language-translate-a emerald-icon' />
 
                 </div>
               </Nav.Link>
@@ -485,7 +481,7 @@ const Header = ({ handlePageChange }) => {
 
               <NavDropdown eventKey={3} title={<div style={{ display: "inline-block" }}>
 
-                <FontAwesomeIcon icon={faBars} className='' size='md' style={{ fontWeight: 'bolder' }} /><FontAwesomeIcon icon={faCircleUser} className='ml-2 ' size='2xl' style={{ fontWeight: 'bolder' }} />
+                <FontAwesomeIcon icon={faBars} className=''  style={{ fontWeight: 'bolder' }} /><FontAwesomeIcon icon={faCircleUser} className='ml-2 ' size='2xl' style={{ fontWeight: 'bolder' }} />
               </div>} className='navbar-static basic-nav-dropdown' autoClose="true">
 
                 <NavDropdown.Item className='p-0'>
@@ -553,7 +549,7 @@ const Header = ({ handlePageChange }) => {
                 <NavDropdown.Item className='p-0'>
                   <Nav.Link>
                     <Link to="/" onClick={() => handleNavLinkClick('/')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Language  <FontAwesomeIcon icon={faGlobe} /> <FontAwesomeIcon icon={faLanguage} size='md' /></p>
+                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Language  <FontAwesomeIcon icon={faGlobe} /> <FontAwesomeIcon icon={faLanguage}  /></p>
                     </Link>
                   </Nav.Link>
                 </NavDropdown.Item>
@@ -594,7 +590,7 @@ const Header = ({ handlePageChange }) => {
               <Nav.Link>
                 <div className=' mr-3 language-translate emerald-icon'>
 
-                  <FontAwesomeIcon icon={faGlobe} className='language-translate-g emerald-icon' /> <FontAwesomeIcon icon={faLanguage} size='md' className=' language-translate-a emerald-icon' />
+                  <FontAwesomeIcon icon={faGlobe} className='language-translate-g emerald-icon' /> <FontAwesomeIcon icon={faLanguage} className=' language-translate-a emerald-icon' />
 
                 </div>
               </Nav.Link>

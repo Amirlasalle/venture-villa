@@ -118,7 +118,7 @@ function Home() {
                 <div className="button-container">
                   <Link to="/bnb" onClick={() => handleNavLinkClick('bnb')} className='btn1'>
                     <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '155px' }}>
-                      See Rentals <FontAwesomeIcon icon={faChevronRight} size="md" />
+                      See Rentals <FontAwesomeIcon icon={faChevronRight}  />
                     </Button>
                   </Link>
                 </div>
@@ -134,7 +134,7 @@ function Home() {
                 <div className="button-container">
                   <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=1z2wa7nK8zs')} className='btn1'>
                     <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '125px' }}>
-                      <a href='#home' target="_blank" rel="noreferrer" className="btn1">Beaches <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                      <a href='#home' target="_blank" rel="noreferrer" className="btn1">Beaches <FontAwesomeIcon icon={faChevronRight}  /></a>
                     </Button>
                   </Link>
                 </div>
@@ -150,7 +150,7 @@ function Home() {
                 <div className="button-container">
                   <Link to="/bnb" onClick={() => handleNavLinkClick('bnb')} className='btn1'>
                     <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '155px' }}>
-                      See Rentals <FontAwesomeIcon icon={faChevronRight} size="md" />
+                      See Rentals <FontAwesomeIcon icon={faChevronRight}  />
                     </Button>
                   </Link>
                 </div>
@@ -166,7 +166,7 @@ function Home() {
                 <div className="button-container">
                   <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=BamIljS3reIr')} className='btn1'>
                     <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '120px' }}>
-                      <a href='#cali' target="_blank" rel="noreferrer" className="btn1">Explore <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                      <a href='#cali' target="_blank" rel="noreferrer" className="btn1">Explore <FontAwesomeIcon icon={faChevronRight} /></a>
                     </Button>
                   </Link>
                 </div>
@@ -364,7 +364,7 @@ function Home() {
                   <div className="button-container mb-2">
                     <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=BamIljS3reIr')} className='btn1'>
                       <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '125px' }}>
-                        <a href='#cali' target="_blank" rel="noreferrer" className="btn1">See Why <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                        <a href='#cali' target="_blank" rel="noreferrer" className="btn1">See Why <FontAwesomeIcon icon={faChevronRight}  /></a>
                       </Button>
                     </Link>
                   </div>
@@ -392,7 +392,7 @@ function Home() {
                   <div className="button-container mb-2">
                     <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=BamIljS3reIr')} className='btn1'>
                       <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '120px' }}>
-                        <a href='#cali' target="_blank" rel="noreferrer" className="btn1">More <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                        <a href='#cali' target="_blank" rel="noreferrer" className="btn1">More <FontAwesomeIcon icon={faChevronRight}  /></a>
                       </Button>
                     </Link>
                   </div>
@@ -517,7 +517,7 @@ function Home() {
                         <div className="button-container mb-2">
                           <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=BamIljS3reIr')} className='btn1'>
                             <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '120px' }}>
-                              <a href='#cali' target="_blank" rel="noreferrer" className="btn1">Explore <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                              <a href='#cali' target="_blank" rel="noreferrer" className="btn1">Explore <FontAwesomeIcon icon={faChevronRight}  /></a>
                             </Button>
                           </Link>
                         </div>
@@ -545,7 +545,7 @@ function Home() {
                         <div className="button-container mb-2">
                           <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=BamIljS3reIr')} className='btn1'>
                             <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '120px' }}>
-                              <a href='#cali' target="_blank" rel="noreferrer" className="btn1">Explore <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                              <a href='#cali' target="_blank" rel="noreferrer" className="btn1">Explore <FontAwesomeIcon icon={faChevronRight} /></a>
                             </Button>
                           </Link>
                         </div>
@@ -568,7 +568,7 @@ function Home() {
                   <div className='bot'>
                     <Link to="/universities" onClick={() => handleNavLinkClick('/universities')} className='w-100'>
                       <Button variant='outline-light' className='btn2 w-100' size="lg">
-                        Browse All Universities <FontAwesomeIcon icon={faChevronRight} size="md" />
+                        Browse All Universities <FontAwesomeIcon icon={faChevronRight}  />
                       </Button>
                     </Link>
                   </div>
@@ -576,7 +576,7 @@ function Home() {
                   <div className='bot'>
                     <a href='https://www.gooverseas.com/study-abroad/colombia' target="_blank" rel="noreferrer" className="w-100">
                       <Button variant='outline-light' className='btn2 w-100' size="lg">
-                        Study abroad programs in Colombia <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+                        Study abroad programs in Colombia <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} />
                       </Button>
                     </a>
                   </div>
@@ -584,7 +584,7 @@ function Home() {
                   <div className='bot'>
                     <a href='https://www.unisabana.edu.co/englishversion/academic-programs/undergraduate/gastronomy/' target="_blank" rel="noreferrer" className="w-100">
                       <Button variant='outline-light' className='btn2 w-100' size="lg">
-                        The number one culinary progam in Colombia <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+                        The number one culinary progam in Colombia <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} />
                       </Button>
                     </a>
                   </div>
@@ -592,7 +592,7 @@ function Home() {
                   <div className='bot'>
                     <a href='https://ingenieria.bogota.unal.edu.co/en/programs/undergraduate/mechanical-engineering.html' target="_blank" rel="noreferrer" className="w-100">
                       <Button variant='outline-light' className='btn2 w-100' size="lg">
-                        Colombia's premier Mechanical Engineering program <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+                        Colombia's premier Mechanical Engineering program <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} />
                       </Button>
                     </a>
                   </div>
@@ -600,7 +600,7 @@ function Home() {
                   <div className='bot'>
                     <a href='https://centrocatalina.com/' target="_blank" rel="noreferrer" className="w-100">
                       <Button variant='outline-light' className='btn2 w-100' size="lg">
-                        Learn Spanish in Medellin <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+                        Learn Spanish in Medellin <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} />
                       </Button>
                     </a>
                   </div>
@@ -608,7 +608,7 @@ function Home() {
                   <div className='bot'>
                     <a href='https://salsapura.com/en/salsa-school-in-cali-colombia-salsa-academy-in-cali-colombia/' target="_blank" rel="noreferrer" className="w-100">
                       <Button variant='outline-light' className='btn2 w-100' size="lg">
-                        Elevate your dance skills in Cali <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+                        Elevate your dance skills in Cali <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} />
                       </Button>
                     </a>
                   </div>
@@ -616,7 +616,7 @@ function Home() {
                   <div className='bot'>
                     <a href='https://www.alliance-training.com/our-facilities/medellin-colombia/#:~:text=MEDELLIN%20TRAINING%20CENTER,UAEAC%2Dapproved%20pilot%20training%20programs' target="_blank" rel="noreferrer" className="w-100">
                       <Button variant='outline-light' className='btn2 w-100' size="lg">
-                        Flight training with Alliance Aviation <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+                        Flight training with Alliance Aviation <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} />
                       </Button>
                     </a>
                   </div>
@@ -641,7 +641,7 @@ function Home() {
                         <div className="button-container mb-2">
                           <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=BamIljS3reIr')} className='btn1'>
                             <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '120px' }}>
-                              <a href='#cali' target="_blank" rel="noreferrer" className="btn1">Explore <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                              <a href='#cali' target="_blank" rel="noreferrer" className="btn1">Explore <FontAwesomeIcon icon={faChevronRight} /></a>
                             </Button>
                           </Link>
                         </div>
@@ -718,7 +718,7 @@ function Home() {
 
                         <div className="button-container mb-2">
                           <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '155px' }}>
-                            <a href='https://www.avianca.com/en/' target="_blank" rel="noreferrer" className="btn1">Book Flights  <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                            <a href='https://www.avianca.com/en/' target="_blank" rel="noreferrer" className="btn1">Book Flights  <FontAwesomeIcon icon={faChevronRight}  /></a>
                           </Button>
                         </div>
                         <h2 className="text-center pl-5 pr-5 pb-3 mb-0 about-section-divider-y about-text-sd" >
@@ -744,7 +744,7 @@ function Home() {
 
                         <div className="button-container mb-2">
                           <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '155px' }}>
-                            <a href='https://www.latamairlines.com/us/en/destinations/colombia' target="_blank" rel="noreferrer" className="btn1">Book Flights  <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                            <a href='https://www.latamairlines.com/us/en/destinations/colombia' target="_blank" rel="noreferrer" className="btn1">Book Flights  <FontAwesomeIcon icon={faChevronRight} /></a>
                           </Button>
                         </div>
                         <h2 className="text-center pl-5 pr-5 pb-3 mb-0 about-section-divider-y about-text-sd" >
@@ -770,7 +770,7 @@ function Home() {
 
                         <div className="button-container mb-2">
                           <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '155px' }}>
-                            <a href='https://destinationsguide.copaair.com/en/flights-to-colombia' target="_blank" rel="noreferrer" className="btn1">Book Flights  <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                            <a href='https://destinationsguide.copaair.com/en/flights-to-colombia' target="_blank" rel="noreferrer" className="btn1">Book Flights  <FontAwesomeIcon icon={faChevronRight} /></a>
                           </Button>
                         </div>
                         <h2 className="text-center pl-5 pr-5 pb-3 mb-0 about-section-divider-y about-text-sd" >
@@ -796,7 +796,7 @@ function Home() {
 
                         <div className="button-container mb-2">
                           <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '155px' }}>
-                            <a href='https://www.satena.com/' target="_blank" rel="noreferrer" className="btn1">Book Flights  <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                            <a href='https://www.satena.com/' target="_blank" rel="noreferrer" className="btn1">Book Flights  <FontAwesomeIcon icon={faChevronRight} /></a>
                           </Button>
                         </div>
                         <h2 className="text-center pl-5 pr-5 pb-3 mb-0 about-section-divider-y about-text-sd" >
@@ -822,7 +822,7 @@ function Home() {
               <p className='d-flex flex-column justify-content-center history-para'>Create a Colombian travel bucket list, book charming B&Bs, and embark on a journey to uncover Colombia's diverse experiences.</p>
               <div className="button-container mt-5 mb-3">
                 <Link to="/signup" onClick={() => handleNavLinkClick('/signup')} className='btn1'>
-                  <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '170px' }}> Sign Up Now <FontAwesomeIcon icon={faChevronRight} size="md" />
+                  <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '170px' }}> Sign Up Now <FontAwesomeIcon icon={faChevronRight} />
                   </Button>
                 </Link>
               </div>

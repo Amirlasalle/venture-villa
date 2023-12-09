@@ -24,7 +24,7 @@ className="mb-3 tabs"
           <div className="button-container mb-2">
             <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=BamIljS3reIr')} className='btn1'>
               <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '120px' }}>
-                <a href='#cali' target="_blank" rel="noreferrer" className="btn1">Explore <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                <a href='#cali' target="_blank" rel="noreferrer" className="btn1">Explore <FontAwesomeIcon icon={faChevronRight}  /></a>
               </Button>
             </Link>
           </div>
@@ -52,7 +52,7 @@ className="mb-3 tabs"
           <div className="button-container mb-2">
             <Link to="/" onClick={() => handleNavLinkClick('https://www.youtube.com/watch?v=BamIljS3reIr')} className='btn1'>
               <Button variant="info" size="md" className="carousel-btn btn-block mx-auto" style={{ maxWidth: '120px' }}>
-                <a href='#cali' target="_blank" rel="noreferrer" className="btn1">Explore <FontAwesomeIcon icon={faChevronRight} size="md" /></a>
+                <a href='#cali' target="_blank" rel="noreferrer" className="btn1">Explore <FontAwesomeIcon icon={faChevronRight} /></a>
               </Button>
             </Link>
           </div>
@@ -75,7 +75,7 @@ className="mb-3 tabs"
     <div className='bot'>
       <Link to="/universities" onClick={() => handleNavLinkClick('/universities')} className='w-100'>
         <Button variant='outline-light' className='btn2 w-100' size="lg">
-          Browse All Universities <FontAwesomeIcon icon={faChevronRight} size="md" />
+          Browse All Universities <FontAwesomeIcon icon={faChevronRight}  />
         </Button>
       </Link>
     </div>
@@ -83,7 +83,7 @@ className="mb-3 tabs"
     <div className='bot'>
       <a href='https://www.gooverseas.com/study-abroad/colombia' target="_blank" rel="noreferrer" className="w-100">
         <Button variant='outline-light' className='btn2 w-100' size="lg">
-          Study abroad programs in Colombia <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+          Study abroad programs in Colombia <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight}  />
         </Button>
       </a>
     </div>
@@ -91,7 +91,7 @@ className="mb-3 tabs"
     <div className='bot'>
       <a href='https://www.unisabana.edu.co/englishversion/academic-programs/undergraduate/gastronomy/' target="_blank" rel="noreferrer" className="w-100">
         <Button variant='outline-light' className='btn2 w-100' size="lg">
-          The number one culinary progam in Colombia <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+          The number one culinary progam in Colombia <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} />
         </Button>
       </a>
     </div>
@@ -99,7 +99,7 @@ className="mb-3 tabs"
     <div className='bot'>
       <a href='https://ingenieria.bogota.unal.edu.co/en/programs/undergraduate/mechanical-engineering.html' target="_blank" rel="noreferrer" className="w-100">
         <Button variant='outline-light' className='btn2 w-100' size="lg">
-          Colombia's premier Mechanical Engineering program <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+          Colombia's premier Mechanical Engineering program <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} />
         </Button>
       </a>
     </div>
@@ -107,7 +107,7 @@ className="mb-3 tabs"
     <div className='bot'>
       <a href='https://centrocatalina.com/' target="_blank" rel="noreferrer" className="w-100">
         <Button variant='outline-light' className='btn2 w-100' size="lg">
-          Learn Spanish in Medellin <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+          Learn Spanish in Medellin <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight}  />
         </Button>
       </a>
     </div>
@@ -115,7 +115,7 @@ className="mb-3 tabs"
     <div className='bot'>
       <a href='https://salsapura.com/en/salsa-school-in-cali-colombia-salsa-academy-in-cali-colombia/' target="_blank" rel="noreferrer" className="w-100">
         <Button variant='outline-light' className='btn2 w-100' size="lg">
-          Elevate your dance skills in Cali <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+          Elevate your dance skills in Cali <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight}  />
         </Button>
       </a>
     </div>
@@ -123,7 +123,7 @@ className="mb-3 tabs"
     <div className='bot'>
       <a href='https://www.alliance-training.com/our-facilities/medellin-colombia/#:~:text=MEDELLIN%20TRAINING%20CENTER,UAEAC%2Dapproved%20pilot%20training%20programs' target="_blank" rel="noreferrer" className="w-100">
         <Button variant='outline-light' className='btn2 w-100' size="lg">
-          Flight training with Alliance Aviation <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight} size="md" />
+          Flight training with Alliance Aviation <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" /> <FontAwesomeIcon icon={faChevronRight}  />
         </Button>
       </a>
     </div>

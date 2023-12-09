@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import '../../index.css'
 import { ADD_COMMENT } from '../../utils/mutations';
-
+import { Button } from 'react-bootstrap';
 import Auth from '../../utils/auth';
 
 const CommentForm = ({ thoughtId }) => {
@@ -69,9 +69,9 @@ const CommentForm = ({ thoughtId }) => {
             </div>
 
             <div className="col-12 col-lg-3">
-              <button className="btn btn-light btn-block py-3" type="submit">
+              <Button className="btn btn-light btn-block py-3" type="submit">
               Submit Plan
-              </button>
+              </Button>
             </div>
           </form>
         </>

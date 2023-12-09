@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import universitiesData from "../components/Jsons/universities.json";
 import majorsData from "../components/Jsons/majors.json";
-import { Image, Container, Col, Card, Accordion, useAccordionButton, AccordionContext } from 'react-bootstrap';
+import { Button, Image, Container, Col, Card, Accordion, useAccordionButton, AccordionContext } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronDown, faChevronUp, faChevronCircleRight, faChevronCircleLeft, faLocationDot, faSuitcase, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import Slider from "react-slick";
@@ -95,7 +95,7 @@ const Universities = () => {
             <div className="uni-main mt-5 mb-5">
                 <Container fluid secondary="true" className="justify-content-around d-flex flex-wrap  uni-main">
                     {universities.map((university, key) => (
-                        <button key={key} className="document-category" style={{ maxWidth: '100%', height: '7rem' }}>
+                        <Button key={key} className="document-category" style={{ maxWidth: '100%', height: '7rem' }}>
                             <a href={university.uniUrl} target="_blank" rel="noreferrer" className="no-decoration">
                                 <div className="document-category-container">
                                     <div className="document-category-item document-icon-title">
@@ -112,7 +112,7 @@ const Universities = () => {
                                     </span>
                                 </div>
                             </a>
-                        </button>
+                        </Button>
                     ))}
                 </Container>
             </div>

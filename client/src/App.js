@@ -23,6 +23,7 @@ import Wishlists from './pages/Wishlists';
 import ApiTest from './pages/ApiTest';
 import Futbol from './pages/Futbol';
 import Restaurants from './pages/Restaurants';
+import Attractions from './pages/Attractions';
 import BnB from './pages/BnB';
 import SpecificPlace from './components/Places/SpecificPlace';
 
@@ -112,6 +113,10 @@ function App() {
             <Route
               path="/restaurants"
               element={<Restaurants />}
+            />
+               <Route
+              path="/attractions"
+              element={<Attractions />}
             />
             <Route
               path="/bnb"

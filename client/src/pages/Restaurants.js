@@ -22,7 +22,8 @@ import {
     faGlobe,
     faDirections,
     faPhone,
-    faMap
+    faMap,
+    faSpinner
 } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -196,11 +197,10 @@ function Restaurants() {
                             </div>
                             <div className="mt-3">
                                 {loading &&
-                                    <div>
-                                        <p className='pl-0 text-center'>
-                                            Loading...
-                                        </p>
-                                    </div>}
+                                    <div className="w-100 display-flex justify-center align-center">
+                                        <FontAwesomeIcon icon={faSpinner} spin style={{ color: "#0011ff", }} size='2xl' />
+                                    </div>
+                                }
                                 {suggestions.map(suggestion => (
                                     <div key={suggestion.placeId} {...getSuggestionItemProps(suggestion, {})}
                                         className="w-100 search-data-item p-2" >
@@ -223,7 +223,7 @@ function Restaurants() {
                     variant="info"
                     onClick={handleShow}
                     className="map-btn"
-                ><div className='map-btn-text'><span className='ml-1 map-btn-text'>Map</span><span className='mx-1'><FontAwesomeIcon icon={faMap} /></span></div>
+                ><div className='map-btn-text'><span className='mx-1 map-btn-text'>Map</span><span className='mx-1'><FontAwesomeIcon icon={faMap} /></span></div>
                 </Button>
                 <div className='ml-5'>
                     <Modal
@@ -247,22 +247,13 @@ function Restaurants() {
                     </Modal>
                 </div>
             </div>
-            {/* <div>
-                {coordinates && (
-                    <div className='display-flex justify-center align-center'>
-                        <p className='pl-0 text-center'>
-                            {coordinates.lat}, {coordinates.lng}
-                        </p>
-                    </div>
-                )}
-            </div> */}
 
             <Row className='mt-5'>
                 <div className='display-flex justify-center align-center'>
                     {loading &&
-                        <p className='pl-0'>
-                            Loading...
-                        </p>
+                        <div className="w-100 display-flex justify-center align-center mb-5">
+                            <FontAwesomeIcon icon={faSpinner} spin style={{ color: "#0011ff", }} size='2xl' />
+                        </div>
                     }
                 </div>
                 {!loading && (
@@ -301,8 +292,7 @@ function Restaurants() {
                                                     className="hover-decoration">
                                                     <Card.Subtitle
                                                         className="mb-3 text-default-2 restaurant-details">
-                                                        <FontAwesomeIcon
-                                                            icon={faPhone} /> {''}
+                                                        <FontAwesomeIcon icon={faPhone} /> {''}
                                                         {place.phone}
                                                     </Card.Subtitle>
                                                 </a>
@@ -324,8 +314,7 @@ function Restaurants() {
                                                     rel="noreferrer"
                                                     className="hover-decoration">
                                                     <Card.Subtitle className="mb-3 text-default-2 restaurant-details">
-                                                        <FontAwesomeIcon icon={faGlobe} /> {''}
-                                                        website
+                                                        <FontAwesomeIcon icon={faGlobe} /> {''} website
                                                     </Card.Subtitle>
                                                 </a>
                                             )}
@@ -337,14 +326,13 @@ function Restaurants() {
                     </div>
                 )}
 
-                <h2 className="text-center pb-5 section-divider-y w-100" >
-                </h2>
-                <h2 className="text-center section-divider-b w-100" >
-                </h2>
-                <h2 className="text-center section-divider-r mb-0 w-100" >
-                </h2>
             </Row>
-
+            <h2 className="text-center pb-5 mt-5 section-divider-y w-100" >
+            </h2>
+            <h2 className="text-center section-divider-b w-100" >
+            </h2>
+            <h2 className="text-center section-divider-r mb-0 w-100" >
+            </h2>
 
         </div>
     );

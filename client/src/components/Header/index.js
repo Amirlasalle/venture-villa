@@ -104,7 +104,7 @@ const Header = ({ handlePageChange }) => {
   const [whattodo] = useState(whattodoData)
   const [foryourtastebuds] = useState(foryourtastebudsData)
 
- 
+
 
 
 
@@ -142,11 +142,11 @@ const Header = ({ handlePageChange }) => {
       const results = await geocodeByAddress(selectedAddress);
       const latLng = await getLatLng(results[0]);
       setCoordinates(latLng);
+      setAddress(selectedAddress);
     } catch (error) {
       console.error('Error selecting place:', error);
     }
   };
-
 
   return (
     <div role='navigation' className='bg-body-tertiary mar'>
@@ -177,7 +177,7 @@ const Header = ({ handlePageChange }) => {
                 </Button>
                 <Button size="md" className="venture-search-3 pr-0" >
                   <div className='venture-mag-div'>
-                    <FontAwesomeIcon icon={faMagnifyingGlass} className='venture-mag venture-mag-bold'  style={{ fontWeight: 'bolder' }} />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='venture-mag venture-mag-bold' style={{ fontWeight: 'bolder' }} />
                   </div>
                 </Button>
               </div>
@@ -209,7 +209,7 @@ const Header = ({ handlePageChange }) => {
                       <Stack direction="horizontal">
                         <Button variant='light' className='btn10 btn-block10 mx-3 p-3 text-left' onClick={toggleShowA}>
                           <span className='mx-1'>
-                            <FontAwesomeIcon icon={faMagnifyingGlass}  style={{ fontWeight: 'bolder' }} />
+                            <FontAwesomeIcon icon={faMagnifyingGlass} style={{ fontWeight: 'bolder' }} />
                           </span>
                           <span className='btn-block-text'>
                             Venture Search
@@ -349,53 +349,58 @@ const Header = ({ handlePageChange }) => {
                   <ToastCloseButton onClick={toggleShowA} className='btn-close' />
                 </Toast.Header>
                 <Toast.Body className='w-100'>
-                  <PlacesAutocomplete
-                    value={address}
-                    onChange={(value) => setAddress(value)}
-                    onSelect={handleSelect}
-                    searchOptions={{
-                      key: 'AIzaSyDzy3wz5yxKZv9CaxbAHUstxBLvan78zsY',
-                      types: ['geocode'],
-                      componentRestrictions: { country: 'co' },
-                    }}
-                  >
-                    {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-                      <div className="w-100 mb-5 mt-3 justify-center">
-                        <div className="w-100 display-flex justify-center align-center">
-                          <div ref={resetColor} variant='light' style={{ backgroundColor }} className='form-div  mx-3 p-3 text-left ' onClick={changeBgColor}>
-                            <span className="mx-1 ">
-                              <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" className="faMagGlass text-left" />
-                            </span>
-                            <input
-                              {...getInputProps({
-                                placeholder: 'Venture Search...',
+                  <div className="w-100 display-flex justify-center align-center">
+                    <PlacesAutocomplete
+                      value={address}
+                      onChange={(value) => setAddress(value)}
+                      onSelect={handleSelect}
+                      searchOptions={{
+                        key: 'AIzaSyDzy3wz5yxKZv9CaxbAHUstxBLvan78zsY',
+                        types: ['geocode'],
+                        componentRestrictions: { country: 'co' },
+                      }}>
+                      {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+                        <div className="w-100 mb-5 mt-3 justify-center">
+                          <div className="w-100 display-flex justify-center align-center">
+                            <div
+                              ref={resetColor}
+                              variant='light'
+                              style={{ backgroundColor }}
+                              className='form-div  mx-3 p-3 text-left '
+                              onClick={changeBgColor}>
+                              <span className="mx-1 ">
+                                <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" className="faMagGlass text-left" />
+                              </span>
+                              <input {...getInputProps({
+                                placeholder: 'Venture City Search...',
                                 className: 'w-100 form-input search-btn-form',
                               })}
-                            />
+                              />
+                            </div>
+                          </div>
+                          <div className="mt-3">
+                            {loading &&
+                              <div>
+                                <p className='pl-0 text-center'>
+                                  Loading...
+                                </p>
+                              </div>}
+                            {suggestions.map(suggestion => (
+                              <div key={suggestion.placeId} {...getSuggestionItemProps(suggestion, {})}
+                                className="w-100 search-data-item p-2" >
+                                <div className="search-data-icon-div">
+                                  <Image src={process.env.PUBLIC_URL + "/assets/cities/placeholder.png"} alt={suggestion.description} className="search-data-icon" />
+                                </div>
+                                <div className="search-data-text">
+                                  {suggestion.description}
+                                </div>
+                              </div>
+                            ))}
                           </div>
                         </div>
-                        <div className="mt-3">
-                          {loading && <div> <p className='pl-0 text-center'>Loading...</p></div>}
-                          {suggestions.map(suggestion => (
-                            <div
-                              key={suggestion.placeId}
-                              {...getSuggestionItemProps(suggestion, {})}
-                              className="w-100 search-data-item p-2"
-                            >
-                              <div className="search-data-icon-div">
-                                <Image
-                                  src={process.env.PUBLIC_URL + "/assets/cities/placeholder.png"}
-                                  alt={suggestion.description}
-                                  className="search-data-icon"
-                                />
-                              </div>
-                              <div className="search-data-text">{suggestion.description}</div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </PlacesAutocomplete>
+                      )}
+                    </PlacesAutocomplete>
+                  </div>
 
 
                   {coordinates && (
@@ -406,177 +411,177 @@ const Header = ({ handlePageChange }) => {
                     </div>
                   )}
 
-              </Toast.Body>
-            </Toast>
-          </div>
-          <div className='w-100  bg-white'>
-            <Toast show={showB} onClose={toggleShowB}
-              style={{ width: '100%' }} className='toast'>
-              <Toast.Header closeButton={false} closeVariant='primary' className='fixed-top'>
-                <ToastCloseButton onClick={toggleShowB} className='btn-close' />
-              </Toast.Header>
-              <Toast.Body className='w-100'>
-                <div ref={resetColor} variant='light' style={{ backgroundColor }} className='form-div  mx-3 p-3 text-left' onClick={changeBgColor}>
-                  <span className='mx-1 '>
-                    <FontAwesomeIcon icon={faMagnifyingGlass} size='lg' className='faMagGlass' />
-                  </span>
-                  <input
-                    className="form-input search-btn-form" placeholder=" Venture Search..."
-                    value={searchQuery2}
-                    onChange={(e) => setSearchQuery2(e.target.value)}
-                  />
-                </div>
-                {searchQuery2 && (
-                  <div className='search-data-body '>
-                    {searchedData2.slice(0, 5).map((item) => (
-                      <div key={item.name} className='search-data-item p-2'>
-                        <div className='search-data-icon-div'>
-                          <Image src={item.screenShot} alt={item.name} className='search-data-icon' />
-                        </div>
-                        <div className='search-data-text'>
-                          {item.name}
-                        </div>
-                      </div>
-                    ))}
+                </Toast.Body>
+              </Toast>
+            </div>
+            <div className='w-100  bg-white'>
+              <Toast show={showB} onClose={toggleShowB}
+                style={{ width: '100%' }} className='toast'>
+                <Toast.Header closeButton={false} closeVariant='primary' className='fixed-top'>
+                  <ToastCloseButton onClick={toggleShowB} className='btn-close' />
+                </Toast.Header>
+                <Toast.Body className='w-100'>
+                  <div ref={resetColor} variant='light' style={{ backgroundColor }} className='form-div  mx-3 p-3 text-left' onClick={changeBgColor}>
+                    <span className='mx-1 '>
+                      <FontAwesomeIcon icon={faMagnifyingGlass} size='lg' className='faMagGlass' />
+                    </span>
+                    <input
+                      className="form-input search-btn-form" placeholder=" Venture Search..."
+                      value={searchQuery2}
+                      onChange={(e) => setSearchQuery2(e.target.value)}
+                    />
                   </div>
-                )}
+                  {searchQuery2 && (
+                    <div className='search-data-body '>
+                      {searchedData2.slice(0, 5).map((item) => (
+                        <div key={item.name} className='search-data-item p-2'>
+                          <div className='search-data-icon-div'>
+                            <Image src={item.screenShot} alt={item.name} className='search-data-icon' />
+                          </div>
+                          <div className='search-data-text'>
+                            {item.name}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
 
-              </Toast.Body>
-            </Toast>
-          </div>
+                </Toast.Body>
+              </Toast>
+            </div>
 
 
-          <Modal.Footer className='p-5 modal-footers bg-colombia'>
-          </Modal.Footer>
-        </Modal>
-
-
-
-        <div className="basic-nav-dropdown-div">
-
-          {Auth.loggedIn() ? (
-            <>
-
-
-              <Nav.Link>
-
-                <p className='pl-2 mb-0 mt-0 d-flex parcero-text parcero'>
-                  <span>
-                    <Image className='emerald-icon parcero' src={process.env.PUBLIC_URL + "/assets/thumbnails/hola-parcero.png"} fluid />
-                  </span>
-                  Hola parce<br></br>Que mas?
-                </p>
-
-              </Nav.Link>
-
-              <Nav.Link>
-                <div className=' mr-3 language-translate emerald-icon'>
-
-                  <FontAwesomeIcon icon={faGlobe} className='language-translate-g emerald-icon' /> <FontAwesomeIcon icon={faLanguage}  className=' language-translate-a emerald-icon' />
-
-                </div>
-              </Nav.Link>
+            <Modal.Footer className='p-5 modal-footers bg-colombia'>
+            </Modal.Footer>
+          </Modal>
 
 
 
-              <NavDropdown eventKey={3} title={<div style={{ display: "inline-block" }}>
+          <div className="basic-nav-dropdown-div">
 
-                <FontAwesomeIcon icon={faBars} className=''  style={{ fontWeight: 'bolder' }} /><FontAwesomeIcon icon={faCircleUser} className='ml-2 ' size='2xl' style={{ fontWeight: 'bolder' }} />
-              </div>} className='navbar-static basic-nav-dropdown' autoClose="true">
-
-                <NavDropdown.Item className='p-0'>
-                  <Nav.Link>
-                    <Link to="/" onClick={() => handleNavLinkClick('/')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-bold'>
-                        Explore Colombia's gem
-                        <span>
-                          <Image className='emerald-icon' src={process.env.PUBLIC_URL + "/assets/thumbnails/pngwing.com.png"} fluid />
-                        </span>
-                      </p>
-                    </Link>
-                  </Nav.Link>
-                </NavDropdown.Item>
-
-                <NavDropdown.Divider />
+            {Auth.loggedIn() ? (
+              <>
 
 
-                <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text-signedin'>Signed in as: {Auth.getProfile().data.username}</p>
+                <Nav.Link>
 
-                <NavDropdown.Item className='p-0'>
-                  <Nav.Link>
-                    <Link to="/me" onClick={() => handleNavLinkClick('/me')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-bold'>Venture trips bucklist</p>
-                    </Link>
-                  </Nav.Link>
-                </NavDropdown.Item>
+                  <p className='pl-2 mb-0 mt-0 d-flex parcero-text parcero'>
+                    <span>
+                      <Image className='emerald-icon parcero' src={process.env.PUBLIC_URL + "/assets/thumbnails/hola-parcero.png"} fluid />
+                    </span>
+                    Hola parce<br></br>Que mas?
+                  </p>
 
-                <NavDropdown.Item className='p-0'>
-                  <Nav.Link>
-                    <Link to="/wishlists" onClick={() => handleNavLinkClick('/wishlists')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-bold'>Wishlists</p>
-                    </Link>
-                  </Nav.Link>
-                </NavDropdown.Item>
+                </Nav.Link>
 
-                <NavDropdown.Divider />
+                <Nav.Link>
+                  <div className=' mr-3 language-translate emerald-icon'>
 
-                <NavDropdown.Item className='p-0'>
-                  <Nav.Link>
-                    <Link to="/bnb" onClick={() => handleNavLinkClick('/bnb')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Find a Bed & Breakfast</p>
-                    </Link>
-                  </Nav.Link>
-                </NavDropdown.Item>
+                    <FontAwesomeIcon icon={faGlobe} className='language-translate-g emerald-icon' /> <FontAwesomeIcon icon={faLanguage} className=' language-translate-a emerald-icon' />
 
-                <NavDropdown.Item className='p-0'>
-                  <Nav.Link>
-                    <Link to="/restaurants" onClick={() => handleNavLinkClick('/restaurants')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Restaurants</p>
-                    </Link>
-                  </Nav.Link>
-                </NavDropdown.Item>
-
-                <NavDropdown.Item className='p-0'>
-                  <Nav.Link>
-                    <Link to="/futbol" onClick={() => handleNavLinkClick('/futbol')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Watch a Fútbol Game</p>
-                    </Link>
-                  </Nav.Link>
-                </NavDropdown.Item>
-
-                <NavDropdown.Divider />
-
-                <NavDropdown.Item className='p-0'>
-                  <Nav.Link>
-                    <Link to="/" onClick={() => handleNavLinkClick('/')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Language  <FontAwesomeIcon icon={faGlobe} /> <FontAwesomeIcon icon={faLanguage}  /></p>
-                    </Link>
-                  </Nav.Link>
-                </NavDropdown.Item>
+                  </div>
+                </Nav.Link>
 
 
-                <NavDropdown.Item className='p-0'>
-                  <Nav.Link>
-                    <Link to="/contact" onClick={() => handleNavLinkClick('/contact')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Help Center</p>
-                    </Link>
-                  </Nav.Link>
-                </NavDropdown.Item>
 
-                <NavDropdown.Item className='p-0'>
-                  <Nav.Link>
-                    <Link onClick={logout}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Logout</p>
-                    </Link>
-                  </Nav.Link>
-                </NavDropdown.Item>
+                <NavDropdown eventKey={3} title={<div style={{ display: "inline-block" }}>
 
-              </NavDropdown>
-            </>
-          ) : (
-            <>
+                  <FontAwesomeIcon icon={faBars} className='' style={{ fontWeight: 'bolder' }} /><FontAwesomeIcon icon={faCircleUser} className='ml-2 ' size='2xl' style={{ fontWeight: 'bolder' }} />
+                </div>} className='navbar-static basic-nav-dropdown' autoClose="true">
 
-              {/* <Nav.Link>
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link to="/" onClick={() => handleNavLinkClick('/')}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-bold'>
+                          Explore Colombia's gem
+                          <span>
+                            <Image className='emerald-icon' src={process.env.PUBLIC_URL + "/assets/thumbnails/pngwing.com.png"} fluid />
+                          </span>
+                        </p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
+
+                  <NavDropdown.Divider />
+
+
+                  <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text-signedin'>Signed in as: {Auth.getProfile().data.username}</p>
+
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link to="/me" onClick={() => handleNavLinkClick('/me')}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-bold'>Venture trips bucklist</p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
+
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link to="/wishlists" onClick={() => handleNavLinkClick('/wishlists')}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-bold'>Wishlists</p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
+
+                  <NavDropdown.Divider />
+
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link to="/bnb" onClick={() => handleNavLinkClick('/bnb')}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Find a Bed & Breakfast</p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
+
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link to="/restaurants" onClick={() => handleNavLinkClick('/restaurants')}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Restaurants</p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
+
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link to="/futbol" onClick={() => handleNavLinkClick('/futbol')}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Watch a Fútbol Game</p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
+
+                  <NavDropdown.Divider />
+
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link to="/" onClick={() => handleNavLinkClick('/')}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Language  <FontAwesomeIcon icon={faGlobe} /> <FontAwesomeIcon icon={faLanguage} /></p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
+
+
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link to="/contact" onClick={() => handleNavLinkClick('/contact')}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Help Center</p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
+
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link onClick={logout}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Logout</p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
+
+                </NavDropdown>
+              </>
+            ) : (
+              <>
+
+                {/* <Nav.Link>
 
                   <p className='pl-2 mb-0 mt-0 d-flex parcero-text parcero'>
                     <span>
@@ -587,92 +592,92 @@ const Header = ({ handlePageChange }) => {
 
                 </Nav.Link> */}
 
-              <Nav.Link>
-                <div className=' mr-3 language-translate emerald-icon'>
+                <Nav.Link>
+                  <div className=' mr-3 language-translate emerald-icon'>
 
-                  <FontAwesomeIcon icon={faGlobe} className='language-translate-g emerald-icon' /> <FontAwesomeIcon icon={faLanguage} className=' language-translate-a emerald-icon' />
+                    <FontAwesomeIcon icon={faGlobe} className='language-translate-g emerald-icon' /> <FontAwesomeIcon icon={faLanguage} className=' language-translate-a emerald-icon' />
 
-                </div>
-              </Nav.Link>
+                  </div>
+                </Nav.Link>
 
-              <NavDropdown title={<div style={{ display: "inline-block" }}>
-                <FontAwesomeIcon icon={faBars} className='' size='xl' style={{ fontWeight: 'bolder' }} />
-                <FontAwesomeIcon icon={faCircleUser} className='ml-2 ' size='2xl' style={{ fontWeight: 'bolder' }} />
-              </div>} className='navbar-static basic-nav-dropdown' autoClose="true">
+                <NavDropdown title={<div style={{ display: "inline-block" }}>
+                  <FontAwesomeIcon icon={faBars} className='' size='xl' style={{ fontWeight: 'bolder' }} />
+                  <FontAwesomeIcon icon={faCircleUser} className='ml-2 ' size='2xl' style={{ fontWeight: 'bolder' }} />
+                </div>} className='navbar-static basic-nav-dropdown' autoClose="true">
 
-                <NavDropdown.Item className='p-0'>
-                  <Nav.Link>
-                    <Link to="/" onClick={() => handleNavLinkClick('/')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>
-                        Explore Colombia's gem
-                        <span>
-                          <Image className='emerald-icon' src={process.env.PUBLIC_URL + "/assets/thumbnails/pngwing.com.png"} fluid />
-                        </span>
-                      </p>
-                    </Link>
-                  </Nav.Link>
-                </NavDropdown.Item>
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link to="/" onClick={() => handleNavLinkClick('/')}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>
+                          Explore Colombia's gem
+                          <span>
+                            <Image className='emerald-icon' src={process.env.PUBLIC_URL + "/assets/thumbnails/pngwing.com.png"} fluid />
+                          </span>
+                        </p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
 
-                <NavDropdown.Divider />
+                  <NavDropdown.Divider />
 
-                <NavDropdown.Item className='p-0'>
-                  <Nav.Link>
-                    <Link to="/signup" onClick={() => handleNavLinkClick('/signup')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Sign up</p>
-                    </Link>
-                  </Nav.Link>
-                </NavDropdown.Item>
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link to="/signup" onClick={() => handleNavLinkClick('/signup')}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Sign up</p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
 
-                <NavDropdown.Item className='p-0'>
-                  <Nav.Link>
-                    <Link to="/login" onClick={() => handleNavLinkClick('/login')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Login</p>
-                    </Link>
-                  </Nav.Link>
-                </NavDropdown.Item>
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link to="/login" onClick={() => handleNavLinkClick('/login')}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Login</p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
 
-                <NavDropdown.Divider />
+                  <NavDropdown.Divider />
 
-                <NavDropdown.Item className='p-0'>
-                  <Nav.Link>
-                    <Link to="/restaurants" onClick={() => handleNavLinkClick('/restaurants')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Restaurants</p>
-                    </Link>
-                  </Nav.Link>
-                </NavDropdown.Item>
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link to="/restaurants" onClick={() => handleNavLinkClick('/restaurants')}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Restaurants</p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
 
-                <NavDropdown.Item className='p-0'>
-                  <Nav.Link>
-                    <Link to="/bnb" onClick={() => handleNavLinkClick('/bnb')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Find a Bed & Breakfast</p>
-                    </Link>
-                  </Nav.Link>
-                </NavDropdown.Item>
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link to="/bnb" onClick={() => handleNavLinkClick('/bnb')}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Find a Bed & Breakfast</p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
 
-                <NavDropdown.Item className='p-0'>
-                  <Nav.Link>
-                    <Link to="/contact" onClick={() => handleNavLinkClick('/contact')}>
-                      <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Help Center</p>
-                    </Link>
-                  </Nav.Link>
-                </NavDropdown.Item>
+                  <NavDropdown.Item className='p-0'>
+                    <Nav.Link>
+                      <Link to="/contact" onClick={() => handleNavLinkClick('/contact')}>
+                        <p className='pl-2 mb-0 mt-0 basic-nav-dropdown-text'>Help Center</p>
+                      </Link>
+                    </Nav.Link>
+                  </NavDropdown.Item>
 
-              </NavDropdown>
-            </>
-          )}
-          <br></br>
-
-
+                </NavDropdown>
+              </>
+            )}
+            <br></br>
 
 
 
 
 
 
-        </div>
 
-      </Container>
-    </Navbar>
+
+          </div>
+
+        </Container>
+      </Navbar>
 
 
 

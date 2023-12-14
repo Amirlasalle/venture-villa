@@ -68,7 +68,8 @@ body {
 .map-btn {
   position: sticky !important;
   max-width: 100% !important;
-  display: inline-flex !important;
+  display: flex !important;
+  justify-content: center;
   align-items: center !important;
   background-color: #fff;
   border: 1px solid #afafaf;

@@ -3,13 +3,14 @@ import { Link, useNavigate } from 'react-router-dom';
 import Auth from '../../utils/auth';
 import { Image, Container, Nav, Navbar, NavDropdown, Button, Modal, Tab, Tabs, Stack, Card, Toast } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faCircleUser, faBars, faLanguage, faGlobe, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faCircleUser, faBars, faLanguage, faGlobe, faArrowLeft, faSpinner, faDirections, faPhone } from '@fortawesome/free-solid-svg-icons';
 import terrainsData from '../Jsons/terrains.json';
 import whattodoData from '../Jsons/whattodo.json';
 import wheretoData from '../Jsons/whereto.json';
-import foodData from '../Jsons/food.json';
-import activitiesData from '../Jsons/activities.json';
 import foryourtastebudsData from "../Jsons/foryourtastebuds.json";
+import { getAttractionsData } from '../ApiAttractions/index';
+import { getPlacesData } from '../api/index';
+import Map from '../Map/MapTwo'
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
@@ -58,18 +59,7 @@ const Header = ({ handlePageChange }) => {
     navigate(url);
   };
 
-  const [backgroundColor, setBackgroundColor] = useState('#f3f2f2');
-  const resetColor = useRef(null);
 
-  const changeBgColor = () => {
-    setBackgroundColor('#f3f2f2');
-  };
-
-  const outSideSearchBar = (event) => {
-    if (resetColor.current && !resetColor.current.contains(event.target)) {
-      setBackgroundColor('#fff');
-    }
-  };
   useEffect(() => {
     document.addEventListener('click', outSideSearchBar);
 
@@ -93,6 +83,8 @@ const Header = ({ handlePageChange }) => {
     setShow(true);
   }
 
+  const handleClose = () => setShow(false);
+
   const ToastCloseButton = ({ onClick }) => (
     <div variant="link" className="close-btn" onClick={onClick}>
       <FontAwesomeIcon icon={faArrowLeft} size='lg' />
@@ -108,45 +100,135 @@ const Header = ({ handlePageChange }) => {
 
 
 
-  const [data2, setData2] = useState([]);
-  const [searchQuery2, setSearchQuery2] = useState('');
-
-  useEffect(() => {
-
-    const searchData2 = [
-      ...foodData,
-      ...activitiesData,
-    ];
-    setData2(searchData2);
-  }, []);
-
-
-  const searchedData2 = data2.filter((item) => {
-    const filteredSearch2 = searchQuery2.trim().toLowerCase();
-    const filteredName2 = item.name.toLowerCase().trim();
-    return filteredName2.startsWith(filteredSearch2) || filteredName2 === filteredSearch2;
-  });
-
   const closeToast = () => {
     setShowA(false);
     setShowB(false);
   };
 
 
-
   const [address, setAddress] = useState('');
-  const [coordinates, setCoordinates] = useState(null);
-
-  const handleSelect = async (selectedAddress) => {
+  const handleSelect = async (selectedAddress, ...dataTypes) => {
     try {
       const results = await geocodeByAddress(selectedAddress);
       const latLng = await getLatLng(results[0]);
       setCoordinates(latLng);
       setAddress(selectedAddress);
+
+      const selectedBounds = {
+        sw: { lat: latLng.lat - 0.1, lng: latLng.lng - 0.1 },
+        ne: { lat: latLng.lat + 0.1, lng: latLng.lng + 0.1 }
+      };
+
+      setLoading(true);
+
+      for (const dataType of dataTypes) {
+        if (dataType === 'attractions') {
+          getAttractionsData(selectedBounds.sw, selectedBounds.ne)
+            .then((data) => {
+              setPlaces(data);
+            })
+            .finally(() => {
+              setLoading(false);
+            });
+        } else if (dataType === 'restaurants') {
+          getPlacesData(selectedBounds.sw, selectedBounds.ne)
+            .then((data) => {
+              setRestaurants(data);
+            })
+            .finally(() => {
+              setLoading(false);
+            });
+        }
+      }
     } catch (error) {
       console.error('Error selecting place:', error);
     }
   };
+
+
+
+  const outSideSearchBar = (event) => {
+    if (resetColor.current && !resetColor.current.contains(event.target)) {
+      setBackgroundColor('#fff');
+    }
+  };
+  useEffect(() => {
+    document.addEventListener('click', outSideSearchBar);
+
+    return () => {
+      document.removeEventListener('click', outSideSearchBar);
+    };
+  }, []);
+
+
+  const [bounds, setBounds] = useState({});
+  const [coordinates, setCoordinates] = useState({});
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
+      setCoordinates({ lat: latitude, lng: longitude });
+    })
+  }, [])
+
+  const [backgroundColor, setBackgroundColor] = useState('#f3f2f2');
+  const resetColor = useRef(null);
+
+  const changeBgColor = () => {
+    setBackgroundColor('#f3f2f2');
+  };
+
+
+  const [places, setPlaces] = useState([]);
+
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
+      setCoordinates({ lat: latitude, lng: longitude });
+      setBounds({ sw: { lat: latitude - 0.1, lng: longitude - 0.1 }, ne: { lat: latitude + 0.1, lng: longitude + 0.1 } });
+    })
+  }, [])
+
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (bounds) {
+      setLoading(true);
+
+      getAttractionsData(bounds.sw, bounds.ne)
+        .then((data) => {
+          setPlaces(data);
+          setLoading(false);
+        });
+    }
+  }, [bounds]);
+
+
+  const [restaurants, setRestaurants] = useState([]);
+  const [loadingRestaurants, setLoadingRestaurants] = useState(true);
+
+  useEffect(() => {
+    if (bounds) {
+      setLoading(true);
+
+      getPlacesData(bounds.sw, bounds.ne)
+        .then((data) => {
+          setRestaurants(data);
+          setLoadingRestaurants(false);
+        });
+    }
+  }, [bounds]);
+
+  const [autocomplete, setAutocomplete] = useState(null);
+  const onLoad = (autoC) => setAutocomplete(autoC);
+
+  const onPlaceChanged = () => {
+    const lat = autocomplete.getPlace().geometry.location.lat();
+    const lng = autocomplete.getPlace().geometry.location.lng();
+
+    setCoordinates({ lat, lng });
+  };
+
 
   return (
     <div role='navigation' className='bg-body-tertiary mar'>
@@ -184,7 +266,7 @@ const Header = ({ handlePageChange }) => {
               {typeof v === 'string' && `below ${v.split('-')[0]}`}
             </Button>
           ))}
-          <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
+          <Modal show={show} fullscreen={fullscreen} onHide={handleClose}>
 
             <Modal.Body className='search-modal-body justify-center'>
               <Modal.Header closeButton
@@ -222,7 +304,7 @@ const Header = ({ handlePageChange }) => {
                         {whereto.map((butwhereto, key) =>
 
                           <Card key={key} className=" mx-1 where-to-cards" style={{ width: '10rem' }}>
-                            <Link to={butwhereto.more} className="btn1" >
+                            <Link to={butwhereto.more} onClick={(handleClose)} className="btn1" >
                               <Image src={process.env.PUBLIC_URL + butwhereto.screenshotone} className="img-fluid d-flex flex-wrap justify-content-around where-to-image" />
                             </Link>
                             <Card.Body className='w-100 mt-1 ml-0 mr-0'>
@@ -250,7 +332,7 @@ const Header = ({ handlePageChange }) => {
                         {terrains.map((terrain, key) =>
 
                           <Card key={key} className=" mx-1 where-to-cards-two" style={{ width: '3.5rem' }}>
-                            <Link to={terrain.more} className="btn1 where-to-image-two" >
+                            <Link to={terrain.more} onClick={(handleClose)} className="btn1 where-to-image-two" >
                               <Image src={process.env.PUBLIC_URL + terrain.screenshotone} className="img-fluid d-flex flex-wrap justify-content-around where-to-image-two" />
                             </Link>
                             <Card.Body className='w-100 mt-1 ml-0 mr-0'>
@@ -278,7 +360,6 @@ const Header = ({ handlePageChange }) => {
                         What to do?
                       </h4>
                       <Stack direction="horizontal">
-                        {/* <Form.Control className="mx-3 p-3" placeholder=" Venture Search..." /> */}
                         <Button variant='light' className='btn10 btn-block10 mx-3 p-3 text-left' onClick={toggleShowB}>
                           <span className='mx-1'>
                             <FontAwesomeIcon icon={faMagnifyingGlass} style={{ fontWeight: 'bolder' }} />
@@ -294,7 +375,7 @@ const Header = ({ handlePageChange }) => {
                         {whattodo.map((butwhattodo, key) =>
 
                           <Card key={key} className=" mx-1 where-to-cards" style={{ width: '10rem' }}>
-                            <Link to={butwhattodo.more} target="_blank" rel="noreferrer" className="btn1" >
+                            <Link to={butwhattodo.more} onClick={(handleClose)} className="btn1" >
                               <Image src={process.env.PUBLIC_URL + butwhattodo.screenshotone} className="img-fluid d-flex flex-wrap where-to-image" />
                             </Link>
                             <Card.Body className='w-100 mt-1 ml-0 mr-0'>
@@ -317,12 +398,12 @@ const Header = ({ handlePageChange }) => {
                         For your taste buds
                       </h6>
                     </div>
-                    <div className=' where-to-content-3 ml-2'>
+                    <div className=' where-to-content-3 ml-1 pl-3'>
                       <div className='where-to-cards-container-3'>
                         {foryourtastebuds.map((food, key) =>
 
                           <Card key={key} className=" mx-1 where-to-cards-3" style={{ width: '3.5rem' }}>
-                            <Link to={food.more} className="btn1 where-to-image-3" >
+                            <Link to={food.more} onClick={(handleClose)} className="btn1 where-to-image-3" >
                               <Image src={process.env.PUBLIC_URL + food.screenshotone} className="img-fluid d-flex flex-wrap justify-content-around where-to-image-3" />
                             </Link>
                             <Card.Body className='w-100 mt-1 ml-0 mr-0'>
@@ -406,48 +487,238 @@ const Header = ({ handlePageChange }) => {
                   {coordinates && (
                     <div>
                       <p>
-                        Selected Coordinates: {coordinates.lat}, {coordinates.lng}
+                       {coordinates.lat}, {coordinates.lng}
                       </p>
                     </div>
                   )}
 
+                  <div className="w-100 display-flex justify-center align-center">
+
+                    <Map
+                      setCoordinates={setCoordinates}
+                      setBounds={setBounds}
+                      coordinates={coordinates}
+                    />
+
+                  </div>
                 </Toast.Body>
               </Toast>
             </div>
+
+
             <div className='w-100  bg-white'>
               <Toast show={showB} onClose={toggleShowB}
                 style={{ width: '100%' }} className='toast'>
                 <Toast.Header closeButton={false} closeVariant='primary' className='fixed-top'>
                   <ToastCloseButton onClick={toggleShowB} className='btn-close' />
                 </Toast.Header>
-                <Toast.Body className='w-100'>
-                  <div ref={resetColor} variant='light' style={{ backgroundColor }} className='form-div  mx-3 p-3 text-left' onClick={changeBgColor}>
-                    <span className='mx-1 '>
-                      <FontAwesomeIcon icon={faMagnifyingGlass} size='lg' className='faMagGlass' />
-                    </span>
-                    <input
-                      className="form-input search-btn-form" placeholder=" Venture Search..."
-                      value={searchQuery2}
-                      onChange={(e) => setSearchQuery2(e.target.value)}
-                    />
-                  </div>
-                  {searchQuery2 && (
-                    <div className='search-data-body '>
-                      {searchedData2.slice(0, 5).map((item) => (
-                        <div key={item.name} className='search-data-item p-2'>
-                          <div className='search-data-icon-div'>
-                            <Image src={item.screenShot} alt={item.name} className='search-data-icon' />
+                <Toast.Body>
+                  <div className="w-100 display-flex justify-center align-center">
+                    <PlacesAutocomplete
+                      onLoad={onLoad}
+                      onPlaceChanged={onPlaceChanged}
+                      value={address}
+                      onChange={(value) => setAddress(value)}
+                      onSelect={(selectedAddress) => handleSelect(selectedAddress, 'attractions', 'restaurants')}
+                      searchOptions={{
+                        key: 'AIzaSyDzy3wz5yxKZv9CaxbAHUstxBLvan78zsY',
+                        types: ['geocode'],
+                        componentRestrictions: { country: 'co' },
+                      }}>
+                      {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+                        <div className="w-100 mb-5 mt-3 justify-center">
+                          <div className="w-100 display-flex justify-center align-center">
+                            <div
+                              ref={resetColor}
+                              variant='light'
+                              style={{ backgroundColor }}
+                              className='form-div  mx-3 p-3 text-left '
+                              onClick={changeBgColor}>
+                              <span className="mx-1 ">
+                                <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" className="faMagGlass text-left" />
+                              </span>
+                              <input {...getInputProps({
+                                placeholder: 'Venture City Search...',
+                                className: 'w-100 form-input search-btn-form',
+                              })}
+                              />
+                            </div>
                           </div>
-                          <div className='search-data-text'>
-                            {item.name}
+                          <div className="mt-3">
+                            {loading &&
+                              <div className="w-100 display-flex justify-center align-center">
+                                <FontAwesomeIcon icon={faSpinner} spin style={{ color: "#0011ff", }} size='2xl' />
+                              </div>
+                            }
+                            {suggestions.map(suggestion => (
+                              <div key={suggestion.placeId} {...getSuggestionItemProps(suggestion, {})}
+                                className="w-100 search-data-item p-2" >
+                                <div className="search-data-icon-div">
+                                  <Image src={process.env.PUBLIC_URL + "/assets/cities/placeholder.png"} alt={suggestion.description} className="search-data-icon" />
+                                </div>
+                                <div className="search-data-text">
+                                  {suggestion.description}
+                                </div>
+                              </div>
+                            ))}
                           </div>
                         </div>
-                      ))}
-                    </div>
-                  )}
-
+                      )}
+                    </PlacesAutocomplete>
+                  </div>
                 </Toast.Body>
+                <Tabs
+                  defaultActiveKey="attractions"
+                  transition={false}
+                  id="model-tabs"
+                  variant='tabs'
+                  className="model-tabs fixed-top justify-center">
+                  <Tab eventKey="attractions" title="Attractions" className="modal-tab mb-0 mt-0 justify-center" >
+
+
+
+                    <div className='modal-tab-content mt-0'>
+                      <div className='display-flex mt-0 justify-center align-center'>
+                        {loading &&
+                          <div className="w-100 display-flex justify-center align-center mb-5 mt-0 where-to-content">
+                            <FontAwesomeIcon icon={faSpinner} spin style={{ color: "#0011ff", }} size='2xl' className='mt-5' />
+                          </div>
+                        }
+                      </div>
+                      {!loading && (
+                        <div className='mt-4 where-to-content ml-2'>
+                          <div className='attractions-cards-container'>
+                            {places &&
+                              places.map((place, key) => (
+                                (place.phone || place.address || place.website) && (
+
+                                  <Card key={key} className=" mx-1 where-to-cards" style={{ width: '10rem' }}>
+                                    <Image
+                                      src={place.photo ? place.photo.images.large.url : "/assets/activities/extracurricular-activities.png"}
+                                      alt={place.name}
+                                      className="img-fluid d-flex flex-wrap where-to-image" />
+                                    <Card.Body className='w-100 mt-1 ml-0 mr-0'>
+                                      <Card.Subtitle className="mb-2 mr-1 where-to-text">
+                                        {place.name}
+                                      </Card.Subtitle>
+                                      <Card.Subtitle
+                                        className="mb-3 card-price">
+                                        {place.price_level}
+                                      </Card.Subtitle>
+                                      {place.phone && (
+                                        <a href={`tel:${place.phone}`}
+                                          target="_blank" rel="noreferrer"
+                                          className="hover-decoration">
+                                          <Card.Subtitle
+                                            className="mb-3 text-default-2 where-to-links-text">
+                                            <FontAwesomeIcon icon={faPhone} /> {''}
+                                            {place.phone}
+                                          </Card.Subtitle>
+                                        </a>
+                                      )}
+                                      {place.address && (
+                                        <a href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(place.address)}`}
+                                          target="_blank"
+                                          rel="noreferrer"
+                                          className="hover-decoration" >
+                                          <Card.Subtitle className="mb-3 text-default-2 where-to-links-text">
+                                            <FontAwesomeIcon icon={faDirections} /> {''}
+                                            Directions
+                                          </Card.Subtitle>
+                                        </a>
+                                      )}
+                                      {place.website && (
+                                        <a href={place.website}
+                                          target="_blank"
+                                          rel="noreferrer"
+                                          className="hover-decoration">
+                                          <Card.Subtitle className="mb-3 text-default-2 where-to-links-text">
+                                            <FontAwesomeIcon icon={faGlobe} /> {''} website
+                                          </Card.Subtitle>
+                                        </a>
+                                      )}
+                                    </Card.Body>
+                                  </Card>
+                                )
+                              ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </Tab>
+
+                  <Tab eventKey="restaurants" title="Restaurants" className="modal-tab mb-0 mt-0 justify-center" >
+
+                    <div className='modal-tab-content mt-0'>
+
+
+                      <div className='display-flex mt-0 justify-center align-center'>
+                        {loadingRestaurants &&
+                          <div className="w-100 display-flex justify-center align-center mb-5 mt-0 where-to-content">
+                            <FontAwesomeIcon icon={faSpinner} spin style={{ color: "#0011ff", }} size='2xl' className='mt-5' />
+                          </div>
+                        }
+                      </div>
+                      {!loadingRestaurants && (
+                        <div className='mt-4 where-to-content ml-2'>
+                          <div className='attractions-cards-container'>
+                            {restaurants &&
+                              restaurants.map((restaurant, key) => (
+                                (restaurant.phone || restaurant.address || restaurant.website) && (
+
+                                  <Card key={key} className=" mx-1 where-to-cards" style={{ width: '10rem' }}>
+                                    <Image
+                                      src={restaurant.photo ? restaurant.photo.images.large.url : "/assets/activities/extracurricular-activities.png"}
+                                      alt={restaurant.name}
+                                      className="img-fluid d-flex flex-wrap where-to-image" />
+                                    <Card.Body className='w-100 mt-1 ml-0 mr-0'>
+                                      <Card.Subtitle className="mb-2 mr-1 where-to-text">
+                                        {restaurant.name}
+                                      </Card.Subtitle>
+                                      {restaurant.phone && (
+                                        <a href={`tel:${restaurant.phone}`}
+                                          target="_blank" rel="noreferrer"
+                                          className="hover-decoration">
+                                          <Card.Subtitle
+                                            className="mb-3 text-default-2 where-to-links-text">
+                                            <FontAwesomeIcon icon={faPhone} /> {''}
+                                            {restaurant.phone}
+                                          </Card.Subtitle>
+                                        </a>
+                                      )}
+                                      {restaurant.address && (
+                                        <a href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(restaurant.address)}`}
+                                          target="_blank"
+                                          rel="noreferrer"
+                                          className="hover-decoration" >
+                                          <Card.Subtitle className="mb-3 text-default-2 where-to-links-text">
+                                            <FontAwesomeIcon icon={faDirections} /> {''}
+                                            Directions
+                                          </Card.Subtitle>
+                                        </a>
+                                      )}
+                                      {restaurant.website && (
+                                        <a href={restaurant.website}
+                                          target="_blank"
+                                          rel="noreferrer"
+                                          className="hover-decoration">
+                                          <Card.Subtitle className="mb-3 text-default-2 where-to-links-text">
+                                            <FontAwesomeIcon icon={faGlobe} /> {''} website
+                                          </Card.Subtitle>
+                                        </a>
+                                      )}
+                                    </Card.Body>
+                                  </Card>
+                                )
+                              ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </Tab>
+                </Tabs>
               </Toast>
+
             </div>
 
 

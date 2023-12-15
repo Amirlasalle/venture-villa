@@ -26,7 +26,7 @@ const Footer = () => {
 
       <div className='w-100 custom-links-footer'>
 
-        <div className='p-0 pb-5'>
+        <div className='p-0 pb-5 mt-3'>
           <Link to="/" onClick={() => handleNavLinkClick('/')} className='custom-link'> <Image className='vv-white-logo' src={process.env.PUBLIC_URL + "/assets/venture-villa-white-logo.png"} fluid />
           </Link>
         </div>

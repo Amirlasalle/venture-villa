@@ -2,91 +2,91 @@
     {
         "name": "Urban Cities",
         "screenshotone": "/assets/terrains/city.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Mountains",
         "screenshotone": "/assets/terrains/mountain.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Amazon Rainforest",
         "screenshotone": "/assets/terrains/jungle.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Farm",
         "screenshotone": "/assets/terrains/farmhouse.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Caribbean Coast",
         "screenshotone": "/assets/terrains/caribbean.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Pacific Coast",
         "screenshotone": "/assets/terrains/pacific-coast.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Village",
         "screenshotone": "/assets/terrains/village.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Historic",
         "screenshotone": "/assets/terrains/historic.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Llanos",
         "screenshotone": "/assets/terrains/plain.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Tropical Lowlands",
         "screenshotone": "/assets/terrains/tropical-lowlands.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Islands",
         "screenshotone": "/assets/terrains/island.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Coastal Village",
         "screenshotone": "/assets/terrains/coastal-village.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Country Side",
         "screenshotone": "/assets/terrains/power.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Coffee Region",
         "screenshotone": "/assets/terrains/coffee-beans.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Desert",
         "screenshotone": "/assets/terrains/desert.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Paramo",
         "screenshotone": "/assets/terrains/plateau.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Mangroves",
         "screenshotone": "/assets/terrains/mangrove.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Highland Lakes",
         "screenshotone": "/assets/terrains/lake.png",
-        "more": ""
+        "more": "/bnb"
     }
 ]

@@ -2,51 +2,51 @@
     {
         "name": "Any City",
         "screenshotone": "/assets/maps/colombia-map.svg",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Armenia Quindio",
         "screenshotone": "/assets/maps/armenia-map.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Bogota",
         "screenshotone": "/assets/maps/bogota-map.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Cuaca",
         "screenshotone": "/assets/maps/cali-map.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Bolivar",
         "screenshotone": "/assets/maps/bolivar-map.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Antioquia",
         "screenshotone": "/assets/maps/medellin-map.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "San Andrés",
         "screenshotone": "/assets/maps/cali-map.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Atlantico",
         "screenshotone": "/assets/maps/cali-map.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Cundinamarca",
         "screenshotone": "/assets/maps/cundinamarca-map.png",
-        "more": ""
+        "more": "/bnb"
     },
     {
         "name": "Magdalena",
         "screenshotone": "/assets/maps/magdalena-map.png",
-        "more": ""
+        "more": "/bnb"
     }
 ]

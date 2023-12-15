@@ -668,7 +668,7 @@ const Header = ({ handlePageChange }) => {
 
                                   <Card key={key} className=" mx-1 where-to-cards" style={{ width: '10rem' }}>
                                     <Image
-                                      src={restaurant.photo ? restaurant.photo.images.large.url : "/assets/activities/extracurricular-activities.png"}
+                                      src={restaurant.photo ? restaurant.photo.images.large.url : "/assets/food/food.png"}
                                       alt={restaurant.name}
                                       className="img-fluid d-flex flex-wrap where-to-image" />
                                     <Card.Body className='w-100 mt-1 ml-0 mr-0'>

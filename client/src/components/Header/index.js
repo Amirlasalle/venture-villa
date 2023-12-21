@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Auth from '../../utils/auth';
-import { Image, Container, Nav, Navbar, NavDropdown, Button, Modal, Tab, Tabs, Stack, Card, Toast } from 'react-bootstrap';
+import { Image, Container, Nav, Navbar, NavDropdown, Button, Modal, Tab, Row, Tabs, Stack, Card, Toast } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faCircleUser, faBars, faLanguage, faGlobe, faArrowLeft, faSpinner, faDirections, faPhone } from '@fortawesome/free-solid-svg-icons';
 import terrainsData from '../Jsons/terrains.json';
@@ -15,7 +15,7 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from 'react-places-autocomplete';
-// ,Col,   , faChevronCircleRight, faChevronLeft, faChevronRight, faPipe, faExternalLinkAlt, faArrowUpRightFromSquare 
+
 
 const Header = ({ handlePageChange }) => {
   const logout = (event) => {
@@ -77,6 +77,11 @@ const Header = ({ handlePageChange }) => {
   const values = [true];
   const [fullscreen, setFullscreen] = useState(true);
   const [show, setShow] = useState(false);
+
+  const [showLanguages, setShowLanguages] = useState(true);
+
+  const handleShowLanguages = () => setShowLanguages(true);
+  const handleCloseLanguages = () => setShowLanguages(false);
 
   function handleShow(breakpoint) {
     setFullscreen(breakpoint);
@@ -487,7 +492,7 @@ const Header = ({ handlePageChange }) => {
                   {coordinates && (
                     <div>
                       <p>
-                       {coordinates.lat}, {coordinates.lng}
+                        {coordinates.lat}, {coordinates.lng}
                       </p>
                     </div>
                   )}
@@ -745,13 +750,13 @@ const Header = ({ handlePageChange }) => {
 
                 </Nav.Link>
 
-                <Nav.Link>
-                  <div className=' mr-3 language-translate emerald-icon'>
 
-                    <FontAwesomeIcon icon={faGlobe} className='language-translate-g emerald-icon' /> <FontAwesomeIcon icon={faLanguage} className=' language-translate-a emerald-icon' />
-
+                <Button variant='flat' className='btn-invisible mr-3' onClick={handleShow}>
+                  <div className='language-translate'>
+                    <FontAwesomeIcon icon={faGlobe} className='language-translate-g language-icon' /> <FontAwesomeIcon icon={faLanguage} className=' language-translate-a .language-icon' />
                   </div>
-                </Nav.Link>
+                </Button>
+
 
 
 
@@ -863,13 +868,47 @@ const Header = ({ handlePageChange }) => {
 
                 </Nav.Link> */}
 
-                <Nav.Link>
-                  <div className=' mr-3 language-translate emerald-icon'>
-
-                    <FontAwesomeIcon icon={faGlobe} className='language-translate-g emerald-icon' /> <FontAwesomeIcon icon={faLanguage} className=' language-translate-a emerald-icon' />
-
+                <Button variant='flat' className='btn-invisible mr-3' onClick={handleShowLanguages}>
+                  <div className='language-translate'>
+                    <FontAwesomeIcon icon={faGlobe} className='language-translate-g language-icon' /> <FontAwesomeIcon icon={faLanguage} className=' language-translate-a .language-icon' />
                   </div>
-                </Nav.Link>
+                </Button>
+                <div className='ml-5 modal-div'>
+                  <Modal show={showLanguages} animation={false} size="lg" dialogClassName="my-modal custom-modal">
+                    <Modal.Header closeButton onClick={handleCloseLanguages}
+                      className='close-button fixed-top'>
+                    </Modal.Header>
+                    <Modal.Body className='d-flex flex-wrap custom-modal' style={{ width: '80vw', height: '70vh' }} closeButton>
+                      <h2 className="pr-5 mt-0 justify-content-center">
+                        Choose a language and region
+                      </h2>
+                      <h2 className="text-center pb-4 section-divider-y w-100" >
+                      </h2>
+                      <h2 className="text-center section-divider-b w-100" >
+                      </h2>
+                      <h2 className="mb-0 text-center section-divider-r w-100" >
+                      </h2>
+                      <p className="mt-1 mb-auto pr-5 justify-content-center font-light text-small">
+                        Currently, there are no available languages. Please check again later for updates.
+                      </p>
+                      <p className="mt-1 mb-auto pr-5 justify-content-center font-light text-small">
+                        Currently, there are no available languages. Please check again later for updates.
+                      </p>
+                      <p className="mt-1 mb-auto pr-5 justify-content-center font-light text-small">
+                        Currently, there are no available languages. Please check again later for updates.
+                      </p>
+                      <p className="mt-1 mb-auto pr-5 justify-content-center font-light text-small">
+                        Currently, there are no available languages. Please check again later for updates.
+                      </p>
+                      <p className="mt-1 mb-auto pr-5 justify-content-center font-light text-small">
+                        Currently, there are no available languages. Please check again later for updates.
+                      </p>
+                      <p className="mt-1 mb-auto pr-5 justify-content-center font-light text-small">
+                        Currently, there are no available languages. Please check again later for updates.
+                      </p>
+                    </Modal.Body>
+                  </Modal>
+                </div>
 
                 <NavDropdown title={<div style={{ display: "inline-block" }}>
                   <FontAwesomeIcon icon={faBars} className='' size='xl' style={{ fontWeight: 'bolder' }} />

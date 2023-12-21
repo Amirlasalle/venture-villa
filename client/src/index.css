@@ -844,6 +844,7 @@ height: 55vh;
   color: #fff;
   vertical-align: middle;
   position: relative;
+  cursor: pointer;
 }
 
 .basic-nav-dropdown {
@@ -862,6 +863,7 @@ height: 55vh;
 
 .basic-nav-dropdown:hover {
   box-shadow: 5px 5px 5px 0 rgba(51, 51, 51, 0.307), 0 1px 7px 0 rgba(51, 51, 51, 0.365) !important;
+  border: 1px solid transparent;
 }
 
 .basic-nav-dropdown .dropdown-toggle::after {
@@ -934,12 +936,51 @@ height: 55vh;
   }
 }
 
+.language-translate {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  &:hover {
+    border: none;
+    filter: brightness(180%);
+    -webkit-filter: brightness(180%);
+    -moz-filter: brightness(180%);
+    -o-filter: brightness(180%);
+    -ms-filter: brightness(180%);
+    -webkit-transition: all 0.50s;
+    transition: all 0.50s;
+  }
+}
+
 .language-translate-a {
   color: #a22c2c;
 }
 
 .language-translate-g {
   color: #2c42a2;
+}
+
+.language-icon {
+  justify-content: center !important;
+  align-items: center;
+  -webkit-transition: all 0.50s;
+  transition: all 0.50s;
+  /* &:hover {
+    border: none;
+    filter: brightness(180%);
+    -webkit-filter: brightness(180%);
+    -moz-filter: brightness(180%);
+    -o-filter: brightness(180%);
+    -ms-filter: brightness(180%);
+    -webkit-transition: all 0.50s;
+    transition: all 0.50s;
+  } */
 }
 
 .parcero-text {
@@ -3707,6 +3748,20 @@ h-25-w-25 {
 .btn.btn-squared {
   border-radius: 0;
 }
+.btn-invisible {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  outline: none !important;
+  border: none;
+
+}
+.btn-invisible:hover{
+  background: #d4d4d4c3;
+}
 
 .btn-xsm {
   font-family: 'Poppins', sans-serif;
@@ -5148,9 +5203,9 @@ label form [type='radio'] {
 }
 
 @media screen and (max-width: 681px) {
-  .language-translate {
+  /* .language-translate {
     display: none;
-  }
+  } */
 
   .venture-search-container-btn {
     max-width: 45%;

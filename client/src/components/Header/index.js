@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Auth from '../../utils/auth';
-import { Image, Container, Nav, Navbar, NavDropdown, Button, Modal, Tab, Row, Tabs, Stack, Card, Toast } from 'react-bootstrap';
+import { Image, Container, Nav, Navbar, NavDropdown, Button, Modal, Tab, Tabs, Stack, Card, Toast } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faCircleUser, faBars, faLanguage, faGlobe, faArrowLeft, faSpinner, faDirections, faPhone } from '@fortawesome/free-solid-svg-icons';
 import terrainsData from '../Jsons/terrains.json';
@@ -78,7 +78,7 @@ const Header = ({ handlePageChange }) => {
   const [fullscreen, setFullscreen] = useState(true);
   const [show, setShow] = useState(false);
 
-  const [showLanguages, setShowLanguages] = useState(true);
+  const [showLanguages, setShowLanguages] = useState(false);
 
   const handleShowLanguages = () => setShowLanguages(true);
   const handleCloseLanguages = () => setShowLanguages(false);

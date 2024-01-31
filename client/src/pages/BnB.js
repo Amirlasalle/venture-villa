@@ -6,12 +6,6 @@ import '../App.css'
 import '../index.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleRight, faChevronCircleLeft, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-// import Col from 'react-bootstrap/Col';
-// import { faStar } from '@fortawesome/free-solid-svg-icons';
-// import PlaceList from '../components/Places/Places'; 
-//Col,  Tab, Tabs, Button, Modal 
-//faChevronLeft, faChevronRight, faExternalLinkAlt, faArrowUpRightFromSquare
-//
 
 
 function BnB() {

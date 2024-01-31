@@ -5203,9 +5203,9 @@ label form [type='radio'] {
 }
 
 @media screen and (max-width: 681px) {
-  /* .language-translate {
+  .language-translate {
     display: none;
-  } */
+  }
 
   .venture-search-container-btn {
     max-width: 45%;

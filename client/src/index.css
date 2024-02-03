@@ -833,7 +833,7 @@ height: 55vh;
 }
 
 .basic-nav-dropdown-div {
-  max-width: 70%;
+  width: 25%;
   display: inline-flex;
   align-items: center !important;
   background-color: #fff;
@@ -5204,9 +5204,11 @@ label form [type='radio'] {
 
 @media screen and (max-width: 681px) {
   .language-translate {
-    display: none;
+    display: none !important;
   }
-
+.btn-invisible {
+display: none ;
+}
   .venture-search-container-btn {
     max-width: 45%;
     display: inline-flex;

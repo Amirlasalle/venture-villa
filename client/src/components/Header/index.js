@@ -753,7 +753,7 @@ const Header = ({ handlePageChange }) => {
 
                 <Button variant='flat' className='btn-invisible mr-3' onClick={handleShow}>
                   <div className='language-translate'>
-                    <FontAwesomeIcon icon={faGlobe} className='language-translate-g language-icon' /> <FontAwesomeIcon icon={faLanguage} className=' language-translate-a .language-icon' />
+                    <FontAwesomeIcon icon={faGlobe} className='language-translate-g language-icon' /> <FontAwesomeIcon icon={faLanguage} className=' language-translate-a language-icon' />
                   </div>
                 </Button>
 

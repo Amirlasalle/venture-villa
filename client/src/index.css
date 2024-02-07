@@ -833,7 +833,7 @@ height: 55vh;
 }
 
 .basic-nav-dropdown-div {
-  width: 25%;
+  max-width: 30%;
   display: inline-flex;
   align-items: center !important;
   background-color: #fff;

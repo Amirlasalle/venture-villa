@@ -873,7 +873,7 @@ const Header = ({ handlePageChange }) => {
                     <FontAwesomeIcon icon={faGlobe} className='language-translate-g language-icon' /> <FontAwesomeIcon icon={faLanguage} className=' language-translate-a .language-icon' />
                   </div>
                 </Button>
-                <div className='ml-5 btn-invisible modal-div'>
+                {/* <div className='ml-5 btn-invisible modal-div'> */}
                   <Modal show={showLanguages} animation={false} size="lg" dialogClassName="my-modal custom-modal">
                     <Modal.Header closeButton onClick={handleCloseLanguages}
                       className='close-button fixed-top'>
@@ -908,7 +908,7 @@ const Header = ({ handlePageChange }) => {
                       </p>
                     </Modal.Body>
                   </Modal>
-                </div>
+                {/* </div> */}
 
                 <NavDropdown title={<div style={{ display: "inline-block" }}>
                   <FontAwesomeIcon icon={faBars} className='' size='xl' style={{ fontWeight: 'bolder' }} />

@@ -1,30 +1,30 @@
 import React from 'react';
+import '../../index.css'
 
 const CommentList = ({ comments = [] }) => {
   if (!comments.length) {
-    return <h3>No Recommendations Yet</h3>;
+    return <h3>No Venture Plans Yet</h3>;
   }
 
   return (
     <>
       <h3
-        className="p-5 display-inline-block"
-        style={{ borderBottom: '1px solid #1a1a1a' }}
+        className=" display-inline-block font-poppins"
       >
-        Recommendations
+       Venture Plans
       </h3>
-      <div className="flex-row my-4">
+      <div className="flex-row font-poppins">
         {comments &&
           comments.map((comment) => (
-            <div key={comment._id} className="col-12 mb-3 pb-3">
-              <div className="p-3 text-dark" s style={{ background: 'rgb(247, 231, 12)' }}>
-                <h5 className="card-header">
-                  {comment.commentAuthor} commented{' '}
+            <div key={comment._id} className="col-12 mb-1 pb-1 pl-0 font-poppins">
+              <div className="p-1 pl-3 text-dark font-poppins" >
+                <h6 className="card-header font-poppins">
+                  {comment.commentAuthor} added to their bucket list{' '}
                   <span style={{ fontSize: '0.825rem' }}>
-                    on {comment.createdAt}
+                    on {comment.createdAt} :
                   </span>
-                </h5>
-                <p className="card-body">{comment.commentText}</p>
+                </h6>
+                <p className="card-body font-poppins">{comment.commentText}</p>
               </div>
             </div>
           ))}

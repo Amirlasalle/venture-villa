@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
-
+import { Button } from 'react-bootstrap';
 import { ADD_THOUGHT } from '../../utils/mutations';
 import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
 
@@ -63,8 +63,8 @@ const ThoughtForm = () => {
   };
 
   return (
-    <div>
-      <h3>What's the next destination on your bucklist?</h3>
+    <div className='font-poppins'> 
+      <h3>What destination in Colombia would you like to add to your bucket list?</h3>
 
       {Auth.loggedIn() ? (
         <>
@@ -80,7 +80,7 @@ const ThoughtForm = () => {
             onSubmit={handleFormSubmit}
           >
             <div className="col-12 col-lg-9">
-              <textarea                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+              <textarea                   
                 name="thoughtText"
                 placeholder="This year I really want to go to..."
                 value={thoughtText}
@@ -91,9 +91,9 @@ const ThoughtForm = () => {
             </div>
 
             <div className="col-12 col-lg-3">
-              <button className="btn btn-light btn-block py-3" type="submit">
+              <Button className="btn btn-light btn-block py-3" type="submit">
                 Add Your Venture
-              </button>
+              </Button>
             </div>
             {error && (
               <div className="col-12 my-3 bg-danger text-white p-3">

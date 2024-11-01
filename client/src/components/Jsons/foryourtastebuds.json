@@ -1,0 +1,117 @@
+[
+    {
+        "name": "Bandeja Paisa",
+        "screenshotone": "/assets/food/bandeja-paisa1.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Arepas",
+        "screenshotone": "/assets/food/arepas.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Sancocho",
+        "screenshotone": "/assets/food/sancocho.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Empanadas",
+        "screenshotone": "/assets/food/cassava.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Bunuelos",
+        "screenshotone": "/assets/food/bunuelo.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Pan de Bono",
+        "screenshotone": "/assets/food/pan-de-bono.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Ajiaco",
+        "screenshotone": "/assets/food/ajiaco.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Lechona",
+        "screenshotone": "/assets/food/lechona.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Tamales",
+        "screenshotone": "/assets/food/tamales.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Changua",
+        "screenshotone": "/assets/food/changua.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Ceviche",
+        "screenshotone": "/assets/food/ceviche.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Fritanga",
+        "screenshotone": "/assets/food/fritanga.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Arroz con Pollo",
+        "screenshotone": "/assets/food/biryani.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Obleas",
+        "screenshotone": "/assets/food/oblea.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Pargo Rojo Frito",
+        "screenshotone": "/assets/food/red-snapper-fish.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Mote de Queso",
+        "screenshotone": "/assets/food/mote-de-queso.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Choclo con Queso",
+        "screenshotone": "/assets/food/arepas1.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Salpicón",
+        "screenshotone": "/assets/food/salpicon.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Pescado a la Plancha",
+        "screenshotone": "/assets/food/rice.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Sudado de Pollo",
+        "screenshotone": "/assets/food/stew.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Cholado",
+        "screenshotone": "/assets/food/cholado.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Cabrito",
+        "screenshotone": "/assets/food/roasted-lamb.png",
+        "more": "/restaurants"
+    },
+    {
+        "name": "Aguardiente",
+        "screenshotone": "/assets/food/aguardiente.png",
+        "more": "/restaurants"
+    }
+]

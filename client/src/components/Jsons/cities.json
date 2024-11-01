@@ -1,0 +1,417 @@
+[
+    {
+        "name": "Amazonas, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Leticia, Amazonas, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Antioquia, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Bello, Antioquia, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Envigado, Antioquia, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Itagüí, Antioquia, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Medellín, Antioquia, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Puerto Berrío, Antioquia, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Arauca, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Atlántico, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Barranquilla, Atlántico, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Soledad, Atlántico, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Bogotá (Distrito Capital), Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Bolívar, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Cartagena, Bolívar, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Magangué, Bolívar, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Boyacá, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Duitama, Boyacá, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Sogamoso, Boyacá, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Tunja, Boyacá, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Caldas, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Manizales, Caldas, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Caquetá, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Florencia, Caquetá, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Casanare, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Yopal, Casanare, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Cauca, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Popayán, Cauca, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Sevilla, Cauca, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Cesar, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Valledupar, Cesar, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Chocó, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Quibdó, Chocó, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Córdoba, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Montería, Córdoba, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Cundinamarca, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Girardot, Cundinamarca, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Guainía, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Guaviare, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "San José del Guaviare, Guaviare, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Huila, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Neiva, Huila, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "La Guajira, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Ríohacha, La Guajira, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Magdalena, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "El Banco, Magdalena, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Ciénaga, Magdalena, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Santa Marta, Magdalena, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Meta, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Villavicencio, Meta, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Nariño, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Ipiales, Nariño, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Pasto, Nariño, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Tumaco, Nariño, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Norte de Santander, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Cúcuta, Norte de Santander, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Ocaña, Norte de Santander, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Pamplona, Norte de Santander, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Putumayo, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Mocoa, Putumayo, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Quindío, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Armenia, Quindío, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Calarcá, Quindío, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Risaralda, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Pereira, Risaralda, Colombia",
+        "screenShot": "/assets/cities/pereira.jpg",
+        "more": ""
+    },
+    {
+        "name": "Santa Rosa de Cabal, Risaralda, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "San Andrés y Providencia, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Santander, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Barrancabermeja, Santander, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Bucaramanga, Santander, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Sucre, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Sincelejo, Sucre, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Tolima, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Ibagué, Tolima, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Valle del Cauca, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Buenaventura, Valle del Cauca, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Buga, Valle del Cauca, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Cali, Valle del Cauca, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Palmira, Valle del Cauca, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Tuluá, Valle del Cauca, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Vaupés, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Vichada, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    },
+    {
+        "name": "Puerto Carreño, Vichada, Colombia",
+        "screenShot": "/assets/cities/placeholder.png",
+        "more": ""
+    }
+]

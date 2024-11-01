@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Any Activity",
+        "screenshotone": "/assets/activities/extracurricular-activities.png",
+        "more": "/attractions"
+    },
+    {
+        "name": "Salsa Dancing in Cali",
+        "screenshotone": "/assets/activities/salsa.png",
+        "more": "/attractions"
+    },
+    {
+        "name": "Hike in Cocora Valley",
+        "screenshotone": "/assets/activities/hiker.png",
+        "more": "/attractions"
+    },
+    {
+        "name": "Take a Coffee Farm Tour",
+        "screenshotone": "/assets/activities/tour-guide.png",
+        "more": "/attractions"
+    },
+    {
+        "name": "Explore Cartagena's Old Town",
+        "screenshotone": "/assets/activities/cartagena.png",
+        "more": "/attractions"
+    },
+    {
+        "name": "Trek to the Lost City (Ciudad Perdida)",
+        "screenshotone": "/assets/activities/ciudad-perdida.png",
+        "more": "/attractions"
+    },
+    {
+        "name": "Visit Tayrona National Natural Park",
+        "screenshotone": "/assets/activities/Tayrona-park.png",
+        "more": "/attractions"
+    },
+    {
+        "name": "Explore Medellín's Comuna 13",
+        "screenshotone": "/assets/activities/medellin.png",
+        "more": "/attractions"
+    },
+    {
+        "name": "Visit the Salt Cathedral of Zipaquirá",
+        "screenshotone": "/assets/activities/salt-cathedral.png",
+        "more": "/attractions"
+    },
+    {
+        "name": "Go Paragliding in San Gil",
+        "screenshotone": "/assets/activities/paragliding.png",
+        "more": "/attractions"
+    },
+    {
+        "name": "Discover the Amazon Rainforest",
+        "screenshotone": "/assets/activities/rainforestamazon.png",
+        "more": "/attractions"
+    },
+    {
+        "name": "Attend the Barranquilla Carnival",
+        "screenshotone": "/assets/activities/carnaval-de-barranquilla.png",
+        "more": "/attractions"
+    },
+    {
+        "name": "Take a Boat Trip in Guatapé",
+        "screenshotone": "/assets/activities/bumper-boats.png",
+        "more": "/attractions"
+    },
+    {
+        "name": "Bird Watching in Minca",
+        "screenshotone": "/assets/activities/toucan-clipart-md.png",
+        "more": "/attractions"
+    },
+    {
+        "name": "Relax in San Andrés and Providencia",
+        "screenshotone": "/assets/activities/hammock.png",
+        "more": "/attractions"
+    },
+    {
+        "name": "Experience Bogotá's Museums",
+        "screenshotone": "/assets/activities/art-museum.png",
+        "more": "/attractions"
+    }
+]

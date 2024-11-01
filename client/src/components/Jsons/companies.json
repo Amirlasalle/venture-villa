@@ -1,0 +1,56 @@
+[
+    {
+        "name": "RAPPI: Colombia's Supper APP",
+        "founded": "2015",
+        "headquarters": "Bogotá, Colombia",
+        "industry":"On-demand delivery",
+        "products": "Mobile app",
+        "companyUrl": "https://about.rappi.com/",
+        "logo": "./assets/companies/Rappi_logo.svg.png"
+    },
+    {
+        "name": "Grupo Nutresa: Nutriendo un mejor mañana",
+        "founded": "April 12, 1920",
+        "headquarters": "Medellín, Colombia",
+        "industry":"Food processing",
+        "products": "Processed food",
+        "companyUrl": "https://gruponutresa.com/",
+        "logo": "./assets/companies/grupo-nutresa-logo.png"
+    },
+    {
+        "name": "Bancolombia: Aqui Estás Siempre",
+        "founded": "January 29, 1875",
+        "headquarters": "Medellín, Colombia",
+        "industry":"Financial services",
+        "products": "Banking",
+        "companyUrl": "https://www.bancolombia.com/personas",
+        "logo": "./assets/companies/bancolombia.com.png"
+    },
+    {
+        "name": "Postobón: Siente el Sabor",
+        "founded": "October 11, 1904",
+        "headquarters": "Medellín, Colombia",
+        "industry":"Beverage",
+        "products": "Soft drinks, & more ",
+        "companyUrl": "https://www.postobon.com/",
+        "logo": "./assets/companies/Postobon.png"
+    },
+    {
+        "name": "Ecopetrol: Energía que nos une",
+        "founded": "1921",
+        "headquarters": "Bogotá, Colombia",
+        "industry":"Oil and Gas",
+        "products": "Fuels, Lubricants, Petrochemicals, & Biofuels",
+        "companyUrl": "https://www.ecopetrol.com.co/wps/portal/",
+        "logo": "./assets/companies/Ecopetrol_logo.svg.png"
+    },
+    {
+        "name": "Mario Hernández: Fundado en 1978",
+        "founded": "1978",
+        "headquarters": "Bogotá, Colombia",
+        "industry":"Apparels, accessories",
+        "products": "High fashion clothing, accessories, & footwear",
+        "companyUrl": "https://www.mariohernandez.com.co/",
+        "logo": "./assets/companies/Mario-Hernandez.png"
+    }
+]

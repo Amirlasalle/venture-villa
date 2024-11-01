@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Universidad de los Andes",
+        "brief": "Founded in 1948, one of Colombia's top-ranked universities.",
+        "uniUrl": "https://uniandes.edu.co/en",
+        "logo": "./assets/thumbnails/University_of_Los_Andes_logo.svg.png"
+    },
+    {
+        "name": "Pontificia Universidad Javeriana",
+        "brief": "Founded in 1623. One of the oldest, and prestigious universities in Colombia.",
+        "uniUrl": "https://www.javeriana.edu.co/inicio",
+        "logo": "./assets/thumbnails/440px-Javeriana.svg.png"
+    },
+    {
+        "name": "Universidad Nacional de Colombia",
+        "brief": "Established in 1867 by Colombia's Congress, it's one of the country's largest universities.",
+        "uniUrl": "https://unal.edu.co/",
+        "logo": "./assets/thumbnails/NationalUniversityofColombia.png"
+    },
+    {
+        "name": "Universidad de La Sabana",
+        "brief": "Private university founded in 1979 by the association for teaching Aspaen. Located in Chía, Colombia.",
+        "uniUrl": "https://www.unisabana.edu.co/menu-superior-2/internacional/cooperacion/unisabana-faculty-links/english-version-unisabana-faculty-links/about-us-universidad-de-la-sabana/",
+        "logo": "./assets/thumbnails/Unisabana.png"
+    },
+    {
+        "name": "Universidad Externado de Colombia",
+        "brief": "A respected university producing graduates in law, journalism, and government.",
+        "uniUrl": "https://www.uexternado.edu.co/",
+        "logo": "./assets/thumbnails/uec-logo.png"
+    },
+    {
+        "name": "Universidad de Antioquia",
+        "brief": "founded in 1803 by a Royal Decree, and receiving a high quality accreditation from the Ministry of Education for 9 years.",
+        "uniUrl": "https://www.udea.edu.co/wps/portal/udea/web/inicio/!ut/p/z1/hY7LDoIwEEW_hQVbOjyq4K5BYkDCIzERuzElVqgikIL4-zbqyviY3Z17zmQQRQWiLZtExUbRtaxReUdn-yTHgWn5EKehHUDuJTizV6HlzG20_QdQVcOXIaB8-kBcz7dM4kAMaxMDyYMs2aR-toysF_DjRoRo1XTl813SlrZbISr5kUsujatU63oc-2Ghgw68NW7iLHp-EMzoZKXDJ6nuhhEV7yzqLwWccDPFRNPumJ31Pg!!/dz/d5/L2dBISEvZ0FBIS9nQSEh/",
+        "logo": "./assets/thumbnails/324px-Escudo-UdeA.svg.png"
+    },
+    {
+        "name": "Universidad Pontificia Bolivariana",
+        "brief": "Established in 1936. As of June 2022, UPB ranks top 4 in Colombia, and top 30 in LATAM.",
+        "uniUrl": "https://www.upb.edu.co/es/home",
+        "logo": "./assets/thumbnails/440px-Escudo_f2.png"
+    },
+    {
+        "name": "Universidad Nacional de Rosario",
+        "brief": "Founded in 1968, UNR began with multiple academic and administrative units.",
+        "uniUrl": "https://unr.edu.ar/",
+        "logo": "./assets/thumbnails/Logo_del_Rosario.png"
+    },
+    {
+        "name": "Universidad del Valle",
+        "brief": "Home to faculties in Engineering, Humanities, Arts, Sciences, Social Sciences, Economics, Education, Pedagogy, and Psychology.",
+        "uniUrl": "https://www.univalle.edu.co/",
+        "logo": "./assets/thumbnails/udvlogo.jpeg"
+    },
+    {
+        "name": "Universidad de Antioquia",
+        "brief": "A Medellín-based university with 23 undergrad programs, 70 specializations, 34 master's degrees, and 6 PHDs.",
+        "uniUrl": "https://www.eafit.edu.co/",
+        "logo": "./assets/thumbnails/Escudo_Universidad_EAFIT.svg.png"
+    }
+]
